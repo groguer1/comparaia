@@ -1,198 +1,23 @@
-<!DOCTYPE html>
-<html lang="es"> 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparativas de IA – CompararIA</title>
-  <meta name="description" content="Análisis detallados y comparativas cara a cara de las mejores herramientas de IA para profesionales.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <style>
-    /* Estilos base heredados de tu Home */
-    :root {
-      --bg:        #0a0a0f;
-      --bg2:       #111118;
-      --surface:   #1e1e2e;
-      --border:    rgba(255,255,255,0.07);
-      --accent:    #00e5a0;
-      --accent2:   #7c6fff;
-      --text:      #e8e8f0;
-      --muted:     #7a7a9a;
-      --card-glow: rgba(0,229,160,0.06);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Orbes de fondo */
-    .orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .orb-1 {
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(124,111,255,0.08) 0%, transparent 70%);
-      top: -100px; right: -100px;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* NAV simplificada */
-    nav {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.2rem;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .logo span { color: var(--accent); }
-
-    /* Header de Sección */
-    .header-section {
-      padding: 80px 0 40px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(0,229,160,0.1);
-      color: var(--accent);
-      padding: 6px 12px;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      margin-bottom: 16px;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      max-width: 600px;
-      font-size: 1.1rem;
-    }
-
-    /* Grid de Comparativas */
-    .comp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 24px;
-      padding: 40px 0 100px;
-    }
-
-    .comp-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .comp-card:hover {
-      border-color: var(--accent2);
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(124, 111, 255, 0.1);
-    }
-
-    .comp-card .icon {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .comp-card h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-    }
-
-    .comp-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .comp-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    /* Footer simple */
-    footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 600px) {
-      .comp-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="orb orb-1"></div>
-
-  <nav>
-    <div class="container">
-      <a href="/" class="logo">Comparar<span>IA</span></a>
-    </div>
-  </nav>
-
-  <main class="container">
-    <header class="header-section">
-      <span class="badge">Análisis 2025</span>
-      <h1>Comparativas en Profundidad</h1>
-      <p class="subtitle">Enfrentamos a los gigantes de la inteligencia artificial para que sepas cuál elegir según tu perfil profesional.</p>
-    </header>
-
-    <div class="comp-grid">
+<div class="comp-grid">
       
-      <a href="./chatgpt-vs-claude/" class="comp-card">
-        <div class="icon">⚡</div>
-        <h2>ChatGPT vs Claude</h2>
-        <p>¿Prefieres la versatilidad de OpenAI o la precisión y razonamiento de Anthropic? Analizamos sus capacidades de redacción y análisis.</p>
-        <div class="comp-link">Leer comparativa →</div>
-      </a>
+  <a href="./chatgpt-vs-claude/" class="comp-card">
+    <div class="icon">⚡</div>
+    <h2>ChatGPT vs Claude</h2>
+    <p>¿Prefieres la versatilidad de OpenAI o la precisión de Anthropic? Analizamos sus capacidades de redacción.</p>
+    <div class="comp-link">Leer comparativa →</div>
+  </a>
 
-      <a href="./chatgpt-vs-gemini/" class="comp
+  <a href="./chatgpt-vs-gemini/" class="comp-card">
+    <div class="icon">🔍</div>
+    <h2>ChatGPT vs Gemini</h2>
+    <p>Google vs OpenAI. Comparamos la integración con herramientas de productividad y búsquedas en tiempo real.</p>
+    <div class="comp-link">Leer comparativa →</div>
+  </a>
+
+  <div class="comp-card" style="border-style: dashed; opacity: 0.5;">
+    <div class="icon">➕</div>
+    <h2>Más análisis</h2>
+    <p>Pronto: Midjourney vs Flux y las mejores IA para programadores.</p>
+  </div>
+
+</div>
