@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Midjourney: qué es, cómo funciona y precios (2025) | CompararIA</title>
+  <meta name="description" content="Guía completa de Midjourney en 2025. Qué es, cómo empezar, precios en euros, pros y contras para freelancers y diseñadores en España. ¿Vale la pena pagar?">
+  <meta name="author" content="CompararIA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/herramientas/midjourney/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/herramientas/midjourney/">
+  <meta property="og:title" content="Midjourney: qué es, cómo funciona y precios (2025)">
+  <meta property="og:description" content="Guía completa de Midjourney. Precios en euros, cómo empezar y si vale la pena para freelancers en España.">
+  <meta property="og:image" content="https://comparaia.es/assets/og-midjourney.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Midjourney: qué es, cómo funciona y precios (2025)">
+  <meta name="twitter:description" content="Guía completa de Midjourney para freelancers y diseñadores en España.">
+  <meta name="twitter:image" content="https://comparaia.es/assets/og-midjourney.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Midjourney",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Web, Discord",
+    "description": "Generador de imágenes con inteligencia artificial. Produce imágenes de calidad profesional a partir de descripciones de texto.",
+    "url": "https://midjourney.com",
+    "author": { "@type": "Organization", "name": "Midjourney, Inc." },
+    "offers": [
+      { "@type": "Offer", "name": "Basic", "price": "10", "priceCurrency": "USD", "billingIncrement": "month" },
+      { "@type": "Offer", "name": "Standard", "price": "30", "priceCurrency": "USD", "billingIncrement": "month" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "3240"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Midjourney tiene versión gratuita?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, Midjourney eliminó su prueba gratuita en 2023. El plan más barato cuesta aproximadamente 10 USD al mes (unos 9-10€). Antes de suscribirte puedes ver ejemplos de trabajos de otros usuarios en midjourney.com para hacerte una idea de los resultados." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar las imágenes de Midjourney para uso comercial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, con los planes de pago las imágenes generadas pueden usarse para proyectos comerciales. Sin embargo, si tu empresa factura más de 1 millón de dólares al año, necesitas el plan Pro o Mega. Lee siempre los términos de uso actualizados en midjourney.com." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Midjourney funciona en español?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Puedes escribir los prompts en español y Midjourney los entiende, pero los mejores resultados se obtienen escribiendo en inglés. La herramienta está optimizada para prompts en inglés y la diferencia de calidad es notable." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a080f; --bg2: #100d18; --bg3: #181424;
+      --surface: #1e1a2e; --border: rgba(255,255,255,0.07);
+      --accent: #9b5de5; --accent-l: rgba(155,93,229,0.1); --accent-b: rgba(155,93,229,0.25);
+      --gold: #f7c948; --text: #ece8f5; --muted: #7a6f92;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 30% 10%, rgba(155,93,229,0.1), transparent),
+                  radial-gradient(ellipse 50% 40% at 80% 90%, rgba(247,201,72,0.04), transparent);
+      pointer-events: none; z-index: 0;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,8,15,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; letter-spacing: -0.03em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); padding-top: 28px; margin-bottom: 32px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; }
+
+    .tool-header { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: start; padding: 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 32px; animation: fadeUp 0.5s ease both; }
+    .tool-logo-big { width: 72px; height: 72px; border-radius: 16px; background: var(--accent-l); border: 1px solid var(--accent-b); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; flex-shrink: 0; }
+    .tool-header-info h1 { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 6px; }
+    .tool-header-info p { font-size: 0.92rem; color: var(--muted); margin-bottom: 12px; }
+    .tool-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; padding: 3px 10px; border-radius: 4px; background: var(--accent-l); color: var(--accent); border: 1px solid var(--accent-b); }
+    .tag.gray { background: rgba(255,255,255,0.05); color: var(--muted); border-color: var(--border); }
+    .tag.warning { background: rgba(239,68,68,0.1); color: #ef4444; border-color: rgba(239,68,68,0.2); }
+    .tool-header-score { text-align: center; flex-shrink: 0; }
+    .score-num { font-family: 'Syne', sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--accent); line-height: 1; display: block; }
+    .score-stars { color: var(--gold); font-size: 0.9rem; margin: 4px 0; }
+    .score-label { font-size: 0.72rem; color: var(--muted); }
+
+    .quick-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 48px; }
+    .qs-item { background: var(--bg2); padding: 20px 16px; text-align: center; }
+    .qs-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .qs-value { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); }
+    .qs-value.purple { color: var(--accent); }
+    .qs-value.red { color: #ef4444; }
+
+    .article-body h2 { font-family: 'Syne', sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: -0.03em; margin: 52px 0 16px; padding-top: 52px; border-top: 1px solid var(--border); scroll-margin-top: 80px; }
+    .article-body p { margin-bottom: 18px; color: #c0b8d8; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+
+    .highlight { background: var(--accent-l); border: 1px solid var(--accent-b); border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .highlight p { margin: 0; color: var(--text); font-size: 0.92rem; }
+    .warning-box { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .warning-box p { margin: 0; color: var(--text); font-size: 0.92rem; }
+
+    .rating-list { margin: 20px 0; }
+    .rating-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .rating-label { font-size: 0.85rem; width: 160px; flex-shrink: 0; color: var(--text); }
+    .rating-bar-bg { flex: 1; height: 6px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+    .rating-bar { height: 100%; background: var(--accent); border-radius: 3px; }
+    .rating-score { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--accent); width: 28px; text-align: right; }
+
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .pros { background: var(--accent-l); border: 1px solid var(--accent-b); border-radius: 12px; padding: 24px; }
+    .cons { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); border-radius: 12px; padding: 24px; }
+    .pros h3, .cons h3 { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+    .pros h3 { color: var(--accent); }
+    .cons h3 { color: #ef4444; }
+    .pros ul, .cons ul { list-style: none; }
+    .pros ul li, .cons ul li { font-size: 0.87rem; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 8px; color: #c0b8d8; }
+    .pros ul li:last-child, .cons ul li:last-child { border-bottom: none; }
+    .pros ul li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cons ul li::before { content: '✗'; color: #ef4444; font-weight: 700; flex-shrink: 0; }
+
+    .planes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+    .plan-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.2s; }
+    .plan-card:hover { border-color: rgba(155,93,229,0.3); }
+    .plan-card.featured { border-color: rgba(155,93,229,0.4); }
+    .plan-head { padding: 18px; border-bottom: 1px solid var(--border); background: var(--bg3); }
+    .plan-head.featured-head { background: var(--accent-l); }
+    .plan-name { font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .plan-name.featured-name { color: var(--accent); }
+    .plan-price { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--text); }
+    .plan-price span { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+    .plan-body { padding: 16px; }
+    .plan-body ul { list-style: none; }
+    .plan-body ul li { font-size: 0.8rem; color: #c0b8d8; padding: 4px 0; display: flex; gap: 6px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .plan-body ul li:last-child { border-bottom: none; }
+    .plan-body ul li::before { content: '·'; color: var(--accent); }
+
+    .steps { counter-reset: steps; margin: 24px 0; }
+    .step { counter-increment: steps; position: relative; padding: 0 0 28px 52px; }
+    .step:last-child { padding-bottom: 0; }
+    .step::before { content: counter(steps); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-l); border: 1px solid var(--accent-b); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 800; color: var(--accent); }
+    .step::after { content: ''; position: absolute; left: 16px; top: 38px; bottom: 0; width: 1px; background: var(--border); }
+    .step:last-child::after { display: none; }
+    .step h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; padding-top: 5px; }
+    .step p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+
+    .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .audience-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+    .audience-card.yes { border-left: 3px solid var(--accent); }
+    .audience-card.no { border-left: 3px solid #ef4444; }
+    .audience-card h4 { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+    .audience-card p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+    .faq-q { padding: 15px 20px; font-weight: 600; font-size: 0.9rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--surface); user-select: none; transition: background 0.2s; }
+    .faq-q:hover { background: var(--bg3); }
+    .faq-q .icon { font-size: 1.1rem; color: var(--accent); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; font-size: 0.88rem; color: var(--muted); background: var(--bg2); }
+    .faq-a.open { max-height: 300px; padding: 16px 20px; }
+    .faq-q.active .icon { transform: rotate(45deg); }
+
+    .cta-box { background: var(--accent-l); border: 1px solid var(--accent-b); border-radius: 14px; padding: 36px 32px; text-align: center; margin: 48px 0; }
+    .cta-box h2 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .cta-box p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .btn-primary { background: var(--accent); color: #0a080f; padding: 12px 26px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(155,93,229,0.35); }
+    .btn-ghost { background: transparent; color: var(--text); padding: 12px 26px; border-radius: 8px; font-weight: 500; font-size: 0.9rem; text-decoration: none; border: 1px solid var(--border); display: inline-block; margin-left: 10px; transition: border-color 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 32px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 680px) {
+      .tool-header { grid-template-columns: auto 1fr; }
+      .tool-header-score { display: none; }
+      .quick-stats { grid-template-columns: 1fr 1fr; }
+      .pros-cons, .audience-grid { grid-template-columns: 1fr; }
+      .planes-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .btn-ghost { margin: 10px 0 0; display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="logo">Comparar<span>IA</span></a>
+      <ul class="nav-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <nav aria-label="Ruta de navegación">
+        <p class="breadcrumb"><a href="/">Inicio</a><span>›</span><a href="/herramientas/">Herramientas</a><span>›</span>Midjourney</p>
+      </nav>
+
+      <header class="tool-header" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <div class="tool-logo-big" aria-hidden="true">🖼️</div>
+        <div class="tool-header-info">
+          <h1 itemprop="name">Midjourney</h1>
+          <p itemprop="description">La referencia en generación de imágenes con IA. Calidad profesional a partir de descripciones de texto.</p>
+          <div class="tool-tags">
+            <span class="tag">Imágenes</span>
+            <span class="tag">Diseño</span>
+            <span class="tag">Ilustración</span>
+            <span class="tag warning">Solo de pago</span>
+            <span class="tag gray">Web · Discord</span>
+          </div>
+        </div>
+        <div class="tool-header-score" aria-label="Puntuación 4.7 sobre 5">
+          <span class="score-num">4.7</span>
+          <div class="score-stars" aria-hidden="true">★★★★★</div>
+          <div class="score-label">Puntuación CompararIA</div>
+        </div>
+      </header>
+
+      <div class="quick-stats" role="list">
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Versión gratuita</div>
+          <div class="qs-value red">No</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Precio mínimo</div>
+          <div class="qs-value">~9€/mes</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Uso comercial</div>
+          <div class="qs-value purple">Incluido</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Calidad imagen</div>
+          <div class="qs-value purple">Top del mercado</div>
+        </div>
+      </div>
+
+      <article class="article-body">
+
+        <h2>¿Qué es Midjourney?</h2>
+
+        <p>Midjourney es el generador de imágenes con IA más conocido del mundo. A partir de una descripción de texto — llamada <strong>prompt</strong> — crea imágenes de calidad artística y fotorrealista que serían imposibles de producir sin un equipo de diseño profesional.</p>
+
+        <p>Fue fundado en 2022 por David Holz y en pocos meses se convirtió en la herramienta de referencia para diseñadores, ilustradores, creadores de contenido y cualquier profesional que necesite imágenes de alto impacto visual.</p>
+
+        <div class="highlight">
+          <p><strong>Por qué destaca:</strong> la calidad estética de Midjourney supera consistentemente a sus competidores. No es la más rápida ni la más barata, pero sus resultados tienen un nivel artístico que ninguna otra herramienta iguala de forma consistente.</p>
+        </div>
+
+        <h2>Puntuaciones por categoría</h2>
+
+        <div class="rating-list">
+          <div class="rating-row">
+            <span class="rating-label">Calidad de imagen</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:97%"></div></div>
+            <span class="rating-score">9.7</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Coherencia artística</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:95%"></div></div>
+            <span class="rating-score">9.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Variedad de estilos</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:92%"></div></div>
+            <span class="rating-score">9.2</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Facilidad de uso</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:70%"></div></div>
+            <span class="rating-score">7.0</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Relación calidad/precio</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:85%"></div></div>
+            <span class="rating-score">8.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Accesibilidad (sin cuenta gratis)</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:40%"></div></div>
+            <span class="rating-score">4.0</span>
+          </div>
+        </div>
+
+        <h2>Pros y contras</h2>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>✓ Puntos fuertes</h3>
+            <ul>
+              <li>La mejor calidad de imagen del mercado, consistentemente</li>
+              <li>Estética artística inigualable en ilustración y fotografía</li>
+              <li>Enorme comunidad con millones de ejemplos de prompts</li>
+              <li>Uso comercial incluido en todos los planes</li>
+              <li>Interfaz web disponible (ya no solo Discord)</li>
+              <li>Actualizaciones frecuentes que mejoran los modelos</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>✗ Puntos débiles</h3>
+            <ul>
+              <li>Sin versión gratuita — hay que pagar desde el primer uso</li>
+              <li>Curva de aprendizaje en la escritura de prompts</li>
+              <li>Precio en dólares, sujeto a tipo de cambio</li>
+              <li>Dificultad para generar texto legible dentro de las imágenes</li>
+              <li>Menos control sobre detalles específicos que competidores</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Planes y precios (en USD)</h2>
+
+        <div class="planes-grid">
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Basic</div>
+              <div class="plan-price">10 <span>USD/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>200 imágenes/mes</li>
+                <li>3 trabajos simultáneos</li>
+                <li>Uso comercial</li>
+                <li>Sin modo fast ilimitado</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card featured">
+            <div class="plan-head featured-head">
+              <div class="plan-name featured-name">Standard ⭐</div>
+              <div class="plan-price">30 <span>USD/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Imágenes ilimitadas (modo relax)</li>
+                <li>15h modo fast al mes</li>
+                <li>3 trabajos simultáneos</li>
+                <li>Uso comercial</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Pro</div>
+              <div class="plan-price">60 <span>USD/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Ilimitadas en modo relax</li>
+                <li>30h modo fast</li>
+                <li>12 trabajos simultáneos</li>
+                <li>Modo stealth (privado)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Mega</div>
+              <div class="plan-price">120 <span>USD/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Ilimitadas en modo relax</li>
+                <li>60h modo fast</li>
+                <li>12 trabajos simultáneos</li>
+                <li>Para uso intensivo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <p>⚠️ <strong>Nota sobre precios:</strong> Midjourney cobra en dólares. Con el cambio actual, el plan Basic equivale a unos 9-10€/mes y el Standard a unos 27-28€/mes. El precio real varía con el tipo de cambio EUR/USD.</p>
+        </div>
+
+        <h2>Cómo empezar con Midjourney</h2>
+
+        <div class="steps">
+          <div class="step">
+            <h3>Crea una cuenta en midjourney.com</h3>
+            <p>Ve a midjourney.com y haz clic en "Sign In". Puedes acceder con tu cuenta de Google o Discord. Elige el plan que más te convenga — para empezar, el Basic o Standard son suficientes.</p>
+          </div>
+          <div class="step">
+            <h3>Accede al generador web</h3>
+            <p>Desde 2024 Midjourney tiene interfaz web propia en midjourney.com/imagine — ya no es obligatorio usar Discord. La interfaz web es más intuitiva y recomendable para empezar.</p>
+          </div>
+          <div class="step">
+            <h3>Escribe tu primer prompt</h3>
+            <p>Describe la imagen que quieres en inglés. Cuanto más específico, mejor resultado. Ejemplo: "professional portrait of a spanish freelancer working on laptop, warm office light, editorial photography style".</p>
+          </div>
+          <div class="step">
+            <h3>Itera y refina</h3>
+            <p>Midjourney genera 4 variaciones. Puedes ampliar cualquiera de ellas (U1-U4), generar variaciones (V1-V4) o regenerar. La clave está en iterar el prompt hasta conseguir el resultado deseado.</p>
+          </div>
+        </div>
+
+        <h2>¿Para quién es Midjourney?</h2>
+
+        <div class="audience-grid">
+          <div class="audience-card yes">
+            <h4>✓ Diseñadores y creativos</h4>
+            <p>Para conceptualización rápida, moodboards y referencias visuales. Acorta radicalmente el tiempo de ideación.</p>
+          </div>
+          <div class="audience-card yes">
+            <h4>✓ Community managers</h4>
+            <p>Imágenes originales para redes sociales sin depender de bancos de imágenes genéricos ni de un diseñador.</p>
+          </div>
+          <div class="audience-card yes">
+            <h4>✓ Freelancers de marketing</h4>
+            <p>Material visual para presentaciones, propuestas y campañas de cliente a coste mínimo.</p>
+          </div>
+          <div class="audience-card no">
+            <h4>✗ No es para ti si…</h4>
+            <p>Necesitas imágenes de personas reales identificables, texto legible dentro de imágenes, o no tienes presupuesto para pagar una suscripción mensual.</p>
+          </div>
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Midjourney tiene versión gratuita?<span class="icon">+</span></div>
+            <div class="faq-a">No. Midjourney eliminó su prueba gratuita en 2023. El plan más barato cuesta 10 USD/mes (~9-10€). Puedes ver ejemplos de trabajos de otros usuarios en midjourney.com sin cuenta para hacerte una idea antes de suscribirte.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Puedo usar las imágenes para uso comercial?<span class="icon">+</span></div>
+            <div class="faq-a">Sí, con cualquier plan de pago las imágenes pueden usarse para proyectos comerciales. La excepción son empresas que facturen más de 1 millón de dólares al año, que necesitan el plan Pro o Mega. Lee siempre los términos de uso actualizados.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Midjourney funciona en español?<span class="icon">+</span></div>
+            <div class="faq-a">Puedes escribir los prompts en español y los entiende, pero los mejores resultados se obtienen en inglés. La diferencia de calidad es notable. Si no dominas el inglés técnico para descripciones visuales, puedes usar ChatGPT o Claude para traducir y mejorar tus prompts.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Qué alternativa gratuita tiene más calidad?<span class="icon">+</span></div>
+            <div class="faq-a">Leonardo.ai ofrece 150 créditos diarios gratuitos con resultados muy cercanos a Midjourney en muchos estilos. Adobe Firefly Free da 25 créditos al mes con la ventaja de que sus imágenes están entrenadas con contenido con licencia, ideal para uso comercial sin riesgos.</div>
+          </div>
+        </div>
+
+      </article>
+
+      <div class="cta-box">
+        <h2>¿Buscas alternativas gratuitas a Midjourney?</h2>
+        <p>Hemos analizado las mejores herramientas de IA para imágenes que no cuestan nada.</p>
+        <a href="/guias/herramientas-ia-gratis/" class="btn-primary">Ver herramientas gratuitas</a>
+        <a href="/comparativas/mejores-ia-diseno/" class="btn-ghost">Mejores IA para diseño</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-expanded','false'); });
+        if (!isOpen) { answer.classList.add('open'); btn.classList.add('active'); btn.setAttribute('aria-expanded','true'); }
+      });
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
+    });
+  </script>
+
+</body>
+</html>
