@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════
+       SEO PRIMARIO
+  ═══════════════════════════════════════════ -->
+  <title>CompararIA – Compara herramientas de IA para freelancers y autónomos en España</title>
+  <meta name="description" content="Comparativas honestas de herramientas de inteligencia artificial para freelancers y autónomos españoles. ChatGPT, Claude, Gemini, Midjourney y más. Elige la IA que necesitas.">
+  <meta name="keywords" content="herramientas IA, comparativa inteligencia artificial, IA para freelancers, IA para autónomos España, ChatGPT vs Claude, mejores IA 2025">
+  <meta name="author" content="CompararIA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/">
+
+  <!-- ═══════════════════════════════════════════
+       OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
+  ═══════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comparaia.es/">
+  <meta property="og:title" content="CompararIA – Herramientas de IA para freelancers españoles">
+  <meta property="og:description" content="Comparativas honestas de IA para freelancers y autónomos. Encuentra la herramienta que necesitas sin perder tiempo.">
+  <meta property="og:image" content="https://comparaia.es/assets/og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+
+  <!-- ═══════════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@comparaia">
+  <meta name="twitter:title" content="CompararIA – Herramientas de IA para freelancers españoles">
+  <meta name="twitter:description" content="Comparativas honestas de IA para freelancers y autónomos. Encuentra la herramienta que necesitas.">
+  <meta name="twitter:image" content="https://comparaia.es/assets/og-image.png">
+
+  <!-- ═══════════════════════════════════════════
+       SCHEMA.ORG – WebSite + Sitelinks Searchbox
+  ═══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CompararIA",
+    "url": "https://comparaia.es/",
+    "description": "Comparativas de herramientas de inteligencia artificial para freelancers y autónomos en España",
+    "inLanguage": "es-ES",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CompararIA",
+      "url": "https://comparaia.es/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://comparaia.es/assets/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://comparaia.es/buscar?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       SCHEMA.ORG – ItemList (páginas principales)
+  ═══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Comparativas de herramientas IA",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ChatGPT vs Claude",
+        "url": "https://comparaia.es/comparativas/chatgpt-vs-claude/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mejores IA para escribir",
+        "url": "https://comparaia.es/comparativas/mejores-ia-escribir/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "IA para autónomos en España",
+        "url": "https://comparaia.es/guias/ia-para-autonomos-espana/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       FUENTES
+  ═══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --bg2:       #111118;
+      --bg3:       #1a1a24;
+      --surface:   #1e1e2e;
+      --border:    rgba(255,255,255,0.07);
+      --accent:    #00e5a0;
+      --accent2:   #7c6fff;
+      --text:      #e8e8f0;
+      --muted:     #7a7a9a;
+      --card-glow: rgba(0,229,160,0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE OVERLAY ────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ─── GLOW ORBS ────────────────────────────── */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,229,160,0.12) 0%, transparent 70%);
+      top: -200px; left: -200px;
+    }
+    .orb-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(124,111,255,0.10) 0%, transparent 70%);
+      bottom: 0; right: -100px;
+    }
+
+    /* ─── LAYOUT ───────────────────────────────── */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── NAV ──────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #0a0a0f !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 500 !important;
+      font-size: 0.85rem !important;
+    }
+
+    /* ─── HERO ─────────────────────────────────── */
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,229,160,0.08);
+      border: 1px solid rgba(0,229,160,0.2);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.4); }
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0a0f;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,229,160,0.3);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.04);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── STATS BAR ────────────────────────────── */
+    .stats {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin: 64px 0;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .stat {
+      flex: 1;
+      padding: 28px 24px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ─── SECTION TITLES ───────────────────────── */
+    .section-head {
+      margin-bottom: 48px;
+    }
+
+    .section-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+    }
+
+    /* ─── COMPARATIVAS GRID ────────────────────── */
+    section { padding: 80px 0; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      display: block;
+    }
+
+    .card:hover {
+      border-color: rgba(0,229,160,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px var(--card-glow);
+    }
+
+    .card-icon {
+      width: 44px; height: 44px;
+      background: rgba(0,229,160,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .card-icon.purple { background: rgba(124,111,255,0.1); }
+
+    .card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .card-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-top: 16px;
+      font-weight: 500;
+    }
+
+    /* ─── HERRAMIENTAS FEATURED ────────────────── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .tool-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .tool-card:hover {
+      border-color: rgba(124,111,255,0.3);
+      background: var(--bg3);
+    }
+
+    .tool-logo {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .tool-info h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .tool-info p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .badge-green { background: rgba(0,229,160,0.12); color: var(--accent); }
+    .badge-purple { background: rgba(124,111,255,0.12); color: var(--accent2); }
+    .badge-orange { background: rgba(255,160,50,0.12); color: #ffa032; }
+
+    /* ─── GUIAS ────────────────────────────────── */
+    .guides-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .guide-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, background 0.2s;
+      gap: 16px;
+    }
+
+    .guide-item:hover {
+      border-color: rgba(255,255,255,0.15);
+      background: var(--bg3);
+    }
+
+    .guide-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .guide-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      width: 24px;
+      flex-shrink: 0;
+    }
+
+    .guide-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .guide-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ─── CTA BANNER ───────────────────────────── */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(0,229,160,0.08) 0%, rgba(124,111,255,0.08) 100%);
+      border: 1px solid rgba(0,229,160,0.15);
+      border-radius: 20px;
+      padding: 64px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(0,229,160,0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-banner h2 { margin-bottom: 12px; }
+    .cta-banner p { color: var(--muted); margin-bottom: 32px; }
+
+    /* ─── FOOTER ───────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 768px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .stats { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+      .nav-links { display: none; }
+      .cta-banner { padding: 40px 24px; }
+      .hero { padding: 80px 0 60px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <nav aria-label="Navegación principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="logo" aria-label="CompararIA – Inicio">Comparar<span>IA</span></a>
+        <ul class="nav-links">
+          <li><a href="/comparativas/">Comparativas</a></li>
+          <li><a href="/herramientas/">Herramientas</a></li>
+          <li><a href="/guias/">Guías</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/comparativas/" class="nav-cta">Ver comparativas →</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-badge">Comparativas sin publicidad pagada</div>
+
+        <h1 id="hero-title">
+          La IA correcta<br>
+          para tu <em>trabajo real</em>
+        </h1>
+
+        <p class="hero-sub">
+          Comparativas honestas de herramientas de inteligencia artificial
+          para freelancers y autónomos en España. Sin humo, sin afiliados ocultos.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/comparativas/" class="btn-primary">Ver comparativas</a>
+          <a href="/guias/ia-para-autonomos-espana/" class="btn-ghost">Guía para autónomos</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats" role="list" aria-label="Estadísticas del sitio">
+          <div class="stat" role="listitem">
+            <div class="stat-num">40+</div>
+            <div class="stat-label">Herramientas analizadas</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-num">12</div>
+            <div class="stat-label">Comparativas en profundidad</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Enfocado en España</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-num">0€</div>
+            <div class="stat-label">Coste para el lector</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         COMPARATIVAS
+    ═══════════════════════════════════════════ -->
+    <section aria-labelledby="comparativas-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Comparativas</div>
+          <h2 id="comparativas-title">Las dudas más comunes,<br>resueltas de una vez</h2>
+          <p class="section-desc">Análisis directos para que no pierdas horas probando herramientas que no son para ti.</p>
+        </div>
+
+        <div class="grid-3">
+
+          <a href="/comparativas/chatgpt-vs-claude/" class="card" aria-label="Comparativa ChatGPT vs Claude">
+            <div class="card-icon">⚡</div>
+            <h3>ChatGPT vs Claude</h3>
+            <p>Cuál es mejor para redactar, programar o gestionar clientes. La comparativa definitiva en 2025.</p>
+            <span class="card-arrow">Leer comparativa →</span>
+          </a>
+
+          <a href="/comparativas/mejores-ia-escribir/" class="card" aria-label="Mejores herramientas IA para escribir">
+            <div class="card-icon">✍️</div>
+            <h3>Mejores IA para escribir</h3>
+            <p>Copywriters, redactores y bloggers: estas son las herramientas que de verdad ahorran tiempo.</p>
+            <span class="card-arrow">Leer comparativa →</span>
+          </a>
+
+          <a href="/comparativas/mejores-ia-diseno/" class="card" aria-label="Mejores herramientas IA para diseño">
+            <div class="card-icon purple">🎨</div>
+            <h3>Mejores IA para diseño</h3>
+            <p>Midjourney, DALL-E, Stable Diffusion… cuál elegir según tu caso de uso y presupuesto.</p>
+            <span class="card-arrow">Leer comparativa →</span>
+          </a>
+
+          <a href="/comparativas/ia-gratis-vs-pago/" class="card" aria-label="IA gratis vs de pago">
+            <div class="card-icon">💶</div>
+            <h3>IA gratis vs de pago</h3>
+            <p>¿Merece la pena pagar 20€/mes? Analizamos qué obtienes y cuándo tiene sentido invertir.</p>
+            <span class="card-arrow">Leer comparativa →</span>
+          </a>
+
+          <a href="/comparativas/chatgpt-vs-gemini/" class="card" aria-label="ChatGPT vs Gemini">
+            <div class="card-icon">🔍</div>
+            <h3>ChatGPT vs Gemini</h3>
+            <p>Google vs OpenAI. Quién gana en búsquedas, resúmenes y productividad diaria.</p>
+            <span class="card-arrow">Leer comparativa →</span>
+          </a>
+
+          <a href="/comparativas/mejores-ia-codigo/" class="card" aria-label="Mejores IA para programar">
+            <div class="card-icon purple">💻</div>
+            <h3>Mejores IA para programar</h3>
+            <p>Copilot, Cursor, Claude Code… la guía para developers y freelancers técnicos.</p>
+            <span class="card-arrow">Leer comparativa →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         HERRAMIENTAS DESTACADAS
+    ═══════════════════════════════════════════ -->
+    <section aria-labelledby="herramientas-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Herramientas</div>
+          <h2 id="herramientas-title">Las más usadas por<br>freelancers españoles</h2>
+          <p class="section-desc">Fichas completas con precios, pros, contras y para quién es cada herramienta.</p>
+        </div>
+
+        <div class="tools-grid">
+
+          <a href="/herramientas/chatgpt/" class="tool-card" aria-label="Ficha de ChatGPT">
+            <div class="tool-logo">🤖</div>
+            <div class="tool-info">
+              <h3>ChatGPT</h3>
+              <p>El más conocido. Versátil, potente y con una versión gratuita útil para empezar.</p>
+              <span class="badge badge-green">Versión gratuita</span>
+            </div>
+          </a>
+
+          <a href="/herramientas/claude/" class="tool-card" aria-label="Ficha de Claude">
+            <div class="tool-logo">🧠</div>
+            <div class="tool-info">
+              <h3>Claude</h3>
+              <p>Mejor para textos largos, análisis y conversaciones complejas. Muy preciso.</p>
+              <span class="badge badge-green">Versión gratuita</span>
+            </div>
+          </a>
+
+          <a href="/herramientas/midjourney/" class="tool-card" aria-label="Ficha de Midjourney">
+            <div class="tool-logo">🖼️</div>
+            <div class="tool-info">
+              <h3>Midjourney</h3>
+              <p>La referencia en generación de imágenes. Resultados profesionales desde el día uno.</p>
+              <span class="badge badge-orange">Solo de pago</span>
+            </div>
+          </a>
+
+          <a href="/herramientas/notion-ia/" class="tool-card" aria-label="Ficha de Notion IA">
+            <div class="tool-logo">📝</div>
+            <div class="tool-info">
+              <h3>Notion IA</h3>
+              <p>Si ya usas Notion, su IA integrada puede cambiar cómo gestionas proyectos y documentos.</p>
+              <span class="badge badge-purple">Add-on de pago</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div style="text-align:center; margin-top: 40px;">
+          <a href="/herramientas/" class="btn-ghost">Ver todas las herramientas →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GUÍAS
+    ═══════════════════════════════════════════ -->
+    <section aria-labelledby="guias-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">Guías</div>
+          <h2 id="guias-title">Aprende a usar IA<br>en tu trabajo</h2>
+          <p class="section-desc">Guías prácticas pensadas para el contexto español: fiscal, laboral y de mercado.</p>
+        </div>
+
+        <div class="guides-list">
+
+          <a href="/guias/ia-para-autonomos-espana/" class="guide-item" aria-label="Guía de IA para autónomos en España">
+            <div class="guide-left">
+              <span class="guide-num">01</span>
+              <span class="guide-title">Cómo usar IA si eres autónomo en España</span>
+            </div>
+            <span class="guide-meta">Guía completa · 15 min</span>
+          </a>
+
+          <a href="/guias/ia-para-freelancers/" class="guide-item" aria-label="Guía de IA para freelancers">
+            <div class="guide-left">
+              <span class="guide-num">02</span>
+              <span class="guide-title">IA para freelancers: las 10 tareas que puedes automatizar hoy</span>
+            </div>
+            <span class="guide-meta">Productividad · 10 min</span>
+          </a>
+
+          <a href="/guias/herramientas-ia-gratis/" class="guide-item" aria-label="Herramientas IA gratuitas">
+            <div class="guide-left">
+              <span class="guide-num">03</span>
+              <span class="guide-title">Las mejores herramientas IA gratuitas en 2025</span>
+            </div>
+            <span class="guide-meta">Sin coste · 8 min</span>
+          </a>
+
+          <a href="/guias/ia-facturas-contabilidad/" class="guide-item" aria-label="IA para facturas y contabilidad">
+            <div class="guide-left">
+              <span class="guide-num">04</span>
+              <span class="guide-title">IA para facturas y contabilidad: lo que funciona de verdad</span>
+            </div>
+            <span class="guide-meta">Fiscal · 12 min</span>
+          </a>
+
+        </div>
+
+        <div style="text-align:center; margin-top: 40px;">
+          <a href="/guias/" class="btn-ghost">Ver todas las guías →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA BANNER
+    ═══════════════════════════════════════════ -->
+    <section aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="newsletter-title">Sin spam. Solo lo que importa.</h2>
+          <p>Una vez al mes: la herramienta IA más útil para freelancers ese mes. Nada más.</p>
+          <a href="#newsletter" class="btn-primary">Suscribirme gratis</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="logo" aria-label="CompararIA – Inicio">Comparar<span>IA</span></a>
+        <ul class="footer-links">
+          <li><a href="/comparativas/">Comparativas</a></li>
+          <li><a href="/herramientas/">Herramientas</a></li>
+          <li><a href="/guias/">Guías</a></li>
+          <li><a href="/aviso-legal/">Aviso legal</a></li>
+          <li><a href="/privacidad/">Privacidad</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+        <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

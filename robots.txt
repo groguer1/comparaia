@@ -1,0 +1,13 @@
+# robots.txt – comparaia.es
+# https://www.robotstxt.org/robotstxt.html
+
+# ─── BOTS PRINCIPALES ──────────────────────────
+User-agent: *
+Allow: /
+
+# ─── EXCLUIR PÁGINAS SIN VALOR SEO ─────────────
+Disallow: /404.html
+Disallow: /buscar?
+
+# ─── SITEMAP ───────────────────────────────────
+Sitemap: https://comparaia.es/sitemap.xml

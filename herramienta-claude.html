@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Claude (Anthropic): qué es, precios y para qué sirve (2025) | CompararIA</title>
+  <meta name="description" content="Ficha completa de Claude de Anthropic en 2025. Precios, versiones, pros y contras para freelancers y autónomos en España. ¿Vale la pena pagar Claude Pro?">
+  <meta name="author" content="CompararIA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/herramientas/claude/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/herramientas/claude/">
+  <meta property="og:title" content="Claude (Anthropic): qué es, precios y para qué sirve (2025)">
+  <meta property="og:description" content="Ficha completa de Claude. Precios, versiones, pros y contras para freelancers y autónomos en España.">
+  <meta property="og:image" content="https://comparaia.es/assets/og-claude.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude (Anthropic): qué es, precios y para qué sirve (2025)">
+  <meta name="twitter:description" content="Ficha completa de Claude para freelancers y autónomos en España.">
+  <meta name="twitter:image" content="https://comparaia.es/assets/og-claude.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Claude",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "Asistente de inteligencia artificial de Anthropic. Especializado en textos largos, análisis de documentos y respuestas precisas y matizadas.",
+    "url": "https://claude.ai",
+    "author": { "@type": "Organization", "name": "Anthropic" },
+    "offers": [
+      { "@type": "Offer", "name": "Claude Free", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Claude Pro", "price": "20", "priceCurrency": "EUR", "billingIncrement": "month" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "1920"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4.6", "bestRating": "5" },
+      "author": { "@type": "Organization", "name": "CompararIA" },
+      "reviewBody": "Claude es la mejor opción para autónomos españoles que trabajan principalmente con texto. Su tono en español es notablemente más natural que el de ChatGPT, y su manejo de documentos largos no tiene rival en el mercado de consumo."
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es Claude y quién lo hace?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Claude es el asistente de IA de Anthropic, una empresa fundada en 2021 por ex-investigadores de OpenAI. Se distingue por su enfoque en seguridad, precisión y respuestas más cautelosas y matizadas." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Claude es mejor que ChatGPT?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende del uso. Claude es mejor para textos largos, análisis de documentos y redacción en español con tono natural. ChatGPT tiene ventaja en búsqueda web en tiempo real, generación de imágenes y ecosistema de integraciones." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Vale la pena pagar Claude Pro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Si usas Claude intensivamente para redacción, análisis de documentos o conversaciones largas, la versión Pro (~20€/mes) elimina los límites diarios y da acceso a los modelos más potentes. Para uso puntual, la versión gratuita es funcional." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f0c0a;
+      --bg2:      #161210;
+      --bg3:      #1e1916;
+      --surface:  #231e1a;
+      --border:   rgba(255,255,255,0.07);
+      --accent:   #d97706;
+      --accent-l: rgba(217,119,6,0.1);
+      --accent-b: rgba(217,119,6,0.25);
+      --text:     #ede8e4;
+      --muted:    #7a6f68;
+      --star:     #f59e0b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px; line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(217,119,6,0.07), transparent);
+      pointer-events: none; z-index: 0;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,12,10,0.92); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; letter-spacing: -0.03em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); padding-top: 28px; margin-bottom: 32px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; }
+
+    .tool-header {
+      display: grid; grid-template-columns: auto 1fr auto;
+      gap: 24px; align-items: start;
+      padding: 32px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 16px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .tool-logo-big {
+      width: 72px; height: 72px; border-radius: 16px;
+      background: var(--accent-l); border: 1px solid var(--accent-b);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem; flex-shrink: 0;
+    }
+
+    .tool-header-info h1 { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 6px; }
+    .tool-header-info p { font-size: 0.92rem; color: var(--muted); margin-bottom: 12px; }
+    .tool-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; padding: 3px 10px; border-radius: 4px; background: var(--accent-l); color: var(--accent); border: 1px solid var(--accent-b); }
+    .tag.gray { background: rgba(255,255,255,0.05); color: var(--muted); border-color: var(--border); }
+
+    .tool-header-score { text-align: center; flex-shrink: 0; }
+    .score-num { font-family: 'Syne', sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--accent); line-height: 1; display: block; }
+    .score-stars { color: var(--star); font-size: 0.9rem; margin: 4px 0; }
+    .score-label { font-size: 0.72rem; color: var(--muted); }
+
+    .quick-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; margin-bottom: 48px;
+    }
+    .qs-item { background: var(--bg2); padding: 20px 16px; text-align: center; }
+    .qs-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .qs-value { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); }
+    .qs-value.amber { color: var(--accent); }
+    .qs-value.muted { color: var(--muted); }
+
+    .article-body h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.35rem; font-weight: 700; letter-spacing: -0.03em;
+      margin: 52px 0 16px; padding-top: 52px; border-top: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+    .article-body p { margin-bottom: 18px; color: #c4b8b0; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+
+    .rating-list { margin: 20px 0; }
+    .rating-row { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .rating-label { font-size: 0.85rem; width: 160px; flex-shrink: 0; color: var(--text); }
+    .rating-bar-bg { flex: 1; height: 6px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+    .rating-bar { height: 100%; background: var(--accent); border-radius: 3px; }
+    .rating-score { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--accent); width: 28px; text-align: right; }
+
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .pros { background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 12px; padding: 24px; }
+    .cons { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); border-radius: 12px; padding: 24px; }
+    .pros h3, .cons h3 { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+    .pros h3 { color: var(--accent); }
+    .cons h3 { color: #ef4444; }
+    .pros ul, .cons ul { list-style: none; }
+    .pros ul li, .cons ul li { font-size: 0.87rem; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 8px; color: #c4b8b0; }
+    .pros ul li:last-child, .cons ul li:last-child { border-bottom: none; }
+    .pros ul li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cons ul li::before { content: '✗'; color: #ef4444; font-weight: 700; flex-shrink: 0; }
+
+    .planes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+    .plan-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .plan-card:hover { border-color: rgba(217,119,6,0.3); transform: translateY(-2px); }
+    .plan-card.featured { border-color: rgba(217,119,6,0.35); }
+    .plan-head { padding: 20px; border-bottom: 1px solid var(--border); background: var(--bg3); }
+    .plan-head.featured-head { background: var(--accent-l); }
+    .plan-name { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .plan-name.featured-name { color: var(--accent); }
+    .plan-price { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.04em; color: var(--text); }
+    .plan-price span { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+    .plan-body { padding: 20px; }
+    .plan-body ul { list-style: none; }
+    .plan-body ul li { font-size: 0.83rem; color: #c4b8b0; padding: 5px 0; display: flex; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .plan-body ul li:last-child { border-bottom: none; }
+    .plan-body ul li::before { content: '·'; color: var(--accent); }
+
+    .highlight { background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .highlight p { margin: 0; color: var(--text); font-size: 0.92rem; }
+
+    .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    .audience-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+    .audience-card h4 { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+    .audience-card p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+    .audience-card.yes { border-left: 3px solid var(--accent); }
+    .audience-card.no { border-left: 3px solid #ef4444; }
+
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 0.9rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--surface); user-select: none; transition: background 0.2s; }
+    .faq-q:hover { background: var(--bg3); }
+    .faq-q .icon { font-size: 1.1rem; color: var(--accent); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; font-size: 0.88rem; color: var(--muted); background: var(--bg2); }
+    .faq-a.open { max-height: 300px; padding: 16px 20px; }
+    .faq-q.active .icon { transform: rotate(45deg); }
+
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 48px; }
+    .related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+    .related-card:hover { border-color: rgba(217,119,6,0.3); }
+    .related-card .rtag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .related-card p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    .cta-box { background: var(--accent-l); border: 1px solid var(--accent-b); border-radius: 14px; padding: 36px 32px; text-align: center; margin: 48px 0; }
+    .cta-box h2 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .cta-box p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .btn-primary { background: var(--accent); color: #0f0c0a; padding: 12px 26px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(217,119,6,0.3); }
+    .btn-ghost { background: transparent; color: var(--text); padding: 12px 26px; border-radius: 8px; font-weight: 500; font-size: 0.9rem; text-decoration: none; border: 1px solid var(--border); display: inline-block; margin-left: 10px; transition: border-color 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 32px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 640px) {
+      .tool-header { grid-template-columns: auto 1fr; }
+      .tool-header-score { display: none; }
+      .quick-stats { grid-template-columns: 1fr 1fr; }
+      .pros-cons, .planes-grid, .audience-grid, .related-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .btn-ghost { margin: 10px 0 0; display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="logo">Comparar<span>IA</span></a>
+      <ul class="nav-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <nav aria-label="Ruta de navegación">
+        <p class="breadcrumb">
+          <a href="/">Inicio</a><span>›</span>
+          <a href="/herramientas/">Herramientas</a><span>›</span>
+          Claude
+        </p>
+      </nav>
+
+      <header class="tool-header" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <div class="tool-logo-big" aria-hidden="true">🧠</div>
+        <div class="tool-header-info">
+          <h1 itemprop="name">Claude</h1>
+          <p itemprop="description">Asistente de IA de Anthropic. El mejor para textos en español, análisis de documentos y conversaciones precisas.</p>
+          <div class="tool-tags">
+            <span class="tag">Texto</span>
+            <span class="tag">Análisis</span>
+            <span class="tag">Documentos</span>
+            <span class="tag">Código</span>
+            <span class="tag gray">Web · iOS · Android</span>
+          </div>
+        </div>
+        <div class="tool-header-score" aria-label="Puntuación 4.6 sobre 5">
+          <span class="score-num">4.6</span>
+          <div class="score-stars" aria-hidden="true">★★★★½</div>
+          <div class="score-label">Puntuación CompararIA</div>
+        </div>
+      </header>
+
+      <div class="quick-stats" role="list" aria-label="Datos rápidos de Claude">
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Precio mínimo</div>
+          <div class="qs-value amber">Gratis</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Plan de pago</div>
+          <div class="qs-value">~20 €/mes</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Búsqueda web</div>
+          <div class="qs-value muted">Limitada</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Genera imágenes</div>
+          <div class="qs-value muted">No</div>
+        </div>
+      </div>
+
+      <article class="article-body">
+
+        <h2>¿Qué es Claude?</h2>
+
+        <p>Claude es el asistente de inteligencia artificial de <strong>Anthropic</strong>, una empresa fundada en 2021 por ex-investigadores de OpenAI — entre ellos varios de los creadores originales de ChatGPT. Su filosofía de diseño pone el foco en la <strong>seguridad, la precisión y el razonamiento cuidadoso</strong>.</p>
+
+        <p>A diferencia de ChatGPT, Claude no intenta ser la navaja suiza de la IA. Su apuesta es más enfocada: ser el mejor asistente posible para tareas de <strong>texto, análisis y razonamiento</strong>. Y en ese terreno, actualmente no tiene rival.</p>
+
+        <div class="highlight">
+          <p><strong>Por qué lo recomendamos para autónomos españoles:</strong> Claude produce textos en español con un tono notablemente más natural y menos "traducido". Para presupuestos, propuestas comerciales, emails formales y contratos, la diferencia se nota.</p>
+        </div>
+
+        <h2>Puntuaciones por categoría</h2>
+
+        <div class="rating-list" aria-label="Puntuaciones por categoría">
+          <div class="rating-row">
+            <span class="rating-label">Redacción en español</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:93%"></div></div>
+            <span class="rating-score">9.3</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Textos largos</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:95%"></div></div>
+            <span class="rating-score">9.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Análisis de documentos</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:92%"></div></div>
+            <span class="rating-score">9.2</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Programación</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:85%"></div></div>
+            <span class="rating-score">8.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Búsqueda web</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:55%"></div></div>
+            <span class="rating-score">5.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Precisión y fiabilidad</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:92%"></div></div>
+            <span class="rating-score">9.2</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Facilidad de uso</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:90%"></div></div>
+            <span class="rating-score">9.0</span>
+          </div>
+        </div>
+
+        <h2>Pros y contras</h2>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>✓ Puntos fuertes</h3>
+            <ul>
+              <li>El mejor tono en español del mercado</li>
+              <li>Ventana de contexto enorme — ideal para documentos largos</li>
+              <li>Más cauteloso: dice cuándo no sabe algo</li>
+              <li>Excelente para análisis, contratos y propuestas</li>
+              <li>Razonamiento más matizado en temas complejos</li>
+              <li>Versión gratuita muy funcional</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>✗ Puntos débiles</h3>
+            <ul>
+              <li>Sin búsqueda web en tiempo real en versión gratuita</li>
+              <li>No genera imágenes</li>
+              <li>Menos integraciones con herramientas externas</li>
+              <li>Ecosistema más pequeño que ChatGPT</li>
+              <li>Menos conocido, menos tutoriales disponibles</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Planes y precios</h2>
+
+        <div class="planes-grid">
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Free</div>
+              <div class="plan-price">0 <span>€/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Acceso a Claude Sonnet</li>
+                <li>Límite de mensajes diarios</li>
+                <li>Subida de documentos y PDFs</li>
+                <li>Sin memoria persistente</li>
+                <li>App móvil incluida</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card featured">
+            <div class="plan-head featured-head">
+              <div class="plan-name featured-name">Pro ⭐ Recomendado</div>
+              <div class="plan-price">~20 <span>€/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Claude Opus (modelo más potente)</li>
+                <li>5× más uso que la versión gratuita</li>
+                <li>Acceso prioritario en horas punta</li>
+                <li>Proyectos con contexto persistente</li>
+                <li>Nuevas funciones antes que nadie</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Team</div>
+              <div class="plan-price">~25 <span>€/usuario/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Todo lo de Pro</li>
+                <li>Espacio de trabajo compartido</li>
+                <li>Datos no usados para entrenar</li>
+                <li>Panel de administración</li>
+                <li>Mínimo 2 usuarios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2>¿Para quién es Claude?</h2>
+
+        <div class="audience-grid">
+          <div class="audience-card yes">
+            <h4>✓ Redactores y copywriters</h4>
+            <p>El tono más natural en español del mercado. Artículos, propuestas y emails que no suenan a IA.</p>
+          </div>
+          <div class="audience-card yes">
+            <h4>✓ Consultores y analistas</h4>
+            <p>Analiza contratos, informes y documentos largos sin perder el hilo. Contexto de hasta 200.000 tokens.</p>
+          </div>
+          <div class="audience-card yes">
+            <h4>✓ Autónomos con mucha documentación</h4>
+            <p>Presupuestos, contratos, condiciones de servicio. Claude redacta en español formal sin esfuerzo.</p>
+          </div>
+          <div class="audience-card no">
+            <h4>✗ Quizás no es para ti si…</h4>
+            <p>Necesitas búsqueda web actualizada constantemente o generar imágenes. Para eso ChatGPT tiene ventaja clara.</p>
+          </div>
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿Qué es Claude y quién lo hace?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Claude es el asistente de IA de Anthropic, empresa fundada en 2021 por ex-investigadores de OpenAI. Se distingue por su enfoque en seguridad, precisión y respuestas más matizadas. Su sede está en San Francisco y está respaldada por Google e importantes fondos de capital riesgo.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿Claude es mejor que ChatGPT?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Depende del uso. Claude gana en redacción en español, textos largos y análisis de documentos. ChatGPT gana en búsqueda web, generación de imágenes e integraciones. Para autónomos que trabajan principalmente con texto, Claude suele dar mejores resultados.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿Vale la pena pagar Claude Pro?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Si lo usas intensivamente para redacción o análisis de documentos, sí. La versión Pro da acceso a Claude Opus (el modelo más potente), elimina los límites diarios y permite crear proyectos con contexto persistente — muy útil si trabajas en proyectos largos con un mismo cliente.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿Puedo subir documentos a Claude?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Sí, desde la versión gratuita. Claude acepta PDFs, documentos Word y archivos de texto. Puede resumirlos, analizarlos, extraer información clave o responder preguntas sobre su contenido. Es una de sus funciones más valoradas por consultores y analistas.
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+      <div class="cta-box">
+        <h2>¿Claude o ChatGPT para tu trabajo?</h2>
+        <p>Lee nuestra comparativa directa y decide cuál se adapta mejor a lo que necesitas.</p>
+        <a href="/comparativas/chatgpt-vs-claude/" class="btn-primary">Ver comparativa completa</a>
+        <a href="/herramientas/chatgpt/" class="btn-ghost">Ver ficha de ChatGPT</a>
+      </div>
+
+      <nav aria-label="Contenido relacionado">
+        <div class="related-grid">
+          <a href="/comparativas/chatgpt-vs-claude/" class="related-card">
+            <div class="rtag">Comparativa</div>
+            <h3>ChatGPT vs Claude</h3>
+            <p>Análisis directo entre las dos mejores IAs para freelancers.</p>
+          </a>
+          <a href="/guias/ia-para-autonomos-espana/" class="related-card">
+            <div class="rtag">Guía</div>
+            <h3>IA para autónomos en España</h3>
+            <p>Cómo sacar partido a la IA en tu trabajo del día a día.</p>
+          </a>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-expanded','false'); });
+        if (!isOpen) { answer.classList.add('open'); btn.classList.add('active'); btn.setAttribute('aria-expanded','true'); }
+      });
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
+    });
+  </script>
+
+</body>
+</html>

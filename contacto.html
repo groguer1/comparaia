@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contacto | CompararIA</title>
+  <meta name="description" content="Contacta con CompararIA. Sugerencias, colaboraciones, correcciones o cualquier consulta sobre nuestras comparativas de herramientas de IA.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/contacto/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comparaia.es/contacto/">
+  <meta property="og:title" content="Contacto | CompararIA">
+  <meta property="og:site_name" content="CompararIA">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f; --bg2: #111118; --surface: #1e1e2e;
+      --border: rgba(255,255,255,0.07); --accent: #00e5a0;
+      --text: #e8e8f0; --muted: #7a7a9a;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.9); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; height: 60px; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; letter-spacing: -0.03em; }
+    .logo span { color: var(--accent); }
+
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); padding-top: 28px; margin-bottom: 32px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; }
+
+    .page-header { padding: 8px 0 40px; margin-bottom: 48px; }
+    .page-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.2); padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+    h1 { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 12px; }
+    .page-intro { font-size: 1rem; color: var(--muted); max-width: 500px; }
+
+    /* Opciones de contacto */
+    .contact-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; }
+
+    .contact-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px 28px;
+      display: flex; align-items: center; gap: 20px;
+      text-decoration: none; color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .contact-card:hover { border-color: rgba(0,229,160,0.3); transform: translateX(4px); }
+
+    .contact-icon {
+      width: 48px; height: 48px; border-radius: 10px;
+      background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+    }
+
+    .contact-info h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 3px; }
+    .contact-info p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+    .contact-value { font-size: 0.88rem; color: var(--accent); margin-top: 4px; }
+
+    .contact-arrow { margin-left: auto; color: var(--muted); font-size: 1.1rem; flex-shrink: 0; }
+
+    /* Motivos de contacto */
+    .reasons { margin-bottom: 48px; }
+    .reasons h2 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+
+    .reason-list { list-style: none; }
+    .reason-list li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: #b8b8c8; }
+    .reason-list li:last-child { border-bottom: none; }
+    .reason-list li::before { content: '→'; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+
+    /* Nota */
+    .note { background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.15); border-radius: 10px; padding: 20px 24px; }
+    .note p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+    .note strong { color: var(--text); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 64px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="logo">Comparar<span>IA</span></a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <nav aria-label="Ruta de navegación">
+        <p class="breadcrumb">
+          <a href="/">Inicio</a><span>›</span>Contacto
+        </p>
+      </nav>
+
+      <header class="page-header">
+        <span class="page-tag">Contacto</span>
+        <h1>Hablemos</h1>
+        <p class="page-intro">Sugerencias, correcciones, colaboraciones o cualquier pregunta. Respondemos en menos de 48 horas.</p>
+      </header>
+
+      <!-- OPCIONES DE CONTACTO -->
+      <div class="contact-options">
+
+        <a href="mailto:contacto@comparaia.es" class="contact-card" aria-label="Enviar email a contacto@comparaia.es">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <h3>Email general</h3>
+            <p>Consultas, sugerencias y colaboraciones</p>
+            <div class="contact-value">contacto@comparaia.es</div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="mailto:privacidad@comparaia.es" class="contact-card" aria-label="Enviar email a privacidad@comparaia.es">
+          <div class="contact-icon">🔒</div>
+          <div class="contact-info">
+            <h3>Privacidad y datos</h3>
+            <p>Ejercicio de derechos RGPD y protección de datos</p>
+            <div class="contact-value">privacidad@comparaia.es</div>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+      </div>
+
+      <!-- MOTIVOS -->
+      <div class="reasons">
+        <h2>¿En qué podemos ayudarte?</h2>
+        <ul class="reason-list">
+          <li>Corrección de un dato incorrecto en alguna comparativa o ficha de herramienta</li>
+          <li>Sugerencia de una herramienta de IA que debería estar en el sitio</li>
+          <li>Propuesta de colaboración editorial o intercambio de contenido</li>
+          <li>Consulta sobre publicidad o patrocinios (siempre marcados como tal)</li>
+          <li>Ejercicio de derechos sobre datos personales</li>
+          <li>Cualquier otra consulta relacionada con el sitio</li>
+        </ul>
+      </div>
+
+      <!-- NOTA -->
+      <div class="note">
+        <p><strong>Nota sobre afiliados:</strong> CompararIA puede incluir enlaces de afiliación en algunas páginas. Esto significa que podemos recibir una pequeña comisión si adquieres un producto o servicio a través de nuestros enlaces, sin ningún coste adicional para ti. Nunca aceptamos dinero para alterar nuestras valoraciones.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/aviso-legal/">Aviso Legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · David Mateos Pascual</p>
+    </div>
+  </footer>
+
+</body>
+</html>

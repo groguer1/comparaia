@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ChatGPT: qué es, cómo funciona y para qué sirve (2025) | CompararIA</title>
+  <meta name="description" content="Ficha completa de ChatGPT en 2025. Precios, versiones, pros y contras, casos de uso para freelancers y autónomos en España. ¿Vale la pena pagar ChatGPT Plus?">
+  <meta name="author" content="CompararIA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/herramientas/chatgpt/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/herramientas/chatgpt/">
+  <meta property="og:title" content="ChatGPT: qué es, cómo funciona y para qué sirve (2025)">
+  <meta property="og:description" content="Ficha completa de ChatGPT. Precios, versiones, pros y contras para freelancers y autónomos en España.">
+  <meta property="og:image" content="https://comparaia.es/assets/og-chatgpt.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChatGPT: qué es, cómo funciona y para qué sirve (2025)">
+  <meta name="twitter:description" content="Ficha completa de ChatGPT para freelancers y autónomos en España.">
+  <meta name="twitter:image" content="https://comparaia.es/assets/og-chatgpt.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ChatGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "Asistente de inteligencia artificial de OpenAI. Genera texto, código, imágenes y responde preguntas con acceso a internet.",
+    "url": "https://chat.openai.com",
+    "author": { "@type": "Organization", "name": "OpenAI" },
+    "offers": [
+      { "@type": "Offer", "name": "ChatGPT Free", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "ChatGPT Plus", "price": "20", "priceCurrency": "EUR", "billingIncrement": "month" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "2840"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" },
+      "author": { "@type": "Organization", "name": "CompararIA" },
+      "reviewBody": "ChatGPT es la herramienta de IA más versátil del mercado. Su punto fuerte es el ecosistema de integraciones y el acceso a búsqueda web en tiempo real. Ideal para freelancers que necesitan una sola herramienta para todo."
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿ChatGPT es gratis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, ChatGPT tiene una versión gratuita completamente funcional. La versión de pago (ChatGPT Plus, ~20€/mes) da acceso al modelo más potente (GPT-4o), menos limitaciones de uso y funciones como generación de imágenes con DALL-E." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Vale la pena pagar ChatGPT Plus?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende de la intensidad de uso. Si lo usas más de 1-2 horas diarias para trabajo, la versión Plus elimina los límites que cortan el flujo de trabajo. Si lo usas puntualmente, la versión gratuita es suficiente." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿ChatGPT habla bien el español?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, ChatGPT funciona bien en español. Aunque su entrenamiento tiene más datos en inglés, los resultados en español son de alta calidad. Para textos muy formales o con matices locales españoles, Claude puede dar resultados algo más naturales." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0c0e0a;
+      --bg2:      #12140f;
+      --bg3:      #1a1d16;
+      --surface:  #1e2119;
+      --border:   rgba(255,255,255,0.07);
+      --accent:   #10a37f;
+      --accent-l: rgba(16,163,127,0.12);
+      --accent-b: rgba(16,163,127,0.25);
+      --text:     #e6ede6;
+      --muted:    #6b7a6b;
+      --star:     #f59e0b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Diagonal stripes background */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(16,163,127,0.015) 40px,
+        rgba(16,163,127,0.015) 41px
+      );
+      pointer-events: none; z-index: 0;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* ─── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(12,14,10,0.92); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; letter-spacing: -0.03em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── BREADCRUMB ── */
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); padding-top: 28px; margin-bottom: 32px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* ─── TOOL HEADER ── */
+    .tool-header {
+      display: grid; grid-template-columns: auto 1fr auto;
+      gap: 24px; align-items: start;
+      padding: 32px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 16px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .tool-logo-big {
+      width: 72px; height: 72px; border-radius: 16px;
+      background: var(--accent-l); border: 1px solid var(--accent-b);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem; flex-shrink: 0;
+    }
+
+    .tool-header-info h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem; font-weight: 800; letter-spacing: -0.04em;
+      margin-bottom: 6px;
+    }
+
+    .tool-header-info p { font-size: 0.92rem; color: var(--muted); margin-bottom: 12px; }
+
+    .tool-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    .tag {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+      padding: 3px 10px; border-radius: 4px;
+      background: var(--accent-l); color: var(--accent);
+      border: 1px solid var(--accent-b);
+    }
+
+    .tag.gray { background: rgba(255,255,255,0.05); color: var(--muted); border-color: var(--border); }
+
+    .tool-header-score { text-align: center; flex-shrink: 0; }
+
+    .score-num {
+      font-family: 'Syne', sans-serif; font-size: 2.8rem; font-weight: 800;
+      color: var(--accent); line-height: 1; display: block;
+    }
+
+    .score-stars { color: var(--star); font-size: 0.9rem; margin: 4px 0; }
+    .score-label { font-size: 0.72rem; color: var(--muted); }
+
+    /* ─── QUICK STATS ── */
+    .quick-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; margin-bottom: 48px;
+    }
+
+    .qs-item {
+      background: var(--bg2); padding: 20px 16px; text-align: center;
+    }
+
+    .qs-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+    .qs-value { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); }
+    .qs-value.green { color: var(--accent); }
+
+    /* ─── BODY ── */
+    .article-body h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.35rem; font-weight: 700; letter-spacing: -0.03em;
+      margin: 52px 0 16px; padding-top: 52px; border-top: 1px solid var(--border);
+      scroll-margin-top: 80px;
+    }
+
+    .article-body p { margin-bottom: 18px; color: #b0bdb0; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+
+    /* ─── PROS CONS ── */
+    .pros-cons {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin: 24px 0;
+    }
+
+    .pros, .cons {
+      border-radius: 12px; padding: 24px;
+    }
+
+    .pros { background: rgba(16,163,127,0.06); border: 1px solid rgba(16,163,127,0.18); }
+    .cons { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); }
+
+    .pros h3, .cons h3 {
+      font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px;
+    }
+
+    .pros h3 { color: var(--accent); }
+    .cons h3 { color: #ef4444; }
+
+    .pros ul, .cons ul { list-style: none; }
+
+    .pros ul li, .cons ul li {
+      font-size: 0.87rem; padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex; gap: 8px; color: #b0bdb0;
+    }
+
+    .pros ul li:last-child, .cons ul li:last-child { border-bottom: none; }
+    .pros ul li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cons ul li::before { content: '✗'; color: #ef4444; font-weight: 700; flex-shrink: 0; }
+
+    /* ─── PLANES ── */
+    .planes-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 16px; margin: 24px 0;
+    }
+
+    .plan-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .plan-card:hover { border-color: rgba(16,163,127,0.3); transform: translateY(-2px); }
+    .plan-card.featured { border-color: rgba(16,163,127,0.35); }
+
+    .plan-head {
+      padding: 20px; border-bottom: 1px solid var(--border);
+      background: var(--bg3);
+    }
+
+    .plan-head.featured-head { background: var(--accent-l); }
+
+    .plan-name {
+      font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+
+    .plan-name.featured-name { color: var(--accent); }
+
+    .plan-price {
+      font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
+      letter-spacing: -0.04em; color: var(--text);
+    }
+
+    .plan-price sup { font-size: 1rem; vertical-align: super; }
+    .plan-price span { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+
+    .plan-body { padding: 20px; }
+    .plan-body ul { list-style: none; }
+    .plan-body ul li {
+      font-size: 0.83rem; color: #b0bdb0; padding: 5px 0;
+      display: flex; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .plan-body ul li:last-child { border-bottom: none; }
+    .plan-body ul li::before { content: '·'; color: var(--accent); }
+
+    /* ─── RATING BARS ── */
+    .rating-list { margin: 20px 0; }
+    .rating-row {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 12px;
+    }
+    .rating-label { font-size: 0.85rem; width: 160px; flex-shrink: 0; color: var(--text); }
+    .rating-bar-bg { flex: 1; height: 6px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+    .rating-bar { height: 100%; background: var(--accent); border-radius: 3px; transition: width 1s ease; }
+    .rating-score { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--accent); width: 28px; text-align: right; }
+
+    /* ─── PARA QUIEN ── */
+    .audience-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0;
+    }
+
+    .audience-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 18px;
+    }
+
+    .audience-card h4 { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+    .audience-card p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+    .audience-card.yes { border-left: 3px solid var(--accent); }
+    .audience-card.no { border-left: 3px solid #ef4444; }
+
+    /* ─── FAQ ── */
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 0.9rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--surface); user-select: none; transition: background 0.2s; }
+    .faq-q:hover { background: var(--bg3); }
+    .faq-q .icon { font-size: 1.1rem; color: var(--accent); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; font-size: 0.88rem; color: var(--muted); background: var(--bg2); }
+    .faq-a.open { max-height: 300px; padding: 16px 20px; }
+    .faq-q.active .icon { transform: rotate(45deg); }
+
+    /* ─── RELATED ── */
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 48px; }
+    .related-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 20px; text-decoration: none; color: inherit; transition: border-color 0.2s;
+    }
+    .related-card:hover { border-color: rgba(16,163,127,0.3); }
+    .related-card .rtag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .related-card p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    /* ─── CTA ── */
+    .cta-box {
+      background: var(--accent-l); border: 1px solid var(--accent-b);
+      border-radius: 14px; padding: 36px 32px; text-align: center; margin: 48px 0;
+    }
+    .cta-box h2 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .cta-box p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .btn-primary { background: var(--accent); color: #0c0e0a; padding: 12px 26px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(16,163,127,0.3); }
+    .btn-ghost { background: transparent; color: var(--text); padding: 12px 26px; border-radius: 8px; font-weight: 500; font-size: 0.9rem; text-decoration: none; border: 1px solid var(--border); display: inline-block; margin-left: 10px; transition: border-color 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); }
+
+    /* ─── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 32px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 640px) {
+      .tool-header { grid-template-columns: auto 1fr; }
+      .tool-header-score { display: none; }
+      .quick-stats { grid-template-columns: 1fr 1fr; }
+      .pros-cons { grid-template-columns: 1fr; }
+      .planes-grid { grid-template-columns: 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .btn-ghost { margin: 10px 0 0; display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="logo">Comparar<span>IA</span></a>
+      <ul class="nav-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <nav aria-label="Ruta de navegación">
+        <p class="breadcrumb">
+          <a href="/">Inicio</a><span>›</span>
+          <a href="/herramientas/">Herramientas</a><span>›</span>
+          ChatGPT
+        </p>
+      </nav>
+
+      <!-- CABECERA DE HERRAMIENTA -->
+      <header class="tool-header" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <div class="tool-logo-big" aria-hidden="true">🤖</div>
+        <div class="tool-header-info">
+          <h1 itemprop="name">ChatGPT</h1>
+          <p itemprop="description">Asistente de IA de OpenAI. El más conocido y con el ecosistema más amplio del mercado.</p>
+          <div class="tool-tags">
+            <span class="tag">Texto</span>
+            <span class="tag">Imágenes</span>
+            <span class="tag">Código</span>
+            <span class="tag">Búsqueda web</span>
+            <span class="tag gray">Web · iOS · Android</span>
+          </div>
+        </div>
+        <div class="tool-header-score" aria-label="Puntuación 4.5 sobre 5">
+          <span class="score-num">4.5</span>
+          <div class="score-stars" aria-hidden="true">★★★★½</div>
+          <div class="score-label">Puntuación CompararIA</div>
+        </div>
+      </header>
+
+      <!-- STATS RÁPIDOS -->
+      <div class="quick-stats" role="list" aria-label="Datos rápidos de ChatGPT">
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Precio mínimo</div>
+          <div class="qs-value green">Gratis</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Plan de pago</div>
+          <div class="qs-value">~20 €/mes</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Búsqueda web</div>
+          <div class="qs-value green">Sí</div>
+        </div>
+        <div class="qs-item" role="listitem">
+          <div class="qs-label">Genera imágenes</div>
+          <div class="qs-value green">Sí (DALL-E)</div>
+        </div>
+      </div>
+
+      <article class="article-body">
+
+        <h2>¿Qué es ChatGPT?</h2>
+
+        <p>ChatGPT es el asistente de inteligencia artificial desarrollado por <strong>OpenAI</strong>. Fue lanzado en noviembre de 2022 y en pocas semanas se convirtió en la herramienta de IA más usada del mundo, alcanzando 100 millones de usuarios en tiempo récord.</p>
+
+        <p>Funciona como una conversación: tú escribes una pregunta o una instrucción, y ChatGPT responde. Puede redactar textos, responder preguntas, analizar documentos, generar código, crear imágenes y buscar información en internet en tiempo real.</p>
+
+        <p>Para un freelancer o autónomo en España, su principal ventaja es la <strong>versatilidad</strong>: es la navaja suiza de las herramientas de IA.</p>
+
+        <h2>Puntuaciones por categoría</h2>
+
+        <div class="rating-list" aria-label="Puntuaciones por categoría">
+          <div class="rating-row">
+            <span class="rating-label">Redacción en español</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:80%"></div></div>
+            <span class="rating-score">8.0</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Programación</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:90%"></div></div>
+            <span class="rating-score">9.0</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Búsqueda web</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:92%"></div></div>
+            <span class="rating-score">9.2</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Análisis de docs</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:75%"></div></div>
+            <span class="rating-score">7.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Generación de imágenes</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:82%"></div></div>
+            <span class="rating-score">8.2</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Facilidad de uso</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:95%"></div></div>
+            <span class="rating-score">9.5</span>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Integraciones</span>
+            <div class="rating-bar-bg"><div class="rating-bar" style="width:93%"></div></div>
+            <span class="rating-score">9.3</span>
+          </div>
+        </div>
+
+        <h2>Pros y contras</h2>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>✓ Puntos fuertes</h3>
+            <ul>
+              <li>Búsqueda web en tiempo real integrada</li>
+              <li>Generación de imágenes con DALL-E incluida</li>
+              <li>El ecosistema de integraciones más amplio (Zapier, Make, plugins)</li>
+              <li>Versión gratuita muy funcional</li>
+              <li>App móvil iOS y Android de alta calidad</li>
+              <li>Memoria entre conversaciones (versión de pago)</li>
+              <li>La comunidad más grande: más tutoriales, más recursos</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>✗ Puntos débiles</h3>
+            <ul>
+              <li>Puede inventar datos con aparente seguridad</li>
+              <li>Textos en español a veces suenen algo genéricos</li>
+              <li>Contexto limitado para documentos muy largos</li>
+              <li>Límites de uso en versión gratuita (se cortan en momentos clave)</li>
+              <li>Precio en euros sujeto a tipo de cambio</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Planes y precios</h2>
+
+        <div class="planes-grid">
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Free</div>
+              <div class="plan-price">0 <span>€/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Acceso a GPT-4o mini</li>
+                <li>Límite de mensajes diarios</li>
+                <li>Búsqueda web limitada</li>
+                <li>Sin memoria persistente</li>
+                <li>App móvil incluida</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card featured">
+            <div class="plan-head featured-head">
+              <div class="plan-name featured-name">Plus ⭐ Recomendado</div>
+              <div class="plan-price">~20 <span>€/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>GPT-4o completo sin límites</li>
+                <li>Búsqueda web ilimitada</li>
+                <li>DALL-E 3 para imágenes</li>
+                <li>Memoria entre conversaciones</li>
+                <li>Acceso prioritario a nuevas funciones</li>
+              </ul>
+            </div>
+          </div>
+          <div class="plan-card">
+            <div class="plan-head">
+              <div class="plan-name">Team</div>
+              <div class="plan-price">~25 <span>€/usuario/mes</span></div>
+            </div>
+            <div class="plan-body">
+              <ul>
+                <li>Todo lo de Plus</li>
+                <li>Espacio de trabajo compartido</li>
+                <li>Datos no usados para entrenar</li>
+                <li>Mínimo 2 usuarios</li>
+                <li>Panel de administración</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2>¿Para quién es ChatGPT?</h2>
+
+        <div class="audience-grid">
+          <div class="audience-card yes">
+            <h4>✓ Ideal para ti si…</h4>
+            <p>Necesitas búsqueda web actualizada, generas imágenes, programas, o quieres conectar la IA con otras herramientas como Zapier o Make.</p>
+          </div>
+          <div class="audience-card yes">
+            <h4>✓ Community managers</h4>
+            <p>Búsqueda de tendencias, generación de imágenes y redacción de posts. Todo en una sola herramienta.</p>
+          </div>
+          <div class="audience-card yes">
+            <h4>✓ Desarrolladores</h4>
+            <p>El mejor ecosistema de plugins e integraciones. Copilot y GPT-4 dominan el flujo de trabajo técnico.</p>
+          </div>
+          <div class="audience-card no">
+            <h4>✗ Quizás no es para ti si…</h4>
+            <p>Tu trabajo es principalmente redactar textos largos o analizar documentos extensos en español. En ese caso Claude puede darte mejores resultados.</p>
+          </div>
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿ChatGPT es gratis?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Sí, tiene versión gratuita completamente funcional. Los límites aparecen cuando lo usas intensivamente a diario. ChatGPT Plus (~20€/mes) elimina esas restricciones y añade funciones como DALL-E y búsqueda web ilimitada.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿Vale la pena pagar ChatGPT Plus?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Si lo usas más de 1-2 horas diarias para trabajo, sí. Los límites de la versión gratuita cortan el flujo en los momentos más productivos. Si lo usas de forma puntual, la versión gratuita es más que suficiente.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿ChatGPT habla bien el español?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Sí, con alta calidad. Para textos muy formales o con matices locales españoles, Claude puede dar resultados algo más naturales. Pero para el 90% de los casos de uso, ChatGPT en español funciona muy bien.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              ¿Puedo deducirme ChatGPT Plus como autónomo?
+              <span class="icon">+</span>
+            </div>
+            <div class="faq-a">
+              Sí, si lo usas para tu actividad profesional. Solicita factura a nombre de tu actividad. Consulta nuestra guía completa sobre fiscalidad de herramientas IA para autónomos.
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h2>¿ChatGPT o Claude para tu trabajo?</h2>
+        <p>Lee nuestra comparativa directa y decide cuál se adapta mejor a lo que necesitas.</p>
+        <a href="/comparativas/chatgpt-vs-claude/" class="btn-primary">Ver comparativa completa</a>
+        <a href="/herramientas/claude/" class="btn-ghost">Ver ficha de Claude</a>
+      </div>
+
+      <!-- RELACIONADOS -->
+      <nav aria-label="Contenido relacionado">
+        <div class="related-grid">
+          <a href="/comparativas/chatgpt-vs-claude/" class="related-card">
+            <div class="rtag">Comparativa</div>
+            <h3>ChatGPT vs Claude</h3>
+            <p>Análisis directo entre las dos mejores IAs para freelancers.</p>
+          </a>
+          <a href="/guias/ia-para-autonomos-espana/" class="related-card">
+            <div class="rtag">Guía</div>
+            <h3>IA para autónomos en España</h3>
+            <p>Cómo sacar partido a la IA en tu trabajo del día a día.</p>
+          </a>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-expanded','false'); });
+        if (!isOpen) { answer.classList.add('open'); btn.classList.add('active'); btn.setAttribute('aria-expanded','true'); }
+      });
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); } });
+    });
+  </script>
+
+</body>
+</html>
