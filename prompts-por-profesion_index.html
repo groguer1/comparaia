@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompts de IA por profesión: biblioteca para freelancers en España (2025) | CompararIA</title>
+  <meta name="description" content="Biblioteca de prompts de IA específicos para cada profesión freelance en España. Redactores, diseñadores, desarrolladores, consultores, fotógrafos. Listos para copiar y usar hoy.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/prompts-por-profesion/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comparaia.es/prompts-por-profesion/">
+  <meta property="og:title" content="Prompts de IA por profesión: biblioteca para freelancers en España">
+  <meta property="og:description" content="Prompts específicos para redactores, diseñadores, desarrolladores, consultores y más. Listos para copiar.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Prompts de IA por profesión: biblioteca para freelancers en España (2025)","datePublished":"2025-02-01T00:00:00+01:00","author":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"},"publisher":{"@type":"Organization","name":"CompararIA"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/prompts-por-profesion/"},"inLanguage":"es-ES","keywords":"prompts IA redactor, prompts diseñador IA, prompts freelance España, prompts ChatGPT profesiones, prompts Claude autónomo"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+    .orb{position:fixed;border-radius:50%;filter:blur(130px);pointer-events:none;z-index:0}
+    .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-150px;left:-150px}
+    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,111,255,0.06) 0%,transparent 70%);bottom:0;right:-100px}
+    nav{padding:20px 0;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .page{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+    /* HERO */
+    .hero{padding:64px 0 48px;text-align:center;animation:fadeUp 0.5s ease both}
+    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 16px;border-radius:100px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px}
+    .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-0.04em;line-height:1.1;margin-bottom:16px}
+    .hero h1 span{color:var(--accent)}
+    .hero p{color:var(--muted);font-size:1.05rem;max-width:560px;margin:0 auto 32px}
+    .hero-stats{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+    .hs{font-size:0.82rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+    .hs strong{color:var(--accent)}
+
+    /* PROFESSION TABS */
+    .prof-nav{display:flex;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:48px;flex-wrap:wrap}
+    .prof-tab{flex:1;min-width:120px;padding:14px 8px;text-align:center;cursor:pointer;transition:all 0.2s;border-right:1px solid var(--border);font-size:0.82rem;font-weight:600;color:var(--muted);background:var(--surface)}
+    .prof-tab:last-child{border-right:none}
+    .prof-tab:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+    .prof-tab.active{background:rgba(0,229,160,0.08);color:var(--accent);border-bottom:2px solid var(--accent)}
+    .prof-tab .pt-icon{display:block;font-size:1.4rem;margin-bottom:4px}
+
+    /* SECTION */
+    .prof-section{display:none}
+    .prof-section.active{display:block;animation:fadeUp 0.3s ease both}
+
+    .section-header{margin-bottom:32px}
+    .section-header h2{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:8px}
+    .section-header p{color:var(--muted);font-size:0.95rem;max-width:600px}
+    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:32px 0 16px;display:flex;align-items:center;gap:12px}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+    /* PROMPT CARDS */
+    .prompts-grid{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
+    .prompt-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s}
+    .prompt-card:hover{border-color:rgba(0,229,160,0.25)}
+    .prompt-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;user-select:none;gap:12px}
+    .ph-left{display:flex;align-items:center;gap:12px;flex:1}
+    .ph-icon{width:36px;height:36px;border-radius:10px;background:rgba(0,229,160,0.08);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .ph-title{font-size:0.92rem;font-weight:700;color:var(--text)}
+    .ph-sub{font-size:0.78rem;color:var(--muted);margin-top:1px}
+    .ph-badges{display:flex;gap:6px;flex-shrink:0}
+    .ph-badge{font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:6px}
+    .ph-badge.claude{background:rgba(0,229,160,0.1);color:var(--accent)}
+    .ph-badge.chatgpt{background:rgba(124,111,255,0.1);color:var(--accent2)}
+    .ph-badge.ambos{background:rgba(255,255,255,0.06);color:var(--muted)}
+    .ph-toggle{color:var(--accent);font-size:1.2rem;font-weight:300;transition:transform 0.3s;flex-shrink:0}
+    .prompt-card.open .ph-toggle{transform:rotate(45deg)}
+    .prompt-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+    .prompt-card.open .prompt-body{max-height:800px}
+    .prompt-text{padding:18px 20px;border-top:1px solid var(--border);background:rgba(0,0,0,0.2);font-family:monospace;font-size:0.83rem;line-height:1.85;color:var(--muted);white-space:pre-wrap}
+    .prompt-text em{color:var(--accent);font-style:normal;font-weight:600}
+    .prompt-actions{padding:12px 20px 16px;border-top:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .btn-copy{background:var(--accent);color:#0a0a0f;border:none;padding:8px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:700;cursor:pointer;transition:opacity 0.2s}
+    .btn-copy:hover{opacity:0.85}
+    .btn-copy.copied{background:var(--accent2)}
+    .prompt-tip{font-size:0.78rem;color:var(--muted);flex:1}
+    .prompt-tip strong{color:var(--text)}
+
+    /* BOTTOM CTA */
+    .bottom-cta{background:linear-gradient(135deg,rgba(0,229,160,0.08),rgba(124,111,255,0.08));border:1px solid rgba(0,229,160,0.2);border-radius:20px;padding:40px 48px;margin:48px 0 64px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .bottom-cta h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:8px}
+    .bottom-cta p{color:var(--muted);font-size:0.9rem;max-width:440px}
+    .cta-buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:var(--accent);color:#0a0a0f;padding:12px 24px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;text-decoration:none;transition:opacity 0.2s;white-space:nowrap}
+    .btn-primary:hover{opacity:0.88}
+    .btn-secondary{background:rgba(255,255,255,0.05);color:var(--text);padding:12px 24px;border-radius:10px;font-weight:600;font-size:0.9rem;text-decoration:none;border:1px solid var(--border2);white-space:nowrap}
+    .btn-secondary:hover{border-color:var(--accent)}
+
+    footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-links{display:flex;gap:20px;justify-content:center;list-style:none;margin-bottom:12px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-links a:hover{color:var(--accent)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:760px){.prof-nav{border-radius:0;margin:0 -24px 48px}.prof-tab{min-width:80px;padding:12px 6px;font-size:0.75rem}.bottom-cta{flex-direction:column}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="page">
+
+  <header class="hero">
+    <span class="badge">Biblioteca · 60+ prompts · 2025</span>
+    <h1>Prompts de IA<br>por <span>profesión</span></h1>
+    <p>No prompts genéricos. Prompts específicos para lo que haces tú cada semana, con el contexto que la IA necesita para dar buenos resultados.</p>
+    <div class="hero-stats">
+      <div class="hs"><strong>60+</strong> prompts listos</div>
+      <div class="hs"><strong>6</strong> profesiones</div>
+      <div class="hs"><strong>0€</strong> sin registro</div>
+    </div>
+  </header>
+
+  <!-- PROFESSION TABS -->
+  <div class="prof-nav" role="tablist">
+    <div class="prof-tab active" role="tab" onclick="showProf('redactor', this)"><span class="pt-icon">✍️</span>Redactor/a</div>
+    <div class="prof-tab" role="tab" onclick="showProf('diseñador', this)"><span class="pt-icon">🎨</span>Diseñador/a</div>
+    <div class="prof-tab" role="tab" onclick="showProf('developer', this)"><span class="pt-icon">💻</span>Developer</div>
+    <div class="prof-tab" role="tab" onclick="showProf('consultor', this)"><span class="pt-icon">📈</span>Consultor/a</div>
+    <div class="prof-tab" role="tab" onclick="showProf('fotografo', this)"><span class="pt-icon">📸</span>Fotógrafo/a</div>
+    <div class="prof-tab" role="tab" onclick="showProf('formador', this)"><span class="pt-icon">🎓</span>Formador/a</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       REDACTOR / COPYWRITER
+  ══════════════════════════════════════════ -->
+  <div class="prof-section active" id="sec-redactor">
+    <div class="section-header">
+      <h2>✍️ Prompts para redactores y copywriters</h2>
+      <p>Para producir textos con tu voz, investigar temas rápido y gestionar la relación con clientes que siempre quieren "algo más".</p>
+    </div>
+
+    <div class="section-label">Producción de contenido</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📝</div><div><div class="ph-title">Artículo SEO con estructura definida</div><div class="ph-sub">Para entregas de contenido web a clientes</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Escribe un artículo de <em>[X]</em> palabras sobre "<em>[tema]</em>" optimizado para la keyword "<em>[keyword principal]</em>".
+
+Audiencia: <em>[descripción del lector ideal]</em>
+Tono: práctico y directo, sin filosofar ni relleno
+Sector/contexto: <em>[sector del cliente]</em>
+
+Estructura obligatoria:
+- H1 que incluya la keyword y enganche en menos de 60 caracteres
+- Introducción de 80-100 palabras: engancha con un problema real, no promete lo que no se cumple
+- H2 para cada sección principal (mínimo 4)
+- Conclusión con CTA hacia <em>[acción concreta]</em>
+
+SEO: keyword en el primer párrafo, en al menos 2 H2 y en la conclusión. Densidad natural, no forzada.
+
+Prohibido: "En el mundo actual", "En conclusión", "Sin duda", listas de más de 5 puntos seguidas sin texto intermedio, párrafos de más de 4 líneas.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> Claude da mejores resultados que ChatGPT en artículos largos con tono específico</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🔄</div><div><div class="ph-title">Reescribir texto de cliente sin perder el mensaje</div><div class="ph-sub">Cuando el cliente escribe mal pero tiene razón en el fondo</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Aquí tienes un texto que me ha enviado un cliente para mejorar:
+
+<em>[pega el texto original aquí]</em>
+
+El cliente es <em>[tipo de empresa]</em> y el texto irá en <em>[dónde: web, email, folleto]</em>. La audiencia es <em>[descripción]</em>.
+
+Reescríbelo manteniendo el mensaje esencial y el tono de la empresa, pero con:
+- Claridad: frases cortas, activa en lugar de pasiva
+- Fluidez: transiciones naturales entre ideas
+- Impacto: el primer párrafo engancha
+- Sin jerga innecesaria
+
+No añadas información que no esté en el original. No elimines puntos clave aunque estén mal expresados. Entrega el texto reescrito y luego una nota breve de qué cambiaste y por qué.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> La nota de cambios es clave — justifica tu trabajo ante el cliente</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📱</div><div><div class="ph-title">5 variaciones de post para LinkedIn desde un artículo</div><div class="ph-sub">Reutilizar contenido sin que parezca reutilizado</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Aquí tienes un artículo que acabo de publicar:
+
+<em>[pega el artículo o un resumen]</em>
+
+Crea 5 posts de LinkedIn distintos basados en este artículo. Cada uno debe:
+- Usar un ángulo diferente (un dato, una historia, una pregunta, una opinión polémica, una lista)
+- Empezar con un gancho distinto — ninguno puede empezar con "En este artículo..."
+- Tener entre 150-250 palabras
+- Tono: <em>[directo / cercano / técnico / inspiracional]</em>
+- Sin emojis en exceso (máximo 2-3 si los usas)
+
+Al final de cada post incluye un CTA natural hacia el artículo, sin que parezca publicidad.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-label">Gestión de clientes</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">💬</div><div><div class="ph-title">Responder al cliente que pide cambios ilimitados</div><div class="ph-sub">Poner límites sin perder el proyecto</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Un cliente me ha enviado este mensaje pidiendo más cambios: "<em>[pega el mensaje]</em>"
+
+Esta es la <em>[X]</em>ª ronda de revisiones. Mi contrato incluía <em>[N]</em> revisiones.
+
+Necesito un email que:
+1. Reconozca su feedback de forma positiva
+2. Le recuerde amablemente que hemos superado las revisiones incluidas
+3. Le ofrezca continuar con las revisiones adicionales a <em>[X]</em>€ por revisión
+4. No suene a amenaza ni a queja — tono profesional y firme
+
+Máximo 150 palabras. Sin "Espero que estés bien".</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> Siempre más fácil poner límites con un borrador — evita escribir en caliente</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">💰</div><div><div class="ph-title">Presupuesto de proyecto editorial complejo</div><div class="ph-sub">Para proyectos con múltiples entregables</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy redactor/a freelance especializado en <em>[tu especialidad]</em>. Me han pedido presupuesto para este proyecto:
+
+<em>[descripción del proyecto: tipo de contenido, volumen, plazos, cliente]</em>
+
+Mi tarifa base es <em>[X]</em>€ por <em>[artículo / 1.000 palabras / hora]</em>.
+
+Escribe una propuesta completa que incluya:
+- Resumen del proyecto y mi comprensión del encargo
+- Desglose de entregables con precio unitario y total
+- Qué incluye (revisiones, formatos, optimización SEO si aplica)
+- Qué NO incluye (imágenes, maquetación, publicación)
+- Plazos de entrega propuestos
+- Condiciones de pago (sugiero 50% inicio / 50% entrega)
+- Validez del presupuesto: 15 días
+
+Tono profesional y confiado. Sin "Estimado/a cliente".</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       DISEÑADOR
+  ══════════════════════════════════════════ -->
+  <div class="prof-section" id="sec-diseñador">
+    <div class="section-header">
+      <h2>🎨 Prompts para diseñadores gráficos</h2>
+      <p>Para generar referencias visuales, defender decisiones de diseño ante clientes y producir textos que acompañen tu trabajo.</p>
+    </div>
+
+    <div class="section-label">Generación visual con IA</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🖼️</div><div><div class="ph-title">Brief visual para Midjourney (marca profesional)</div><div class="ph-sub">Para proyectos de identidad corporativa</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude → Midjourney</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Primero usa Claude para definir el estilo:
+
+"Soy diseñador/a gráfico y voy a crear la identidad visual de <em>[tipo de empresa]</em>. El cliente describe su marca como: <em>[palabras del cliente]</em>. Su audiencia es <em>[descripción]</em>. Propón: 1) Una paleta de 4 colores con sus códigos hex, 2) 3 adjetivos visuales que guíen el estilo, 3) Una descripción de 2 líneas del tipo de imágenes que encajan con esta marca."
+
+Luego convierte eso en prompt de Midjourney:
+
+<em>[adjetivos visuales]</em> brand photography, <em>[tipo de negocio]</em> aesthetic, <em>[paleta de colores]</em> color palette, professional, editorial quality, clean composition, no text, no logos --ar 16:9 --style raw --v 6</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> Este flujo de 2 pasos da mejores resultados que ir directamente a Midjourney</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📐</div><div><div class="ph-title">Manual de marca básico para el cliente</div><div class="ph-sub">Documento de uso de marca tras un proyecto de identidad</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Acabo de terminar el proyecto de identidad visual de <em>[nombre empresa]</em>. Los elementos son:
+- Logotipo: <em>[descripción]</em>
+- Colores principales: <em>[códigos hex]</em>
+- Tipografías: <em>[tipografías]</em>
+- Tono visual: <em>[3 adjetivos]</em>
+
+Escribe el texto para un manual de marca básico (máx. 400 palabras) que incluya: introducción a la marca, normas de uso del logotipo (espacios, fondos permitidos, lo que no se puede hacer), uso de colores con sus códigos, tipografías y cuándo usar cada una. Tono claro y directo, pensado para que lo entienda el cliente sin conocimientos de diseño.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-label">Comunicación con clientes</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🛡️</div><div><div class="ph-title">Defender una decisión de diseño ante un cliente</div><div class="ph-sub">Cuando el cliente quiere cambiarlo todo por gusto personal</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Un cliente me dice: "<em>[queja o cambio que pide]</em>"
+
+La decisión que quiere cambiar fue: <em>[explica la decisión de diseño y el razonamiento original]</em>
+
+Escribe una respuesta profesional que:
+1. Muestre que entiendo su preocupación
+2. Explique la razón estratégica detrás de la decisión (no solo estética)
+3. Proponga un pequeño ajuste que satisfaga su preocupación sin romper la coherencia
+4. Si la petición es realmente problemática, explique el impacto de hacerlo
+
+Tono educativo, no defensivo. Como si fuera un médico explicando un diagnóstico — con autoridad pero con empatía.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> La analogía del médico funciona muy bien para posicionarte como experto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📋</div><div><div class="ph-title">Briefing de proyecto que el cliente no te ha dado</div><div class="ph-sub">Cuando el cliente solo dice "necesito un logo"</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Un cliente me ha pedido <em>[tipo de proyecto: logo, web, identidad...]</em> pero no me ha dado suficiente información. Lo que sé es: <em>[lo poco que sabes]</em>.
+
+Genera una lista de 10 preguntas de briefing específicas y ordenadas por importancia que debo hacerle antes de empezar. Las preguntas deben cubrir: objetivo del proyecto, audiencia, competencia, referencias visuales, restricciones, plazos y presupuesto. Que sean preguntas concretas, no genéricas. Sin jerga de diseño que el cliente no entienda.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       DEVELOPER
+  ══════════════════════════════════════════ -->
+  <div class="prof-section" id="sec-developer">
+    <div class="section-header">
+      <h2>💻 Prompts para desarrolladores web</h2>
+      <p>Para debug eficiente, documentación automática, comunicación técnica con clientes no técnicos y gestión de proyectos.</p>
+    </div>
+
+    <div class="section-label">Código y debug</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🐛</div><div><div class="ph-title">Debug con contexto completo</div><div class="ph-sub">El prompt de debug que da mejores resultados</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Tengo un bug en <em>[lenguaje/framework]</em>. El comportamiento esperado es: <em>[qué debería pasar]</em>. El comportamiento actual es: <em>[qué pasa realmente]</em>.
+
+Error en consola (si hay): <em>[pega el error exacto]</em>
+
+Código relevante:
+<em>[pega el código]</em>
+
+Contexto adicional: <em>[versión del framework, dependencias relevantes, cualquier cambio reciente]</em>
+
+Necesito: 1) Diagnóstico de qué está causando el bug, 2) La corrección con explicación de por qué funciona, 3) Si hay riesgo de que este mismo bug aparezca en otro lugar del código, dílo.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> Claude supera a ChatGPT en bugs complejos con mucho contexto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📄</div><div><div class="ph-title">Documentar una función o módulo</div><div class="ph-sub">Para proyectos que entregas a clientes o equipos</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Documenta este código en <em>[idioma: español / inglés]</em>:
+
+<em>[pega el código]</em>
+
+Genera:
+1. Descripción de qué hace en 1-2 líneas (para el README)
+2. JSDoc / docstring completo con parámetros, tipos y retorno
+3. Ejemplo de uso real con datos de ejemplo
+4. Posibles errores o casos extremos a tener en cuenta
+
+Nivel: la documentación debe ser comprensible para un developer de nivel medio que no conoce este código.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🔍</div><div><div class="ph-title">Code review antes de entregar al cliente</div><div class="ph-sub">Segunda opinión antes de cada entrega</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Revisa este código antes de que lo entregue a un cliente. Stack: <em>[lenguaje / framework]</em>.
+
+<em>[pega el código]</em>
+
+Analiza en este orden:
+1. Bugs o errores potenciales que no he visto
+2. Problemas de seguridad (si aplica: SQL injection, XSS, exposición de datos)
+3. Performance: ¿hay algo claramente ineficiente?
+4. Legibilidad: ¿hay algo que un developer junior no entendería?
+5. Una cosa concreta que mejorarías si tuvieras más tiempo
+
+No reescribas todo. Dame observaciones específicas con la línea o función a la que te refieres.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-label">Comunicación con clientes no técnicos</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🗣️</div><div><div class="ph-title">Explicar un problema técnico sin perder al cliente</div><div class="ph-sub">Cuando algo falla y el cliente no entiende por qué</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Tengo que explicarle a un cliente no técnico este problema: <em>[descripción técnica del problema]</em>
+
+El cliente es <em>[tipo de negocio]</em> y no tiene conocimientos técnicos. Lo que le preocupa principalmente es <em>[impacto en su negocio: tiempo de inactividad, datos perdidos, retraso en lanzamiento...]</em>.
+
+Escribe un email que:
+1. Explique qué pasó en términos que entienda (sin jerga)
+2. Diga claramente qué impacto ha tenido o puede tener
+3. Explique qué estoy haciendo para resolverlo y cuándo estará resuelto
+4. Si es un error mío, lo reconozca con honestidad sin dramatizar
+5. Si no es un error mío, lo aclare sin sonar defensivo
+
+Tono: tranquilizador pero honesto. Máximo 200 palabras.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> La transparencia con clientes en situaciones de crisis genera más confianza que esconderse</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       CONSULTOR
+  ══════════════════════════════════════════ -->
+  <div class="prof-section" id="sec-consultor">
+    <div class="section-header">
+      <h2>📈 Prompts para consultores y asesores</h2>
+      <p>Para investigar sectores rápido, preparar informes, defender recomendaciones y gestionar proyectos con múltiples stakeholders.</p>
+    </div>
+
+    <div class="section-label">Análisis e investigación</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🔭</div><div><div class="ph-title">Análisis rápido de un sector antes de una reunión</div><div class="ph-sub">15 minutos de investigación en lugar de 1 hora</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Perplexity + Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Primero busca en Perplexity: "<em>[sector]</em> tendencias España 2025" y "<em>[empresa del cliente]</em> noticias recientes"
+
+Luego pega los resultados en Claude con este prompt:
+
+"Tengo una reunión con un potencial cliente de <em>[sector]</em>. Basándome en esta información: <em>[pega resultados de Perplexity]</em>
+
+Prepárame:
+1. Los 3 retos principales del sector ahora mismo (con datos si hay)
+2. Las 3 oportunidades que pocas empresas están aprovechando
+3. 5 preguntas inteligentes que demuestren que conozco su sector
+4. Una hipótesis sobre el problema principal de este cliente específico basada en lo que sé
+
+Todo en máximo 300 palabras. Que sea práctico, no académico."</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> Perplexity para datos frescos, Claude para síntesis y análisis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📊</div><div><div class="ph-title">Informe ejecutivo de resultados para cliente</div><div class="ph-sub">Convierte datos en narrativa que el cliente entiende</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Tengo estos datos de resultados del proyecto para mi cliente: <em>[pega los datos, métricas, KPIs]</em>
+
+El cliente es <em>[tipo de empresa]</em> y le preocupa especialmente <em>[su objetivo principal]</em>.
+
+Escribe un informe ejecutivo de máximo 400 palabras con:
+1. Resumen de resultados en 3 bullets (los más importantes primero)
+2. Lo que funcionó bien y por qué
+3. Lo que no funcionó como esperado y qué aprendemos
+4. Próximos pasos concretos con fechas
+
+Tono: profesional pero accesible. Que el CEO que no entiende de marketing pueda leerlo y entender exactamente qué pasó y qué se hace ahora. Sin eufemismos cuando algo fue mal.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-label">Gestión y propuestas</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🎯</div><div><div class="ph-title">Propuesta de consultoría con caso de negocio</div><div class="ph-sub">Para proyectos donde el cliente pide justificar el ROI</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy consultor/a de <em>[especialidad]</em>. Mi cliente potencial es <em>[tipo de empresa]</em> con <em>[tamaño/contexto]</em>. El problema que quiero resolver es <em>[descripción del problema]</em>.
+
+Escribe una propuesta con:
+1. Diagnóstico del problema (en sus términos, no en los míos)
+2. Mi propuesta de solución con fases y entregables
+3. Caso de negocio: si el proyecto sale bien, ¿qué valor genera? (en términos de ahorro, ingreso o riesgo evitado)
+4. Por qué yo: 2-3 razones específicas sin sonar arrogante
+5. Inversión: <em>[importe]</em>€ — desglosado por fases si es largo
+6. Siguiente paso concreto para avanzar
+
+Máximo 600 palabras. Que la persona que lo lea quiera llamarme.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOTÓGRAFO
+  ══════════════════════════════════════════ -->
+  <div class="prof-section" id="sec-fotografo">
+    <div class="section-header">
+      <h2>📸 Prompts para fotógrafos y videógrafos</h2>
+      <p>Para generar textos de acompañamiento, gestionar entregas y comunicar el valor de tu trabajo a clientes que solo miran el precio.</p>
+    </div>
+
+    <div class="section-label">Comunicación y ventas</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">💌</div><div><div class="ph-title">Email de presentación tras una sesión de fotos</div><div class="ph-sub">Para acompañar la entrega y pedir la valoración</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Acabo de entregar las fotos de <em>[tipo de sesión: boda / producto / corporativo / evento]</em> a <em>[tipo de cliente]</em>. La sesión fue <em>[resumen breve: qué se hizo, dónde, algo destacable]</em>.
+
+Escribe el email de entrega que:
+1. Presenta el trabajo con entusiasmo pero sin exagerar
+2. Da instrucciones claras de cómo acceder a las fotos (<em>[plataforma: WeTransfer / Google Drive / Pixieset]</em>)
+3. Menciona qué incluye la entrega (número de fotos, formatos, licencia de uso)
+4. Pide de forma natural una valoración o recomendación si están contentos
+5. Ofrece próximos servicios de forma no agresiva
+
+Tono: cálido y profesional. Que refleje que me importa el resultado tanto como a ellos. Máximo 180 palabras.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📸</div><div><div class="ph-title">Descripciones para portfolio o Instagram</div><div class="ph-sub">Para que las fotos expliquen algo más que la imagen</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Voy a publicar <em>[número]</em> fotos de <em>[tipo de sesión / proyecto]</em>. El contexto es: <em>[descripción del proyecto, cliente, historia detrás]</em>.
+
+Para cada foto o serie, escribe una descripción de 2-3 líneas que:
+- Cuente algo que la imagen no puede mostrar sola (el momento, la decisión creativa, el reto)
+- Sea auténtica, no publicitaria
+- Invite a la conversación sin una pregunta retórica forzada
+- Incluya 3-5 hashtags relevantes en español e inglés para fotografía de <em>[especialidad]</em>
+
+Tono: como si lo escribiera yo mismo/a — personal, directo, sin emojis en exceso.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">💶</div><div><div class="ph-title">Defender el precio ante un cliente que regatea</div><div class="ph-sub">Sin descuentos, sin perder la dignidad</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Un cliente me dice: "<em>[cita lo que ha dicho]</em>" sobre mi precio de <em>[X]</em>€ para <em>[tipo de sesión]</em>.
+
+Dame 3 respuestas distintas para elegir:
+1. La que mantiene el precio sin ceder y lo justifica con valor
+2. La que ofrece una versión reducida (menos horas / menos fotos) a menor precio — sin descuento en la tarifa
+3. La que cierra la conversación amablemente si el presupuesto es claramente incompatible
+
+Para cada una: máximo 80 palabras, tono seguro y sin sonar ofendido.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> La opción 2 (versión reducida) cierra más que el descuento directo</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FORMADOR
+  ══════════════════════════════════════════ -->
+  <div class="prof-section" id="sec-formador">
+    <div class="section-header">
+      <h2>🎓 Prompts para formadores y coaches</h2>
+      <p>Para crear contenido formativo más rápido, personalizar el aprendizaje y gestionar la comunicación con alumnos y empresas clientes.</p>
+    </div>
+
+    <div class="section-label">Creación de contenido formativo</div>
+    <div class="prompts-grid">
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">📚</div><div><div class="ph-title">Esquema completo de módulo formativo</div><div class="ph-sub">Para cursos online o formación presencial</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy formador/a y necesito diseñar un módulo sobre "<em>[tema]</em>" para <em>[audiencia: directivos de pyme / empleados de comercio / estudiantes universitarios...]</em>.
+
+Duración: <em>[X horas]</em>. Formato: <em>[presencial / online / mixto]</em>.
+
+Diseña el módulo completo con:
+1. Objetivos de aprendizaje (qué sabrá hacer el alumno al terminar — verbos concretos, no "entender")
+2. Estructura por bloques de tiempo con contenido de cada bloque
+3. 3 ejercicios prácticos con instrucciones y criterios de evaluación
+4. 5 preguntas para la evaluación final
+5. Un recurso adicional recomendado por bloque (libro, vídeo, herramienta)
+
+Nivel: <em>[básico / intermedio / avanzado]</em>. Sin asumir conocimientos previos más allá de lo que especifico.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+            <span class="prompt-tip"><strong>Consejo:</strong> Los verbos de los objetivos son clave — "identificar", "aplicar", "crear" en lugar de "entender"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">💬</div><div><div class="ph-title">Respuesta personalizada a un alumno atascado</div><div class="ph-sub">Sin invertir 20 minutos en cada respuesta</div></div></div>
+          <div class="ph-badges"><span class="ph-badge ambos">Ambos</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy formador/a del curso de <em>[tema]</em>. Un alumno me ha enviado esta duda o problema: "<em>[pega el mensaje del alumno]</em>"
+
+El contexto del curso en este punto es: <em>[en qué módulo están, qué se ha explicado hasta ahora]</em>.
+
+Escribe una respuesta que:
+1. Valide su esfuerzo sin ser condescendiente
+2. Explique el concepto desde un ángulo diferente al que usé en clase (si falla la explicación original, hay que buscar otra entrada)
+3. Proponga un ejercicio concreto de 10 minutos para que practique este concepto
+4. Abra la puerta a más preguntas
+
+Tono: como un buen mentor — cercano, paciente, exigente en el buen sentido. Máximo 200 palabras.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-header">
+          <div class="ph-left"><div class="ph-icon">🏢</div><div><div class="ph-title">Propuesta de formación in-company</div><div class="ph-sub">Para vender formación a empresas, no a particulares</div></div></div>
+          <div class="ph-badges"><span class="ph-badge claude">Claude</span></div>
+          <span class="ph-toggle">+</span>
+        </div>
+        <div class="prompt-body">
+          <div class="prompt-text">Quiero presentar una propuesta de formación a <em>[tipo de empresa]</em> sobre "<em>[tema]</em>". El equipo que participaría es <em>[descripción del equipo]</em> y el problema que quieren resolver es <em>[problema concreto]</em>.
+
+Escribe la propuesta con:
+1. Diagnóstico del problema formativo (en sus términos de negocio)
+2. Objetivos de la formación ligados a resultados de negocio, no solo a conocimiento
+3. Programa: módulos, duración total y formato
+4. Metodología: cómo será diferente de una formación estándar aburrida
+5. Métricas de éxito: cómo sabremos que funcionó
+6. Inversión: <em>[X]</em>€ — desglosada si es multi-sesión
+7. Próximos pasos
+
+Tono: ejecutivo. Que lo lea el responsable de RRHH o el CEO y vea retorno, no un catálogo de cursos.</div>
+          <div class="prompt-actions">
+            <button class="btn-copy" onclick="copyPrompt(this)">Copiar prompt</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <div>
+      <h2>¿Quieres saber qué herramienta usar con estos prompts?</h2>
+      <p>Haz el test de 5 preguntas y te recomendamos la combinación exacta para tu perfil. O calcula cuánto tiempo y dinero puedes ahorrar.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="/test-que-ia-necesitas/" class="btn-primary">Hacer el test →</a>
+      <a href="/calculadora-roi-ia/" class="btn-secondary">Calcular mi ROI</a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div style="max-width:1140px;margin:0 auto;padding:0 24px">
+    <ul class="footer-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+    </ul>
+    <p>© 2025 CompararIA · Hecho en España para freelancers.</p>
+  </div>
+</footer>
+
+<script>
+  function showProf(id, tab) {
+    document.querySelectorAll('.prof-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.prof-section').forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('sec-' + id).classList.add('active');
+  }
+
+  document.querySelectorAll('.prompt-header').forEach(h => {
+    h.addEventListener('click', () => {
+      const card = h.parentElement;
+      const isOpen = card.classList.contains('open');
+      document.querySelectorAll('.prompt-card').forEach(c => c.classList.remove('open'));
+      if (!isOpen) card.classList.add('open');
+    });
+  });
+
+  function copyPrompt(btn) {
+    const text = btn.closest('.prompt-card').querySelector('.prompt-text').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copiar prompt'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+</script>
+</body>
+</html>
