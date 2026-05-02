@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo escribir buenos prompts para IA (2025): guía con 40+ ejemplos reales | CompararIA</title>
+  <meta name="description" content="Aprende a escribir prompts de IA que funcionan. Técnicas, estructura y biblioteca de 40+ prompts listos para copiar para freelancers y autónomos en España.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/guias/como-escribir-prompts/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/guias/como-escribir-prompts/">
+  <meta property="og:title" content="Cómo escribir buenos prompts para IA: guía con 40+ ejemplos reales">
+  <meta property="og:description" content="Técnicas y biblioteca de 40+ prompts listos para copiar para autónomos en España.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <meta property="article:published_time" content="2025-01-01T00:00:00+01:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo escribir buenos prompts para IA (2025): guía con 40+ ejemplos reales","datePublished":"2025-01-01T00:00:00+01:00","dateModified":"2025-01-01T00:00:00+01:00","author":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"},"publisher":{"@type":"Organization","name":"CompararIA"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/guias/como-escribir-prompts/"},"inLanguage":"es-ES","keywords":"cómo escribir prompts, prompts IA español, prompt engineering, prompts para freelancers, ejemplos prompts ChatGPT Claude"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es un prompt de IA?","acceptedAnswer":{"@type":"Answer","text":"Un prompt es la instrucción que le das a una herramienta de IA. Cuanto más específico y estructurado sea, mejor será el resultado."}},{"@type":"Question","name":"¿Hay que escribir los prompts en inglés?","acceptedAnswer":{"@type":"Answer","text":"No. Claude y ChatGPT entienden español con alta calidad. Para textos en español es mejor escribir el prompt en español para que el tono sea más natural."}},{"@type":"Question","name":"¿Cuál es la longitud ideal de un prompt?","acceptedAnswer":{"@type":"Answer","text":"No hay longitud ideal, pero sí suficiente contexto. Un prompt de 3-5 líneas bien estructurado suele superar a uno de 1 línea vago. Incluye: qué quieres, para quién, el tono y restricciones relevantes."}}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0e0e0e;--bg2:#161616;--bg3:#1e1e1e;--surface:#242424;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);--text:#f0f0f0;--muted:#888;--accent:#f5e642;--accent2:#42f5b3;--red:#ff5757}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Bricolage Grotesque',sans-serif;font-size:17px;line-height:1.75;overflow-x:hidden}
+    nav{position:sticky;top:0;z-index:100;background:rgba(14,14,14,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
+    .logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;letter-spacing:-0.04em}
+    .logo em{font-style:normal;color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .container{max-width:760px;margin:0 auto;padding:0 24px}
+    .breadcrumb{font-size:0.78rem;color:var(--muted);padding-top:28px;margin-bottom:32px;font-family:'DM Mono',monospace}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{margin:0 8px}
+    .article-hero{padding:8px 0 40px;animation:fadeUp 0.5s ease both}
+    .hero-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:4px 12px;margin-bottom:24px}
+    h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-0.04em;line-height:1.1;margin-bottom:20px}
+    h1 em{font-style:italic;font-family:'Instrument Serif',serif;color:var(--accent);font-weight:400}
+    .article-meta{font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);margin-bottom:24px;display:flex;gap:16px;flex-wrap:wrap}
+    .article-intro{font-size:1.05rem;color:#bbb;line-height:1.8;border-left:3px solid var(--accent);padding-left:20px}
+    .toc{background:var(--surface);border:1px solid var(--border2);padding:24px 28px;margin:40px 0}
+    .toc-title{font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+    .toc ol{list-style:none;counter-reset:toc}
+    .toc ol li{counter-increment:toc;display:flex;gap:12px;align-items:baseline;padding:5px 0;border-bottom:1px solid var(--border)}
+    .toc ol li:last-child{border-bottom:none}
+    .toc ol li::before{content:counter(toc,decimal-leading-zero);font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0}
+    .toc ol li a{color:var(--text);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .toc ol li a:hover{color:var(--accent)}
+    .article-body h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-0.03em;margin:56px 0 18px;padding-top:56px;border-top:1px solid var(--border);scroll-margin-top:80px}
+    .article-body h2:first-child{margin-top:0;padding-top:0;border-top:none}
+    .article-body h3{font-size:1.05rem;font-weight:700;margin:28px 0 10px}
+    .article-body p{margin-bottom:20px;color:#ccc}
+    .article-body strong{color:var(--text);font-weight:600}
+    .formula-box{background:var(--bg2);border:1px solid var(--border2);border-left:4px solid var(--accent);padding:24px 28px;margin:28px 0;font-family:'DM Mono',monospace;font-size:0.88rem;line-height:1.9}
+    .formula-box .label{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+    .formula-part{display:flex;gap:14px;margin-bottom:4px}
+    .formula-part .key{color:var(--accent);font-weight:500;min-width:110px;flex-shrink:0}
+    .formula-part .val{color:#ccc}
+    .technique-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+    .technique-card{background:var(--surface);border:1px solid var(--border);padding:20px}
+    .tc-num{font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:8px}
+    .tc-title{font-size:0.95rem;font-weight:700;margin-bottom:8px}
+    .tc-desc{font-size:0.84rem;color:var(--muted);line-height:1.55}
+    .comp-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:0.86rem}
+    .comp-table thead{background:var(--surface)}
+    .comp-table th{padding:12px 14px;text-align:left;font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);letter-spacing:0.04em;border-bottom:2px solid var(--border2)}
+    .comp-table td{padding:11px 14px;border-bottom:1px solid var(--border);color:#ccc;vertical-align:top}
+    .comp-table tr:hover td{background:var(--bg2)}
+    .comp-table td:first-child{font-weight:600;color:var(--text);white-space:nowrap}
+    .td-bad{color:var(--red)!important;font-style:italic}
+    .td-good{color:var(--accent2)!important}
+    .prompt-section{margin:40px 0}
+    .prompt-section-title{font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+    .prompt-section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+    .prompt-card{background:var(--bg2);border:1px solid var(--border);margin-bottom:10px;transition:border-color 0.2s}
+    .prompt-card:hover{border-color:var(--border2)}
+    .prompt-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;cursor:pointer;user-select:none;gap:12px}
+    .prompt-label{font-size:0.9rem;font-weight:600;color:var(--text);flex:1}
+    .prompt-meta{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);flex-shrink:0}
+    .prompt-toggle{color:var(--accent);font-size:1.1rem;flex-shrink:0;transition:transform 0.3s;font-weight:300}
+    .prompt-card.open .prompt-toggle{transform:rotate(45deg)}
+    .prompt-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+    .prompt-card.open .prompt-body{max-height:700px}
+    .prompt-text{padding:16px 18px;border-top:1px solid var(--border);background:var(--bg3);font-family:'DM Mono',monospace;font-size:0.82rem;line-height:1.8;color:#ccc;white-space:pre-wrap}
+    .prompt-text em{color:var(--accent);font-style:normal;font-weight:500}
+    .prompt-actions{padding:10px 18px 14px;display:flex;gap:10px;align-items:center;border-top:1px solid var(--border)}
+    .btn-copy{background:var(--accent);color:var(--bg);border:none;padding:7px 16px;font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.04em;cursor:pointer;transition:opacity 0.2s}
+    .btn-copy:hover{opacity:0.85}
+    .btn-copy.copied{background:var(--accent2)}
+    .prompt-note{font-size:0.78rem;color:var(--muted)}
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-q{padding:16px 0;font-weight:600;font-size:0.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}
+    .faq-q .icon{color:var(--accent);transition:transform 0.3s;flex-shrink:0;font-size:1.2rem;font-weight:300}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;font-size:0.9rem;color:var(--muted)}
+    .faq-a.open{max-height:300px;padding-bottom:16px}
+    .faq-q.active .icon{transform:rotate(45deg)}
+    .article-cta{background:var(--accent);color:var(--bg);padding:36px;margin:56px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .article-cta h2{font-size:1.15rem;font-weight:700;margin-bottom:4px;letter-spacing:-0.02em}
+    .article-cta p{font-size:0.88rem;opacity:0.65;margin:0}
+    .cta-links{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-dark{background:var(--bg);color:var(--accent);padding:11px 22px;font-weight:700;font-size:0.88rem;text-decoration:none;white-space:nowrap}
+    .btn-ghost-dark{background:transparent;color:var(--bg);padding:11px 22px;font-weight:600;font-size:0.88rem;text-decoration:none;border:1px solid rgba(0,0,0,0.25);white-space:nowrap}
+    footer{border-top:1px solid var(--border);padding:32px 0;margin-top:32px}
+    .footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .footer-links{display:flex;gap:20px;list-style:none}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-links a:hover{color:var(--text)}
+    .footer-copy{font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:640px){.technique-grid{grid-template-columns:1fr}.nav-links{display:none}.article-cta{flex-direction:column}.comp-table{font-size:0.78rem}}
+  </style>
+</head>
+<body>
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<em>IA</em></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+<div class="container">
+  <nav aria-label="Ruta de navegación">
+    <p class="breadcrumb"><a href="/">Inicio</a><span>›</span><a href="/guias/">Guías</a><span>›</span>Cómo escribir buenos prompts</p>
+  </nav>
+  <header class="article-hero">
+    <div class="hero-tag">Guía práctica · 2025</div>
+    <h1>Cómo escribir <em>buenos prompts</em> para IA</h1>
+    <div class="article-meta"><span>Actualizado: enero 2025</span><span>//</span><span>14 min de lectura</span><span>//</span><span>40+ prompts para copiar</span></div>
+    <p class="article-intro">La IA es tan buena como las instrucciones que le das. Esta guía no te explica qué es un prompt — te enseña a escribirlos bien, con ejemplos reales para trabajo de autónomo. Y al final tienes una biblioteca completa para copiar y adaptar hoy mismo.</p>
+  </header>
+  <nav class="toc" aria-label="Índice">
+    <div class="toc-title">Índice</div>
+    <ol>
+      <li><a href="#por-que">Por qué el 80% de los prompts fallan por lo mismo</a></li>
+      <li><a href="#formula">La fórmula que funciona siempre</a></li>
+      <li><a href="#tecnicas">6 técnicas avanzadas con ejemplos</a></li>
+      <li><a href="#comparativa">Prompt malo vs bueno: comparativa real</a></li>
+      <li><a href="#biblioteca">Biblioteca de 40+ prompts para autónomos</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+  <article class="article-body">
+
+    <h2 id="por-que">Por qué el 80% de los prompts fallan por lo mismo</h2>
+    <p>Cuando alguien dice "la IA no me da buenos resultados", el problema casi nunca está en la herramienta. Está en la instrucción. Las IAs como Claude o ChatGPT son modelos entrenados para completar texto de la forma más probable y útil. Si el input es vago, el output será genérico.</p>
+    <p>El error más común es tratar la IA como un buscador. Escribes "email de reclamación de factura" y esperas un email profesional. Lo que obtienes es una plantilla que necesita reescribirse entera. No porque la IA sea mala — sino porque no tenía contexto.</p>
+    <p><strong>La IA no sabe quién eres, cuál es tu tono, para quién es el email, cuánto se debe, si es la primera reclamación o la tercera, ni si quieres sonar firme o conciliador.</strong> Sin esa información, lo mejor que puede hacer es ser genérica.</p>
+
+    <h2 id="formula">La fórmula que funciona siempre</h2>
+    <p>Una estructura que mejora drásticamente cualquier prompt. No es magia — es contexto:</p>
+    <div class="formula-box">
+      <div class="label">// Fórmula base del prompt efectivo</div>
+      <div class="formula-part"><span class="key">ROL</span><span class="val">Quién eres tú o qué papel debe adoptar la IA</span></div>
+      <div class="formula-part"><span class="key">TAREA</span><span class="val">Qué quieres exactamente que haga</span></div>
+      <div class="formula-part"><span class="key">CONTEXTO</span><span class="val">Información relevante: destinatario, situación, datos</span></div>
+      <div class="formula-part"><span class="key">TONO</span><span class="val">Cómo debe sonar: formal, directo, cercano, técnico</span></div>
+      <div class="formula-part"><span class="key">FORMATO</span><span class="val">Longitud, estructura, qué incluir y qué no</span></div>
+      <div class="formula-part"><span class="key">RESTRICCIONES</span><span class="val">Qué evitar, qué no puede mencionar</span></div>
+    </div>
+    <p>No siempre necesitas los seis elementos. Pero cuantos más incluyas, mejor será el resultado. Un prompt con solo ROL + TAREA + CONTEXTO ya supera al 90% de los prompts que la mayoría escribe.</p>
+
+    <h2 id="tecnicas">6 técnicas avanzadas con ejemplos</h2>
+    <div class="technique-grid">
+      <div class="technique-card">
+        <div class="tc-num">01</div>
+        <div class="tc-title">El rol experto</div>
+        <p class="tc-desc">Pide a la IA que actúe como un profesional específico. "Actúa como abogado especialista en contratos freelance en España" produce resultados muy distintos a una petición genérica.</p>
+      </div>
+      <div class="technique-card">
+        <div class="tc-num">02</div>
+        <div class="tc-title">El contexto previo</div>
+        <p class="tc-desc">Antes de pedir el texto, da el contexto: "Mi cliente lleva 45 días sin pagar. Ya le envié dos recordatorios amables. Ahora necesito ser más firme sin romper la relación."</p>
+      </div>
+      <div class="technique-card">
+        <div class="tc-num">03</div>
+        <div class="tc-title">La restricción negativa</div>
+        <p class="tc-desc">Dile qué NO hacer: "No uses frases como 'Espero que estés bien' ni cierres con 'Quedo a tu disposición'. Suena artificial. Ve directo al grano."</p>
+      </div>
+      <div class="technique-card">
+        <div class="tc-num">04</div>
+        <div class="tc-title">El ejemplo de referencia</div>
+        <p class="tc-desc">Pega un texto tuyo real: "Este es un email que yo escribí. Adapta este estilo para escribir uno reclamando el pago de la factura 023-2025."</p>
+      </div>
+      <div class="technique-card">
+        <div class="tc-num">05</div>
+        <div class="tc-title">La iteración dirigida</div>
+        <p class="tc-desc">No aceptes el primer resultado si no es perfecto. "Bien, pero el segundo párrafo suena muy formal. Reescríbelo con tono más directo, máximo 2 frases."</p>
+      </div>
+      <div class="technique-card">
+        <div class="tc-num">06</div>
+        <div class="tc-title">El formato estructurado</div>
+        <p class="tc-desc">Pide el resultado en el formato que necesitas: "Dame la respuesta con: Situación / Opciones / Recomendación", "Máximo 3 bullet points", "En JSON".</p>
+      </div>
+    </div>
+
+    <h2 id="comparativa">Prompt malo vs prompt bueno: comparativa real</h2>
+    <p>La misma tarea, dos prompts distintos. El resultado es completamente diferente:</p>
+    <table class="comp-table" aria-label="Comparativa prompt malo vs bueno">
+      <thead><tr><th>Situación</th><th>Prompt malo</th><th>Prompt bueno</th></tr></thead>
+      <tbody>
+        <tr><td>Reclamar factura</td><td class="td-bad">"Escribe un email reclamando el pago de una factura"</td><td class="td-good">"Soy diseñador freelance. Cliente Asesoría López, 60 días sin pagar factura 021/2025 de 1.800€. Segunda vez que ocurre. Email firme pero profesional, sin amenazas legales aún, máximo 150 palabras."</td></tr>
+        <tr><td>Bio LinkedIn</td><td class="td-bad">"Escribe mi bio profesional para LinkedIn"</td><td class="td-good">"Soy consultora de marketing digital especializada en pymes hosteleras en España, 8 años de experiencia, basada en Sevilla. Bio en primera persona, tono cercano, destacar la especialización. Titular 200 caracteres, resumen 300 palabras."</td></tr>
+        <tr><td>Artículo SEO</td><td class="td-bad">"Escribe un artículo sobre productividad para freelancers"</td><td class="td-good">"800 palabras sobre las 5 tareas que los freelancers en España pueden automatizar con IA en 2025. Tono práctico, sin filosofar. Cada punto: qué tarea, qué herramienta concreta, tiempo de ahorro semanal. Sin frases como 'En el mundo actual'."</td></tr>
+        <tr><td>Propuesta precio</td><td class="td-bad">"Cómo respondo cuando un cliente dice que soy caro"</td><td class="td-good">"Soy fotógrafo de producto. Cliente dice que 900€ 'está por encima de su presupuesto' sin decir cuánto tiene. Dame 3 respuestas: una defiende el precio, una propone versión reducida, una descalifica amablemente si el presupuesto es irreal."</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="biblioteca">Biblioteca de prompts para autónomos</h2>
+    <p>Prompts listos para copiar y adaptar. Los campos en <em style="color:var(--accent);font-style:normal">amarillo</em> son los que debes personalizar.</p>
+
+    <div class="prompt-section">
+      <div class="prompt-section-title">Emails y comunicación profesional</div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Reclamación de factura — primera vez</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy <em>[tu profesión]</em> autónomo en España. Mi cliente <em>[nombre empresa]</em> tiene pendiente la factura <em>[número]</em> de <em>[importe]</em>€ con vencimiento hace <em>[X días]</em>. Es la primera vez que pasa. Escribe un email de recordatorio amable pero que deje claro que espero el pago esta semana. Tono profesional, no agresivo. Máximo 120 palabras. Sin "Espero que estés bien".</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button><span class="prompt-note">Adapta los campos en amarillo</span></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Reclamación firme — segunda vez</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy <em>[tu profesión]</em>. Ya envié dos recordatorios sobre la factura <em>[número]</em> de <em>[importe]</em>€. Llevan <em>[X días]</em> de retraso. Necesito un email firmemente profesional que mencione que el siguiente paso sería reclamar por vía legal si no hay respuesta en 48h, pero sin sonar desesperado ni agresivo gratuitamente. Corto, directo, máximo 100 palabras.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button><span class="prompt-note">Para cuando los recordatorios amables no funcionan</span></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Declinar proyecto sin quemar el puente</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Tengo que rechazar un proyecto de <em>[tipo de cliente]</em> porque <em>[motivo real: presupuesto insuficiente / sin capacidad ahora / fuera de mi especialidad]</em>. Email que decline de forma educada, no queme el puente para futuros encargos, y no deje la puerta abierta a negociación de precio. Tono cálido pero definitivo.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Seguimiento de propuesta sin parecer pesado</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Envié una propuesta a <em>[tipo de empresa]</em> hace <em>[X días]</em> sin respuesta. Quiero hacer seguimiento sin parecer desesperado. Email breve que retome el contacto de forma natural, aporte un pequeño dato de valor de su sector, y pregunte si tienen dudas sobre la propuesta. Máximo 80 palabras.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Responder a un cliente difícil con calma</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">He recibido este mensaje de un cliente: "<em>[pega el mensaje aquí]</em>". Me ha molestado / no sé cómo responder. Necesito una respuesta profesional que: reconozca su preocupación sin darle la razón en lo que creo equivocado, mantenga la calma, y proponga un siguiente paso concreto. Tono firme pero sin escalada emocional.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button><span class="prompt-note">Útil cuando estás molesto y no quieres enviar algo que lamentes</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-section">
+      <div class="prompt-section-title">Presupuestos y propuestas comerciales</div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Estructura de propuesta comercial completa</span><span class="prompt-meta">Claude</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy <em>[profesión]</em> freelance. Propuesta para <em>[cliente: tipo de empresa]</em> para el proyecto <em>[descripción breve]</em>. Importe: <em>[X]</em>€. Escribe con: resumen ejecutivo (problema del cliente + mi solución), alcance detallado, qué NO incluye, plazos, forma de pago, y párrafo de por qué yo soy la opción correcta. Tono profesional y confiado. Sin "estimado cliente".</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button><span class="prompt-note">Claude maneja mejor que ChatGPT los documentos largos</span></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Justificar un precio alto ante un cliente</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Un cliente me dice que mi presupuesto de <em>[X]</em>€ es caro. Mi servicio es <em>[descripción]</em>. Dame 3 argumentos concretos para defender ese precio basados en: el ROI para el cliente, el coste de no hacerlo bien a la primera, y el valor de la especialización. Sin sonar defensivo. Tono seguro y educativo.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Borrador de contrato de servicios</span><span class="prompt-meta">Claude</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Borrador de contrato de prestación de servicios entre yo (<em>[tu nombre]</em>, autónomo, NIF <em>[XXXXXXXX]</em>) y mi cliente (<em>[empresa]</em>). Servicio: <em>[descripción]</em>. Importe: <em>[X]</em>€ + IVA. Pago: <em>[50% inicio / 50% entrega]</em>. Plazo: <em>[X semanas]</em>. Incluye cláusulas de: propiedad intelectual, revisiones (máximo <em>[X]</em>), cancelación, y confidencialidad. Legislación española. NOTA: es borrador para revisar con asesor legal.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button><span class="prompt-note">Siempre revisa con un abogado antes de usar en proyectos reales</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-section">
+      <div class="prompt-section-title">Marketing y contenido</div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Bio profesional para LinkedIn</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy <em>[profesión]</em> especializado en <em>[nicho concreto]</em>, <em>[X]</em> años de experiencia, trabajo con <em>[tipo de clientes]</em>. Logros: <em>[logro 1]</em> y <em>[logro 2]</em>. Basado en <em>[ciudad]</em>, España. Bio para LinkedIn en primera persona. Tono <em>[cercano / formal / directo]</em>. Titular 200 caracteres y resumen 250 palabras. Que no empiece con "Soy [profesión]" porque todo el mundo empieza así.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Post de LinkedIn con caso de éxito</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Proyecto reciente: cliente era <em>[tipo de empresa]</em>, problema que tenían: <em>[problema]</em>, lo que hice: <em>[solución]</em>, resultado: <em>[resultado medible si tienes]</em>. Post de LinkedIn en formato narrativo, primera persona, que no suene a autobombo sino a aprendizaje compartido. Empieza con un gancho que no sea pregunta retórica. Máximo 250 palabras. Sin emojis en exceso.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Artículo de blog optimizado para SEO</span><span class="prompt-meta">Claude</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Artículo de <em>[X]</em> palabras sobre "<em>[tema]</em>" para la keyword "<em>[keyword principal]</em>". Audiencia: <em>[descripción del lector]</em>. Tono práctico, sin relleno. Estructura: H1 con keyword, introducción 100 palabras que engancha, H2 por sección, conclusión con CTA hacia <em>[acción]</em>. Keyword en primer párrafo, en 2 H2, y en conclusión. Nada de "En el mundo actual" ni "En conclusión".</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-section">
+      <div class="prompt-section-title">Productividad y análisis</div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Resumir reunión en tareas accionables</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Notas de reunión con cliente: <em>[pega tus notas aquí, aunque estén desordenadas]</em>. Extrae: 1) Acuerdos concretos, 2) Tareas que me corresponden a mí con fecha límite, 3) Tareas que corresponden al cliente, 4) Puntos sin resolver que necesitan seguimiento. Lista clara, sin interpretar lo que no está explícito.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Analizar un contrato como autónomo en España</span><span class="prompt-meta">Claude</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Analiza este contrato que me envía un cliente desde el punto de vista de un freelance autónomo en España: 1) Cláusulas desfavorables para mí, 2) Cosas que faltan y debería pedir (propiedad intelectual, revisiones, cancelación), 3) Redacción ambigua que podría interpretarse en mi contra. No consejo legal formal — análisis práctico para saber qué preguntar a mi abogado. Contrato: <em>[pega aquí]</em></div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button><span class="prompt-note">Claude maneja mejor documentos largos</span></div>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-header"><span class="prompt-label">Plan de precios para mis servicios</span><span class="prompt-meta">Claude / ChatGPT</span><span class="prompt-toggle">+</span></div>
+        <div class="prompt-body">
+          <div class="prompt-text">Soy <em>[profesión]</em> autónomo en España. Ahora cobro <em>[X]</em>€ por <em>[descripción del servicio]</em>. Trabajo principalmente con <em>[tipo de clientes]</em>. Quiero estructurar mis precios en 3 paquetes (básico, estándar, premium). Ayúdame a definir qué incluye cada paquete, qué precio tendría cada uno, y cómo presentarlo para que el cliente tienda a elegir el estándar. Sin justificar precios ridículamente bajos.</div>
+          <div class="prompt-actions"><button class="btn-copy" onclick="copyPrompt(this)">Copiar</button></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="faq">Preguntas frecuentes</h2>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Qué es un prompt de IA?<span class="icon">+</span></div><div class="faq-a">Una instrucción que le das a una herramienta de IA. Cuanto más específico y estructurado sea, mejor el resultado. La calidad del prompt es el factor más determinante en la calidad del output.</div></div>
+      <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Hay que escribir los prompts en inglés?<span class="icon">+</span></div><div class="faq-a">No. Claude y ChatGPT entienden español con alta calidad. Para tareas en español — emails, propuestas, artículos — es mejor escribir en español para que el tono sea más natural y no tenga el aire de traducido.</div></div>
+      <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Cuál es la longitud ideal de un prompt?<span class="icon">+</span></div><div class="faq-a">No hay longitud ideal, pero sí suficiente contexto. Un prompt de 3-5 líneas bien estructurado supera a uno de 1 línea vago. Lo importante: qué quieres, para quién, el tono y restricciones relevantes.</div></div>
+      <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false">¿Claude o ChatGPT para estos prompts?<span class="icon">+</span></div><div class="faq-a">Para textos largos, contratos y redacción con tono natural en español, Claude da mejores resultados. Para prompts que requieren información actualizada o generación de imágenes, ChatGPT. Para los prompts de esta guía, los dos funcionan bien — prueba con tu herramienta habitual.</div></div>
+    </div>
+
+  </article>
+
+  <div class="article-cta">
+    <div><h2>¿Qué herramienta usar con estos prompts?</h2><p>Lee la comparativa directa entre Claude y ChatGPT para autónomos.</p></div>
+    <div class="cta-links">
+      <a href="/comparativas/chatgpt-vs-claude/" class="btn-dark">ChatGPT vs Claude →</a>
+      <a href="/guias/ia-para-autonomos-espana/" class="btn-ghost-dark">Guía autónomos</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="logo" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;letter-spacing:-0.04em;">Comparar<em style="font-style:normal;color:var(--accent)">IA</em></a>
+    <ul class="footer-links"><li><a href="/comparativas/">Comparativas</a></li><li><a href="/herramientas/">Herramientas</a></li><li><a href="/guias/">Guías</a></li><li><a href="/blog/">Blog</a></li><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/privacidad/">Privacidad</a></li></ul>
+    <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.prompt-header').forEach(h=>{h.addEventListener('click',()=>{const c=h.parentElement,o=c.classList.contains('open');document.querySelectorAll('.prompt-card').forEach(x=>x.classList.remove('open'));if(!o)c.classList.add('open')})});
+  function copyPrompt(btn){const t=btn.closest('.prompt-card').querySelector('.prompt-text').innerText;navigator.clipboard.writeText(t).then(()=>{btn.textContent='✓ Copiado';btn.classList.add('copied');setTimeout(()=>{btn.textContent='Copiar';btn.classList.remove('copied')},2000)})}
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling,o=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-expanded','false')});if(!o){a.classList.add('open');btn.classList.add('active');btn.setAttribute('aria-expanded','true')}});btn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();btn.click()}})});
+</script>
+</body>
+</html>
