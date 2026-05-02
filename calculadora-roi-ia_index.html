@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora ROI de IA para autónomos: cuánto dinero pierdes sin usar IA | CompararIA</title>
+  <meta name="description" content="Calcula cuánto tiempo y dinero podrías ahorrar usando inteligencia artificial en tu trabajo como autónomo o freelance en España. Calculadora gratuita con resultados personalizados.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/calculadora-roi-ia/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comparaia.es/calculadora-roi-ia/">
+  <meta property="og:title" content="Calculadora ROI de IA para autónomos: cuánto dinero pierdes sin usar IA">
+  <meta property="og:description" content="Introduce tu tarifa y tus tareas semanales. Te calculamos cuánto tiempo y dinero podrías recuperar con IA.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--surface2:#252538;
+      --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+      --accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;
+      --card-glow:rgba(0,229,160,0.08);--red:#ff6b6b;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;min-height:100vh}
+    .orb{position:fixed;border-radius:50%;filter:blur(130px);pointer-events:none;z-index:0}
+    .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-150px;left:-150px}
+    .orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(124,111,255,0.06) 0%,transparent 70%);bottom:-100px;right:-100px}
+
+    /* NAV */
+    nav{padding:20px 0;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+
+    /* LAYOUT */
+    .page{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+    /* HERO */
+    .hero{padding:64px 0 48px;text-align:center}
+    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 16px;border-radius:100px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px}
+    .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-0.04em;line-height:1.1;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto}
+    .hero h1 span{color:var(--accent)}
+    .hero p{color:var(--muted);font-size:1.05rem;max-width:540px;margin:0 auto 32px}
+
+    /* MAIN GRID */
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:64px;align-items:start}
+
+    /* INPUT PANEL */
+    .panel{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+    .panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    .panel-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+    .panel-title .pt-icon{width:32px;height:32px;border-radius:8px;background:rgba(0,229,160,0.1);display:flex;align-items:center;justify-content:center;font-size:1rem}
+
+    /* INPUTS */
+    .field{margin-bottom:22px}
+    .field label{display:block;font-size:0.85rem;font-weight:600;color:var(--text);margin-bottom:8px}
+    .field .label-sub{font-size:0.78rem;color:var(--muted);font-weight:400;margin-left:6px}
+    .input-wrap{position:relative}
+    .input-wrap .unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:0.82rem;color:var(--muted);pointer-events:none}
+    input[type=number],input[type=range]{width:100%}
+    input[type=number]{background:var(--bg2);border:1px solid var(--border2);color:var(--text);padding:12px 40px 12px 14px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s;-moz-appearance:textfield}
+    input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+    input[type=number]:focus{border-color:var(--accent)}
+    input[type=range]{-webkit-appearance:none;height:6px;border-radius:100px;background:var(--border2);outline:none;cursor:pointer;margin-top:6px}
+    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;transition:transform 0.15s;box-shadow:0 0 0 4px rgba(0,229,160,0.15)}
+    input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
+    .range-labels{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--muted);margin-top:4px}
+    .range-value{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--accent);text-align:right;margin-top:4px}
+
+    /* TASK ROWS */
+    .tasks-section{margin-top:4px}
+    .task-row{display:grid;grid-template-columns:1fr 80px;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+    .task-row:last-child{border-bottom:none}
+    .task-name{font-size:0.88rem;color:var(--text);display:flex;align-items:center;gap:8px}
+    .task-name .ti{font-size:1rem}
+    .task-input{background:var(--bg2);border:1px solid var(--border2);color:var(--text);padding:8px 10px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.88rem;text-align:center;outline:none;width:100%;transition:border-color 0.2s;-moz-appearance:textfield}
+    .task-input::-webkit-outer-spin-button,.task-input::-webkit-inner-spin-button{-webkit-appearance:none}
+    .task-input:focus{border-color:var(--accent)}
+    .task-unit{font-size:0.72rem;color:var(--muted);text-align:center;margin-top:2px}
+
+    /* RESULTS PANEL */
+    .results-panel{background:var(--surface);border:1px solid rgba(0,229,160,0.2);border-radius:20px;padding:32px;position:relative;overflow:hidden}
+    .results-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+
+    .result-hero{text-align:center;padding:24px 0 28px;border-bottom:1px solid var(--border)}
+    .result-hero .rh-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:8px}
+    .result-hero .rh-num{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--accent);transition:all 0.4s ease}
+    .result-hero .rh-sub{font-size:0.88rem;color:var(--muted);margin-top:6px}
+
+    .result-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin:24px 0;border-radius:12px;overflow:hidden}
+    .stat-box{background:var(--surface);padding:20px 16px;text-align:center}
+    .stat-num{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:-0.03em;color:var(--text);transition:all 0.4s ease}
+    .stat-num.green{color:var(--accent)}
+    .stat-num.purple{color:var(--accent2)}
+    .stat-label{font-size:0.75rem;color:var(--muted);margin-top:4px;line-height:1.3}
+
+    /* BREAKDOWN */
+    .breakdown{margin-top:20px}
+    .breakdown-title{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:14px}
+    .breakdown-row{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border)}
+    .breakdown-row:last-child{border-bottom:none}
+    .br-name{font-size:0.85rem;color:var(--text);flex:1;display:flex;align-items:center;gap:8px}
+    .br-bar-wrap{width:80px;height:6px;background:var(--border2);border-radius:100px;overflow:hidden}
+    .br-bar{height:100%;background:var(--accent);border-radius:100px;transition:width 0.6s ease}
+    .br-val{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;color:var(--accent);min-width:42px;text-align:right;transition:all 0.4s}
+
+    /* RECOMMENDATION */
+    .rec-box{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:12px;padding:20px;margin-top:20px}
+    .rec-box .rb-title{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+    .rec-box p{font-size:0.85rem;color:var(--muted);margin-bottom:12px;line-height:1.55}
+    .rec-box .rb-link{display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;font-weight:700;color:var(--accent);text-decoration:none}
+    .rec-box .rb-link:hover{text-decoration:underline}
+
+    /* SHARE / CTA */
+    .share-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    .btn-primary{background:var(--accent);color:#0a0a0f;padding:11px 22px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.2s;white-space:nowrap}
+    .btn-primary:hover{opacity:0.88}
+    .btn-secondary{background:rgba(255,255,255,0.05);color:var(--text);padding:11px 22px;border-radius:10px;font-weight:600;font-size:0.9rem;text-decoration:none;border:1px solid var(--border2);cursor:pointer;transition:border-color 0.2s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+    .btn-secondary:hover{border-color:var(--accent)}
+
+    /* HOW IT WORKS */
+    .how-section{padding:48px 0 64px;border-top:1px solid var(--border)}
+    .how-title{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:8px;text-align:center}
+    .how-sub{color:var(--muted);text-align:center;margin-bottom:40px;font-size:0.95rem}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .how-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center}
+    .how-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);opacity:0.5;margin-bottom:12px}
+    .how-card h3{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px}
+    .how-card p{font-size:0.85rem;color:var(--muted);line-height:1.55}
+
+    /* METHODOLOGY */
+    .method-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:64px}
+    .method-title{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;margin-bottom:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em}
+    .method-box p{font-size:0.85rem;color:var(--muted);line-height:1.65}
+    .method-box strong{color:var(--text)}
+
+    footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-links{display:flex;gap:20px;justify-content:center;list-style:none;margin-bottom:12px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-links a:hover{color:var(--accent)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .hero{animation:fadeUp 0.5s ease both}
+    .calc-grid{animation:fadeUp 0.5s ease 0.1s both}
+
+    @media(max-width:860px){.calc-grid{grid-template-columns:1fr}.how-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:580px){.nav-links{display:none}.how-grid{grid-template-columns:1fr}.result-stats{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="page">
+
+  <header class="hero">
+    <span class="badge">Calculadora gratuita · Sin registro</span>
+    <h1>¿Cuánto dinero pierdes<br>por <span>no usar IA</span>?</h1>
+    <p>Introduce tu tarifa y cuánto tiempo dedicas a tareas repetitivas. Te calculamos el coste real de no automatizarlas.</p>
+  </header>
+
+  <div class="calc-grid">
+
+    <!-- INPUT PANEL -->
+    <div class="panel">
+      <div class="panel-title"><span class="pt-icon">⚙️</span>Tus datos</div>
+
+      <div class="field">
+        <label>Tu tarifa por hora <span class="label-sub">(lo que cobras a clientes)</span></label>
+        <div class="input-wrap">
+          <input type="number" id="hourlyRate" value="45" min="10" max="500" oninput="calculate()">
+          <span class="unit">€/h</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Horas de trabajo semanales <span class="label-sub">(total, no solo facturables)</span></label>
+        <input type="range" id="weeklyHours" min="20" max="60" value="40" oninput="updateRange('weeklyHours','weeklyHoursVal');calculate()">
+        <div class="range-labels"><span>20h</span><span>60h</span></div>
+        <div class="range-value" id="weeklyHoursVal">40 horas/semana</div>
+      </div>
+
+      <div class="field">
+        <label>Semanas de trabajo al año</label>
+        <input type="range" id="weeksYear" min="40" max="52" value="46" oninput="updateRange('weeksYear','weeksYearVal');calculate()">
+        <div class="range-labels"><span>40</span><span>52</span></div>
+        <div class="range-value" id="weeksYearVal">46 semanas/año</div>
+      </div>
+
+      <div class="panel-title" style="margin-top:8px"><span class="pt-icon">📋</span>Tiempo en tareas repetitivas</div>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:16px">¿Cuántas horas a la semana dedicas a cada tarea? Sé realista — incluye el tiempo de pensar, no solo de escribir.</p>
+
+      <div class="tasks-section">
+        <div class="task-row">
+          <div class="task-name"><span class="ti">📧</span>Emails y comunicación</div>
+          <div><input type="number" class="task-input" id="t_email" value="4" min="0" max="20" oninput="calculate()"><div class="task-unit">h/sem</div></div>
+        </div>
+        <div class="task-row">
+          <div class="task-name"><span class="ti">📄</span>Propuestas y presupuestos</div>
+          <div><input type="number" class="task-input" id="t_proposals" value="3" min="0" max="20" oninput="calculate()"><div class="task-unit">h/sem</div></div>
+        </div>
+        <div class="task-row">
+          <div class="task-name"><span class="ti">📱</span>Contenido para redes</div>
+          <div><input type="number" class="task-input" id="t_social" value="2" min="0" max="20" oninput="calculate()"><div class="task-unit">h/sem</div></div>
+        </div>
+        <div class="task-row">
+          <div class="task-name"><span class="ti">🔍</span>Investigación y documentación</div>
+          <div><input type="number" class="task-input" id="t_research" value="3" min="0" max="20" oninput="calculate()"><div class="task-unit">h/sem</div></div>
+        </div>
+        <div class="task-row">
+          <div class="task-name"><span class="ti">🧾</span>Administración y facturas</div>
+          <div><input type="number" class="task-input" id="t_admin" value="2" min="0" max="20" oninput="calculate()"><div class="task-unit">h/sem</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS PANEL -->
+    <div class="results-panel" id="resultsPanel">
+      <div class="panel-title"><span class="pt-icon">📊</span>Tu resultado</div>
+
+      <div class="result-hero">
+        <div class="rh-label">Dinero que podrías recuperar al año</div>
+        <div class="rh-num" id="annualValue">—</div>
+        <div class="rh-sub" id="annualValueSub">Calculando...</div>
+      </div>
+
+      <div class="result-stats">
+        <div class="stat-box">
+          <div class="stat-num green" id="weeklyHoursSaved">—</div>
+          <div class="stat-label">Horas ahorradas<br>por semana</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num purple" id="annualHoursSaved">—</div>
+          <div class="stat-label">Horas ahorradas<br>al año</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num green" id="monthlyValue">—</div>
+          <div class="stat-label">Valor mensual<br>recuperado</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="iaCostRatio">—</div>
+          <div class="stat-label">Retorno sobre<br>coste IA (~20€/mes)</div>
+        </div>
+      </div>
+
+      <div class="breakdown">
+        <div class="breakdown-title">Ahorro por tarea</div>
+        <div class="breakdown-row"><span class="br-name"><span>📧</span>Emails</span><div class="br-bar-wrap"><div class="br-bar" id="bar_email" style="width:0%"></div></div><span class="br-val" id="val_email">—</span></div>
+        <div class="breakdown-row"><span class="br-name"><span>📄</span>Propuestas</span><div class="br-bar-wrap"><div class="br-bar" id="bar_proposals" style="width:0%"></div></div><span class="br-val" id="val_proposals">—</span></div>
+        <div class="breakdown-row"><span class="br-name"><span>📱</span>Redes</span><div class="br-bar-wrap"><div class="br-bar" id="bar_social" style="width:0%"></div></div><span class="br-val" id="val_social">—</span></div>
+        <div class="breakdown-row"><span class="br-name"><span>🔍</span>Investigación</span><div class="br-bar-wrap"><div class="br-bar" id="bar_research" style="width:0%"></div></div><span class="br-val" id="val_research">—</span></div>
+        <div class="breakdown-row"><span class="br-name"><span>🧾</span>Administración</span><div class="br-bar-wrap"><div class="br-bar" id="bar_admin" style="width:0%"></div></div><span class="br-val" id="val_admin">—</span></div>
+      </div>
+
+      <div class="rec-box" id="recBox">
+        <div class="rb-title">💡 <span id="recTitle">Recomendación</span></div>
+        <p id="recText">Calculando tu perfil...</p>
+        <a href="#" class="rb-link" id="recLink">Ver herramienta recomendada →</a>
+      </div>
+
+      <div class="share-row">
+        <a href="/test-que-ia-necesitas/" class="btn-primary">Descubrir qué IA usar →</a>
+        <a href="/guias/ia-para-freelancers/" class="btn-secondary">Guía práctica</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <h2 class="how-title">Cómo funciona la calculadora</h2>
+    <p class="how-sub">La metodología detrás de los números.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <h3>Coste de oportunidad real</h3>
+        <p>Cada hora que dedicas a tareas repetitivas es una hora que no estás facturando o que no estás descansando. Usamos tu tarifa por hora para convertir tiempo en dinero concreto.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <h3>Tasas de ahorro conservadoras</h3>
+        <p>Aplicamos porcentajes de reducción demostrados en estudios: emails (60%), propuestas (55%), redes (65%), investigación (50%), administración (55%). Siempre por lo bajo.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <h3>ROI vs coste real de IA</h3>
+        <p>El coste mensual de las herramientas de IA para autónomos ronda los 20€/mes (~240€/año). Calculamos cuántas veces recuperas esa inversión con el tiempo que ahorras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY NOTE -->
+  <div class="method-box">
+    <div class="method-title">📋 Nota sobre la metodología</div>
+    <p>Los porcentajes de ahorro se basan en datos agregados de estudios de productividad de McKinsey (2023), Stanford HAI (2023) y encuestas propias a freelancers españoles. <strong>Las cifras son estimaciones conservadoras</strong> — el ahorro real depende del uso habitual, la calidad de los prompts y el tipo de trabajo. Esta calculadora no incluye el tiempo de aprendizaje inicial (~2 semanas para uso fluido) ni el coste de oportunidad de la curva de adopción.</p>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div style="max-width:1140px;margin:0 auto;padding:0 24px">
+    <ul class="footer-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+    </ul>
+    <p>© 2025 CompararIA · Hecho en España para freelancers.</p>
+  </div>
+</footer>
+
+<script>
+  // Savings rates per task (% reduction with AI)
+  const SAVINGS = {
+    email: 0.60,
+    proposals: 0.55,
+    social: 0.65,
+    research: 0.50,
+    admin: 0.55
+  };
+
+  const IA_MONTHLY_COST = 20;
+
+  function updateRange(id, valId) {
+    const el = document.getElementById(id);
+    const val = parseInt(el.value);
+    if (id === 'weeklyHours') document.getElementById(valId).textContent = val + ' horas/semana';
+    if (id === 'weeksYear') document.getElementById(valId).textContent = val + ' semanas/año';
+  }
+
+  function fmt(n) {
+    if (n >= 1000) return Math.round(n).toLocaleString('es-ES') + '€';
+    return Math.round(n) + '€';
+  }
+
+  function fmtH(h) {
+    if (h >= 100) return Math.round(h) + 'h';
+    return h.toFixed(1) + 'h';
+  }
+
+  function calculate() {
+    const rate = parseFloat(document.getElementById('hourlyRate').value) || 45;
+    const weeksYear = parseInt(document.getElementById('weeksYear').value) || 46;
+
+    const tasks = {
+      email:     parseFloat(document.getElementById('t_email').value) || 0,
+      proposals: parseFloat(document.getElementById('t_proposals').value) || 0,
+      social:    parseFloat(document.getElementById('t_social').value) || 0,
+      research:  parseFloat(document.getElementById('t_research').value) || 0,
+      admin:     parseFloat(document.getElementById('t_admin').value) || 0,
+    };
+
+    // Hours saved per week per task
+    const savedH = {};
+    let totalWeeklySaved = 0;
+    let maxSaved = 0;
+
+    for (const [k, h] of Object.entries(tasks)) {
+      savedH[k] = h * SAVINGS[k];
+      totalWeeklySaved += savedH[k];
+      if (savedH[k] > maxSaved) maxSaved = savedH[k];
+    }
+
+    const annualHours = totalWeeklySaved * weeksYear;
+    const annualMoney = annualHours * rate;
+    const monthlyMoney = annualMoney / 12;
+    const iaCostAnnual = IA_MONTHLY_COST * 12;
+    const roi = annualMoney / iaCostAnnual;
+
+    // Update main number
+    document.getElementById('annualValue').textContent = fmt(annualMoney);
+    document.getElementById('annualValueSub').textContent =
+      `${fmtH(totalWeeklySaved)} ahorradas/semana × ${weeksYear} semanas × ${rate}€/h`;
+
+    document.getElementById('weeklyHoursSaved').textContent = fmtH(totalWeeklySaved);
+    document.getElementById('annualHoursSaved').textContent = fmtH(annualHours);
+    document.getElementById('monthlyValue').textContent = fmt(monthlyMoney);
+    document.getElementById('iaCostRatio').textContent = 'x' + roi.toFixed(0);
+
+    // Breakdown bars
+    for (const [k, h] of Object.entries(savedH)) {
+      const weeklyVal = h * rate;
+      const pct = maxSaved > 0 ? (h / maxSaved * 100) : 0;
+      document.getElementById('bar_' + k).style.width = pct + '%';
+      document.getElementById('val_' + k).textContent = fmt(weeklyVal * weeksYear / 12) + '/mes';
+    }
+
+    // Recommendation logic
+    const topTask = Object.entries(savedH).sort((a,b) => b[1]-a[1])[0][0];
+    const recs = {
+      email:     {t:'Empieza por los emails', txt:'Tu mayor ahorro está en comunicación. Con Claude Free y un prompt guardado para cada tipo de email recuperarás este tiempo en 2 semanas.', l:'/herramientas/claude/'},
+      proposals: {t:'Automatiza tus propuestas', txt:'Tus propuestas son donde más tiempo pierdes. Un prompt master en Claude con tu estructura habitual genera el 70% del documento en 3 minutos.', l:'/guias/como-escribir-prompts/'},
+      social:    {t:'Genera contenido en bloque', txt:'Una sesión semanal de 20 min con Claude o ChatGPT puede generar contenido para toda la semana. El mayor ROI de tiempo de toda la lista.', l:'/herramientas/chatgpt/'},
+      research:  {t:'Perplexity AI para investigación', txt:'Perplexity AI convierte 1 hora de investigación en 15 minutos, con fuentes citadas. Gratuito y sin registro.', l:'/guias/herramientas-ia-gratis/'},
+      admin:     {t:'Organiza tu administración', txt:'Otter.ai transcribe reuniones y extrae tareas automáticamente. Claude categoriza extractos bancarios para tu gestor. Dos herramientas, grandes ahorros.', l:'/guias/ia-para-freelancers/'},
+    };
+    const rec = recs[topTask];
+    document.getElementById('recTitle').textContent = rec.t;
+    document.getElementById('recText').textContent = rec.txt;
+    document.getElementById('recLink').href = rec.l;
+  }
+
+  // Init
+  calculate();
+</script>
+</body>
+</html>
