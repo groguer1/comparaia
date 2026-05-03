@@ -22,30 +22,48 @@
   <meta name="twitter:title" content="CompararIA – Herramientas de IA para freelancers españoles">
   <meta name="twitter:description" content="Comparativas honestas de IA para freelancers y autónomos. Encuentra la herramienta que necesitas.">
   <meta name="twitter:image" content="https://comparaia.es/assets/og-image.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CompararIA","url":"https://comparaia.es/","description":"Comparativas de herramientas de inteligencia artificial para freelancers y autónomos en España","inLanguage":"es-ES","publisher":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/","logo":{"@type":"ImageObject","url":"https://comparaia.es/assets/logo.png"}},"potentialAction":{"@type":"SearchAction","target":"https://comparaia.es/buscar?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CompararIA","url":"https://comparaia.es/","description":"Comparativas de herramientas de inteligencia artificial para freelancers y autónomos en España","inLanguage":"es-ES","publisher":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"},"potentialAction":{"@type":"SearchAction","target":"https://comparaia.es/buscar?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Comparativas de herramientas IA","itemListElement":[{"@type":"ListItem","position":1,"name":"ChatGPT vs Claude","url":"https://comparaia.es/comparativas/chatgpt-vs-claude/"},{"@type":"ListItem","position":2,"name":"Mejores IA para escribir","url":"https://comparaia.es/comparativas/mejores-ia-escribir/"},{"@type":"ListItem","position":3,"name":"IA para autónomos en España","url":"https://comparaia.es/guias/ia-para-autonomos-espana/"}]}</script>
+
+  <!-- Brevo fonts (en head, como indica Brevo) -->
+  <style>
+    @font-face{font-display:block;font-family:Roboto;src:url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")}
+    @font-face{font-display:fallback;font-family:Roboto;font-weight:600;src:url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")}
+    @font-face{font-display:fallback;font-family:Roboto;font-weight:700;src:url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")}
+  </style>
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a24;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4}
+
+    /* ORBS — z-index bajo para no interferir con nav */
     .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
     .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,229,160,0.12) 0%,transparent 70%);top:-200px;left:-200px}
     .orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(124,111,255,0.10) 0%,transparent 70%);bottom:0;right:-100px}
+
     .container{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-    nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+
+    /* NAV — z-index alto + isolation para que no se pierda nunca */
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);isolation:isolate}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1140px;margin:0 auto;padding:0 24px}
     .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
     .logo span{color:var(--accent)}
     .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
     .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;font-weight:400;transition:color 0.2s}
     .nav-links a:hover{color:var(--text)}
-    .nav-cta{background:var(--accent);color:#0a0a0f!important;padding:8px 16px;border-radius:6px;font-weight:600!important;font-size:0.82rem!important}
-    .hero{padding:120px 0 80px;text-align:center}
+    .nav-cta{background:var(--accent);color:#0a0a0f!important;padding:8px 16px;border-radius:6px;font-weight:600!important;font-size:0.82rem!important;white-space:nowrap}
+
+    /* HERO */
+    .hero{padding:120px 0 80px;text-align:center;position:relative;z-index:1}
     .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.2);color:var(--accent);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:32px;animation:fadeUp 0.6s ease both}
     .hero-badge::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(1.4)}}
@@ -53,21 +71,27 @@
     h1 em{font-style:normal;color:var(--accent)}
     .hero-sub{font-size:1.15rem;color:var(--muted);max-width:560px;margin:0 auto 40px;font-weight:300;animation:fadeUp 0.6s 0.2s ease both}
     .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both}
-    .btn-primary{background:var(--accent);color:#0a0a0f;padding:14px 28px;border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
+    .btn-primary{background:var(--accent);color:#0a0a0f;padding:14px 28px;border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;display:inline-block}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,229,160,0.3)}
-    .btn-ghost{background:transparent;color:var(--text);padding:14px 28px;border-radius:8px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1px solid var(--border);transition:border-color 0.2s,background 0.2s}
+    .btn-ghost{background:transparent;color:var(--text);padding:14px 28px;border-radius:8px;font-weight:500;font-size:0.95rem;text-decoration:none;border:1px solid var(--border);transition:border-color 0.2s,background 0.2s;display:inline-block}
     .btn-ghost:hover{border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.04)}
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+    /* STATS */
     .stats{display:flex;border:1px solid var(--border);border-radius:12px;margin:64px 0;overflow:hidden;background:var(--surface)}
     .stat{flex:1;padding:28px 24px;text-align:center;border-right:1px solid var(--border)}
     .stat:last-child{border-right:none}
     .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:-0.03em}
     .stat-label{font-size:0.82rem;color:var(--muted);margin-top:4px}
+
+    /* SECTIONS */
     .section-head{margin-bottom:48px}
     .section-tag{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
     h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;letter-spacing:-0.03em;line-height:1.2;margin-bottom:12px}
     .section-desc{color:var(--muted);font-size:1rem;max-width:520px}
-    section{padding:80px 0}
+    section{padding:80px 0;position:relative;z-index:1}
+
+    /* CARDS */
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;text-decoration:none;color:inherit;transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;display:block}
     .card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-4px);box-shadow:0 16px 48px var(--card-glow)}
@@ -76,6 +100,8 @@
     .card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-0.02em}
     .card p{font-size:0.875rem;color:var(--muted);line-height:1.55}
     .card-arrow{display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);margin-top:16px;font-weight:500}
+
+    /* TOOLS */
     .tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     .tool-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px 28px;display:flex;gap:20px;align-items:flex-start;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s}
     .tool-card:hover{border-color:rgba(124,111,255,0.3);background:var(--bg3)}
@@ -86,6 +112,8 @@
     .badge-green{background:rgba(0,229,160,0.12);color:var(--accent)}
     .badge-purple{background:rgba(124,111,255,0.12);color:var(--accent2)}
     .badge-orange{background:rgba(255,160,50,0.12);color:#ffa032}
+
+    /* GUIDES */
     .guides-list{display:flex;flex-direction:column;gap:2px}
     .guide-item{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;gap:16px}
     .guide-item:hover{border-color:rgba(255,255,255,0.15);background:var(--bg3)}
@@ -93,6 +121,7 @@
     .guide-num{font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;color:var(--muted);width:24px;flex-shrink:0}
     .guide-title{font-size:0.95rem;font-weight:500}
     .guide-meta{font-size:0.8rem;color:var(--muted);flex-shrink:0}
+
     /* DIFF TOOLS */
     .tools-diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     .diff-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:inherit;transition:all 0.3s ease;display:flex;flex-direction:column;position:relative;overflow:hidden}
@@ -105,40 +134,63 @@
     .diff-card p{font-size:0.875rem;color:var(--muted);line-height:1.6;flex:1;margin-bottom:18px}
     .diff-card .dc-cta{font-size:0.82rem;color:var(--accent);font-weight:600}
     .diff-card .dc-tag{position:absolute;top:20px;right:20px;font-size:0.68rem;font-weight:700;padding:3px 8px;border-radius:4px;background:rgba(0,229,160,0.1);color:var(--accent)}
-    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.08) 0%,rgba(124,111,255,0.08) 100%);border:1px solid rgba(0,229,160,0.15);border-radius:20px;padding:64px 48px;text-align:center;position:relative;overflow:hidden}
-    .cta-banner::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(0,229,160,0.12),transparent 70%);pointer-events:none}
-    .cta-banner h2{margin-bottom:12px}
-    .cta-banner p{color:var(--muted);margin-bottom:32px}
-    footer{border-top:1px solid var(--border);padding:40px 0;margin-top:40px}
+
+    /* NEWSLETTER (Brevo override) */
+    .newsletter-section{padding:80px 0}
+    .newsletter-wrap{background:linear-gradient(135deg,rgba(0,229,160,0.08) 0%,rgba(124,111,255,0.08) 100%);border:1px solid rgba(0,229,160,0.15);border-radius:20px;padding:64px 48px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .newsletter-wrap::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(0,229,160,0.12),transparent 70%);pointer-events:none}
+    .nl-text h2{margin-bottom:12px}
+    .nl-text p{color:var(--muted);font-size:0.95rem;line-height:1.6}
+    /* Ocultar título y descripción del formulario de Brevo, usar los nuestros */
+    #sib-container{background:transparent!important;border:none!important;max-width:100%!important;border-radius:0!important;padding:0!important}
+    .sib-form{background:transparent!important;text-align:left!important}
+    .sib-form-block:first-child{display:none!important}
+    .sib-form-block:nth-child(2){display:none!important}
+    #sib-container .entry__label{color:var(--muted)!important;font-family:'DM Sans',sans-serif!important;font-size:0.82rem!important;font-weight:500!important;margin-bottom:6px!important}
+    #sib-container .input{background:rgba(255,255,255,0.06)!important;border:1px solid var(--border)!important;border-radius:8px!important;color:var(--text)!important;font-family:'DM Sans',sans-serif!important;font-size:0.95rem!important;padding:12px 16px!important;width:100%!important;transition:border-color 0.2s!important}
+    #sib-container .input:focus{border-color:var(--accent)!important;outline:none!important}
+    #sib-container input::placeholder{color:var(--muted)!important}
+    .sib-form-block__button{background:var(--accent)!important;color:#0a0a0f!important;font-family:'Syne',sans-serif!important;font-weight:700!important;font-size:0.9rem!important;border-radius:8px!important;padding:12px 28px!important;border:none!important;cursor:pointer!important;width:100%!important;margin-top:8px!important;transition:opacity 0.2s!important}
+    .sib-form-block__button:hover{opacity:0.88!important}
+    .entry__specification{color:var(--muted)!important;font-size:0.75rem!important;font-family:'DM Sans',sans-serif!important}
+    #success-message{background:rgba(0,229,160,0.08)!important;border-color:var(--accent)!important;color:var(--accent)!important;border-radius:8px!important}
+    #error-message{background:rgba(255,107,107,0.08)!important;border-color:#ff6b6b!important;color:#ff6b6b!important;border-radius:8px!important}
+    .sib-form-message-panel{max-width:100%!important}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:40px 0;margin-top:40px;position:relative;z-index:1}
     .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
     .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
     .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
     .footer-links a:hover{color:var(--text)}
     .footer-copy{font-size:0.82rem;color:var(--muted)}
-    @media(max-width:768px){.grid-3,.tools-diff-grid,.tools-grid{grid-template-columns:1fr}.stats{flex-direction:column}.stat{border-right:none;border-bottom:1px solid var(--border)}.stat:last-child{border-bottom:none}.nav-links{display:none}.cta-banner{padding:40px 24px}.hero{padding:80px 0 60px}}
+
+    @media(max-width:860px){.newsletter-wrap{grid-template-columns:1fr;padding:40px 28px}}
+    @media(max-width:768px){.grid-3,.tools-diff-grid,.tools-grid{grid-template-columns:1fr}.stats{flex-direction:column}.stat{border-right:none;border-bottom:1px solid var(--border)}.stat:last-child{border-bottom:none}.nav-links{display:none}.hero{padding:80px 0 60px}}
   </style>
 </head>
 <body>
   <div class="orb orb-1" aria-hidden="true"></div>
   <div class="orb orb-2" aria-hidden="true"></div>
 
+  <!-- NAV -->
   <nav aria-label="Navegación principal">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="/" class="logo" aria-label="CompararIA – Inicio">Comparar<span>IA</span></a>
-        <ul class="nav-links">
-          <li><a href="/comparativas/">Comparativas</a></li>
-          <li><a href="/herramientas/">Herramientas</a></li>
-          <li><a href="/guias/">Guías</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
-          <li><a href="/test-que-ia-necesitas/" class="nav-cta">¿Qué IA necesito? →</a></li>
-        </ul>
-      </div>
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="CompararIA – Inicio">Comparar<span>IA</span></a>
+      <ul class="nav-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+        <li><a href="/test-que-ia-necesitas/" class="nav-cta">¿Qué IA necesito? →</a></li>
+      </ul>
     </div>
   </nav>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-badge">Comparativas sin publicidad pagada</div>
@@ -253,18 +305,69 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section aria-labelledby="cta-title">
+    <!-- NEWSLETTER con Brevo -->
+    <section class="newsletter-section" aria-labelledby="newsletter-title">
       <div class="container">
-        <div class="cta-banner">
-          <h2 id="cta-title">Sin spam. Solo lo que importa.</h2>
-          <p>Una vez al mes: la herramienta IA más útil para freelancers ese mes. Nada más.</p>
-          <a href="#newsletter" class="btn-primary">Suscribirme gratis</a>
+        <div class="newsletter-wrap">
+          <div class="nl-text">
+            <div class="section-tag">Newsletter</div>
+            <h2 id="newsletter-title">Sin spam.<br>Solo lo que importa.</h2>
+            <p>Una vez al mes: la herramienta IA más útil para freelancers ese mes, con un caso de uso real. Nada más. Más de 3 suscriptores ya lo reciben.</p>
+          </div>
+          <div class="nl-form-wrap">
+            <!-- Brevo form (solo el formulario, sin título propio) -->
+            <div class="sib-form">
+              <div id="sib-form-container" class="sib-form-container">
+                <div id="error-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'DM Sans',sans-serif;color:#ff6b6b;background-color:rgba(255,107,107,0.08);border-radius:8px;border-color:#ff6b6b;max-width:100%;display:none">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <span class="sib-form-message-panel__inner-text">No hemos podido validar tu suscripción.</span>
+                  </div>
+                </div>
+                <div id="success-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'DM Sans',sans-serif;color:var(--accent);background-color:rgba(0,229,160,0.08);border-radius:8px;border-color:var(--accent);max-width:100%;display:none">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <span class="sib-form-message-panel__inner-text">✓ Suscripción realizada. Bienvenido/a.</span>
+                  </div>
+                </div>
+                <div id="sib-container" class="sib-container--large sib-container--vertical">
+                  <form id="sib-form" method="POST" action="https://9a7395d6.sibforms.com/serve/MUIFAJDlo4zgU-dsxe11eh1EA4XqEAdJ5gJp970hZATC2IRwMqCvltW7lKGPSVaAIWhOGs2olMsQA5u6yCDLGiWmAO9n1P0GKXA73LsHBd9YaxTkpgDJRBKrLZ-VIl4xZ_7uL_3smgOv5Yc2gQdXFcoWt68v_zFi029sRfxZ0zMxnrPXT9A4pswc0Pj9OFLHljS7QVQLE1rT9v_ipw==" data-type="subscription">
+                    <div style="padding:8px 0">
+                      <div class="sib-input sib-form-block">
+                        <div class="form__entry entry_block">
+                          <div class="form__label-row">
+                            <label class="entry__label" style="font-weight:500;text-align:left;font-size:0.82rem;font-family:'DM Sans',sans-serif;color:var(--muted)" for="EMAIL">Tu dirección de email</label>
+                            <div class="entry__field">
+                              <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="tu@email.com" data-required="true" required />
+                            </div>
+                          </div>
+                          <label class="entry__error entry__error--primary" style="font-size:0.78rem;text-align:left;font-family:'DM Sans',sans-serif;color:#ff6b6b"></label>
+                          <label class="entry__specification" style="font-size:0.72rem;text-align:left;font-family:'DM Sans',sans-serif;color:var(--muted)">Sin spam. Te puedes dar de baja cuando quieras.</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:8px 0">
+                      <div class="sib-form-block">
+                        <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:0.95rem;font-weight:700;font-family:'Syne',sans-serif;color:#0a0a0f;background-color:var(--accent);border-radius:8px;border-width:0;padding:13px 28px;width:100%;cursor:pointer" form="sib-form" type="submit">
+                          <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:16px;height:16px;margin-right:8px;vertical-align:middle">
+                            <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
+                          </svg>
+                          Suscribirme gratis
+                        </button>
+                      </div>
+                    </div>
+                    <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none">
+                    <input type="hidden" name="locale" value="es">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -286,5 +389,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Brevo scripts (al final del body) -->
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE='Elija un código de país';
+    window.LOCALE='es';
+    window.EMAIL_INVALID_MESSAGE=window.SMS_INVALID_MESSAGE="La información no es válida. Compruebe el formato e inténtalo de nuevo.";
+    window.REQUIRED_ERROR_MESSAGE="Este campo no puede quedarse vacío.";
+    window.GENERIC_INVALID_MESSAGE="La información no es válida. Compruebe el formato e inténtalo de nuevo.";
+    window.translation={common:{selectedList:'{quantity} lista seleccionada',selectedLists:'{quantity} listas seleccionadas',selectedOption:'{quantity} seleccionado',selectedOptions:'{quantity} seleccionados'}};
+    var AUTOHIDE=Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
 </body>
 </html>
