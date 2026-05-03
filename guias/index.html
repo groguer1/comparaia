@@ -1,292 +1,157 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Guías de Inteligencia Artificial para Autónomos | CompararIA</title>
-  <meta name="description" content="Aprende a integrar la inteligencia artificial en tu trabajo con nuestras guías prácticas para freelancers y autónomos en España. Herramientas gratis, productividad y fiscalidad.">
-  <meta name="keywords" content="guías IA, inteligencia artificial autónomos, IA para freelancers, herramientas IA gratis, tutoriales IA España">
-  <meta name="author" content="CompararIA">
+  <title>Guías de IA para autónomos y freelancers en España 2025 | CompararIA</title>
+  <meta name="description" content="Guías prácticas de inteligencia artificial para autónomos y freelancers en España. Cómo usar IA, herramientas gratuitas, cómo escribir prompts y más.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://comparaia.es/guias/">
-
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://comparaia.es/guias/">
-  <meta property="og:title" content="Guías de Inteligencia Artificial para Autónomos | CompararIA">
-  <meta property="og:description" content="Aprende a integrar la inteligencia artificial en tu trabajo con nuestras guías prácticas para freelancers.">
+  <meta property="og:title" content="Guías de IA para autónomos y freelancers en España">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="CompararIA">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Guías de Inteligencia Artificial",
-    "description": "Listado de guías prácticas sobre herramientas de IA para autónomos y freelancers.",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Cómo usar IA si eres autónomo en España",
-        "url": "https://comparaia.es/guias/ia-para-autonomos-espana/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Mejores herramientas IA gratuitas",
-        "url": "https://comparaia.es/guias/herramientas-ia-gratis/"
-      }
-    ]
-  }
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <style>
-    /* Estilos base heredados */
-    :root {
-      --bg:        #0a0a0f;
-      --bg2:       #111118;
-      --surface:   #1e1e2e;
-      --border:    rgba(255,255,255,0.07);
-      --accent:    #00e5a0;
-      --accent2:   #7c6fff;
-      --text:      #e8e8f0;
-      --muted:     #7a7a9a;
-      --card-glow: rgba(0,229,160,0.06);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Orbes de fondo (Tono verde para guías) */
-    .orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .orb-1 {
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%);
-      top: -100px; left: -100px;
-    }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* NAV */
-    nav {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.2rem;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .logo span { color: var(--accent); }
-
-    /* Header de Sección */
-    .header-section {
-      padding: 80px 0 40px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(124,111,255,0.1);
-      color: var(--accent2);
-      padding: 6px 12px;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      margin-bottom: 16px;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      max-width: 600px;
-      font-size: 1.1rem;
-    }
-
-    /* Grid de Guías */
-    .guide-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      padding: 40px 0 100px;
-    }
-
-    .guide-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .guide-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px var(--card-glow);
-    }
-
-    /* Pequeño acento visual en las tarjetas */
-    .guide-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .guide-card:hover::before {
-      opacity: 1;
-    }
-
-    .guide-card .icon {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-
-    .guide-card h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .guide-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .guide-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .guide-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-    }
-
-    /* Footer */
-    footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 600px) {
-      .guide-grid { grid-template-columns: 1fr; }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a24;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4}
+    .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+    .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,229,160,0.1) 0%,transparent 70%);top:-150px;left:-150px}
+    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,111,255,0.08) 0%,transparent 70%);bottom:0;right:-100px}
+    .container{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);isolation:isolate}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-links a[aria-current]{color:var(--text)}
+    .page-header{padding:72px 0 48px;position:relative;z-index:1}
+    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.04em;line-height:1.1;margin-bottom:14px}
+    .subtitle{color:var(--muted);font-size:1.05rem;max-width:540px}
+    .guides-list{display:flex;flex-direction:column;gap:14px;margin-bottom:64px;position:relative;z-index:1}
+    .guide-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 32px;text-decoration:none;color:inherit;transition:all 0.3s ease;display:flex;align-items:center;gap:24px}
+    .guide-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-3px);box-shadow:0 12px 40px var(--card-glow)}
+    .guide-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);opacity:0.3;flex-shrink:0;width:48px}
+    .guide-icon{font-size:1.8rem;flex-shrink:0;width:52px;height:52px;background:rgba(0,229,160,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center}
+    .guide-content{flex:1}
+    .guide-title{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:6px;letter-spacing:-0.02em}
+    .guide-desc{font-size:0.88rem;color:var(--muted);line-height:1.55}
+    .guide-meta{font-size:0.78rem;color:var(--muted);margin-top:8px;display:flex;gap:12px}
+    .guide-meta span{background:rgba(255,255,255,0.04);padding:2px 8px;border-radius:4px}
+    .guide-arrow{color:var(--accent);font-size:1.2rem;flex-shrink:0}
+    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.08),rgba(124,111,255,0.08));border:1px solid rgba(0,229,160,0.15);border-radius:16px;padding:40px 48px;margin-bottom:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .cta-banner h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:8px}
+    .cta-banner p{color:var(--muted);font-size:0.92rem}
+    .btn-primary{background:var(--accent);color:#0a0a0f;padding:12px 24px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;text-decoration:none;transition:opacity 0.2s;white-space:nowrap}
+    .btn-primary:hover{opacity:0.88}
+    footer{border-top:1px solid var(--border);padding:40px 0;position:relative;z-index:1}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+    .footer-links a:hover{color:var(--text)}
+    .footer-copy{font-size:0.82rem;color:var(--muted)}
+    @media(max-width:768px){.guide-card{flex-wrap:wrap}.guide-num{display:none}.nav-links{display:none}.cta-banner{flex-direction:column}}
   </style>
 </head>
 <body>
-
-  <div class="orb orb-1"></div>
-
-  <nav aria-label="Navegación principal">
-    <div class="container">
-      <a href="../" class="logo">Comparar<span>IA</span></a>
-    </div>
-  </nav>
-
-  <main class="container">
-    <header class="header-section">
-      <span class="badge">Aprende paso a paso</span>
-      <h1>Guías prácticas de IA</h1>
-      <p class="subtitle">Descubre cómo automatizar tareas, ahorrar horas de trabajo y elegir las mejores herramientas para tu negocio en España.</p>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/" aria-current="page">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <header class="page-header">
+      <span class="badge">4 guías prácticas</span>
+      <h1>Guías de IA<br>para autónomos</h1>
+      <p class="subtitle">Guías prácticas pensadas para el contexto español. Sin teoría innecesaria — solo lo que puedes aplicar esta semana.</p>
     </header>
 
-    <div class="guide-grid" role="list">
-      
-      <a href="./ia-para-autonomos-espana/" class="guide-card" role="listitem">
-        <div class="icon">🇪🇸</div>
-        <h2>Cómo usar IA si eres autónomo en España</h2>
-        <p>Aprende a integrar ChatGPT y otras inteligencias artificiales en tu día a día cumpliendo con la normativa. Fiscalidad, automatización y ejemplos reales.</p>
-        <div class="guide-link">Leer guía completa →</div>
-        <div class="guide-meta">
-          <span>Lectura: 15 min</span>
-          <span>Nivel: Básico</span>
+    <div class="guides-list">
+      <a href="/guias/ia-para-autonomos-espana/" class="guide-card">
+        <div class="guide-num">01</div>
+        <div class="guide-icon">🇪🇸</div>
+        <div class="guide-content">
+          <div class="guide-title">Cómo usar IA si eres autónomo en España</div>
+          <div class="guide-desc">La guía completa para autónomos españoles. Qué herramientas usar, cómo encaja con la fiscalidad española y por dónde empezar sin perderse.</div>
+          <div class="guide-meta"><span>Guía completa</span><span>15 min</span><span>Para todos los perfiles</span></div>
         </div>
+        <div class="guide-arrow">→</div>
       </a>
-
-      <a href="./herramientas-ia-gratis/" class="guide-card" role="listitem">
-        <div class="icon">💶</div>
-        <h2>Las mejores herramientas IA gratuitas (2025)</h2>
-        <p>No necesitas gastar 20€ al mes para empezar. Descubre las alternativas gratuitas más potentes para redactar, diseñar y gestionar tu negocio.</p>
-        <div class="guide-link">Leer guía completa →</div>
-        <div class="guide-meta">
-          <span>Lectura: 8 min</span>
-          <span>Nivel: Todos</span>
+      <a href="/guias/ia-para-freelancers/" class="guide-card">
+        <div class="guide-num">02</div>
+        <div class="guide-icon">⚡</div>
+        <div class="guide-content">
+          <div class="guide-title">IA para freelancers: las 10 tareas que puedes automatizar hoy</div>
+          <div class="guide-desc">Herramientas concretas para cada tarea repetitiva: emails, propuestas, facturas, redes sociales. Con tiempo de ahorro estimado por tarea.</div>
+          <div class="guide-meta"><span>Productividad</span><span>10 min</span><span>Accionable hoy</span></div>
         </div>
+        <div class="guide-arrow">→</div>
       </a>
-
-      <a href="#" class="guide-card" style="border-style: dashed; opacity: 0.6; pointer-events: none;" aria-hidden="true">
-        <div class="icon">🧾</div>
-        <h2>IA para facturas y contabilidad</h2>
-        <p>Próximamente: Lo que funciona de verdad para automatizar la gestión de tus gastos y modelos trimestrales.</p>
-        <div class="guide-link" style="color: var(--muted)">En desarrollo ⏳</div>
+      <a href="/guias/como-escribir-prompts/" class="guide-card">
+        <div class="guide-num">03</div>
+        <div class="guide-icon">✍️</div>
+        <div class="guide-content">
+          <div class="guide-title">Cómo escribir buenos prompts para IA (con 40+ ejemplos)</div>
+          <div class="guide-desc">La fórmula base, las 6 técnicas que más mejoran los resultados y una biblioteca de 40+ prompts listos para copiar por tipo de tarea.</div>
+          <div class="guide-meta"><span>Prompts</span><span>14 min</span><span>40+ prompts incluidos</span></div>
+        </div>
+        <div class="guide-arrow">→</div>
       </a>
-
+      <a href="/guias/herramientas-ia-gratis/" class="guide-card">
+        <div class="guide-num">04</div>
+        <div class="guide-icon">🎁</div>
+        <div class="guide-content">
+          <div class="guide-title">Las mejores herramientas IA gratuitas en 2025</div>
+          <div class="guide-desc">Las herramientas de IA que ofrecen versión gratuita real — no trials de 7 días. Para empezar sin gastar nada y decidir qué merece la pena pagar.</div>
+          <div class="guide-meta"><span>Sin coste</span><span>8 min</span><span>Actualizado 2025</span></div>
+        </div>
+        <div class="guide-arrow">→</div>
+      </a>
     </div>
-  </main>
 
-  <footer>
-    <div class="container">
-      © 2025 CompararIA · Hecho en España para freelancers.
+    <div class="cta-banner">
+      <div>
+        <h2>¿Prefieres prompts específicos para tu profesión?</h2>
+        <p>Tenemos una biblioteca de 60+ prompts organizados por perfil de freelance — redactor, diseñador, developer, consultor...</p>
+      </div>
+      <a href="/prompts-por-profesion/" class="btn-primary">Ver prompts →</a>
     </div>
-  </footer>
-
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/" class="logo">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
