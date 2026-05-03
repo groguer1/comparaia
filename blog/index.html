@@ -9,110 +9,78 @@
   <link rel="canonical" href="https://comparaia.es/blog/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://comparaia.es/blog/">
-  <meta property="og:title" content="Blog de IA para autónomos y freelancers en España | CompararIA">
-  <meta property="og:description" content="Contenido práctico de IA para autónomos. Sin humo, con datos reales.">
+  <meta property="og:title" content="Blog de IA para autónomos y freelancers en España">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="CompararIA">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"CompararIA Blog","description":"Blog de inteligencia artificial para autónomos y freelancers en España","url":"https://comparaia.es/blog/","inLanguage":"es-ES","publisher":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+    :root{--bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a24;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4}
     .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
-    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-100px;left:-100px}
-    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,111,255,0.06) 0%,transparent 70%);bottom:0;right:-100px}
+    .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,229,160,0.1) 0%,transparent 70%);top:-150px;left:-150px}
+    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,111,255,0.08) 0%,transparent 70%);bottom:0;right:-100px}
     .container{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-    nav{padding:20px 0;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
-    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);isolation:isolate}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
     .logo span{color:var(--accent)}
-    .nav-links{display:flex;gap:28px;list-style:none}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
-    .nav-links a:hover,.nav-links a[aria-current]{color:var(--text)}
-    /* HEADER */
-    .blog-header{padding:80px 0 48px}
-    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:18px}
-    .blog-header h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:16px}
-    .blog-header .subtitle{color:var(--muted);max-width:600px;font-size:1.05rem}
-    .header-meta{display:flex;gap:16px;margin-top:20px;flex-wrap:wrap}
-    .meta-pill{font-size:0.78rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:4px 12px;border-radius:100px;display:flex;align-items:center;gap:6px}
-    .meta-pill span{color:var(--accent);font-weight:600}
-    /* SECTION LABEL */
-    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:24px;display:flex;align-items:center;gap:14px}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-links a[aria-current]{color:var(--text)}
+    .page-header{padding:72px 0 48px;position:relative;z-index:1}
+    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.04em;line-height:1.1;margin-bottom:14px}
+    .subtitle{color:var(--muted);font-size:1.05rem;max-width:540px;margin-bottom:0}
+    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:48px 0 20px;display:flex;align-items:center;gap:14px;position:relative;z-index:1}
     .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
     /* FEATURED */
-    .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:64px}
-    .feat-card-lg{grid-column:1 / -1;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;text-decoration:none;color:inherit;transition:all 0.3s ease;position:relative;overflow:hidden}
-    .feat-card-lg::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity 0.3s}
-    .feat-card-lg:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px var(--card-glow)}
-    .feat-card-lg:hover::before{opacity:1}
-    .feat-card-lg .fc-cat{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-    .feat-card-lg h2{font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:14px}
-    .feat-card-lg .fc-desc{font-size:0.92rem;color:var(--muted);line-height:1.65;margin-bottom:18px}
-    .feat-card-lg .fc-meta{font-size:0.78rem;color:var(--muted);display:flex;gap:14px}
-    .feat-card-lg .fc-visual{background:var(--bg2);border:1px solid var(--border);border-radius:12px;height:200px;display:flex;align-items:center;justify-content:center;font-size:5rem}
-    .feat-card-lg .fc-cta{display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:600;color:var(--accent);margin-top:16px}
-    /* SMALL FEATURED */
-    .feat-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:all 0.3s ease;position:relative;overflow:hidden}
-    .feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity 0.3s}
-    .feat-card:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 12px 40px var(--card-glow)}
-    .feat-card:hover::before{opacity:1}
-    .fc-cat-pill{display:inline-block;padding:4px 10px;border-radius:100px;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px}
-    .fc-cat-pill.c1{background:rgba(255,107,107,0.1);color:#ff6b6b}
-    .fc-cat-pill.c2{background:rgba(0,229,160,0.1);color:var(--accent)}
-    .fc-cat-pill.c3{background:rgba(116,192,252,0.1);color:#74c0fc}
-    .fc-cat-pill.c4{background:rgba(218,119,242,0.1);color:#da77f2}
-    .feat-card h2{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;line-height:1.3;margin-bottom:10px}
-    .feat-card p{font-size:0.88rem;color:var(--muted);line-height:1.6;flex:1;margin-bottom:16px}
-    .fc-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)}
-    .fc-date{font-size:0.75rem;color:var(--muted)}
-    .fc-read{font-size:0.75rem;color:var(--accent);font-weight:600}
-    /* ALL POSTS */
+    .featured-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:36px;text-decoration:none;color:inherit;display:block;transition:all 0.3s ease;position:relative;overflow:hidden;margin-bottom:48px}
+    .featured-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    .featured-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-4px);box-shadow:0 16px 48px var(--card-glow)}
+    .fc-cat{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+    .featured-card h2{font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;letter-spacing:-0.03em;line-height:1.2;margin-bottom:12px}
+    .featured-card .fc-desc{font-size:0.95rem;color:var(--muted);line-height:1.65;max-width:640px;margin-bottom:16px}
+    .featured-card .fc-meta{font-size:0.8rem;color:var(--muted);display:flex;gap:14px}
+    .featured-card .fc-cta{display:inline-flex;align-items:center;gap:6px;font-size:0.88rem;font-weight:700;color:var(--accent);margin-top:16px}
+    /* POSTS GRID */
     .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:64px}
     .post-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:all 0.3s ease}
     .post-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-4px);box-shadow:0 8px 32px var(--card-glow)}
-    .post-card.dim{opacity:0.4;pointer-events:none;border-style:dashed}
-    .post-num{font-size:0.7rem;color:var(--muted);font-weight:600}
     .post-cat{font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
     .post-cat.cy{color:var(--accent)}
     .post-cat.c1{color:#ff6b6b}
     .post-cat.c2{color:#74c0fc}
     .post-cat.c3{color:#da77f2}
     .post-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
-    .post-desc{font-size:0.82rem;color:var(--muted);line-height:1.55;flex:1}
-    .post-meta{font-size:0.72rem;color:var(--muted);margin-top:auto;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between}
-    /* TOPICS */
-    .topics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:64px}
-    .topic-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:inherit;transition:all 0.3s ease}
-    .topic-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-3px)}
-    .topic-icon{font-size:1.8rem;margin-bottom:10px}
-    .topic-name{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:4px}
-    .topic-count{font-size:0.75rem;color:var(--muted)}
+    .post-desc{font-size:0.84rem;color:var(--muted);line-height:1.55;flex:1}
+    .post-meta{font-size:0.75rem;color:var(--muted);margin-top:auto;padding-top:12px;border-top:1px solid var(--border);display:flex;justify-content:space-between}
     /* MORE */
-    .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:80px}
-    .more-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:inherit;transition:all 0.3s ease}
+    .more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px}
+    .more-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s}
     .more-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-3px)}
     .more-card.highlight{background:rgba(0,229,160,0.04);border-color:rgba(0,229,160,0.2)}
-    .more-card.highlight:hover{border-color:var(--accent)}
     .more-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
     .more-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:6px}
     .more-desc{font-size:0.84rem;color:var(--muted)}
-    footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
-    .footer-links{display:flex;gap:20px;justify-content:center;list-style:none;margin-bottom:12px;flex-wrap:wrap}
-    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
-    .footer-links a:hover{color:var(--accent)}
-    @media(max-width:900px){.featured-grid,.posts-grid,.topics-grid,.more-grid{grid-template-columns:1fr 1fr}.feat-card-lg{grid-column:1;grid-template-columns:1fr}.feat-card-lg .fc-visual{display:none}}
-    @media(max-width:580px){.featured-grid,.posts-grid,.topics-grid,.more-grid{grid-template-columns:1fr}.nav-links{display:none}}
+    footer{border-top:1px solid var(--border);padding:40px 0;position:relative;z-index:1}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+    .footer-links a:hover{color:var(--text)}
+    .footer-copy{font-size:0.82rem;color:var(--muted)}
+    @media(max-width:768px){.posts-grid,.more-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+    @media(max-width:480px){.posts-grid,.more-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
-
 <nav aria-label="Navegación principal">
   <div class="nav-inner">
     <a href="/" class="logo">Comparar<span>IA</span></a>
@@ -121,152 +89,55 @@
       <li><a href="/herramientas/">Herramientas</a></li>
       <li><a href="/guias/">Guías</a></li>
       <li><a href="/blog/" aria-current="page">Blog</a></li>
+      <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
     </ul>
   </div>
 </nav>
-
 <main>
-<div class="container">
+  <div class="container">
+    <header class="page-header">
+      <span class="badge">Blog · 4 artículos</span>
+      <h1>IA para autónomos<br>en España</h1>
+      <p class="subtitle">Análisis y guías prácticas de IA para freelancers. Sin humo: contenido con ejemplos concretos y datos reales.</p>
+    </header>
 
-  <header class="blog-header">
-    <span class="badge">Blog · CompararIA</span>
-    <h1>IA para autónomos en España</h1>
-    <p class="subtitle">Análisis, guías y herramientas de inteligencia artificial para freelancers. Sin humo: contenido práctico con ejemplos concretos y datos reales.</p>
-    <div class="header-meta">
-      <div class="meta-pill"><span>4</span> artículos</div>
-      <div class="meta-pill">Actualizado <span>feb 2025</span></div>
-      <div class="meta-pill">Para <span>autónomos en España</span></div>
-    </div>
-  </header>
-
-  <!-- DESTACADO -->
-  <section aria-label="Artículo destacado">
     <div class="section-label">Artículo destacado</div>
-    <div class="featured-grid">
+    <a href="/blog/productividad-ia-automatizacion/" class="featured-card">
+      <div class="fc-cat">⚡ Productividad</div>
+      <h2>Cómo ganar 10 horas semanales con IA siendo autónomo</h2>
+      <p class="fc-desc">No es teoría. Es un sistema de 5 bloques con prompts guardados, rutinas semanales y herramientas específicas. Incluye el plan de trabajo día a día y los errores que hacen que la gente abandone.</p>
+      <div class="fc-meta"><span>1 febrero 2025</span><span>·</span><span>10 min de lectura</span></div>
+      <div class="fc-cta">Leer artículo →</div>
+    </a>
 
-      <a href="/blog/productividad-ia-automatizacion/" class="feat-card-lg">
-        <div>
-          <div class="fc-cat">⚡ Productividad</div>
-          <h2>Cómo ganar 10 horas semanales con IA siendo autónomo</h2>
-          <p class="fc-desc">No es teoría. Es un sistema de 5 bloques con prompts guardados, rutinas semanales y herramientas específicas. Incluye el plan de trabajo día a día y los errores que hacen que la gente abandone.</p>
-          <div class="fc-meta">
-            <span>1 febrero 2025</span>
-            <span>·</span>
-            <span>10 min de lectura</span>
-          </div>
-          <div class="fc-cta">Leer artículo →</div>
-        </div>
-        <div class="fc-visual" aria-hidden="true">⚡</div>
-      </a>
-
-      <a href="/blog/futuro-autonomo-ia/" class="feat-card">
-        <span class="fc-cat-pill c2">Análisis</span>
-        <h2>El futuro del autónomo con IA en España: qué cambia y qué no</h2>
-        <p>Sin el humo habitual. Qué trabajos están en riesgo real, qué oportunidades existen ahora mismo y qué puedes hacer esta semana.</p>
-        <div class="fc-footer">
-          <span class="fc-date">15 enero 2025 · 9 min</span>
-          <span class="fc-read">Leer →</span>
-        </div>
-      </a>
-
-      <a href="/blog/ia-contabilidad-autonomos/" class="feat-card">
-        <span class="fc-cat-pill c3">Finanzas</span>
-        <h2>IA para la contabilidad del autónomo en España: qué funciona de verdad</h2>
-        <p>Qué puede automatizarse, los límites reales con Hacienda y el flujo de trabajo trimestral que funciona para autónomos españoles.</p>
-        <div class="fc-footer">
-          <span class="fc-date">20 enero 2025 · 10 min</span>
-          <span class="fc-read">Leer →</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- TODOS LOS ARTÍCULOS -->
-  <section aria-label="Todos los artículos">
     <div class="section-label">Todos los artículos</div>
     <div class="posts-grid">
-
       <a href="/blog/productividad-ia-automatizacion/" class="post-card">
-        <div class="post-num">01</div>
         <div class="post-cat cy">Productividad</div>
         <div class="post-title">Cómo ganar 10 horas semanales con IA siendo autónomo</div>
         <p class="post-desc">Sistema de 5 bloques con rutinas semanales y prompts guardados para cada tarea repetitiva.</p>
         <div class="post-meta"><span>1 feb 2025</span><span>10 min</span></div>
       </a>
-
       <a href="/blog/ia-diseno-marca-personal/" class="post-card">
-        <div class="post-num">02</div>
         <div class="post-cat c3">Diseño</div>
         <div class="post-title">Marca personal con IA: guía para freelancers sin presupuesto de agencia</div>
         <p class="post-desc">Midjourney, Canva IA, Firefly: qué usar cuándo. Flujo de trabajo real y prompts para cada perfil.</p>
         <div class="post-meta"><span>25 ene 2025</span><span>11 min</span></div>
       </a>
-
       <a href="/blog/ia-contabilidad-autonomos/" class="post-card">
-        <div class="post-num">03</div>
         <div class="post-cat c2">Finanzas</div>
         <div class="post-title">IA para la contabilidad del autónomo en España: qué funciona de verdad</div>
         <p class="post-desc">Qué puede automatizarse, límites reales con Hacienda y el flujo trimestral que funciona.</p>
         <div class="post-meta"><span>20 ene 2025</span><span>10 min</span></div>
       </a>
-
       <a href="/blog/futuro-autonomo-ia/" class="post-card">
-        <div class="post-num">04</div>
-        <div class="post-cat c2">Análisis</div>
+        <div class="post-cat cy">Análisis</div>
         <div class="post-title">El futuro del autónomo con IA en España: qué cambia y qué no</div>
         <p class="post-desc">Análisis honesto de riesgos y oportunidades reales para los autónomos españoles en 2025-2026.</p>
         <div class="post-meta"><span>15 ene 2025</span><span>9 min</span></div>
       </a>
-
-      <div class="post-card dim">
-        <div class="post-num">05</div>
-        <div class="post-cat cy">Próximamente</div>
-        <div class="post-title">IA para la atención al cliente del autónomo</div>
-        <p class="post-desc">Cómo responder más rápido y mejor sin perder el tono personal. Publicación: marzo 2025.</p>
-        <div class="post-meta"><span>marzo 2025</span><span>—</span></div>
-      </div>
-
-      <div class="post-card dim">
-        <div class="post-num">06</div>
-        <div class="post-cat c1">Próximamente</div>
-        <div class="post-title">ChatGPT vs Claude en 2025: cuál ha mejorado más</div>
-        <p class="post-desc">Análisis comparativo actualizado con pruebas reales en tareas de autónomo. Marzo 2025.</p>
-        <div class="post-meta"><span>marzo 2025</span><span>—</span></div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- TEMAS -->
-  <section aria-label="Temas">
-    <div class="section-label">Explorar por tema</div>
-    <div class="topics-grid">
-      <a href="/blog/" class="topic-card">
-        <div class="topic-icon">⚡</div>
-        <div class="topic-name">Productividad</div>
-        <div class="topic-count">1 artículo</div>
-      </a>
-      <a href="/blog/" class="topic-card">
-        <div class="topic-icon">💰</div>
-        <div class="topic-name">Finanzas y fiscal</div>
-        <div class="topic-count">1 artículo</div>
-      </a>
-      <a href="/blog/" class="topic-card">
-        <div class="topic-icon">🎨</div>
-        <div class="topic-name">Diseño y marca</div>
-        <div class="topic-count">1 artículo</div>
-      </a>
-      <a href="/blog/" class="topic-card">
-        <div class="topic-icon">🔭</div>
-        <div class="topic-name">Análisis y tendencias</div>
-        <div class="topic-count">1 artículo</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- MÁS CONTENIDO -->
-  <section aria-label="Más contenido">
     <div class="section-label">También puede interesarte</div>
     <div class="more-grid">
       <a href="/guias/como-escribir-prompts/" class="more-card">
@@ -285,24 +156,23 @@
         <p class="more-desc">Test de 5 preguntas. Sin registro. Resultado inmediato.</p>
       </a>
     </div>
-  </section>
-
-</div>
+  </div>
 </main>
-
 <footer>
   <div class="container">
-    <ul class="footer-links">
-      <li><a href="/comparativas/">Comparativas</a></li>
-      <li><a href="/herramientas/">Herramientas</a></li>
-      <li><a href="/guias/">Guías</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/aviso-legal/">Aviso legal</a></li>
-      <li><a href="/privacidad/">Privacidad</a></li>
-    </ul>
-    <p>© 2025 CompararIA · Hecho en España para freelancers.</p>
+    <div class="footer-inner">
+      <a href="/" class="logo">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/aviso-legal/">Aviso legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · Hecho en España</p>
+    </div>
   </div>
 </footer>
-
 </body>
 </html>
