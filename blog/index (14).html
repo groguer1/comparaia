@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo usar ChatGPT para escribir presupuestos y propuestas de cliente | CompararIA Blog</title>
+  <meta name="description" content="Guía práctica con prompts reales para que autónomos y freelancers usen ChatGPT para escribir presupuestos, propuestas y emails de cliente que cierran proyectos.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/blog/chatgpt-presupuestos-propuestas-autonomo/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/blog/chatgpt-presupuestos-propuestas-autonomo/">
+  <meta property="og:title" content="Cómo usar ChatGPT para presupuestos y propuestas (con prompts reales)">
+  <meta property="og:description" content="Prompts listos para copiar, estructura probada y los errores que hacen que tus propuestas no conviertan. Sin teoría.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <meta property="article:published_time" content="2025-05-12T00:00:00+01:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo usar ChatGPT para escribir presupuestos y propuestas de cliente","datePublished":"2025-05-12T00:00:00+01:00","author":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"},"publisher":{"@type":"Organization","name":"CompararIA"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/blog/chatgpt-presupuestos-propuestas-autonomo/"},"inLanguage":"es-ES"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+    .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-100px;right:-100px}
+    .container-article{max-width:780px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{padding:20px 0;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .breadcrumb{padding:24px 0 0;font-size:0.82rem;color:var(--muted)}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{margin:0 8px;opacity:0.4}
+    .article-hero{padding:40px 0 48px;animation:fadeUp 0.5s ease both}
+    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:18px}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:18px}
+    .article-meta{font-size:0.82rem;color:var(--muted);margin-bottom:20px;display:flex;gap:16px;flex-wrap:wrap}
+    .article-intro{font-size:1.05rem;color:var(--muted);line-height:1.75;border-left:3px solid var(--accent);padding-left:20px}
+    .article-body h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;margin:52px 0 16px;padding-top:52px;border-top:1px solid var(--border)}
+    .article-body h2:first-child{margin-top:0;padding-top:0;border-top:none}
+    .article-body h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:28px 0 10px}
+    .article-body p{margin-bottom:18px;color:var(--muted);font-size:0.97rem}
+    .article-body strong{color:var(--text);font-weight:600}
+    .article-body a{color:var(--accent);text-decoration:none}
+    .article-body a:hover{text-decoration:underline}
+    /* PROMPT BOX */
+    .prompt-box{background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:20px 24px;margin:20px 0;position:relative}
+    .prompt-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:10px}
+    .prompt-text{font-family:monospace;font-size:0.88rem;color:var(--text);line-height:1.7;white-space:pre-wrap}
+    .prompt-note{font-size:0.78rem;color:var(--muted);margin-top:10px;font-style:italic}
+    /* CALLOUT */
+    .callout{background:rgba(0,229,160,0.06);border:1px solid rgba(0,229,160,0.2);border-radius:12px;padding:20px 24px;margin:24px 0}
+    .callout p{margin:0;color:var(--text);font-size:0.95rem}
+    .callout-warning{background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.2)}
+    .callout-warning p{color:var(--text)}
+    /* ACTION LIST */
+    .action-list{list-style:none;margin:20px 0}
+    .action-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+    .action-list li:last-child{border-bottom:none}
+    .action-num{font-size:0.75rem;color:#0a0a0f;background:var(--accent);padding:3px 8px;border-radius:6px;flex-shrink:0;margin-top:2px;font-weight:700}
+    .action-text{font-size:0.92rem;color:var(--muted)}
+    .action-text strong{color:var(--text)}
+    /* STRUCTURE CARD */
+    .structure-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin:20px 0}
+    .structure-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--border)}
+    .structure-item:last-child{border-bottom:none}
+    .structure-num{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:rgba(0,229,160,0.2);flex-shrink:0;width:36px}
+    .structure-content h4{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:4px}
+    .structure-content p{font-size:0.85rem;color:var(--muted);margin:0}
+    /* RELATED */
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;margin-bottom:48px}
+    .related-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;text-decoration:none;color:inherit;transition:all 0.3s ease}
+    .related-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-3px)}
+    .related-tag{font-size:0.7rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+    .related-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:4px}
+    .related-desc{font-size:0.82rem;color:var(--muted)}
+    footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-links{display:flex;gap:20px;justify-content:center;list-style:none;margin-bottom:12px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-links a:hover{color:var(--accent)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:640px){.related-grid{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+<div class="container-article">
+  <nav aria-label="Ruta de navegación">
+    <p class="breadcrumb"><a href="/">Inicio</a><span>›</span><a href="/blog/">Blog</a><span>›</span>ChatGPT para presupuestos y propuestas</p>
+  </nav>
+  <header class="article-hero">
+    <span class="badge">Productividad · mayo 2025</span>
+    <h1>Cómo usar ChatGPT para escribir presupuestos y propuestas que cierran proyectos</h1>
+    <div class="article-meta"><span>12 mayo 2025</span><span>·</span><span>10 min de lectura</span></div>
+    <p class="article-intro">Escribir un presupuesto o propuesta es una de las tareas que más tiempo consume y que peor domina la mayoría de autónomos. No porque sean malos en su trabajo — sino porque vender es otra habilidad. ChatGPT no cierra proyectos por ti, pero puede darte el borrador estructurado, el tono correcto y el tiempo que no tenías.</p>
+  </header>
+
+  <article class="article-body">
+
+    <h2>El problema real con los presupuestos de autónomo</h2>
+    <p>La mayoría de autónomos cometen el mismo error en sus presupuestos: <strong>describen lo que van a hacer en lugar de explicar qué problema van a resolver</strong>. Un cliente no compra "10 publicaciones para redes sociales al mes" — compra visibilidad, confianza de marca o más contactos de ventas. La distinción importa porque cambia el precio que puedes cobrar.</p>
+    <p>ChatGPT, usado correctamente, te ayuda a dar el salto de la descripción de servicio a la propuesta de valor. Pero solo si le das suficiente contexto. Un prompt de 20 palabras produce un presupuesto genérico que parece de IA. Un prompt de 200 palabras produce algo que parece tuyo.</p>
+
+    <div class="callout">
+      <p><strong>Regla de oro:</strong> Cuanto más contexto le des a ChatGPT — sector del cliente, su problema concreto, tu historial con clientes similares, el tono que usas — más útil será el borrador. La IA no adivina tu valor diferencial; tú tienes que decírselo.</p>
+    </div>
+
+    <h2>La estructura de una buena propuesta (antes de abrir ChatGPT)</h2>
+    <p>Antes de escribir el prompt, tienes que conocer la estructura que funciona. ChatGPT puede rellenarla, pero tú decides qué va en cada bloque.</p>
+
+    <div class="structure-card">
+      <div class="structure-item">
+        <div class="structure-num">01</div>
+        <div class="structure-content">
+          <h4>Contexto del cliente y el problema</h4>
+          <p>Demuestra que entiendes su situación. No lo que quieren — lo que necesitan. Este bloque se escribe con lo que aprendiste en la primera reunión.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="structure-num">02</div>
+        <div class="structure-content">
+          <h4>Tu propuesta concreta</h4>
+          <p>Qué vas a hacer, en qué plazo y cuál es el resultado tangible. Específico, no vago. "Rediseño de web" es vago. "Web nueva en WordPress con 8 páginas, optimizada para SEO y lista en 3 semanas" es concreto.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="structure-num">03</div>
+        <div class="structure-content">
+          <h4>Por qué tú</h4>
+          <p>No tu currículum — un caso similar que resolviste. Si no tienes caso parecido, un ejemplo de metodología que demuestre cómo piensas.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="structure-num">04</div>
+        <div class="structure-content">
+          <h4>Inversión y condiciones</h4>
+          <p>El precio, qué incluye exactamente, qué no incluye, forma de pago y qué pasa si el cliente añade cosas fuera de alcance. Sin ambigüedad.</p>
+        </div>
+      </div>
+      <div class="structure-item">
+        <div class="structure-num">05</div>
+        <div class="structure-content">
+          <h4>Siguientes pasos</h4>
+          <p>Qué tiene que hacer el cliente para avanzar. Una acción concreta, no "espero noticias tuyas".</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Los prompts que funcionan (listos para copiar)</h2>
+
+    <h3>Prompt 1: Para generar la propuesta completa desde cero</h3>
+
+    <div class="prompt-box">
+      <div class="prompt-label">📋 Prompt base — propuesta completa</div>
+      <div class="prompt-text">Eres un consultor especializado en ayudar a freelancers a escribir propuestas comerciales que convierten. Voy a darte información sobre un proyecto y necesito que escribas una propuesta profesional en español.
+
+SOBRE MÍ:
+Soy [tu profesión]. Me especializo en [tu nicho/especialidad]. Llevo [X] años trabajando con clientes de [sector o tipo de empresa].
+
+SOBRE ESTE PROYECTO:
+Cliente: [nombre de la empresa o tipo de empresa]
+Sector: [sector]
+Lo que me han pedido: [descripción de lo que el cliente quiere]
+El problema real que tienen: [lo que detectaste en la reunión]
+Plazo que manejan: [cuándo lo necesitan]
+Presupuesto aproximado que tienen en mente: [si lo sabes]
+
+MI PROPUESTA:
+Quiero ofrecer: [descripción de tu servicio]
+Precio que quiero cobrar: [precio]
+Forma de pago: [50% al inicio, 50% a la entrega / por hitos / etc.]
+Plazo de entrega: [X semanas/días]
+
+Escribe una propuesta con estas secciones: contexto del cliente, mi propuesta, por qué yo, inversión y condiciones, siguientes pasos. Tono: profesional pero directo, sin lenguaje corporativo ni frases vacías. Máximo 600 palabras.</div>
+      <p class="prompt-note">Rellena los campos entre corchetes antes de enviarlo. A más detalle en "el problema real que tienen", mejor resultado.</p>
+    </div>
+
+    <h3>Prompt 2: Para el email de envío del presupuesto</h3>
+
+    <div class="prompt-box">
+      <div class="prompt-label">📧 Prompt — email de envío</div>
+      <div class="prompt-text">Escribe un email corto (máximo 5 líneas) para enviar un presupuesto a un cliente. El contexto:
+
+- Me llamo [tu nombre]
+- El cliente es [nombre del cliente o empresa]
+- El proyecto es [descripción en una frase]
+- El precio total es [precio]
+- El plazo de validez de la propuesta es [X días]
+
+El tono debe ser cercano y seguro, no servil. No empieces con "Espero que estés bien". Termina con una llamada a la acción concreta: una pregunta o una propuesta de llamada para resolver dudas.</div>
+      <p class="prompt-note">Este email es tan importante como la propuesta en sí. Un email de envío soso le quita fuerza al presupuesto.</p>
+    </div>
+
+    <h3>Prompt 3: Para el seguimiento si no responden</h3>
+
+    <div class="prompt-box">
+      <div class="prompt-label">🔔 Prompt — seguimiento sin parecer desesperado</div>
+      <div class="prompt-text">Escribe un email de seguimiento para un presupuesto que envié hace [X días] y al que no he recibido respuesta. 
+
+Contexto:
+- Proyecto: [descripción breve]
+- Precio: [precio]
+- Cliente: [tipo de empresa]
+
+El objetivo es recordarles sin presionar. Quiero añadir algo de valor — una duda que podría tener el cliente o una información relevante — en lugar de simplemente preguntar "¿qué ha decidido?". Máximo 4 líneas. Tono: natural, sin urgencia fingida.</div>
+      <p class="prompt-note">El seguimiento bien hecho cierra más proyectos que la propuesta inicial. La mayoría de autónomos no hace seguimiento — tú sí.</p>
+    </div>
+
+    <h2>Los errores que comete la gente con estos prompts</h2>
+
+    <div class="callout callout-warning">
+      <p><strong>Error 1 — Usar el borrador de IA sin editar:</strong> El primer borrador es un punto de partida, no el resultado final. Siempre edita con tu voz, añade el detalle concreto que solo tú conoces del cliente, y elimina cualquier frase que no dirías tú en persona.</p>
+    </div>
+
+    <div class="callout callout-warning">
+      <p><strong>Error 2 — Prompts sin contexto real:</strong> "Escríbeme un presupuesto de diseño web por 1500€" produce algo que parece de plantilla. El contexto específico del cliente — qué problema tiene, qué intentó antes, por qué te eligió a ti — es lo que convierte un presupuesto en una propuesta.</p>
+    </div>
+
+    <div class="callout callout-warning">
+      <p><strong>Error 3 — Copiar el tono corporativo de la IA:</strong> Palabras como "soluciones innovadoras", "enfoque holístico" o "sinergias" son señales de que el borrador no está editado. Cambia cualquier expresión que no usarías hablando con el cliente.</p>
+    </div>
+
+    <h2>Cuánto tiempo puedes ahorrar realmente</h2>
+    <p>Un presupuesto bien hecho desde cero tarda entre 45 minutos y 2 horas según la complejidad del proyecto. Con este sistema — prompt bien preparado, borrador IA, 20 minutos de edición — puedes bajar a 25-35 minutos por propuesta.</p>
+    <p>Si mandas 3-4 presupuestos a la semana, eso son entre 2 y 5 horas recuperadas cada semana. No es tiempo libre — es tiempo que puedes dedicar a trabajo facturable o a conseguir más clientes.</p>
+
+    <h2>El siguiente nivel: personalizar por tipo de cliente</h2>
+    <p>Una vez que tengas el prompt base funcionando, crea variantes por tipo de cliente. Una propuesta para una pyme local no tiene el mismo tono ni la misma estructura que una para una startup o para un departamento de marketing de una empresa mediana.</p>
+    <ul class="action-list">
+      <li><span class="action-num">01</span><div class="action-text"><strong>Guarda tus mejores propuestas.</strong> Las que cerraron proyecto. Son tu materia prima para entrenar a la IA en tu estilo.</div></li>
+      <li><span class="action-num">02</span><div class="action-text"><strong>Pega una propuesta exitosa en el prompt.</strong> "Usa este ejemplo como referencia de tono y estructura" produce resultados mucho más alineados con tu estilo real.</div></li>
+      <li><span class="action-num">03</span><div class="action-text"><strong>Crea un documento de contexto fijo.</strong> Descripción de tu servicio, tus clientes típicos, tu metodología, tu tono. Pégalo al inicio de cada sesión nueva.</div></li>
+    </ul>
+
+  </article>
+
+  <nav aria-label="Artículos relacionados">
+    <div class="related-grid">
+      <a href="/guias/como-escribir-prompts/" class="related-card">
+        <div class="related-tag">Guía práctica</div>
+        <div class="related-title">Biblioteca de prompts para autónomos</div>
+        <p class="related-desc">40+ prompts listos para copiar para las tareas más comunes.</p>
+      </a>
+      <a href="/blog/productividad-ia-automatizacion/" class="related-card">
+        <div class="related-tag">Productividad</div>
+        <div class="related-title">Ganar 10 horas semanales con IA</div>
+        <p class="related-desc">Sistema de 5 bloques con rutinas y prompts guardados.</p>
+      </a>
+    </div>
+  </nav>
+</div>
+</main>
+<footer>
+  <div style="max-width:1140px;margin:0 auto;padding:0 24px">
+    <ul class="footer-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+    </ul>
+    <p>© 2025 CompararIA · Hecho en España para freelancers.</p>
+  </div>
+</footer>
+</body>
+</html>
