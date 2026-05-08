@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo crear contenido para redes sociales con IA en 30 minutos a la semana | CompararIA Blog</title>
+  <meta name="description" content="Workflow paso a paso para que autónomos y freelancers usen IA y publiquen en LinkedIn e Instagram en 30 minutos semanales. Prompts reales, herramientas y sistema completo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/blog/ia-contenido-redes-sociales-autonomo/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/blog/ia-contenido-redes-sociales-autonomo/">
+  <meta property="og:title" content="Contenido para redes sociales con IA en 30 minutos a la semana">
+  <meta property="og:description" content="El sistema que usan los freelancers que publican de forma constante sin dedicarle horas. Workflow, prompts y herramientas para LinkedIn e Instagram.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <meta property="article:published_time" content="2025-05-18T00:00:00+01:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo crear contenido para redes sociales con IA en 30 minutos a la semana","datePublished":"2025-05-18T00:00:00+01:00","author":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"},"publisher":{"@type":"Organization","name":"CompararIA"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/blog/ia-contenido-redes-sociales-autonomo/"},"inLanguage":"es-ES"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--card-glow:rgba(0,229,160,0.06)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+    .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-100px;right:-100px}
+    .container-article{max-width:780px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{padding:20px 0;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .breadcrumb{padding:24px 0 0;font-size:0.82rem;color:var(--muted)}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{margin:0 8px;opacity:0.4}
+    .article-hero{padding:40px 0 48px;animation:fadeUp 0.5s ease both}
+    .badge{display:inline-block;background:rgba(0,229,160,0.1);color:var(--accent);padding:6px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:18px}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:18px}
+    .article-meta{font-size:0.82rem;color:var(--muted);margin-bottom:20px;display:flex;gap:16px;flex-wrap:wrap}
+    .article-intro{font-size:1.05rem;color:var(--muted);line-height:1.75;border-left:3px solid var(--accent);padding-left:20px}
+    .article-body h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;margin:52px 0 16px;padding-top:52px;border-top:1px solid var(--border)}
+    .article-body h2:first-child{margin-top:0;padding-top:0;border-top:none}
+    .article-body h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:28px 0 10px}
+    .article-body p{margin-bottom:18px;color:var(--muted);font-size:0.97rem}
+    .article-body strong{color:var(--text);font-weight:600}
+    .article-body a{color:var(--accent);text-decoration:none}
+    .article-body a:hover{text-decoration:underline}
+    /* TIMELINE / WORKFLOW */
+    .workflow{margin:24px 0}
+    .workflow-step{display:flex;gap:20px;padding-bottom:24px;position:relative}
+    .workflow-step::before{content:'';position:absolute;left:18px;top:40px;bottom:0;width:1px;background:var(--border)}
+    .workflow-step:last-child::before{display:none}
+    .workflow-dot{width:38px;height:38px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.78rem;color:var(--accent);font-weight:700;font-family:'Syne',sans-serif}
+    .workflow-content{flex:1;padding-top:6px}
+    .workflow-time{font-size:0.72rem;color:var(--accent);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
+    .workflow-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:6px}
+    .workflow-desc{font-size:0.88rem;color:var(--muted)}
+    /* PROMPT BOX */
+    .prompt-box{background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:20px 24px;margin:20px 0}
+    .prompt-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:10px}
+    .prompt-text{font-family:monospace;font-size:0.88rem;color:var(--text);line-height:1.7;white-space:pre-wrap}
+    .prompt-note{font-size:0.78rem;color:var(--muted);margin-top:10px;font-style:italic}
+    /* CALLOUT */
+    .callout{background:rgba(0,229,160,0.06);border:1px solid rgba(0,229,160,0.2);border-radius:12px;padding:20px 24px;margin:24px 0}
+    .callout p{margin:0;color:var(--text);font-size:0.95rem}
+    /* PLATFORM CARDS */
+    .platform-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+    .platform-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+    .platform-name{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;margin-bottom:4px}
+    .platform-tag{font-size:0.72rem;padding:2px 8px;border-radius:100px;font-weight:600;display:inline-block;margin-bottom:10px;background:rgba(0,229,160,0.08);color:var(--accent)}
+    .platform-points{list-style:none}
+    .platform-points li{font-size:0.85rem;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;gap:8px}
+    .platform-points li:last-child{border-bottom:none}
+    .platform-points li::before{content:'→';color:var(--accent);flex-shrink:0}
+    /* ACTION LIST */
+    .action-list{list-style:none;margin:20px 0}
+    .action-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+    .action-list li:last-child{border-bottom:none}
+    .action-num{font-size:0.75rem;color:#0a0a0f;background:var(--accent);padding:3px 8px;border-radius:6px;flex-shrink:0;margin-top:2px;font-weight:700}
+    .action-text{font-size:0.92rem;color:var(--muted)}
+    .action-text strong{color:var(--text)}
+    /* RELATED */
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;margin-bottom:48px}
+    .related-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;text-decoration:none;color:inherit;transition:all 0.3s ease}
+    .related-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-3px)}
+    .related-tag{font-size:0.7rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+    .related-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:4px}
+    .related-desc{font-size:0.82rem;color:var(--muted)}
+    footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-links{display:flex;gap:20px;justify-content:center;list-style:none;margin-bottom:12px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-links a:hover{color:var(--accent)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:640px){.related-grid,.platform-grid{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+<div class="container-article">
+  <nav aria-label="Ruta de navegación">
+    <p class="breadcrumb"><a href="/">Inicio</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Contenido para redes sociales con IA</p>
+  </nav>
+  <header class="article-hero">
+    <span class="badge">Productividad · mayo 2025</span>
+    <h1>Cómo crear contenido para redes sociales con IA en 30 minutos a la semana</h1>
+    <div class="article-meta"><span>18 mayo 2025</span><span>·</span><span>10 min de lectura</span></div>
+    <p class="article-intro">La mayoría de autónomos sabe que debería publicar más en LinkedIn o Instagram, pero no lo hace porque cree que no tiene tiempo. El problema no es el tiempo — es no tener un sistema. Esta guía describe el workflow exacto que permite a un freelance publicar de forma constante en 30 minutos a la semana, usando IA para el trabajo pesado.</p>
+  </header>
+
+  <article class="article-body">
+
+    <h2>El error que comete la mayoría</h2>
+    <p>Cuando un autónomo se sienta a "crear contenido para redes", lo primero que hace es abrir la app y preguntarse: "¿sobre qué publico hoy?" Ese es el error. <strong>Empezar desde el contenido en blanco, sin sistema, consume energía creativa antes de escribir la primera palabra.</strong></p>
+    <p>Los freelancers que publican de forma constante no tienen más tiempo — tienen un sistema que separa tres cosas: decidir sobre qué publicar, crear el contenido, y programarlo. Con IA, la parte de creación se comprime a minutos. Lo que queda — la idea y la voz propia — es lo que no puede hacer la IA por ti.</p>
+
+    <div class="callout">
+      <p><strong>El principio de este sistema:</strong> La IA genera el borrador. Tú aportas la idea y la edición final. Nunca publiques el primer resultado de la IA sin editarlo — la diferencia entre contenido que funciona y contenido que parece de bot está en esos 5 minutos de edición.</p>
+    </div>
+
+    <h2>El workflow de 30 minutos: paso a paso</h2>
+
+    <div class="workflow">
+      <div class="workflow-step">
+        <div class="workflow-dot">1</div>
+        <div class="workflow-content">
+          <div class="workflow-time">Lunes · 5 minutos</div>
+          <div class="workflow-title">Decide los 3 temas de la semana</div>
+          <p class="workflow-desc">No los contenidos — los temas. Una reflexión de tu trabajo, un aprendizaje de un cliente, una tendencia de tu sector. Apúntalos en una nota. No pienses en formato todavía.</p>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-dot">2</div>
+        <div class="workflow-content">
+          <div class="workflow-time">Martes · 15 minutos</div>
+          <div class="workflow-title">Genera los borradores con IA</div>
+          <p class="workflow-desc">Con los 3 temas, abres ChatGPT o Claude y generas los borradores de los 3 posts con un prompt (ver más abajo). No edites aún — solo genera. 15 minutos para los tres.</p>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-dot">3</div>
+        <div class="workflow-content">
+          <div class="workflow-time">Martes · 10 minutos</div>
+          <div class="workflow-title">Edita y personaliza</div>
+          <p class="workflow-desc">Lee cada borrador. Cambia lo que no suena como tú. Añade el detalle concreto que solo tú conoces. Quita el lenguaje corporativo. 3-4 minutos por post.</p>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-dot">4</div>
+        <div class="workflow-content">
+          <div class="workflow-time">Martes · completado</div>
+          <div class="workflow-title">Programa los 3 posts</div>
+          <p class="workflow-desc">Con Buffer, Later o Meta Business Suite, programa los posts para los días que hayas decidido. Todo hecho en martes, publicando durante la semana de forma automática.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Los prompts por plataforma</h2>
+
+    <div class="platform-grid">
+      <div class="platform-card">
+        <div class="platform-name">LinkedIn</div>
+        <span class="platform-tag">Profesional · largo</span>
+        <ul class="platform-points">
+          <li>Posts de 150-300 palabras funcionan bien</li>
+          <li>Primera línea debe generar curiosidad sin revelar todo</li>
+          <li>Un aprendizaje concreto > consejos genéricos</li>
+          <li>Termina con pregunta para generar comentarios</li>
+        </ul>
+      </div>
+      <div class="platform-card">
+        <div class="platform-name">Instagram</div>
+        <span class="platform-tag">Visual · más corto</span>
+        <ul class="platform-points">
+          <li>Caption de 80-150 palabras, el resto en carrusel</li>
+          <li>Los carruseles tienen mejor alcance orgánico</li>
+          <li>Hashtags específicos de nicho (5-8), no generales</li>
+          <li>La imagen importa más que el texto — planifícala</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Prompt para LinkedIn</h3>
+
+    <div class="prompt-box">
+      <div class="prompt-label">💼 Prompt LinkedIn — post profesional</div>
+      <div class="prompt-text">Escribe un post para LinkedIn de un autónomo/freelance especializado en [tu especialidad].
+
+TEMA: [el tema que quieres tratar]
+
+CONTEXTO CONCRETO: [el detalle específico — qué pasó, qué aprendiste, qué viste con un cliente]
+
+MI AUDIENCIA: [tipo de personas que te siguen — otras empresas, otros freelancers, potenciales clientes]
+
+FORMATO:
+- Primera línea: gancho que genere curiosidad (sin puntos suspensivos al final)
+- 3-4 párrafos cortos de 2-3 líneas máximo
+- Conclusión o aprendizaje concreto
+- Pregunta final para provocar comentarios
+- Sin emojis en exceso (máximo 2-3 si el tono lo permite)
+- Sin hashtags en el texto — ponlos al final separados
+
+TONO: [directo y cercano / reflexivo / técnico / informal] — escoge uno
+
+Longitud: 200-250 palabras máximo.</div>
+      <p class="prompt-note">El campo "contexto concreto" es el más importante. Sin ese detalle, la IA produce consejos genéricos que ya han leído mil veces.</p>
+    </div>
+
+    <h3>Prompt para Instagram (carrusel)</h3>
+
+    <div class="prompt-box">
+      <div class="prompt-label">📱 Prompt Instagram — guion de carrusel</div>
+      <div class="prompt-text">Escribe el guion de un carrusel de Instagram para un autónomo de [tu sector].
+
+TEMA: [tema del carrusel]
+OBJETIVO: [educar / inspirar / generar interacción / mostrar proceso]
+
+ESTRUCTURA:
+- Slide 1 (portada): Título que haga parar el scroll. Máximo 7 palabras.
+- Slides 2-6: Un punto por slide. Título corto (3-5 palabras) + explicación de 2 líneas.
+- Slide final (CTA): Qué quiero que haga quien lo lee [guardar, compartir, comentar, seguir].
+
+Caption para el post:
+- Primera frase = gancho
+- 2-3 líneas de contexto
+- 5 hashtags relevantes de nicho
+
+TONO: [educativo / cercano / provocador]. Sin lenguaje corporativo.</div>
+      <p class="prompt-note">Con este guion, creas las slides en Canva o en cualquier herramienta de diseño. La IA te da el texto; tú decides el diseño visual.</p>
+    </div>
+
+    <h2>Qué hacer cuando te quedas sin ideas</h2>
+    <p>La fuente de ideas más subestimada es tu propio trabajo. Cada semana tienes material fresco si sabes dónde mirarlo:</p>
+    <ul class="action-list">
+      <li><span class="action-num">01</span><div class="action-text"><strong>Una pregunta que te hizo un cliente.</strong> Si un cliente te preguntó algo, es probable que otros se lo pregunten también. Respóndela en público.</div></li>
+      <li><span class="action-num">02</span><div class="action-text"><strong>Un error que cometiste.</strong> Los posts sobre errores propios tienen más engagement que los consejos perfectos. La vulnerabilidad concreta genera confianza.</div></li>
+      <li><span class="action-num">03</span><div class="action-text"><strong>Un antes y después de un proyecto.</strong> Muestra el proceso, no solo el resultado. La gente compra al profesional, no solo al resultado.</div></li>
+      <li><span class="action-num">04</span><div class="action-text"><strong>Una herramienta o recurso que usas y poca gente conoce.</strong> Utilidad práctica concreta para tu audiencia, fácil de escribir para ti.</div></li>
+      <li><span class="action-num">05</span><div class="action-text"><strong>Tu opinión sobre algo de tu sector.</strong> No para generar polémica — para posicionarte. "En mi experiencia, X funciona mejor que Y porque..." es siempre interesante para alguien.</div></li>
+    </ul>
+
+    <h2>Las herramientas que completan el sistema</h2>
+    <p><strong>Para generar texto:</strong> ChatGPT Plus o Claude Pro. Cualquiera de los dos funciona para este uso. Si también necesitas crear imágenes, ChatGPT tiene DALL-E integrado.</p>
+    <p><strong>Para diseñar los visuales:</strong> Canva (con sus funciones de IA para generar elementos visuales) es la opción más rápida. Las plantillas de carrusel de Canva más el texto de la IA es un flujo de trabajo sin fricción.</p>
+    <p><strong>Para programar:</strong> Buffer (plan gratuito para 3 canales), Later (enfocado en visual, muy bueno para Instagram) o Meta Business Suite (gratuito para Instagram y Facebook). Para LinkedIn, la programación nativa de la plataforma es suficiente.</p>
+
+    <div class="callout">
+      <p><strong>La constancia bate a la perfección.</strong> Publicar 3 veces a la semana durante 6 meses con posts correctos supera a publicar 2 veces al mes con posts perfectos. El algoritmo y la audiencia responden a la constancia. El sistema de 30 minutos existe para hacer que la constancia sea sostenible.</p>
+    </div>
+
+  </article>
+
+  <nav aria-label="Artículos relacionados">
+    <div class="related-grid">
+      <a href="/blog/productividad-ia-automatizacion/" class="related-card">
+        <div class="related-tag">Productividad</div>
+        <div class="related-title">Ganar 10 horas semanales con IA</div>
+        <p class="related-desc">Sistema de 5 bloques con rutinas y prompts para cada tarea repetitiva.</p>
+      </a>
+      <a href="/guias/como-escribir-prompts/" class="related-card">
+        <div class="related-tag">Guía práctica</div>
+        <div class="related-title">Biblioteca de prompts para autónomos</div>
+        <p class="related-desc">40+ prompts listos para copiar para las tareas más comunes.</p>
+      </a>
+    </div>
+  </nav>
+</div>
+</main>
+<footer>
+  <div style="max-width:1140px;margin:0 auto;padding:0 24px">
+    <ul class="footer-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+    </ul>
+    <p>© 2025 CompararIA · Hecho en España para freelancers.</p>
+  </div>
+</footer>
+</body>
+</html>
