@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>n8n gratis vs de pago: qué plan necesita un autónomo (2026)</title>
+  <meta name="description" content="¿Vale la pena pagar por n8n Cloud o es mejor la versión self-hosted gratuita? Comparativa honesta de planes con precios reales, casos de uso y recomendación concreta para freelancers en España.">
+  <meta name="keywords" content="n8n gratis, n8n precio, n8n self-hosted vs cloud, n8n planes 2026, n8n community edition, n8n starter pro, cuánto cuesta n8n autonomo, n8n gratuito freelancer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/blog/n8n-gratis-vs-pago-autonomo/">
+  <meta property="og:title" content="n8n gratis vs de pago: qué plan necesita un autónomo (2026)">
+  <meta property="og:description" content="Comparativa honesta de todos los planes de n8n con precios reales. Cuál elegir según tu perfil como freelancer en España.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/blog/n8n-gratis-vs-pago-autonomo/">
+  <meta property="og:site_name" content="CompararIA">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"n8n gratis vs de pago: qué plan necesita un autónomo (2026)","description":"Comparativa honesta de todos los planes de n8n con precios reales. Cuál elegir según tu perfil como freelancer en España.","author":{"@type":"Organization","name":"comparaia.es","url":"https://comparaia.es"},"publisher":{"@type":"Organization","name":"comparaia.es","url":"https://comparaia.es"},"datePublished":"2026-05-13","dateModified":"2026-05-13","mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/blog/n8n-gratis-vs-pago-autonomo/"},"inLanguage":"es"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Tiene n8n versión gratuita?","acceptedAnswer":{"@type":"Answer","text":"Sí. n8n Community Edition es 100% gratuita y de código abierto. Se instala en tu propio servidor (self-hosted) y no tiene límites de ejecuciones ni de workflows. El único coste es el servidor, que puede costar desde 5 €/mes en un VPS básico."}},{"@type":"Question","name":"¿Cuánto cuesta n8n Cloud en 2026?","acceptedAnswer":{"@type":"Answer","text":"El plan Starter de n8n Cloud cuesta 24 €/mes (con facturación anual) e incluye 2.500 ejecuciones mensuales. El plan Pro cuesta 60 €/mes con 10.000 ejecuciones. El plan Business cuesta 800 €/mes con 40.000 ejecuciones."}},{"@type":"Question","name":"¿Qué es una ejecución en n8n?","acceptedAnswer":{"@type":"Answer","text":"Una ejecución es cada vez que un workflow completo se activa y se ejecuta, independientemente del número de nodos o pasos que contenga. Un workflow de 3 pasos y uno de 30 pasos cuentan igual: 1 ejecución. Esto hace que n8n sea mucho más económico que Zapier o Make para flujos complejos."}}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--surface:#1e1e2e;--surface2:#252538;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--light:#ccd6f6;--mono:'IBM Plex Mono',monospace;--head:'Syne',sans-serif;--body:'DM Sans',sans-serif;--radius:14px;--max:780px}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.35}
+    .orb{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.09) 0%,transparent 70%);top:-100px;right:-100px}
+    .orb-2{width:350px;height:350px;background:radial-gradient(circle,rgba(124,111,255,0.07) 0%,transparent 70%);bottom:0;left:-80px}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:var(--head);font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .hero{padding:72px 0 52px;border-bottom:1px solid var(--border)}
+    .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;border:1px solid}
+    .tag-green{color:var(--accent);border-color:rgba(0,229,160,0.35);background:rgba(0,229,160,0.07)}
+    .tag-purple{color:var(--accent2);border-color:rgba(124,111,255,0.35);background:rgba(124,111,255,0.07)}
+    h1{font-family:var(--head);font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:18px;letter-spacing:-0.03em}
+    .hero-lead{font-size:1.1rem;color:var(--light);max-width:660px;margin-bottom:28px}
+    .meta-row{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted)}
+    .toc{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:22px 26px;margin:44px 0}
+    .toc-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+    .toc li{font-size:0.91rem;color:var(--light)}
+    .toc a{color:var(--light);text-decoration:none}
+    .toc a:hover{color:var(--accent)}
+    article{padding:0 0 80px}
+    h2{font-family:var(--head);font-size:1.6rem;font-weight:700;color:#fff;margin:56px 0 16px;letter-spacing:-0.02em;scroll-margin-top:30px}
+    h3{font-family:var(--head);font-size:1.1rem;font-weight:700;color:var(--light);margin:28px 0 10px}
+    p{margin-bottom:16px;color:var(--text)}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    strong{color:#fff;font-weight:600}
+    /* Plan cards */
+    .plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0}
+    .plan-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;position:relative}
+    .plan-card.recommended{border-color:rgba(0,229,160,0.4);background:rgba(0,229,160,0.03)}
+    .plan-rec-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#0a0a0f;font-family:var(--mono);font-size:0.7rem;font-weight:700;padding:4px 12px;border-radius:100px;white-space:nowrap}
+    .plan-name{font-family:var(--head);font-weight:800;font-size:1.1rem;color:#fff;margin-bottom:4px}
+    .plan-price{font-family:var(--head);font-size:2rem;font-weight:800;color:var(--accent);line-height:1;margin:10px 0 4px}
+    .plan-price-sub{font-size:0.78rem;color:var(--muted);margin-bottom:14px}
+    .plan-features{list-style:none;display:flex;flex-direction:column;gap:6px}
+    .plan-features li{font-size:0.84rem;color:var(--text);display:flex;gap:8px;align-items:flex-start}
+    .plan-features li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px}
+    .plan-features li.con::before{content:'✗';color:#f07070}
+    /* Calculator */
+    .calc-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:28px 0}
+    .calc-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:16px}
+    .calc-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:0.9rem}
+    .calc-row:last-child{border-bottom:none;padding-top:14px;margin-top:4px}
+    .calc-label{color:var(--muted)}
+    .calc-val{font-family:var(--mono);color:var(--text);font-weight:500}
+    .calc-row.total .calc-label{color:var(--light);font-weight:600}
+    .calc-row.total .calc-val{color:var(--accent);font-size:1.1rem;font-weight:700}
+    /* Decision tree */
+    .decision{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:28px 0}
+    .decision-title{font-family:var(--head);font-weight:700;color:#fff;font-size:1.05rem;margin-bottom:18px}
+    .d-question{background:var(--surface2);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+    .d-q-text{font-size:0.93rem;color:var(--light);margin-bottom:10px}
+    .d-options{display:flex;flex-direction:column;gap:6px}
+    .d-opt{display:flex;gap:10px;align-items:flex-start;font-size:0.85rem}
+    .d-opt-arrow{color:var(--accent);font-family:var(--mono);flex-shrink:0;margin-top:1px}
+    .d-opt-text{color:var(--muted)}
+    .d-opt-result{color:#fff;font-weight:600}
+    /* Callouts */
+    .callout{border-radius:var(--radius);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+    .callout-body p{margin:0;font-size:0.91rem}
+    .callout-green{background:rgba(0,229,160,0.07);border:1px solid rgba(0,229,160,0.2)}
+    .callout-blue{background:rgba(91,142,240,0.08);border:1px solid rgba(91,142,240,0.25)}
+    .callout-amber{background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.22)}
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:4px;margin:24px 0}
+    details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    details[open]{border-color:rgba(0,229,160,0.35)}
+    summary{padding:16px 20px;cursor:pointer;font-weight:600;color:var(--light);list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem}
+    summary::after{content:'+';font-family:var(--mono);font-size:1.2rem;color:var(--accent);transition:transform 0.2s}
+    details[open] summary::after{transform:rotate(45deg)}
+    .faq-answer{padding:0 20px 16px;font-size:0.91rem;color:var(--muted);line-height:1.7}
+    .related{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:var(--radius);padding:20px 24px;margin:48px 0 0}
+    .related-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .related-links{display:flex;flex-direction:column;gap:8px}
+    .related-links a{color:var(--light);text-decoration:none;font-size:0.92rem;display:flex;align-items:center;gap:8px}
+    .related-links a::before{content:'→';color:var(--accent);font-family:var(--mono)}
+    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.1) 0%,rgba(124,111,255,0.07) 100%);border:1px solid rgba(0,229,160,0.25);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0 0}
+    .cta-banner h3{font-family:var(--head);font-size:1.3rem;color:#fff;margin:0 0 8px}
+    .cta-banner p{color:var(--muted);font-size:0.93rem;margin:0 0 20px}
+    .btn{display:inline-block;background:var(--accent);color:#0a0a0f;font-family:var(--mono);font-size:0.83rem;font-weight:700;padding:11px 26px;border-radius:8px;text-decoration:none;transition:opacity 0.2s}
+    .btn:hover{opacity:0.88;color:#0a0a0f}
+    footer{border-top:1px solid var(--border);padding:40px 0;position:relative;z-index:1}
+    .footer-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-copy{font-size:0.82rem;color:var(--muted)}
+    @media(max-width:600px){h1{font-size:1.75rem}h2{font-size:1.3rem}.plan-grid{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+<nav><div class="nav-inner">
+  <a href="/" class="logo">Comparar<span>IA</span></a>
+  <ul class="nav-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+  </ul>
+</div></nav>
+
+<div class="container">
+<header class="hero">
+  <nav class="breadcrumb"><a href="/">comparaia.es</a> / <a href="/blog/">Blog</a> / n8n gratis vs pago</nav>
+  <div class="tag-row">
+    <span class="tag tag-green">Precios</span>
+    <span class="tag tag-purple">Decisión</span>
+  </div>
+  <h1>n8n gratis vs de pago: qué plan necesita un autónomo (2026)</h1>
+  <p class="hero-lead">n8n puede costarte 0 € o 800 €/mes dependiendo de cómo lo uses. Esta guía te explica exactamente qué incluye cada opción, cuándo merece la pena pagar y cuál es la ruta más inteligente para un freelancer en España.</p>
+  <div class="meta-row">
+    <span>📅 Mayo 2026</span>
+    <span>⏱ 8 min de lectura</span>
+    <span>🔗 Artículo 5 del cluster de automatización</span>
+  </div>
+</header>
+
+<article>
+  <nav class="toc">
+    <div class="toc-title">En este artículo</div>
+    <ol>
+      <li><a href="#ejecuciones">Cómo cuenta n8n las ejecuciones (clave para entender el precio)</a></li>
+      <li><a href="#planes">Los planes de n8n en 2026</a></li>
+      <li><a href="#self-hosted">Self-hosted: la opción gratuita explicada sin rodeos</a></li>
+      <li><a href="#cuanto-gastas">¿Cuántas ejecuciones necesitas tú?</a></li>
+      <li><a href="#decision">Árbol de decisión: qué plan elegir</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="ejecuciones">1. Cómo cuenta n8n las ejecuciones (clave para entender el precio)</h2>
+  <p>Antes de hablar de planes, hay que entender cómo mide n8n el consumo, porque es radicalmente diferente a Zapier o Make y cambia todo el análisis de coste.</p>
+  <p>En n8n, <strong>una ejecución = un workflow completo activado una vez</strong>, independientemente del número de nodos o pasos que contenga. Un workflow de 3 pasos y uno de 30 pasos cuentan igual: 1 ejecución.</p>
+  <p>Compara eso con Zapier, donde cada acción individual dentro de un Zap cuenta como una tarea. Un workflow de 5 pasos que se ejecuta 100 veces = 500 tareas en Zapier, pero solo 100 ejecuciones en n8n. Para flujos complejos de múltiples pasos, n8n puede ser 5–10 veces más barato que Zapier a volumen equivalente.</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">💡</div>
+    <div class="callout-body"><p><strong>Además:</strong> desde finales de 2025, n8n solo cuenta las <em>ejecuciones exitosas</em>. Los flujos que fallan o las ejecuciones de prueba no consumen tu cuota. Esto es más generoso que el modelo anterior.</p></div>
+  </div>
+
+  <h2 id="planes">2. Los planes de n8n en 2026</h2>
+  <div class="plan-grid">
+    <div class="plan-card recommended">
+      <div class="plan-rec-badge">✓ Recomendado para la mayoría</div>
+      <div class="plan-name">Community (Self-hosted)</div>
+      <div class="plan-price">0€</div>
+      <div class="plan-price-sub">+ servidor: ~5–10 €/mes</div>
+      <ul class="plan-features">
+        <li>Ejecuciones ilimitadas</li>
+        <li>Workflows ilimitados</li>
+        <li>Todas las integraciones</li>
+        <li>Nodos de IA (GPT, Claude, etc.)</li>
+        <li>Código JS/Python</li>
+        <li class="con">Tú gestionas el servidor</li>
+        <li class="con">Sin soporte oficial</li>
+        <li class="con">Actualizaciones manuales</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <div class="plan-name">Starter (Cloud)</div>
+      <div class="plan-price">24€</div>
+      <div class="plan-price-sub">/mes con facturación anual</div>
+      <ul class="plan-features">
+        <li>2.500 ejecuciones/mes</li>
+        <li>Workflows ilimitados</li>
+        <li>n8n gestiona el hosting</li>
+        <li>Todas las integraciones</li>
+        <li>Sin mantenimiento técnico</li>
+        <li class="con">Límite de ejecuciones</li>
+        <li class="con">Sin soporte prioritario</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <div class="plan-name">Pro (Cloud)</div>
+      <div class="plan-price">60€</div>
+      <div class="plan-price-sub">/mes con facturación anual</div>
+      <ul class="plan-features">
+        <li>10.000 ejecuciones/mes</li>
+        <li>Roles y permisos de equipo</li>
+        <li>Historial de workflows (5 días)</li>
+        <li>Debugging avanzado</li>
+        <li>Soporte prioritario</li>
+        <li class="con">Precio sube rápido con volumen</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <div class="plan-name">Business (Cloud)</div>
+      <div class="plan-price">800€</div>
+      <div class="plan-price-sub">/mes con facturación anual</div>
+      <ul class="plan-features">
+        <li>40.000 ejecuciones/mes</li>
+        <li>SSO empresarial</li>
+        <li>Control de versiones (Git)</li>
+        <li>Auditoría avanzada</li>
+        <li class="con">No tiene sentido para un autónomo</li>
+        <li class="con">Overages muy caros</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="self-hosted">3. Self-hosted: la opción gratuita explicada sin rodeos</h2>
+  <p>La versión Community Edition de n8n es completamente gratuita y de código abierto. La instalas en un servidor que tú controlas (un VPS) y tienes ejecuciones ilimitadas para siempre, sin pagar nada a n8n.</p>
+  <p>El coste real es el del servidor. Un VPS básico en Hetzner, DigitalOcean o Contabo con 2 GB de RAM cuesta entre 5 y 10 €/mes, más que suficiente para correr n8n con un volumen moderado de workflows. Si tienes muchos workflows complejos o alto volumen, podrías necesitar un servidor de 20–30 €/mes.</p>
+  <p>La contrapartida es que tú eres responsable del mantenimiento: actualizaciones de n8n, seguridad del servidor, backups. <strong>Importante:</strong> mantener n8n actualizado no es opcional. En 2025 se detectaron vulnerabilidades críticas en versiones antiguas (CVE-2025-68613, con severidad de 9,9 sobre 10). Un servidor desactualizado es un riesgo de seguridad real.</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-body"><p><strong>Si no tienes experiencia con servidores:</strong> empieza con n8n Cloud Starter. Aprende la herramienta durante 1–2 meses sin preocuparte por infraestructura. Cuando domines n8n y tus workflows sean estables, migra a self-hosted. Es la ruta que siguen la mayoría de freelancers avanzados.</p></div>
+  </div>
+
+  <h2 id="cuanto-gastas">4. ¿Cuántas ejecuciones necesitas tú?</h2>
+  <p>Para dimensionar bien el plan, aquí un ejemplo real de un freelancer con 5 workflows activos:</p>
+
+  <div class="calc-box">
+    <div class="calc-title">Estimación de ejecuciones mensuales — Freelancer tipo</div>
+    <div class="calc-row">
+      <span class="calc-label">Onboarding de clientes (3 clientes nuevos/mes)</span>
+      <span class="calc-val">3 exec</span>
+    </div>
+    <div class="calc-row">
+      <span class="calc-label">Facturación recurrente (10 clientes, día 1 de mes)</span>
+      <span class="calc-val">10 exec</span>
+    </div>
+    <div class="calc-row">
+      <span class="calc-label">Recordatorio cobros (comprobación diaria)</span>
+      <span class="calc-val">30 exec</span>
+    </div>
+    <div class="calc-row">
+      <span class="calc-label">Publicación en redes (5 posts/semana × 4 semanas)</span>
+      <span class="calc-val">80 exec</span>
+    </div>
+    <div class="calc-row">
+      <span class="calc-label">Reporte semanal (cada lunes)</span>
+      <span class="calc-val">4 exec</span>
+    </div>
+    <div class="calc-row">
+      <span class="calc-label">Clasificación de emails (20 emails/día × 22 días)</span>
+      <span class="calc-val">440 exec</span>
+    </div>
+    <div class="calc-row total">
+      <span class="calc-label">Total estimado al mes</span>
+      <span class="calc-val">~567 ejecuciones</span>
+    </div>
+  </div>
+
+  <p>567 ejecuciones al mes. El plan Starter de n8n Cloud incluye 2.500. Con margen de sobra. Pero si decides montar el self-hosted, esas mismas 567 ejecuciones cuestan 0 € adicionales, solo el VPS de 5 €/mes.</p>
+  <p>Para la mayoría de freelancers en España, el plan Starter Cloud o el self-hosted básico cubre perfectamente las necesidades reales. El plan Pro solo tiene sentido si superas las 2.500 ejecuciones mensuales de forma consistente, lo que normalmente implica tener muchos clientes o workflows muy frecuentes.</p>
+
+  <h2 id="decision">5. Árbol de decisión: qué plan elegir</h2>
+  <div class="decision">
+    <div class="decision-title">Responde estas preguntas en orden</div>
+    <div class="d-question">
+      <div class="d-q-text">¿Estás empezando con n8n por primera vez?</div>
+      <div class="d-options">
+        <div class="d-opt"><span class="d-opt-arrow">→ Sí:</span><span class="d-opt-text">Empieza con <strong class="d-opt-result">n8n Cloud (prueba gratuita 14 días)</strong>. Aprende sin fricción técnica. Luego decides.</span></div>
+        <div class="d-opt"><span class="d-opt-arrow">→ No:</span><span class="d-opt-text">Continúa con la siguiente pregunta.</span></div>
+      </div>
+    </div>
+    <div class="d-question">
+      <div class="d-q-text">¿Te importa la privacidad de los datos de tus clientes o manejas información sensible?</div>
+      <div class="d-options">
+        <div class="d-opt"><span class="d-opt-arrow">→ Sí:</span><span class="d-opt-text"><strong class="d-opt-result">Self-hosted Community Edition</strong>. Tus datos no salen de tu servidor. ~5 €/mes de VPS.</span></div>
+        <div class="d-opt"><span class="d-opt-arrow">→ No:</span><span class="d-opt-text">Continúa.</span></div>
+      </div>
+    </div>
+    <div class="d-question">
+      <div class="d-q-text">¿Quieres evitar tocar servidores y prefieres pagar por comodidad?</div>
+      <div class="d-options">
+        <div class="d-opt"><span class="d-opt-arrow">→ Sí:</span><span class="d-opt-text"><strong class="d-opt-result">n8n Cloud Starter (24 €/mes)</strong>. Sin mantenimiento, sin servidores, 2.500 ejecuciones.</span></div>
+        <div class="d-opt"><span class="d-opt-arrow">→ No:</span><span class="d-opt-text"><strong class="d-opt-result">Self-hosted Community Edition</strong>. Máximo ahorro, máximo control. ~5 €/mes de VPS.</span></div>
+      </div>
+    </div>
+    <div class="d-question">
+      <div class="d-q-text">¿Superas las 2.500 ejecuciones mensuales de forma consistente?</div>
+      <div class="d-options">
+        <div class="d-opt"><span class="d-opt-arrow">→ Sí:</span><span class="d-opt-text">Migra a <strong class="d-opt-result">self-hosted</strong> o valora el <strong class="d-opt-result">Cloud Pro (60 €/mes)</strong> si no quieres gestionar infraestructura.</span></div>
+        <div class="d-opt"><span class="d-opt-arrow">→ No:</span><span class="d-opt-text">El <strong class="d-opt-result">Cloud Starter</strong> es más que suficiente. No necesitas subir de plan.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">🎯</div>
+    <div class="callout-body"><p><strong>La ruta más inteligente para el 80% de autónomos:</strong> Cloud Starter para aprender (1–2 meses), luego self-hosted cuando domines la herramienta. Ahorras entre 200 y 700 € al año respecto a mantener el Cloud a largo plazo.</p></div>
+  </div>
+
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq-list">
+    <details>
+      <summary>¿Tiene n8n versión gratuita real?</summary>
+      <div class="faq-answer">Sí. La Community Edition es 100% gratuita, de código abierto y sin límites de ejecuciones ni de workflows. Se instala en tu propio servidor. El único coste es el VPS, que puede estar desde 5 €/mes. No hay trampa: no es una versión recortada, tiene casi todas las funcionalidades excepto algunas features enterprise (SSO, auditoría avanzada) que casi ningún freelancer necesita.</div>
+    </details>
+    <details>
+      <summary>¿El plan gratuito de n8n Cloud sigue existiendo?</summary>
+      <div class="faq-answer">No. A finales de 2025, n8n eliminó el plan gratuito de Cloud (que antes incluía 5 workflows activos). Ahora el Cloud más básico es el Starter a 24 €/mes. Lo que sí se mantiene es la versión self-hosted Community Edition, que sigue siendo completamente gratuita sin límites.</div>
+    </details>
+    <details>
+      <summary>¿Cuánto cuesta n8n Cloud si me paso de ejecuciones?</summary>
+      <div class="faq-answer">Si superas el límite de tu plan, el workflow simplemente no se ejecuta hasta el mes siguiente. No te cobran overages automáticamente en Starter y Pro. En el plan Business, los overages se cobran en bloques de 300.000 ejecuciones por 4.000 €, lo cual es extremadamente caro para un autónomo. Si llegas a ese nivel de volumen, self-hosted es la respuesta obvia.</div>
+    </details>
+    <details>
+      <summary>¿Puedo migrar de Cloud a self-hosted sin perder mis workflows?</summary>
+      <div class="faq-answer">Sí. n8n permite exportar todos tus workflows como archivos JSON. Importas esos archivos en tu instancia self-hosted y los tienes disponibles en minutos. La migración no implica reconfigurar nada desde cero, aunque sí tendrás que volver a añadir las credenciales (claves API de las integraciones).</div>
+    </details>
+    <details>
+      <summary>¿Vale la pena el plan Pro frente al Starter?</summary>
+      <div class="faq-answer">Solo si superas regularmente las 2.500 ejecuciones del Starter. El Pro añade roles de equipo (no necesario para un autónomo solo), historial de workflows y debugging avanzado. Para un freelancer individual, el Starter cubre todo. Si tu volumen crece, la alternativa más inteligente al Pro es migrar a self-hosted, no subir de plan Cloud.</div>
+    </details>
+  </div>
+
+  <div class="related">
+    <div class="related-title">Más sobre automatización para freelancers</div>
+    <div class="related-links">
+      <a href="/blog/n8n-para-freelancers/">n8n para freelancers: qué es y cómo empezar sin programar</a>
+      <a href="/blog/n8n-vs-zapier-vs-make-autonomos/">n8n vs Zapier vs Make: comparativa honesta</a>
+      <a href="/blog/5-automatizaciones-n8n-freelancers/">5 automatizaciones con n8n que todo freelancer debería tener</a>
+      <a href="/blog/automatizar-facturacion-n8n-holded/">Automatizar la facturación con n8n y Holded (Verifactu)</a>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h3>¿Listo para empezar a automatizar tu negocio?</h3>
+    <p>Calcula cuántas horas y euros puedes recuperar con nuestra calculadora de ROI.</p>
+    <a href="/calculadora-roi-ia/" class="btn">Calcular mi ROI →</a>
+  </div>
+</article>
+</div>
+
+<footer><div class="footer-inner">
+  <a href="/" class="logo">Comparar<span style="color:var(--accent)">IA</span></a>
+  <ul class="footer-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/aviso-legal/">Aviso legal</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 CompararIA · Hecho en España</p>
+</div></footer>
+</body>
+</html>
