@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 automatizaciones con n8n que todo freelancer debería tener (2026)</title>
+  <meta name="description" content="Los 5 workflows de n8n más útiles para autónomos: onboarding de clientes, facturación automática, respuesta a emails con IA, reportes semanales y publicación en redes. Con pasos concretos.">
+  <meta name="keywords" content="automatizaciones n8n freelancer, workflows n8n autonomos, n8n onboarding clientes, n8n facturación automática, n8n redes sociales, n8n email respuesta automática, automatizar negocio freelancer España 2026">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/blog/5-automatizaciones-n8n-freelancers/">
+  <meta property="og:title" content="5 automatizaciones con n8n que todo freelancer debería tener (2026)">
+  <meta property="og:description" content="Los 5 workflows de n8n más útiles para autónomos españoles: pasos concretos, nodos necesarios y tiempo ahorrado real.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/blog/5-automatizaciones-n8n-freelancers/">
+  <meta property="og:site_name" content="CompararIA">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"5 automatizaciones con n8n que todo freelancer debería tener (2026)","description":"Los 5 workflows de n8n más útiles para autónomos: onboarding de clientes, facturación automática, respuesta a emails con IA, reportes semanales y redes sociales.","author":{"@type":"Organization","name":"comparaia.es","url":"https://comparaia.es"},"publisher":{"@type":"Organization","name":"comparaia.es","url":"https://comparaia.es"},"datePublished":"2026-05-13","dateModified":"2026-05-13","mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/blog/5-automatizaciones-n8n-freelancers/"},"inLanguage":"es"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--surface:#1e1e2e;--surface2:#252538;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--light:#ccd6f6;--mono:'IBM Plex Mono',monospace;--head:'Syne',sans-serif;--body:'DM Sans',sans-serif;--radius:14px;--max:780px}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.35}
+    .orb{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.09) 0%,transparent 70%);top:-100px;right:-100px}
+    .orb-2{width:350px;height:350px;background:radial-gradient(circle,rgba(124,111,255,0.07) 0%,transparent 70%);bottom:100px;left:-80px}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:var(--head);font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .hero{padding:72px 0 52px;border-bottom:1px solid var(--border)}
+    .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;border:1px solid}
+    .tag-green{color:var(--accent);border-color:rgba(0,229,160,0.35);background:rgba(0,229,160,0.07)}
+    .tag-purple{color:var(--accent2);border-color:rgba(124,111,255,0.35);background:rgba(124,111,255,0.07)}
+    h1{font-family:var(--head);font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:18px;letter-spacing:-0.03em}
+    .hero-lead{font-size:1.1rem;color:var(--light);max-width:660px;margin-bottom:28px}
+    .meta-row{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted)}
+    .toc{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:22px 26px;margin:44px 0}
+    .toc-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+    .toc li{font-size:0.91rem;color:var(--light)}
+    .toc a{color:var(--light);text-decoration:none}
+    .toc a:hover{color:var(--accent)}
+    article{padding:0 0 80px}
+    h2{font-family:var(--head);font-size:1.6rem;font-weight:700;color:#fff;margin:56px 0 16px;letter-spacing:-0.02em;scroll-margin-top:30px}
+    h3{font-family:var(--head);font-size:1.1rem;font-weight:700;color:var(--light);margin:28px 0 10px}
+    p{margin-bottom:16px;color:var(--text)}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    strong{color:#fff;font-weight:600}
+    /* Workflow cards */
+    .wf-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin:32px 0;overflow:hidden}
+    .wf-header{padding:22px 26px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px}
+    .wf-num{font-family:var(--head);font-size:2.8rem;font-weight:800;color:var(--accent);opacity:0.25;line-height:1;flex-shrink:0}
+    .wf-title-block h3{font-family:var(--head);font-size:1.2rem;font-weight:700;color:#fff;margin:0 0 4px}
+    .wf-title-block .wf-sub{font-size:0.85rem;color:var(--muted)}
+    .wf-body{padding:22px 26px}
+    .wf-body p{font-size:0.95rem;margin-bottom:14px}
+    .wf-flow{background:var(--surface2);border-radius:10px;padding:18px 20px;margin:16px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .wf-node{font-family:var(--mono);font-size:0.78rem;background:rgba(0,229,160,0.1);color:var(--accent);border:1px solid rgba(0,229,160,0.25);padding:5px 10px;border-radius:6px;white-space:nowrap}
+    .wf-arrow{color:var(--muted);font-size:0.9rem;flex-shrink:0}
+    .wf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+    .wf-stat{text-align:center;background:var(--surface2);border-radius:8px;padding:12px}
+    .wf-stat-n{font-family:var(--head);font-size:1.4rem;font-weight:800;color:var(--accent)}
+    .wf-stat-l{font-size:0.75rem;color:var(--muted);margin-top:2px}
+    .callout{border-radius:var(--radius);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+    .callout-body p{margin:0;font-size:0.91rem}
+    .callout-green{background:rgba(0,229,160,0.07);border:1px solid rgba(0,229,160,0.2)}
+    .callout-blue{background:rgba(91,142,240,0.08);border:1px solid rgba(91,142,240,0.25)}
+    .callout-amber{background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.22)}
+    .related{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:var(--radius);padding:20px 24px;margin:48px 0 0}
+    .related-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .related-links{display:flex;flex-direction:column;gap:8px}
+    .related-links a{color:var(--light);text-decoration:none;font-size:0.92rem;display:flex;align-items:center;gap:8px}
+    .related-links a::before{content:'→';color:var(--accent);font-family:var(--mono)}
+    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.1) 0%,rgba(124,111,255,0.07) 100%);border:1px solid rgba(0,229,160,0.25);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0 0}
+    .cta-banner h3{font-family:var(--head);font-size:1.3rem;color:#fff;margin:0 0 8px}
+    .cta-banner p{color:var(--muted);font-size:0.93rem;margin:0 0 20px}
+    .btn{display:inline-block;background:var(--accent);color:#0a0a0f;font-family:var(--mono);font-size:0.83rem;font-weight:700;padding:11px 26px;border-radius:8px;text-decoration:none;transition:opacity 0.2s}
+    .btn:hover{opacity:0.88;color:#0a0a0f}
+    footer{border-top:1px solid var(--border);padding:40px 0;position:relative;z-index:1}
+    .footer-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-copy{font-size:0.82rem;color:var(--muted)}
+    @media(max-width:600px){h1{font-size:1.75rem}h2{font-size:1.3rem}.wf-stats{grid-template-columns:1fr 1fr}.nav-links{display:none}.wf-num{font-size:2rem}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+<nav><div class="nav-inner">
+  <a href="/" class="logo">Comparar<span>IA</span></a>
+  <ul class="nav-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+  </ul>
+</div></nav>
+
+<div class="container">
+<header class="hero">
+  <nav class="breadcrumb"><a href="/">comparaia.es</a> / <a href="/blog/">Blog</a> / 5 automatizaciones n8n</nav>
+  <div class="tag-row">
+    <span class="tag tag-green">Automatización</span>
+    <span class="tag tag-purple">Guía práctica</span>
+  </div>
+  <h1>5 automatizaciones con n8n que todo freelancer debería tener (2026)</h1>
+  <p class="hero-lead">No todos los workflows valen lo mismo. Estos cinco son los que más horas ahorran a un autónomo español: pasos concretos, nodos necesarios y tiempo real recuperado cada semana.</p>
+  <div class="meta-row">
+    <span>📅 Mayo 2026</span>
+    <span>⏱ 11 min de lectura</span>
+    <span>🔗 Artículo 3 del cluster de automatización</span>
+  </div>
+</header>
+
+<article>
+  <nav class="toc">
+    <div class="toc-title">En este artículo</div>
+    <ol>
+      <li><a href="#intro">Por qué estos cinco y no otros</a></li>
+      <li><a href="#wf1">Workflow 1: Onboarding automático de clientes</a></li>
+      <li><a href="#wf2">Workflow 2: Facturación sin intervención</a></li>
+      <li><a href="#wf3">Workflow 3: Respuesta inteligente a emails con IA</a></li>
+      <li><a href="#wf4">Workflow 4: Reporte semanal automático</a></li>
+      <li><a href="#wf5">Workflow 5: Publicación en redes desde Notion</a></li>
+      <li><a href="#como-empezar">Por dónde empezar</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="intro">Por qué estos cinco y no otros</h2>
+  <p>n8n tiene miles de workflows posibles. El problema no es la falta de opciones, sino saber cuáles implementar primero para notar el impacto cuanto antes. La selección se basa en tres criterios: <strong>tiempo ahorrado por semana</strong>, <strong>frecuencia de uso</strong> (tareas que se repiten siempre igual) y <strong>complejidad de implementación</strong> (ninguno requiere programar).</p>
+  <p>Los cinco juntos pueden devolverte entre 8 y 15 horas semanales. Para un autónomo que valora su hora en 50 €, eso son entre 400 y 750 € semanales de valor recuperado frente a un coste de automatización de 5–20 €/mes.</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-body"><p><strong>Antes de empezar:</strong> no intentes implementar los cinco de golpe. Empieza por el que resuelva tu mayor punto de dolor hoy. Cuando lleve una semana funcionando de forma estable, añade el siguiente. La automatización mal implementada crea más problemas que los que resuelve.</p></div>
+  </div>
+
+  <!-- WORKFLOW 1 -->
+  <h2 id="wf1">Workflow 1: Onboarding automático de clientes</h2>
+  <div class="wf-card">
+    <div class="wf-header">
+      <div class="wf-num">01</div>
+      <div class="wf-title-block">
+        <h3>Onboarding automático de clientes</h3>
+        <div class="wf-sub">Trigger: firma de contrato o pago recibido</div>
+      </div>
+    </div>
+    <div class="wf-body">
+      <p>Cada vez que entra un cliente nuevo, repites lo mismo: crear carpeta en Drive, añadirle al CRM, mandarle el email de bienvenida con los próximos pasos, crear el proyecto en tu gestor de tareas y agendar la primera llamada. En total, entre 30 y 45 minutos de trabajo mecánico que no aporta valor.</p>
+      <p>Este workflow lo hace todo en menos de 30 segundos, en el momento en que el cliente firma o paga, sin que estés delante.</p>
+      <div class="wf-flow">
+        <span class="wf-node">Trigger: Stripe / PayPal / Docusign</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Crear carpeta Drive</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Añadir a CRM (Notion / HubSpot)</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Email bienvenida</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Crear proyecto (Trello / Asana)</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Notificación Slack/Telegram</span>
+      </div>
+      <div class="wf-stats">
+        <div class="wf-stat"><div class="wf-stat-n">~35 min</div><div class="wf-stat-l">ahorrados por cliente nuevo</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">30 seg</div><div class="wf-stat-l">lo que tarda el workflow</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">6 nodos</div><div class="wf-stat-l">complejidad baja</div></div>
+      </div>
+      <div class="callout callout-green">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body"><p><strong>Personalización recomendada:</strong> añade un nodo de Claude o ChatGPT entre el trigger y el email de bienvenida. La IA personaliza el mensaje usando el nombre, el servicio contratado y el importe, haciendo que cada email parezca escrito a mano aunque sea completamente automático.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOW 2 -->
+  <h2 id="wf2">Workflow 2: Facturación sin intervención</h2>
+  <div class="wf-card">
+    <div class="wf-header">
+      <div class="wf-num">02</div>
+      <div class="wf-title-block">
+        <h3>Facturación sin intervención</h3>
+        <div class="wf-sub">Trigger: proyecto marcado como completado</div>
+      </div>
+    </div>
+    <div class="wf-body">
+      <p>La facturación es una de las tareas que más fricción genera a los autónomos: acordarte de hacerla, abrir el software, rellenar los datos, enviársela al cliente y apuntar el cobro pendiente. Con este workflow, cuando marcas un proyecto como "completado" en tu gestor de tareas, n8n genera y envía la factura automáticamente vía Holded o Invoice Ninja.</p>
+      <p>También sirve al revés: para la facturación recurrente mensual, el trigger es simplemente "el día 1 de cada mes a las 9:00".</p>
+      <div class="wf-flow">
+        <span class="wf-node">Trigger: tarea completada (Notion/Trello)</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Obtener datos cliente del CRM</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Crear factura en Holded</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Enviar al cliente por email</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Registrar en Google Sheets</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Alerta cobro pendiente (14 días)</span>
+      </div>
+      <div class="wf-stats">
+        <div class="wf-stat"><div class="wf-stat-n">2–3 h</div><div class="wf-stat-l">ahorradas al mes en facturación</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">0 olvidos</div><div class="wf-stat-l">nunca una factura sin enviar</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">5 nodos</div><div class="wf-stat-l">complejidad baja</div></div>
+      </div>
+      <div class="callout callout-blue">
+        <div class="callout-icon">📋</div>
+        <div class="callout-body"><p><strong>Importante para 2026:</strong> Holded está homologado con Verifactu (obligatorio para autónomos desde julio de 2026). Al usar n8n + Holded, el cumplimiento normativo es automático: cada factura generada incluye el código QR y el registro en la AEAT sin que tengas que hacer nada extra.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOW 3 -->
+  <h2 id="wf3">Workflow 3: Respuesta inteligente a emails con IA</h2>
+  <div class="wf-card">
+    <div class="wf-header">
+      <div class="wf-num">03</div>
+      <div class="wf-title-block">
+        <h3>Respuesta inteligente a emails con IA</h3>
+        <div class="wf-sub">Trigger: email nuevo en Gmail/Outlook</div>
+      </div>
+    </div>
+    <div class="wf-body">
+      <p>Este es el workflow que más impresiona cuando lo ves por primera vez. n8n lee los emails entrantes, los clasifica por tipo (consulta de presupuesto, pregunta de cliente existente, spam, solicitud de información), y dependiendo de la categoría hace cosas distintas. Para consultas estándar, redacta una respuesta personalizada con IA y la envía automáticamente o la pone en cola para tu revisión de un clic.</p>
+      <p>El resultado: dejas de perder 20–30 minutos al día respondiendo emails rutinarios. Solo gestionas los que de verdad necesitan tu criterio.</p>
+      <div class="wf-flow">
+        <span class="wf-node">Trigger: email nuevo Gmail</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Claude/GPT clasifica el email</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">¿Consulta estándar?</span>
+        <span class="wf-arrow">→ Sí →</span>
+        <span class="wf-node">IA redacta respuesta</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Envío automático / cola revisión</span>
+        <span class="wf-arrow">→ No →</span>
+        <span class="wf-node">Alerta Telegram + resumen</span>
+      </div>
+      <div class="wf-stats">
+        <div class="wf-stat"><div class="wf-stat-n">20–30 min</div><div class="wf-stat-l">ahorrados al día en emails</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">&lt;2 min</div><div class="wf-stat-l">tiempo de respuesta al cliente</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">7 nodos</div><div class="wf-stat-l">complejidad media</div></div>
+      </div>
+      <div class="callout callout-amber">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body"><p><strong>Recomendación:</strong> empieza con el modo "cola de revisión" antes de activar el envío automático. Pasa una semana revisando las respuestas que genera la IA, ajusta el prompt hasta que el tono sea el tuyo, y entonces activa el envío directo para las categorías donde el 100% de las respuestas son correctas.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOW 4 -->
+  <h2 id="wf4">Workflow 4: Reporte semanal automático</h2>
+  <div class="wf-card">
+    <div class="wf-header">
+      <div class="wf-num">04</div>
+      <div class="wf-title-block">
+        <h3>Reporte semanal automático</h3>
+        <div class="wf-sub">Trigger: cada lunes a las 8:00</div>
+      </div>
+    </div>
+    <div class="wf-body">
+      <p>Cada semana necesitas saber cuánto has facturado, cuántos proyectos tienes activos, cuántos emails sin responder llevas y cómo van tus métricas clave. Recopilar esos datos a mano de cinco herramientas distintas te roba una hora que podrías dedicar a trabajo facturable. Este workflow lo hace solo y te manda un resumen directo al email o al móvil.</p>
+      <div class="wf-flow">
+        <span class="wf-node">Trigger: Lunes 08:00</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Obtener facturas Holded</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Obtener tareas activas Notion</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Métricas GA4 (visitas web)</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">IA redacta resumen ejecutivo</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Envío email / Telegram</span>
+      </div>
+      <div class="wf-stats">
+        <div class="wf-stat"><div class="wf-stat-n">~1 h</div><div class="wf-stat-l">ahorrada cada lunes</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">52 h/año</div><div class="wf-stat-l">de trabajo mecánico eliminado</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">6 nodos</div><div class="wf-stat-l">complejidad media-baja</div></div>
+      </div>
+      <div class="callout callout-green">
+        <div class="callout-icon">📊</div>
+        <div class="callout-body"><p><strong>Versión avanzada:</strong> añade un nodo de IA que compare los datos con la semana anterior y genere automáticamente un comentario de tendencia: "Las visitas subieron un 12% respecto a la semana pasada. Hay 3 facturas pendientes de cobro por un total de 2.400 €." Convierte los números en insights sin que tengas que analizarlos.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOW 5 -->
+  <h2 id="wf5">Workflow 5: Publicación en redes sociales desde Notion</h2>
+  <div class="wf-card">
+    <div class="wf-header">
+      <div class="wf-num">05</div>
+      <div class="wf-title-block">
+        <h3>Publicación en redes sociales desde Notion</h3>
+        <div class="wf-sub">Trigger: entrada en Notion con fecha de publicación</div>
+      </div>
+    </div>
+    <div class="wf-body">
+      <p>Escribes tu contenido en Notion, pones la fecha en la que quieres publicarlo, y n8n lo publica automáticamente en LinkedIn, Instagram o X en el momento exacto. Sin tener que abrir ninguna red social, sin herramientas de scheduling de pago, sin acordarte.</p>
+      <p>Si además añades un nodo de IA, el mismo contenido se adapta automáticamente al formato de cada red: más formal para LinkedIn, más cercano para Instagram, más directo para X.</p>
+      <div class="wf-flow">
+        <span class="wf-node">Trigger: fecha publicación llegó (Notion)</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Leer contenido de la entrada</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">IA adapta tono por red</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Publicar LinkedIn</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Publicar Instagram</span>
+        <span class="wf-arrow">→</span>
+        <span class="wf-node">Marcar como publicado en Notion</span>
+      </div>
+      <div class="wf-stats">
+        <div class="wf-stat"><div class="wf-stat-n">3–4 h</div><div class="wf-stat-l">ahorradas a la semana en RRSS</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">1 fuente</div><div class="wf-stat-l">de contenido → todas las redes</div></div>
+        <div class="wf-stat"><div class="wf-stat-n">6 nodos</div><div class="wf-stat-l">complejidad media</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="como-empezar">Por dónde empezar</h2>
+  <p>Si nunca has usado n8n, el orden recomendado es este: empieza por el <strong>Workflow 4</strong> (el reporte semanal). Es el más sencillo de implementar, no tiene riesgos (solo lee datos, no escribe ni envía nada en tu nombre) y te enseña los conceptos básicos de n8n en una tarde.</p>
+  <p>Cuando ese funcione, pasa al <strong>Workflow 1</strong> (onboarding de clientes), que tiene el impacto más visible. Luego el <strong>Workflow 5</strong> (redes sociales), el <strong>Workflow 2</strong> (facturación) y finalmente el <strong>Workflow 3</strong> (emails con IA), que requiere más ajuste fino para asegurarte de que el tono es el correcto antes de activarlo del todo.</p>
+
+  <div class="related">
+    <div class="related-title">Más sobre automatización para freelancers</div>
+    <div class="related-links">
+      <a href="/blog/n8n-para-freelancers/">n8n para freelancers: qué es y cómo empezar sin programar</a>
+      <a href="/blog/n8n-vs-zapier-vs-make-autonomos/">n8n vs Zapier vs Make: comparativa honesta para autónomos</a>
+      <a href="/blog/automatizar-facturacion-n8n-holded/">Cómo automatizar la facturación con n8n y Holded (Verifactu incluido)</a>
+      <a href="/calculadora-roi-ia/">Calculadora ROI: calcula cuánto ahorrarías automatizando</a>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h3>¿Ya tienes n8n pero no sabes por dónde empezar?</h3>
+    <p>Usa nuestra calculadora de ROI para estimar exactamente cuánto tiempo y dinero puedes recuperar.</p>
+    <a href="/calculadora-roi-ia/" class="btn">Calcular mi ROI →</a>
+  </div>
+</article>
+</div>
+
+<footer><div class="footer-inner">
+  <a href="/" class="logo">Comparar<span style="color:var(--accent)">IA</span></a>
+  <ul class="footer-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/aviso-legal/">Aviso legal</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 CompararIA · Hecho en España</p>
+</div></footer>
+</body>
+</html>
