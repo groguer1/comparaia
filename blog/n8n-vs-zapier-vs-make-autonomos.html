@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>n8n vs Zapier vs Make para autónomos: comparativa honesta (2026)</title>
+  <meta name="description" content="Comparativa real de n8n, Zapier y Make para freelancers y autónomos en España: precios actualizados, tabla de funciones, cuándo usar cada una y veredicto por perfil. Sin humo.">
+  <meta name="keywords" content="n8n vs zapier, n8n vs make, zapier vs make autonomos, mejor herramienta automatización freelancer España, n8n zapier make comparativa 2026, automatización sin código autónomo">
+  <meta name="author" content="comparaia.es">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/blog/n8n-vs-zapier-vs-make-autonomos/">
+
+  <meta property="og:title" content="n8n vs Zapier vs Make para autónomos: comparativa honesta (2026)">
+  <meta property="og:description" content="Precios reales, tabla de funciones y veredicto por perfil. Cuál de las tres herramientas de automatización merece tu dinero como freelancer en España.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/blog/n8n-vs-zapier-vs-make-autonomos/">
+  <meta property="og:site_name" content="CompararIA">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "n8n vs Zapier vs Make para autónomos: comparativa honesta (2026)",
+    "description": "Comparativa real de n8n, Zapier y Make para freelancers y autónomos en España: precios actualizados, tabla de funciones y veredicto por perfil.",
+    "author": {"@type": "Organization", "name": "comparaia.es", "url": "https://comparaia.es"},
+    "publisher": {"@type": "Organization", "name": "comparaia.es", "url": "https://comparaia.es"},
+    "datePublished": "2026-05-13",
+    "dateModified": "2026-05-13",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://comparaia.es/blog/n8n-vs-zapier-vs-make-autonomos/"},
+    "keywords": ["n8n vs zapier", "n8n vs make", "automatización freelancer", "make zapier comparativa", "herramientas automatización España 2026"],
+    "inLanguage": "es"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia principal entre n8n, Zapier y Make?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Zapier es la más fácil de usar pero también la más cara al escalar. Make equilibra precio y potencia con una interfaz visual excelente. n8n es la más potente y la única open source, con opción de instalación gratuita en tu propio servidor y sin límites de ejecuciones."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es más barata para un autónomo en España?",
+        "acceptedAnswer": {"@type": "Answer", "text": "n8n en su versión self-hosted puede costar desde 5 €/mes (solo el servidor). Make empieza en 9 €/mes. Zapier desde 19,99 €/mes. Para un autónomo con volumen de automatizaciones creciente, n8n es la opción más económica a largo plazo."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo empezar con Zapier y migrar a n8n después?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sí. Muchos autónomos empiezan con Zapier por su facilidad y migran a n8n cuando el precio empieza a escalar. La migración tiene algo de coste en tiempo, pero no es irreversible. Es mejor elegir la herramienta que encaja ahora que bloquearse anticipando el futuro."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito saber programar para usar Make o n8n?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Para Make, no. Es completamente visual y accesible sin conocimientos técnicos. Para n8n, tampoco es obligatorio, aunque la curva es algo mayor. Si sabes algo de JavaScript, n8n se vuelve mucho más potente, pero para el 80% de los casos de uso de un autónomo no hace falta código."}
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--surface2:#252538;
+      --border:rgba(255,255,255,0.07);
+      --accent:#00e5a0;--accent2:#7c6fff;--accent3:#ff6b6b;
+      --n8n:#5b8ef0;--zapier:#ff4a00;--make:#6c38d9;
+      --text:#e8e8f0;--muted:#7a7a9a;--light:#ccd6f6;
+      --mono:'IBM Plex Mono',monospace;
+      --head:'Syne',sans-serif;
+      --body:'DM Sans',sans-serif;
+      --radius:14px;--max:780px
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.35}
+    .orb{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.09) 0%,transparent 70%);top:-100px;right:-100px}
+    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,111,255,0.07) 0%,transparent 70%);bottom:0;left:-80px}
+
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:var(--head);font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+
+    /* HERO */
+    .hero{padding:72px 0 52px;border-bottom:1px solid var(--border)}
+    .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;border:1px solid}
+    .tag-green{color:var(--accent);border-color:rgba(0,229,160,0.35);background:rgba(0,229,160,0.07)}
+    .tag-purple{color:var(--accent2);border-color:rgba(124,111,255,0.35);background:rgba(124,111,255,0.07)}
+    h1{font-family:var(--head);font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:18px;letter-spacing:-0.03em}
+    .hero-lead{font-size:1.1rem;color:var(--light);max-width:660px;margin-bottom:28px}
+    .meta-row{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+    /* TOC */
+    .toc{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:22px 26px;margin:44px 0}
+    .toc-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+    .toc li{font-size:0.91rem;color:var(--light)}
+    .toc a{color:var(--light);text-decoration:none}
+    .toc a:hover{color:var(--accent)}
+
+    /* BODY TEXT */
+    article{padding:0 0 80px}
+    h2{font-family:var(--head);font-size:1.6rem;font-weight:700;color:#fff;margin:56px 0 16px;letter-spacing:-0.02em;scroll-margin-top:30px}
+    h3{font-family:var(--head);font-size:1.15rem;font-weight:700;color:var(--light);margin:32px 0 10px}
+    p{margin-bottom:16px;color:var(--text)}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    a:hover{color:#5fefbe}
+    strong{color:#fff;font-weight:600}
+    em{font-style:italic;color:var(--light)}
+
+    /* TOOL HEADERS */
+    .tool-header{display:flex;align-items:center;gap:14px;margin:44px 0 16px}
+    .tool-badge{font-family:var(--head);font-weight:800;font-size:1rem;padding:6px 16px;border-radius:8px;letter-spacing:-0.01em}
+    .badge-n8n{background:rgba(91,142,240,0.15);color:var(--n8n);border:1px solid rgba(91,142,240,0.3)}
+    .badge-zapier{background:rgba(255,74,0,0.12);color:var(--zapier);border:1px solid rgba(255,74,0,0.3)}
+    .badge-make{background:rgba(108,56,217,0.12);color:var(--make);border:1px solid rgba(108,56,217,0.3)}
+    .tool-label{font-family:var(--head);font-size:1.35rem;font-weight:700;color:#fff}
+    .tool-tagline{font-size:0.88rem;color:var(--muted);margin-top:2px}
+
+    /* CALLOUTS */
+    .callout{border-radius:var(--radius);padding:18px 22px;margin:24px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout-body{flex:1}
+    .callout-body p{margin:0;font-size:0.93rem}
+    .callout-green{background:rgba(0,229,160,0.07);border:1px solid rgba(0,229,160,0.2)}
+    .callout-blue{background:rgba(91,142,240,0.08);border:1px solid rgba(91,142,240,0.25)}
+    .callout-amber{background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.22)}
+    .callout-red{background:rgba(255,107,107,0.07);border:1px solid rgba(255,107,107,0.22)}
+
+    /* PRICE CARDS */
+    .price-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+    .price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+    .price-card.winner{border-color:rgba(0,229,160,0.4);background:rgba(0,229,160,0.04)}
+    .price-tool{font-family:var(--mono);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+    .price-num{font-family:var(--head);font-size:1.9rem;font-weight:800;line-height:1;margin-bottom:4px}
+    .price-sub{font-size:0.78rem;color:var(--muted);line-height:1.4}
+    .price-n8n .price-num{color:var(--n8n)}
+    .price-zapier .price-num{color:var(--zapier)}
+    .price-make .price-num{color:var(--make)}
+
+    /* MAIN TABLE */
+    .table-wrap{overflow-x:auto;margin:28px 0;border-radius:var(--radius);border:1px solid var(--border)}
+    table{width:100%;border-collapse:collapse;font-size:0.88rem}
+    th{background:var(--surface2);color:var(--light);font-family:var(--mono);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.07em;padding:13px 16px;text-align:left;border-bottom:1px solid var(--border)}
+    th.col-n8n{color:var(--n8n)}
+    th.col-zapier{color:var(--zapier)}
+    th.col-make{color:var(--make)}
+    td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;color:var(--text)}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:rgba(255,255,255,0.02)}
+    .row-label{color:var(--muted);font-size:0.83rem;font-weight:500}
+    .check{color:var(--accent);font-weight:700}
+    .cross{color:#f07070;font-weight:700}
+    .mid{color:#f0c060;font-weight:700}
+
+    /* VERDICT CARDS */
+    .verdict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+    .verdict-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+    .verdict-card.v-n8n{border-top:3px solid var(--n8n)}
+    .verdict-card.v-zapier{border-top:3px solid var(--zapier)}
+    .verdict-card.v-make{border-top:3px solid var(--make)}
+    .verdict-name{font-family:var(--head);font-weight:800;font-size:1.05rem;margin-bottom:10px}
+    .v-n8n .verdict-name{color:var(--n8n)}
+    .v-zapier .verdict-name{color:var(--zapier)}
+    .v-make .verdict-name{color:var(--make)}
+    .verdict-for{font-size:0.83rem;color:var(--muted);line-height:1.5}
+    .verdict-for strong{color:var(--light);display:block;margin-bottom:4px;font-size:0.85rem}
+
+    /* PROFILES */
+    .profile-list{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+    .profile-row{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;display:flex;gap:14px;align-items:flex-start}
+    .profile-emoji{font-size:1.4rem;flex-shrink:0}
+    .profile-body h4{font-family:var(--head);font-weight:700;font-size:0.93rem;color:var(--light);margin-bottom:3px}
+    .profile-body p{font-size:0.85rem;color:var(--muted);margin:0}
+    .profile-winner{font-family:var(--mono);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;padding:3px 8px;border-radius:4px;margin-left:8px;vertical-align:middle}
+    .pw-n8n{background:rgba(91,142,240,0.15);color:var(--n8n)}
+    .pw-zapier{background:rgba(255,74,0,0.12);color:var(--zapier)}
+    .pw-make{background:rgba(108,56,217,0.12);color:var(--make)}
+
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:4px;margin:24px 0}
+    details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    details[open]{border-color:rgba(0,229,160,0.35)}
+    summary{padding:16px 20px;cursor:pointer;font-weight:600;color:var(--light);list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem}
+    summary::after{content:'+';font-family:var(--mono);font-size:1.2rem;color:var(--accent);transition:transform 0.2s}
+    details[open] summary::after{transform:rotate(45deg)}
+    .faq-answer{padding:0 20px 16px;font-size:0.91rem;color:var(--muted);line-height:1.7}
+
+    /* INTERNAL LINKS */
+    .related{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:var(--radius);padding:20px 24px;margin:48px 0 0}
+    .related-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .related-links{display:flex;flex-direction:column;gap:8px}
+    .related-links a{color:var(--light);text-decoration:none;font-size:0.92rem;display:flex;align-items:center;gap:8px}
+    .related-links a::before{content:'→';color:var(--accent);font-family:var(--mono)}
+    .related-links a:hover{color:var(--accent)}
+
+    /* CTA */
+    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.1) 0%,rgba(124,111,255,0.07) 100%);border:1px solid rgba(0,229,160,0.25);border-radius:var(--radius);padding:32px;text-align:center;margin:56px 0 0}
+    .cta-banner h3{font-family:var(--head);font-size:1.3rem;color:#fff;margin:0 0 8px}
+    .cta-banner p{color:var(--muted);font-size:0.93rem;margin:0 0 20px}
+    .btn{display:inline-block;background:var(--accent);color:#0a0a0f;font-family:var(--mono);font-size:0.83rem;font-weight:700;letter-spacing:0.05em;padding:11px 26px;border-radius:8px;text-decoration:none;transition:opacity 0.2s,transform 0.15s}
+    .btn:hover{opacity:0.88;transform:translateY(-1px);color:#0a0a0f}
+
+    @media(max-width:680px){
+      .price-row,.verdict-grid{grid-template-columns:1fr}
+      h1{font-size:1.75rem}
+      h2{font-size:1.3rem}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/" aria-current="page">Blog</a></li>
+      <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+<header class="hero">
+  <nav class="breadcrumb">
+    <a href="/">comparaia.es</a> / <a href="/blog/">Blog</a> / n8n vs Zapier vs Make
+  </nav>
+  <div class="tag-row">
+    <span class="tag tag-green">Comparativa</span>
+    <span class="tag tag-purple">Automatización</span>
+  </div>
+  <h1>n8n vs Zapier vs Make para autónomos: la comparativa honesta (2026)</h1>
+  <p class="hero-lead">Tres herramientas que hacen básicamente lo mismo pero con diferencias enormes en precio, potencia y curva de aprendizaje. Aquí la verdad sin marketing: cuál te conviene según tu situación real.</p>
+  <div class="meta-row">
+    <span>📅 Mayo 2026</span>
+    <span>⏱ 10 min de lectura</span>
+    <span>🔗 Artículo 2 del cluster de automatización</span>
+  </div>
+</header>
+
+<article>
+  <nav class="toc">
+    <div class="toc-title">En este artículo</div>
+    <ol>
+      <li><a href="#resumen">El veredicto rápido (si tienes prisa)</a></li>
+      <li><a href="#n8n">n8n: máxima potencia y privacidad</a></li>
+      <li><a href="#zapier">Zapier: la más fácil, la más cara</a></li>
+      <li><a href="#make">Make: el equilibrio precio-potencia</a></li>
+      <li><a href="#precios">Comparativa de precios real</a></li>
+      <li><a href="#tabla">Tabla completa de funciones</a></li>
+      <li><a href="#perfiles">Cuál elegir según tu perfil</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- ─── VEREDICTO RÁPIDO ─── -->
+  <h2 id="resumen">1. El veredicto rápido (si tienes prisa)</h2>
+  <p>Si no tienes tiempo para leer todo el artículo, aquí la respuesta directa:</p>
+
+  <div class="verdict-grid">
+    <div class="verdict-card v-n8n">
+      <div class="verdict-name">n8n</div>
+      <div class="verdict-for">
+        <strong>Elige n8n si…</strong>
+        quieres la opción más potente y económica a largo plazo, te importa la privacidad de tus datos (RGPD) y no te asusta una curva de aprendizaje media.
+      </div>
+    </div>
+    <div class="verdict-card v-zapier">
+      <div class="verdict-name">Zapier</div>
+      <div class="verdict-for">
+        <strong>Elige Zapier si…</strong>
+        empiezas desde cero, quieres resultados en 15 minutos sin complicarte y tu volumen de automatizaciones es bajo (menos de 1.000 tareas/mes).
+      </div>
+    </div>
+    <div class="verdict-card v-make">
+      <div class="verdict-name">Make</div>
+      <div class="verdict-for">
+        <strong>Elige Make si…</strong>
+        quieres algo más potente que Zapier pero sin la complejidad de n8n. Mejor relación calidad-precio en cloud para flujos medianos.
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">💡</div>
+    <div class="callout-body"><p><strong>La trampa más común:</strong> empezar con Zapier porque es lo más fácil y no planificar el crecimiento. Cuando el volumen sube, la factura de Zapier puede multiplicarse por 5 o 10 de un mes para otro. Make o n8n escalan mucho más suavemente.</p></div>
+  </div>
+
+  <!-- ─── N8N ─── -->
+  <h2 id="n8n">2. n8n: máxima potencia y privacidad de datos</h2>
+
+  <div class="tool-header">
+    <span class="tool-badge badge-n8n">n8n</span>
+    <div>
+      <div class="tool-label">n8n</div>
+      <div class="tool-tagline">Open source · Self-hosted · Agentes IA nativos</div>
+    </div>
+  </div>
+
+  <p>n8n es la única de las tres que puedes instalar en tu propio servidor de forma completamente gratuita. Eso cambia todo el análisis de costes: con un VPS de 5 €/mes tienes ejecuciones ilimitadas para siempre, sin pagar por cada tarea automatizada.</p>
+
+  <p>En 2026, n8n ha consolidado su posición como la herramienta preferida para quien quiere construir <strong>agentes de IA autónomos</strong>: sistemas que no solo responden preguntas, sino que detectan un evento (un email, un formulario, una hora del día), toman decisiones y ejecutan acciones sin intervención humana. Tiene nodos nativos para ChatGPT, Claude, Gemini, Ollama y LangChain. Ni Zapier ni Make se acercan a ese nivel de integración con IA.</p>
+
+  <p><strong>Lo que más gusta a los autónomos españoles:</strong> al ser self-hosted, todos los datos se quedan en tu servidor. Para quien maneja información sensible de clientes, eso no es un detalle menor: es cumplimiento RGPD sin esfuerzo adicional.</p>
+
+  <p><strong>Lo que no hay que ocultar:</strong> la curva de aprendizaje es más alta que Zapier. Si lo que necesitas es conectar dos aplicaciones de forma puntual, n8n puede resultar excesivo. Y si optas por self-hosted, tú eres responsable de las actualizaciones (importante, porque en 2025 se detectaron vulnerabilidades críticas en versiones antiguas).</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">🔑</div>
+    <div class="callout-body"><p><strong>Diferencia clave en precios:</strong> Zapier cobra por cada acción individual dentro de un workflow. Si un flujo tiene 5 nodos y se ejecuta 100 veces, son 500 tareas facturadas. n8n cloud cobra por workflow completo ejecutado, independientemente de cuántos nodos tenga. En self-hosted, cero.</p></div>
+  </div>
+
+  <!-- ─── ZAPIER ─── -->
+  <h2 id="zapier">3. Zapier: la más fácil, la más cara al crecer</h2>
+
+  <div class="tool-header">
+    <span class="tool-badge badge-zapier">Zapier</span>
+    <div>
+      <div class="tool-label">Zapier</div>
+      <div class="tool-tagline">7.000+ integraciones · Cero curva de aprendizaje · Precio escala rápido</div>
+    </div>
+  </div>
+
+  <p>Zapier es el líder histórico del mercado y hay una razón: es la herramienta que cualquier persona puede usar en 15 minutos sin ningún conocimiento previo. Su interfaz es limpia, los errores se explican con claridad y tiene más de 7.000 integraciones, la mayor biblioteca de las tres. Si necesitas conectar una herramienta de nicho muy específica (sobre todo del mercado americano), probablemente solo esté en Zapier.</p>
+
+  <p>En 2026 lanzó <strong>Zapier Central</strong>, su producto de IA conversacional: describes con lenguaje natural lo que quieres automatizar y el sistema genera el flujo por ti. Es el punto de entrada más accesible al mundo de la automatización con IA para alguien sin perfil técnico.</p>
+
+  <p><strong>El problema:</strong> su modelo de precios penaliza el crecimiento. Cobra por tarea individual, lo que significa que cuanto más complejos y frecuentes son tus flujos, más cara se vuelve la plataforma. Se han documentado casos de PYMEs españolas pagando 800 €/mes en Zapier y migrando a Make con los mismos workflows por 90 €/mes.</p>
+
+  <div class="callout callout-red">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-body"><p><strong>Cuándo Zapier sí tiene sentido:</strong> si tu volumen es bajo (menos de 1.000 tareas/mes), si no tienes tiempo para aprender otra herramienta y si necesitas una integración muy específica que solo existe en su directorio. Fuera de esos casos, el precio no se justifica frente a las alternativas.</p></div>
+  </div>
+
+  <!-- ─── MAKE ─── -->
+  <h2 id="make">4. Make: el equilibrio precio-potencia</h2>
+
+  <div class="tool-header">
+    <span class="tool-badge badge-make">Make</span>
+    <div>
+      <div class="tool-label">Make <em style="font-size:0.8rem;font-weight:400">(antes Integromat)</em></div>
+      <div class="tool-tagline">Visual · Potente · Mejor precio en cloud</div>
+    </div>
+  </div>
+
+  <p>Make ocupa el espacio intermedio y lo hace muy bien. Su editor visual en canvas es genuinamente potente: los flujos se representan como diagramas con nodos conectados, lo que permite ver de un vistazo qué está pasando en cada automatización, incluso cuando la lógica es compleja con bifurcaciones, filtros y bucles.</p>
+
+  <p>En 2026 ha reforzado su integración con IA: módulos nativos para GPT-4o, Claude y DALL-E que se conectan directamente a cualquier flujo sin configuración de APIs. No llega al nivel de n8n para agentes avanzados, pero cubre el 90% de los casos de uso de un freelancer.</p>
+
+  <p>Su modelo de precios cobra por <strong>operación de escenario</strong> (workflow completo), no por acción individual como Zapier. Esto lo hace considerablemente más económico para flujos complejos de múltiples pasos. El plan gratuito incluye 1.000 operaciones mensuales, suficiente para empezar a experimentar de verdad.</p>
+
+  <p><strong>La pega:</strong> no hay opción de self-hosting. Tus datos pasan por sus servidores. Para un autónomo que maneja datos sensibles de clientes y quiere cumplimiento RGPD estricto, esto puede ser un freno.</p>
+
+  <!-- ─── PRECIOS ─── -->
+  <h2 id="precios">5. Comparativa de precios real (mayo 2026)</h2>
+  <p>Estos son los precios verificados de los planes de entrada para un autónomo con uso moderado:</p>
+
+  <div class="price-row">
+    <div class="price-card winner price-n8n">
+      <div class="price-tool">n8n</div>
+      <div class="price-num">0€</div>
+      <div class="price-sub">Self-hosted (gratis)<br>Solo pagas el servidor: ~5€/mes<br>Ejecuciones ilimitadas</div>
+    </div>
+    <div class="price-card price-make">
+      <div class="price-tool">Make</div>
+      <div class="price-num">9€</div>
+      <div class="price-sub">/mes (plan Core, anual)<br>10.000 operaciones/mes<br>Plan gratuito: 1.000 op/mes</div>
+    </div>
+    <div class="price-card price-zapier">
+      <div class="price-tool">Zapier</div>
+      <div class="price-num">20€</div>
+      <div class="price-sub">/mes (plan Starter, anual)<br>750 tareas/mes<br>Plan gratuito: 100 tareas/mes</div>
+    </div>
+  </div>
+
+  <p>Para que los números sean comparables hay que entender cómo cuenta cada uno. <strong>Zapier</strong> cobra por cada acción individual: un workflow de 5 pasos que se ejecuta 100 veces = 500 tareas. <strong>Make</strong> cobra por ejecución de escenario completo: ese mismo workflow = 100 operaciones. <strong>n8n self-hosted</strong>: las mismas 100 ejecuciones cuestan 0€ adicionales, solo el coste fijo del servidor.</p>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">📊</div>
+    <div class="callout-body"><p><strong>A volumen medio (10.000–50.000 operaciones/mes):</strong> n8n self-hosted 5–20 €/mes, Make 9–59 €/mes, Zapier 49–299 €/mes. La diferencia se multiplica según crece la operativa del negocio.</p></div>
+  </div>
+
+  <!-- ─── TABLA ─── -->
+  <h2 id="tabla">6. Tabla completa de funciones</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Criterio</th>
+          <th class="col-n8n">n8n</th>
+          <th class="col-zapier">Zapier</th>
+          <th class="col-make">Make</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">Precio mínimo de uso</td>
+          <td>Gratis (self-hosted)</td>
+          <td>20€/mes</td>
+          <td>9€/mes</td>
+        </tr>
+        <tr>
+          <td class="row-label">Plan gratuito real</td>
+          <td><span class="check">✓</span> Community ilimitado</td>
+          <td><span class="mid">~</span> 100 tareas/mes</td>
+          <td><span class="mid">~</span> 1.000 op/mes</td>
+        </tr>
+        <tr>
+          <td class="row-label">Ejecuciones ilimitadas</td>
+          <td><span class="check">✓</span> Self-hosted</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Integraciones nativas</td>
+          <td>400+</td>
+          <td>7.000+</td>
+          <td>1.000+</td>
+        </tr>
+        <tr>
+          <td class="row-label">Curva de aprendizaje</td>
+          <td><span class="mid">Media</span></td>
+          <td><span class="check">Baja</span></td>
+          <td><span class="mid">Media-baja</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Open source</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Self-hosting (datos propios)</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Agentes IA nativos</td>
+          <td><span class="check">✓ Avanzados</span></td>
+          <td><span class="mid">~ Básico</span></td>
+          <td><span class="mid">~ Básico</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Nodos de código (JS/Python)</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="mid">~ Limitado</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Editor visual</td>
+          <td><span class="mid">Bueno</span></td>
+          <td><span class="check">Excelente</span></td>
+          <td><span class="check">Excelente</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Cumplimiento RGPD fácil</td>
+          <td><span class="check">✓ Self-hosted</span></td>
+          <td><span class="mid">~ Cloud USA</span></td>
+          <td><span class="mid">~ Cloud EU</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Ideal para IA avanzada</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="mid">~</span></td>
+        </tr>
+        <tr>
+          <td class="row-label">Soporte en español</td>
+          <td><span class="mid">Comunidad</span></td>
+          <td><span class="check">✓ Oficial</span></td>
+          <td><span class="check">✓ Oficial</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── PERFILES ─── -->
+  <h2 id="perfiles">7. Cuál elegir según tu perfil como autónomo</h2>
+  <p>La herramienta correcta depende más de <em>quién eres</em> que de las funciones en abstracto:</p>
+
+  <div class="profile-list">
+    <div class="profile-row">
+      <div class="profile-emoji">✍️</div>
+      <div class="profile-body">
+        <h4>Freelancer de contenido, copywriter o community manager <span class="profile-winner pw-make">Make</span></h4>
+        <p>Necesitas automatizar publicaciones, reportes y gestión de clientes sin complicarte. Make te da un editor visual potente a precio razonable. Puedes conectar Notion, Google Sheets, LinkedIn e Instagram en una tarde.</p>
+      </div>
+    </div>
+    <div class="profile-row">
+      <div class="profile-emoji">💻</div>
+      <div class="profile-body">
+        <h4>Desarrollador o perfil técnico <span class="profile-winner pw-n8n">n8n</span></h4>
+        <p>Sin duda n8n. Control total, código cuando lo necesitas, agentes IA avanzados y coste fijo de ~5 €/mes en self-hosted. El retorno de inversión es positivo desde el primer mes.</p>
+      </div>
+    </div>
+    <div class="profile-row">
+      <div class="profile-emoji">📐</div>
+      <div class="profile-body">
+        <h4>Diseñador o consultor que empieza con automatización <span class="profile-winner pw-zapier">Zapier</span></h4>
+        <p>Si quieres empezar sin fricción y tus flujos son sencillos, Zapier te permite crear tu primera automatización funcionando en 15 minutos. Cuando el precio escale, es el momento de migrar a Make.</p>
+      </div>
+    </div>
+    <div class="profile-row">
+      <div class="profile-emoji">⚖️</div>
+      <div class="profile-body">
+        <h4>Autónomo con datos sensibles de clientes (legal, salud, finanzas) <span class="profile-winner pw-n8n">n8n</span></h4>
+        <p>n8n self-hosted es la única opción donde tus datos no salen de tu infraestructura. Para cumplimiento RGPD estricto, no hay alternativa real entre las tres.</p>
+      </div>
+    </div>
+    <div class="profile-row">
+      <div class="profile-emoji">📈</div>
+      <div class="profile-body">
+        <h4>Agencia o freelancer con varios clientes y volumen creciente <span class="profile-winner pw-n8n">n8n</span></h4>
+        <p>Con n8n self-hosted el coste por cliente es mínimo independientemente del volumen. Es la herramienta que usan las agencias de automatización que facturan miles de euros al mes con márgenes altos.</p>
+      </div>
+    </div>
+    <div class="profile-row">
+      <div class="profile-emoji">🛒</div>
+      <div class="profile-body">
+        <h4>E-commerce o tienda online <span class="profile-winner pw-make">Make</span></h4>
+        <p>Make maneja especialmente bien flujos con mucha lógica condicional y estructuras de datos complejas, típico de catálogos de productos, pedidos y sincronización de inventario.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── FAQ ─── -->
+  <h2 id="faq">8. Preguntas frecuentes</h2>
+  <div class="faq-list">
+    <details>
+      <summary>¿Puedo empezar con Zapier y migrar a n8n después?</summary>
+      <div class="faq-answer">Sí, y es una ruta muy habitual. Zapier para aprender los conceptos de automatización, Make cuando el precio empieza a escalar, y n8n cuando quieres máximo control o volumen alto. La migración tiene algo de coste en tiempo, pero los flujos en Zapier son suficientemente simples como para recrearlos en n8n sin demasiado esfuerzo. Lo importante es no esperar a que la factura de Zapier duela demasiado para empezar a planificar la migración.</div>
+    </details>
+    <details>
+      <summary>¿Es difícil instalar n8n en un servidor?</summary>
+      <div class="faq-answer">Con Docker y un VPS básico (Hetzner, DigitalOcean o Railway), la instalación se hace en 15-20 minutos siguiendo la documentación oficial. Si no tienes experiencia con servidores, empieza con n8n Cloud (20 €/mes) para aprender la herramienta sin fricción técnica, y cuando domines n8n migra a self-hosted para reducir costes.</div>
+    </details>
+    <details>
+      <summary>¿Make tiene opciones en español?</summary>
+      <div class="faq-answer">Sí, Make tiene soporte y documentación en español, igual que Zapier. n8n tiene la interfaz en inglés, aunque la comunidad hispanohablante es activa y hay tutoriales en español. Para autónomos no técnicos, Make y Zapier tienen una barrera de idioma menor.</div>
+    </details>
+    <details>
+      <summary>¿Qué pasa si necesito una integración que no tiene n8n?</summary>
+      <div class="faq-answer">n8n tiene un nodo HTTP genérico que te permite conectar cualquier servicio que tenga API REST, aunque no tenga integración nativa. Para el 95% de las herramientas que usa un autónomo español (Holded, Notion, Google Workspace, Stripe, etc.) hay nodo nativo. Si la herramienta que necesitas solo existe en Zapier y no tiene API pública, ese es el único caso donde Zapier gana de forma clara.</div>
+    </details>
+    <details>
+      <summary>¿Con cuál es más fácil construir un agente de IA?</summary>
+      <div class="faq-answer">n8n, sin comparación. Tiene nodos nativos de AI Agent con soporte para OpenAI, Claude, Gemini, Ollama, LangChain y sistemas RAG. Puedes crear un agente que lea emails, tome decisiones y ejecute acciones de forma autónoma con una complejidad visual manejable. Make tiene integración básica con IA pero no llega al nivel de n8n para flujos agénticos. Zapier aún menos.</div>
+    </details>
+  </div>
+
+  <!-- ENLACES INTERNOS DEL CLUSTER -->
+  <div class="related">
+    <div class="related-title">Más sobre automatización para freelancers</div>
+    <div class="related-links">
+      <a href="/blog/n8n-para-freelancers/">n8n para freelancers: qué es y cómo empezar sin programar (2026)</a>
+      <a href="/guias/ia-para-freelancers/">Las 10 tareas que puedes automatizar hoy como autónomo</a>
+      <a href="/calculadora-roi-ia/">Calculadora ROI: cuánto puedes ahorrar automatizando tu negocio</a>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h3>¿Quieres saber qué herramienta de IA encaja mejor con tu negocio?</h3>
+    <p>Test de 5 preguntas. Sin registro. Resultado inmediato con recomendación personalizada.</p>
+    <a href="/test-que-ia-necesitas/" class="btn">Hacer el test →</a>
+  </div>
+
+</article>
+</div>
+</body>
+</html>
