@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Prompt engineering para autónomos: cómo hablarle a la IA (2026)</title>
+  <meta name="description" content="Guía práctica de prompt engineering para autónomos españoles: las técnicas que funcionan de verdad, errores comunes y plantillas para los casos de uso más frecuentes.">
+  <meta name="keywords" content="prompt engineering autónomos, cómo hablar chatgpt freelancer, prompts para autónomos españa, técnicas prompt ia 2026, mejores prompts freelancer">
+  <link rel="canonical" href="https://comparaia.es/blog/prompt-engineering-autonomos/">
+  <meta property="og:title" content="Prompt engineering para autónomos: cómo hablarle a la IA (2026)">
+  <meta property="og:url" content="https://comparaia.es/blog/prompt-engineering-autonomos/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Prompt engineering para autónomos: cómo hablarle a la IA (2026)","author":{"@type":"Organization","name":"comparaia.es"},"datePublished":"2026-03-24","inLanguage":"es"}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CompararIA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--surface:#1e1e2e;--surface2:#252538;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--light:#ccd6f6;--mono:'IBM Plex Mono',monospace;--head:'Syne',sans-serif;--body:'DM Sans',sans-serif;--radius:14px;--max:780px}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.35}
+    .orb{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.09) 0%,transparent 70%);top:-100px;right:-100px}
+    .orb-2{width:350px;height:350px;background:radial-gradient(circle,rgba(124,111,255,0.07) 0%,transparent 70%);bottom:100px;left:-80px}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:var(--head);font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .hero{padding:72px 0 52px;border-bottom:1px solid var(--border)}
+    .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;border:1px solid}
+    .tag-green{color:var(--accent);border-color:rgba(0,229,160,0.35);background:rgba(0,229,160,0.07)}
+    .tag-purple{color:var(--accent2);border-color:rgba(124,111,255,0.35);background:rgba(124,111,255,0.07)}
+    .tag-amber{color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.07)}
+    h1{font-family:var(--head);font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:18px;letter-spacing:-0.03em}
+    .hero-lead{font-size:1.1rem;color:var(--light);max-width:660px;margin-bottom:28px}
+    .meta-row{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted)}
+    .toc{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:22px 26px;margin:44px 0}
+    .toc-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+    .toc li{font-size:0.91rem;color:var(--light)}
+    .toc a{color:var(--light);text-decoration:none}
+    .toc a:hover{color:var(--accent)}
+    article{padding:0 0 80px}
+    h2{font-family:var(--head);font-size:1.6rem;font-weight:700;color:#fff;margin:56px 0 16px;letter-spacing:-0.02em;scroll-margin-top:30px}
+    h3{font-family:var(--head);font-size:1.1rem;font-weight:700;color:var(--light);margin:28px 0 10px}
+    p{margin-bottom:16px;color:var(--text)}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    strong{color:#fff;font-weight:600}
+    ul,ol{margin:0 0 16px 22px}
+    li{margin-bottom:6px;color:var(--text)}
+    .case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin:32px 0;overflow:hidden}
+    .case-header{padding:22px 26px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px}
+    .case-num{font-family:var(--head);font-size:2.8rem;font-weight:800;color:var(--accent);opacity:0.25;line-height:1;flex-shrink:0}
+    .case-title-block h3{font-family:var(--head);font-size:1.2rem;font-weight:700;color:#fff;margin:0 0 4px}
+    .case-title-block .case-sub{font-size:0.85rem;color:var(--muted)}
+    .case-body{padding:22px 26px}
+    .case-body p{font-size:0.95rem;margin-bottom:14px}
+    .prompt-box{background:#0d0d16;border:1px solid rgba(0,229,160,0.2);border-radius:10px;padding:18px 20px;margin:16px 0;font-family:var(--mono);font-size:0.82rem;color:var(--accent);line-height:1.7;white-space:pre-wrap}
+    .prompt-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:8px}
+    .result-box{background:var(--surface2);border-radius:10px;padding:18px 20px;margin:16px 0}
+    .result-box p{font-size:0.88rem;margin:0;color:var(--light)}
+    .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{text-align:center;background:var(--surface2);border-radius:8px;padding:14px}
+    .stat-n{font-family:var(--head);font-size:1.5rem;font-weight:800;color:var(--accent)}
+    .stat-l{font-size:0.75rem;color:var(--muted);margin-top:2px}
+    .callout{border-radius:var(--radius);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+    .callout-body p{margin:0;font-size:0.91rem}
+    .callout-green{background:rgba(0,229,160,0.07);border:1px solid rgba(0,229,160,0.2)}
+    .callout-blue{background:rgba(91,142,240,0.08);border:1px solid rgba(91,142,240,0.25)}
+    .callout-amber{background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.22)}
+    .compare-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.88rem}
+    .compare-table th{background:var(--surface2);color:var(--light);padding:10px 14px;text-align:left;font-family:var(--mono);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em}
+    .compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text)}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table .yes{color:var(--accent)}
+    .compare-table .no{color:#ff6b6b}
+    .compare-table .mid{color:#fbbf24}
+    .related{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:var(--radius);padding:20px 24px;margin:48px 0 0}
+    .related-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .related-links{display:flex;flex-direction:column;gap:8px}
+    .related-links a{color:var(--light);text-decoration:none;font-size:0.92rem;display:flex;align-items:center;gap:8px}
+    .related-links a::before{content:'→';color:var(--accent);font-family:var(--mono)}
+    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.1) 0%,rgba(124,111,255,0.07) 100%);border:1px solid rgba(0,229,160,0.25);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0 0}
+    .cta-banner h3{font-family:var(--head);font-size:1.3rem;color:#fff;margin:0 0 8px}
+    .cta-banner p{color:var(--muted);font-size:0.93rem;margin:0 0 20px}
+    .btn{display:inline-block;background:var(--accent);color:#0a0a0f;font-family:var(--mono);font-size:0.83rem;font-weight:700;padding:11px 26px;border-radius:8px;text-decoration:none;transition:opacity 0.2s}
+    .btn:hover{opacity:0.88;color:#0a0a0f}
+    footer{border-top:1px solid var(--border);padding:40px 0;position:relative;z-index:1}
+    .footer-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-copy{font-size:0.82rem;color:var(--muted)}
+    @media(max-width:600px){h1{font-size:1.75rem}h2{font-size:1.3rem}.stats-row{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+  </style>
+</head><body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+<nav><div class="nav-inner">
+  <a href="/" class="logo">Comparar<span>IA</span></a>
+  <ul class="nav-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+  </ul>
+</div></nav>
+<div class="container">
+<header class="hero">
+  <nav class="breadcrumb"><a href="/">comparaia.es</a> / <a href="/blog/">Blog</a> / Prompt engineering autónomos</nav>
+  <div class="tag-row"><span class="tag tag-green">Guía práctica</span><span class="tag tag-purple">Prompts</span></div>
+  <h1>Prompt engineering para autónomos: cómo hablarle a la IA para que te dé lo que necesitas</h1>
+  <p class="hero-lead">La diferencia entre un resultado mediocre y uno útil no está en la herramienta: está en cómo le preguntas. Técnicas concretas, errores frecuentes y plantillas para los casos de uso más comunes en el día a día de un freelancer.</p>
+  <div class="meta-row"><span>📅 Marzo 2026</span><span>⏱ 13 min</span><span>🎯 Nivel: principiante-intermedio</span></div>
+</header>
+<article>
+  <nav class="toc">
+    <div class="toc-title">En este artículo</div>
+    <ol>
+      <li><a href="#por-que">Por qué el prompt lo cambia todo</a></li>
+      <li><a href="#estructura">La estructura de un buen prompt</a></li>
+      <li><a href="#tecnicas">5 técnicas que funcionan de verdad</a></li>
+      <li><a href="#errores">Los 6 errores más comunes</a></li>
+      <li><a href="#plantillas">Plantillas por caso de uso</a></li>
+      <li><a href="#avanzado">Técnicas avanzadas sin complejidad</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="por-que">Por qué el prompt lo cambia todo</h2>
+  <p>La mayoría de los autónomos que prueban ChatGPT o Claude por primera vez hacen lo mismo: escriben una frase corta, obtienen algo genérico e irrelevante, y concluyen que "la IA no sirve para mi trabajo". La conclusión es incorrecta. El problema es la pregunta, no la herramienta.</p>
+  <p>Un modelo de lenguaje como GPT-4 o Claude 3 tiene capacidad para hacer trabajo de alta calidad en casi cualquier tarea de texto. Pero es literalmente incapaz de adivinar lo que necesitas si no se lo dices. Sin contexto, sin rol, sin criterios de éxito, la IA produce el resultado más probable para esa entrada. Que suele ser genérico.</p>
+  <p>El prompt engineering no es programación ni magia: es simplemente dar suficiente información para que la IA pueda hacer un trabajo bueno. Como darle un briefing a un colaborador humano.</p>
+
+  <h2 id="estructura">La estructura de un buen prompt</h2>
+  <p>Un prompt efectivo tiene cuatro componentes. No todos son obligatorios siempre, pero cuantos más incluyas, mejor suele ser el resultado.</p>
+
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">R</div>
+      <div class="case-title-block"><h3>Rol</h3><div class="case-sub">Quién tiene que ser la IA en esta tarea</div></div>
+    </div>
+    <div class="case-body">
+      <p>Decirle a la IA que actúe como un experto concreto mejora notablemente la calidad. No es placebo: cambia el vocabulario, el nivel de detalle, las asunciones que hace y el tipo de estructura que usa.</p>
+      <div class="prompt-box">Actúa como un consultor de marketing especializado en pymes españolas del sector retail...</div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">C</div>
+      <div class="case-title-block"><h3>Contexto</h3><div class="case-sub">Toda la información relevante para la tarea</div></div>
+    </div>
+    <div class="case-body">
+      <p>El contexto es lo que más diferencia los prompts buenos de los malos. Cuanto más específico, mejor. Incluye: quién eres, para quién es, qué ya existe, qué no quieres, el tono, el canal.</p>
+      <div class="prompt-box">Soy fotógrafo freelance especializado en producto para e-commerce. Mi cliente es una tienda online de moda sostenible con presupuesto medio-alto. Ya tienen el catálogo de temporada anterior. El tono de su marca es: minimalista, cercano, sin greenwashing...</div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">T</div>
+      <div class="case-title-block"><h3>Tarea</h3><div class="case-sub">Qué quieres que haga exactamente</div></div>
+    </div>
+    <div class="case-body">
+      <p>La tarea tiene que ser específica. "Escríbeme un email" es una tarea. "Escríbeme un email de 150 palabras para presentar mi servicio a un responsable de marketing que no me conoce, con asunto incluido" es una tarea bien definida.</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">F</div>
+      <div class="case-title-block"><h3>Formato</h3><div class="case-sub">Cómo quieres que sea el resultado</div></div>
+    </div>
+    <div class="case-body">
+      <p>Especifica longitud, estructura, idioma, si quieres bullet points o párrafos, si necesitas alternativas, si quieres que justifique sus decisiones.</p>
+      <div class="prompt-box">Dame 3 versiones alternativas, cada una de máximo 100 palabras. Sin emojis. En español formal pero no rígido.</div>
+    </div>
+  </div>
+
+  <h2 id="tecnicas">5 técnicas que funcionan de verdad</h2>
+
+  <h3>1. Pide que piense antes de responder</h3>
+  <p>Añadir "piensa paso a paso" o "antes de responder, analiza..." mejora los resultados en tareas que requieren razonamiento. No es superstición: los modelos generan mejores respuestas cuando se les da "espacio" para desarrollar el razonamiento antes del output final.</p>
+  <div class="prompt-box">Antes de hacer la propuesta, analiza brevemente: el sector del cliente, sus posibles objeciones de precio y qué argumentos serían más convincentes para él. Luego escribe la propuesta.</div>
+
+  <h3>2. Dale un ejemplo de lo que quieres</h3>
+  <p>Si tienes un ejemplo de un resultado que te gustó anteriormente, pégalo. "Escribe algo similar a esto" con un ejemplo concreto produce resultados mucho más cercanos a lo que necesitas que cualquier descripción abstracta.</p>
+
+  <h3>3. Dile explícitamente lo que NO quieres</h3>
+  <p>Los modelos tienden a producir ciertos patrones por defecto: frases de relleno, cierres genéricos, adjetivos vacíos. Prohibirlos explícitamente funciona mejor de lo que parece.</p>
+  <div class="prompt-box">No uses frases como "espero que este mensaje te encuentre bien", "no dudes en contactarme", "estoy a tu disposición" ni ningún relleno corporativo. Directo al grano.</div>
+
+  <h3>4. Pide varias opciones y luego pide que las combine</h3>
+  <p>En lugar de pedir el resultado definitivo directamente, pide 3-5 versiones con enfoques diferentes y luego pide que combine lo mejor de cada una. Este proceso de dos pasos produce resultados significativamente mejores en textos persuasivos.</p>
+
+  <h3>5. Itera, no empieces de cero</h3>
+  <p>El error más frecuente es recibir un resultado que no es perfecto y hacer una nueva pregunta desde cero. Es mucho más eficiente decirle "el párrafo 2 está bien, el 3 es demasiado formal, el 1 necesita más energía. Reescribe solo esas partes." La IA mantiene el contexto de la conversación.</p>
+
+  <h2 id="errores">Los 6 errores más comunes</h2>
+  <table class="compare-table">
+    <tr><th>Error</th><th>Resultado</th><th>Solución</th></tr>
+    <tr><td>Prompt de una sola frase</td><td>Respuesta genérica e irrelevante</td><td>Añade rol, contexto y formato mínimo</td></tr>
+    <tr><td>No especificar el tono</td><td>Tono corporativo por defecto</td><td>Define: formal/informal, cercano/distante, energético/sereno</td></tr>
+    <tr><td>No dar longitud orientativa</td><td>Respuesta demasiado larga o corta</td><td>Especifica palabras, párrafos o páginas</td></tr>
+    <tr><td>Pedir demasiadas cosas a la vez</td><td>Resultado superficial en todo</td><td>Divide en prompts separados</td></tr>
+    <tr><td>Aceptar el primer resultado</td><td>Trabajo mediocre</td><td>Itera siempre al menos una vez</td></tr>
+    <tr><td>No revisar hechos y datos</td><td>Información incorrecta o inventada</td><td>Nunca publiques datos sin verificar</td></tr>
+  </table>
+
+  <h2 id="plantillas">Plantillas por caso de uso frecuente</h2>
+
+  <h3>Propuesta comercial</h3>
+  <div class="prompt-box">Actúa como consultor de ventas B2B. Soy [tu profesión] especializado en [especialidad]. El cliente es [descripción del cliente: sector, tamaño, problema concreto]. Escribe una propuesta comercial de [X páginas/palabras] que incluya: resumen ejecutivo, diagnóstico del problema, solución propuesta, inversión y ROI estimado, proceso de trabajo y próximos pasos. Tono: [profesional/cercano/técnico]. Sin relleno.</div>
+
+  <h3>Post para LinkedIn</h3>
+  <div class="prompt-box">Actúa como experto en personal branding para profesionales independientes. Voy a contarte algo que me pasó: [describe la situación o aprendizaje]. Transforma esto en un post de LinkedIn de máximo 200 palabras que: empiece con un hook que detenga el scroll, comparta el aprendizaje de forma concreta, y termine con una pregunta que invite a comentar. Tono: honesto, sin poses de gurú. Primera persona singular.</div>
+
+  <h3>Email de onboarding a nuevo cliente</h3>
+  <div class="prompt-box">Soy [profesión]. Acabo de confirmar un proyecto con un nuevo cliente: [descripción del proyecto]. Redacta el email de bienvenida que envío cuando se firma el contrato. Debe incluir: agradecimiento breve, resumen del proyecto y fechas clave, qué necesito del cliente para empezar, cómo y cuándo me pueden contactar, y el tono de la relación que quiero establecer [profesional/cercano]. Máximo 250 palabras.</div>
+
+  <h2 id="avanzado">Técnicas avanzadas sin complejidad</h2>
+
+  <h3>El sistema de instrucciones persistentes</h3>
+  <p>Tanto ChatGPT como Claude permiten configurar "instrucciones del sistema" o "memoria" que se aplican a todas las conversaciones. Si usas IA regularmente, configura ahí tu perfil profesional completo: quién eres, en qué te especializas, cuál es tu tono habitual, qué no quieres nunca. Así no tienes que repetirlo en cada prompt.</p>
+
+  <h3>Crea tu biblioteca de prompts</h3>
+  <p>Los prompts que funcionan bien son activos. Guárdalos en Notion, en un documento de texto, donde sea. Un autónomo con 20-30 prompts testados para sus tareas más frecuentes multiplica su productividad con IA de forma dramática respecto a alguien que empieza desde cero cada vez.</p>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">💡</div>
+    <div class="callout-body"><p><strong>Regla práctica:</strong> si usas el mismo tipo de tarea más de 3 veces, crea un prompt plantilla para ella. El tiempo de creación se recupera en la cuarta vez.</p></div>
+  </div>
+
+  <div class="related">
+    <div class="related-title">Artículos relacionados</div>
+    <div class="related-links">
+      <a href="/blog/claude-vs-chatgpt-autonomos/">Claude vs ChatGPT para autónomos</a>
+      <a href="/blog/chatgpt-atencion-cliente-autonomo/">ChatGPT para atención al cliente</a>
+      <a href="/blog/ia-propuestas-comerciales-freelancer/">IA para propuestas comerciales</a>
+      <a href="/blog/productividad-ia-automatizacion/">Productividad con IA</a>
+    </div>
+  </div>
+  <div class="cta-banner">
+    <h3>¿Cuánto tiempo puedes ahorrar con IA?</h3>
+    <p>Calcula el ROI real de implementar IA en tu actividad como autónomo.</p>
+    <a href="/calculadora-roi-ia/" class="btn">Calcular ahora →</a>
+  </div>
+</article>
+</div>
+<footer><div class="footer-inner">
+  <a href="/" class="logo">Comparar<span>IA</span></a>
+  <ul class="footer-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 comparaia.es</span>
+</div></footer>
+</body></html>
