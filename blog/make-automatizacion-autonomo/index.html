@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Make para autónomos: 5 casos de uso reales (antes Integromat, 2026)</title>
+  <meta name="description" content="Guía práctica de Make (Integromat) para autónomos españoles: 5 automatizaciones reales con pasos concretos, costes y tiempo ahorrado. Sin saber programar.">
+  <meta name="keywords" content="make integromat autónomos, make automatización freelancer, make vs zapier autonomo, make integromat españa 2026, automatizar negocio make">
+  <link rel="canonical" href="https://comparaia.es/blog/make-automatizacion-autonomo/">
+  <meta property="og:title" content="Make para autónomos: 5 casos de uso reales (2026)">
+  <meta property="og:url" content="https://comparaia.es/blog/make-automatizacion-autonomo/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Make para autónomos: 5 casos de uso reales (2026)","author":{"@type":"Organization","name":"comparaia.es"},"datePublished":"2026-03-10","inLanguage":"es"}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CompararIA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--surface:#1e1e2e;--surface2:#252538;--border:rgba(255,255,255,0.07);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--light:#ccd6f6;--mono:'IBM Plex Mono',monospace;--head:'Syne',sans-serif;--body:'DM Sans',sans-serif;--radius:14px;--max:780px}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.35}
+    .orb{position:fixed;border-radius:50%;filter:blur(140px);pointer-events:none;z-index:0}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.09) 0%,transparent 70%);top:-100px;right:-100px}
+    .orb-2{width:350px;height:350px;background:radial-gradient(circle,rgba(124,111,255,0.07) 0%,transparent 70%);bottom:100px;left:-80px}
+    .container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(10,10,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-family:var(--head);font-weight:800;font-size:1.3rem;color:var(--text);text-decoration:none;letter-spacing:-0.03em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .hero{padding:72px 0 52px;border-bottom:1px solid var(--border)}
+    .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px}
+    .breadcrumb a{color:var(--accent);text-decoration:none}
+    .tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;border:1px solid}
+    .tag-green{color:var(--accent);border-color:rgba(0,229,160,0.35);background:rgba(0,229,160,0.07)}
+    .tag-purple{color:var(--accent2);border-color:rgba(124,111,255,0.35);background:rgba(124,111,255,0.07)}
+    .tag-amber{color:#fbbf24;border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.07)}
+    h1{font-family:var(--head);font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:18px;letter-spacing:-0.03em}
+    .hero-lead{font-size:1.1rem;color:var(--light);max-width:660px;margin-bottom:28px}
+    .meta-row{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted)}
+    .toc{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:22px 26px;margin:44px 0}
+    .toc-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+    .toc li{font-size:0.91rem;color:var(--light)}
+    .toc a{color:var(--light);text-decoration:none}
+    .toc a:hover{color:var(--accent)}
+    article{padding:0 0 80px}
+    h2{font-family:var(--head);font-size:1.6rem;font-weight:700;color:#fff;margin:56px 0 16px;letter-spacing:-0.02em;scroll-margin-top:30px}
+    h3{font-family:var(--head);font-size:1.1rem;font-weight:700;color:var(--light);margin:28px 0 10px}
+    p{margin-bottom:16px;color:var(--text)}
+    a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+    strong{color:#fff;font-weight:600}
+    ul,ol{margin:0 0 16px 22px}
+    li{margin-bottom:6px;color:var(--text)}
+    .case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin:32px 0;overflow:hidden}
+    .case-header{padding:22px 26px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px}
+    .case-num{font-family:var(--head);font-size:2.8rem;font-weight:800;color:var(--accent);opacity:0.25;line-height:1;flex-shrink:0}
+    .case-title-block h3{font-family:var(--head);font-size:1.2rem;font-weight:700;color:#fff;margin:0 0 4px}
+    .case-title-block .case-sub{font-size:0.85rem;color:var(--muted)}
+    .case-body{padding:22px 26px}
+    .case-body p{font-size:0.95rem;margin-bottom:14px}
+    .prompt-box{background:#0d0d16;border:1px solid rgba(0,229,160,0.2);border-radius:10px;padding:18px 20px;margin:16px 0;font-family:var(--mono);font-size:0.82rem;color:var(--accent);line-height:1.7;white-space:pre-wrap}
+    .prompt-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:8px}
+    .result-box{background:var(--surface2);border-radius:10px;padding:18px 20px;margin:16px 0}
+    .result-box p{font-size:0.88rem;margin:0;color:var(--light)}
+    .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{text-align:center;background:var(--surface2);border-radius:8px;padding:14px}
+    .stat-n{font-family:var(--head);font-size:1.5rem;font-weight:800;color:var(--accent)}
+    .stat-l{font-size:0.75rem;color:var(--muted);margin-top:2px}
+    .callout{border-radius:var(--radius);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+    .callout-body p{margin:0;font-size:0.91rem}
+    .callout-green{background:rgba(0,229,160,0.07);border:1px solid rgba(0,229,160,0.2)}
+    .callout-blue{background:rgba(91,142,240,0.08);border:1px solid rgba(91,142,240,0.25)}
+    .callout-amber{background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.22)}
+    .compare-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.88rem}
+    .compare-table th{background:var(--surface2);color:var(--light);padding:10px 14px;text-align:left;font-family:var(--mono);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em}
+    .compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text)}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table .yes{color:var(--accent)}
+    .compare-table .no{color:#ff6b6b}
+    .compare-table .mid{color:#fbbf24}
+    .related{background:rgba(0,229,160,0.05);border:1px solid rgba(0,229,160,0.2);border-radius:var(--radius);padding:20px 24px;margin:48px 0 0}
+    .related-title{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px}
+    .related-links{display:flex;flex-direction:column;gap:8px}
+    .related-links a{color:var(--light);text-decoration:none;font-size:0.92rem;display:flex;align-items:center;gap:8px}
+    .related-links a::before{content:'→';color:var(--accent);font-family:var(--mono)}
+    .cta-banner{background:linear-gradient(135deg,rgba(0,229,160,0.1) 0%,rgba(124,111,255,0.07) 100%);border:1px solid rgba(0,229,160,0.25);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0 0}
+    .cta-banner h3{font-family:var(--head);font-size:1.3rem;color:#fff;margin:0 0 8px}
+    .cta-banner p{color:var(--muted);font-size:0.93rem;margin:0 0 20px}
+    .btn{display:inline-block;background:var(--accent);color:#0a0a0f;font-family:var(--mono);font-size:0.83rem;font-weight:700;padding:11px 26px;border-radius:8px;text-decoration:none;transition:opacity 0.2s}
+    .btn:hover{opacity:0.88;color:#0a0a0f}
+    footer{border-top:1px solid var(--border);padding:40px 0;position:relative;z-index:1}
+    .footer-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-copy{font-size:0.82rem;color:var(--muted)}
+    @media(max-width:600px){h1{font-size:1.75rem}h2{font-size:1.3rem}.stats-row{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+  </style>
+</head><body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+<nav><div class="nav-inner">
+  <a href="/" class="logo">Comparar<span>IA</span></a>
+  <ul class="nav-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/calculadora-roi-ia/">Calculadora ROI</a></li>
+  </ul>
+</div></nav>
+<div class="container">
+<header class="hero">
+  <nav class="breadcrumb"><a href="/">comparaia.es</a> / <a href="/blog/">Blog</a> / Make para autónomos</nav>
+  <div class="tag-row"><span class="tag tag-green">Automatización</span><span class="tag tag-amber">Make</span></div>
+  <h1>Make para autónomos: 5 casos de uso reales con pasos concretos (2026)</h1>
+  <p class="hero-lead">Make (antes Integromat) es la alternativa más potente a Zapier para autónomos que quieren automatizaciones serias sin pagar una fortuna. Cinco workflows reales que puedes implementar esta semana, con los módulos exactos y el tiempo ahorrado medido.</p>
+  <div class="meta-row"><span>📅 Marzo 2026</span><span>⏱ 12 min</span><span>🔗 Complementa: n8n vs Zapier vs Make</span></div>
+</header>
+<article>
+  <nav class="toc">
+    <div class="toc-title">En este artículo</div>
+    <ol>
+      <li><a href="#make-vs">Make vs n8n vs Zapier: cuándo elegir Make</a></li>
+      <li><a href="#caso1">Caso 1: Formulario de contacto → CRM + email automático</a></li>
+      <li><a href="#caso2">Caso 2: Nueva factura → registro contable + aviso</a></li>
+      <li><a href="#caso3">Caso 3: Publicación cruzada en redes con IA</a></li>
+      <li><a href="#caso4">Caso 4: Seguimiento automático de presupuestos</a></li>
+      <li><a href="#caso5">Caso 5: Recopilación semanal de menciones y reseñas</a></li>
+      <li><a href="#precios">Precios reales en 2026</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="make-vs">Make vs n8n vs Zapier: cuándo elegir Make</h2>
+  <p>Los tres son válidos pero tienen perfiles distintos. Make destaca por su interfaz visual de flujo (puedes ver exactamente qué pasa en cada paso), su precio más bajo que Zapier para volúmenes medios y una flexibilidad mayor que Zapier sin la complejidad técnica de n8n.</p>
+
+  <table class="compare-table">
+    <tr><th>Criterio</th><th>Make</th><th>n8n</th><th>Zapier</th></tr>
+    <tr><td>Curva de aprendizaje</td><td class="mid">Media</td><td class="no">Alta</td><td class="yes">Baja</td></tr>
+    <tr><td>Precio (uso moderado)</td><td class="yes">9€/mes</td><td class="yes">0-20€/mes</td><td class="no">~50€/mes</td></tr>
+    <tr><td>Integraciones</td><td class="yes">1.500+</td><td class="mid">450+</td><td class="yes">6.000+</td></tr>
+    <tr><td>Lógica compleja</td><td class="yes">Sí</td><td class="yes">Sí</td><td class="mid">Limitada</td></tr>
+    <tr><td>Sin código</td><td class="yes">Sí</td><td class="mid">Parcialmente</td><td class="yes">Sí</td></tr>
+    <tr><td>Velocidad de setup</td><td class="mid">30-60 min</td><td class="no">1-3 horas</td><td class="yes">10-20 min</td></tr>
+  </table>
+
+  <p><strong>Elige Make si:</strong> quieres más potencia que Zapier pero sin meterte en código, tienes flujos con lógica condicional, o el precio de Zapier te parece desproporcionado.</p>
+
+  <h2 id="caso1">Caso 1: Formulario de contacto → CRM + email automático</h2>
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">01</div>
+      <div class="case-title-block">
+        <h3>Lead automático desde tu web</h3>
+        <div class="case-sub">Tiempo de setup: ~45 min · Tiempo ahorrado: 20-30 min/semana</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Cuando alguien rellena tu formulario de contacto (Typeform, Tally, Google Forms o el de tu web), Make lo captura, crea o actualiza el contacto en tu CRM (HubSpot free, Notion, Airtable), y envía automáticamente un email de confirmación personalizado al lead y una notificación a ti con el resumen.</p>
+      <h3>Módulos necesarios</h3>
+      <ul>
+        <li><strong>Trigger:</strong> Webhooks (Make) o Typeform / Google Forms Watch Responses</li>
+        <li><strong>Paso 2:</strong> Router (si quieres tratar distinto según el tipo de consulta)</li>
+        <li><strong>Paso 3:</strong> HubSpot → Create/Update Contact (o Airtable → Create Record)</li>
+        <li><strong>Paso 4:</strong> Gmail / SMTP → Send Email (al lead, personalizado con su nombre)</li>
+        <li><strong>Paso 5:</strong> Gmail / Telegram → Send notification to me</li>
+      </ul>
+      <div class="callout callout-green">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body"><p><strong>Mejora con IA:</strong> añade un módulo de OpenAI entre el paso 2 y el 3 para que ChatGPT clasifique el tipo de consulta y genere un email de respuesta personalizado según la categoría. Cuesta ~0,001€ por ejecución.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="caso2">Caso 2: Nueva factura → registro contable + aviso de cobro</h2>
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">02</div>
+      <div class="case-title-block">
+        <h3>Automatizar el ciclo de facturación</h3>
+        <div class="case-sub">Tiempo de setup: ~1 hora · Tiempo ahorrado: 30-45 min/semana</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Cuando emites una factura en tu software (Holded, Billin, Factura Directa, o incluso Google Sheets), Make la registra en tu hoja de seguimiento de cobros, crea un recordatorio en tu calendario para el vencimiento, y envía automáticamente un email de recordatorio al cliente X días antes del vencimiento.</p>
+      <h3>Módulos necesarios</h3>
+      <ul>
+        <li><strong>Trigger:</strong> Holded → Watch Invoices / Google Sheets → Watch Rows</li>
+        <li><strong>Paso 2:</strong> Google Sheets → Add Row (a tu hoja de control de cobros)</li>
+        <li><strong>Paso 3:</strong> Google Calendar → Create Event (vencimiento + recordatorio -7 días)</li>
+        <li><strong>Paso 4:</strong> Delay (configurado para X días antes del vencimiento)</li>
+        <li><strong>Paso 5:</strong> Gmail → Send Email (recordatorio de pago al cliente)</li>
+      </ul>
+      <div class="callout callout-amber">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body"><p><strong>Importante:</strong> el módulo Delay de Make no funciona igual en plan gratuito. Para delays superiores a 15 minutos necesitas plan de pago (desde 9€/mes).</p></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="caso3">Caso 3: Publicación cruzada en redes con resumen IA</h2>
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">03</div>
+      <div class="case-title-block">
+        <h3>De Notion a LinkedIn, Instagram y Twitter con IA</h3>
+        <div class="case-sub">Tiempo de setup: ~90 min · Tiempo ahorrado: 1-2 horas/semana</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Escribes el contenido base en Notion (o Google Docs). Make lo detecta, lo envía a ChatGPT con instrucciones específicas para adaptar el tono y formato a cada red, y publica automáticamente (o te manda los borradores para aprobación previa).</p>
+      <h3>Módulos necesarios</h3>
+      <ul>
+        <li><strong>Trigger:</strong> Notion → Watch Database Items (cuando status = "listo para publicar")</li>
+        <li><strong>Paso 2:</strong> OpenAI → Create Completion (adaptar para LinkedIn, 300 palabras, tono profesional)</li>
+        <li><strong>Paso 3:</strong> OpenAI → Create Completion (adaptar para Instagram, más visual, hashtags)</li>
+        <li><strong>Paso 4:</strong> LinkedIn → Create Post / Buffer → Create Post</li>
+        <li><strong>Paso 5:</strong> Notion → Update Item (cambiar status a "publicado")</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="caso4">Caso 4: Seguimiento automático de presupuestos enviados</h2>
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">04</div>
+      <div class="case-title-block">
+        <h3>Nunca más olvidar un seguimiento</h3>
+        <div class="case-sub">Tiempo de setup: ~45 min · Impacto: recuperar proyectos perdidos</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Cuando añades un presupuesto a tu hoja de seguimiento con estado "enviado", Make espera 7 días. Si sigue en estado "enviado" (no "aceptado" ni "rechazado"), te manda un recordatorio y opcionalmente envía un email automático de seguimiento al cliente.</p>
+      <h3>Módulos necesarios</h3>
+      <ul>
+        <li><strong>Trigger:</strong> Google Sheets → Watch Rows (nueva fila con estado = "enviado")</li>
+        <li><strong>Paso 2:</strong> Delay (7 días)</li>
+        <li><strong>Paso 3:</strong> Google Sheets → Get Row (comprobar si el estado ha cambiado)</li>
+        <li><strong>Paso 4:</strong> Router → Si sigue "enviado": continuar / Si cambió: parar</li>
+        <li><strong>Paso 5:</strong> Gmail → Send Email (seguimiento al cliente) + notificación a ti</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="caso5">Caso 5: Recopilación semanal de menciones y reseñas</h2>
+  <div class="case-card">
+    <div class="case-header"><div class="case-num">05</div>
+      <div class="case-title-block">
+        <h3>Monitorización de reputación en piloto automático</h3>
+        <div class="case-sub">Tiempo de setup: ~30 min · Frecuencia: semanal</div>
+      </div>
+    </div>
+    <div class="case-body">
+      <p>Cada lunes a las 9h Make busca menciones de tu nombre o marca en Google Alerts (via RSS), nuevas reseñas en Google My Business (si tienes ficha) y menciones en Twitter/X. Lo compila todo en un email resumen o en una tabla de Notion.</p>
+      <h3>Módulos necesarios</h3>
+      <ul>
+        <li><strong>Trigger:</strong> Schedule (cada lunes 9h)</li>
+        <li><strong>Paso 2:</strong> RSS → Get Feed Items (tu Google Alert como RSS)</li>
+        <li><strong>Paso 3:</strong> HTTP → Get (API de Google My Business si la tienes)</li>
+        <li><strong>Paso 4:</strong> Array Aggregator (consolidar todos los resultados)</li>
+        <li><strong>Paso 5:</strong> Gmail → Send Email (resumen semanal a ti mismo)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="precios">Precios reales de Make en 2026</h2>
+  <table class="compare-table">
+    <tr><th>Plan</th><th>Precio</th><th>Operaciones/mes</th><th>Para quién</th></tr>
+    <tr><td>Free</td><td class="yes">0€</td><td>1.000</td><td>Probar, flujos muy simples</td></tr>
+    <tr><td>Core</td><td class="yes">9€/mes</td><td>10.000</td><td>Autónomo con 3-5 automatizaciones activas</td></tr>
+    <tr><td>Pro</td><td class="mid">16€/mes</td><td>10.000 + más velocidad</td><td>Necesitas ejecuciones más rápidas</td></tr>
+    <tr><td>Teams</td><td class="no">29€/mes</td><td>10.000</td><td>Más de un usuario</td></tr>
+  </table>
+  <p>Para la mayoría de autónomos el plan Core a 9€/mes es más que suficiente. Las 10.000 operaciones mensuales cubren de sobra los cinco casos de uso de este artículo juntos.</p>
+
+  <div class="related">
+    <div class="related-title">Artículos relacionados</div>
+    <div class="related-links">
+      <a href="/blog/n8n-vs-zapier-vs-make-autonomos/">n8n vs Zapier vs Make: comparativa completa</a>
+      <a href="/blog/5-automatizaciones-n8n-freelancers/">5 automatizaciones n8n para freelancers</a>
+      <a href="/blog/ia-contenido-redes-sociales-autonomo/">IA para contenido en redes sociales</a>
+      <a href="/blog/productividad-ia-automatizacion/">Productividad con IA: guía completa</a>
+    </div>
+  </div>
+  <div class="cta-banner">
+    <h3>¿Cuántas horas puedes recuperar con automatización?</h3>
+    <p>Calcula el ROI real de implementar Make o n8n en tu negocio.</p>
+    <a href="/calculadora-roi-ia/" class="btn">Calcular ROI →</a>
+  </div>
+</article>
+</div>
+<footer><div class="footer-inner">
+  <a href="/" class="logo">Comparar<span>IA</span></a>
+  <ul class="footer-links">
+    <li><a href="/comparativas/">Comparativas</a></li>
+    <li><a href="/herramientas/">Herramientas</a></li>
+    <li><a href="/guias/">Guías</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 comparaia.es</span>
+</div></footer>
+</body></html>
