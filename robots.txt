@@ -4,10 +4,49 @@
 # ─── BOTS PRINCIPALES ──────────────────────────
 User-agent: *
 Allow: /
-
-# ─── EXCLUIR PÁGINAS SIN VALOR SEO ─────────────
 Disallow: /404.html
+Disallow: /?s=
 Disallow: /buscar?
+Disallow: /cdn-cgi/
+Crawl-delay: 2
 
-# ─── SITEMAP ───────────────────────────────────
+# ─── AI SCRAPERS: Evitar scrapers masivos ─────
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# ─── IA QUE AYUDA A INDEXAR: Permitir ──────────
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ─── SEO BOTS: Permitir con límite ──────────────
+User-agent: AhrefsBot
+Crawl-delay: 10
+Allow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+Allow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ─── SITEMAPS ────────────────────────────────────
 Sitemap: https://comparaia.es/sitemap.xml
