@@ -1,0 +1,33 @@
+{
+  "name": "CompararIA",
+  "short_name": "CompararIA",
+  "description": "Comparativas honestas de herramientas de IA para freelancers y autónomos en España",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#00e5a0",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/assets/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["productivity", "education", "business"],
+  "screenshots": [
+    {
+      "src": "/assets/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "CompararIA – Página de inicio"
+    }
+  ]
+}
