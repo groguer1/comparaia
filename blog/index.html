@@ -7,6 +7,11 @@
   <meta name="description" content="Análisis, guías y herramientas de inteligencia artificial para freelancers y autónomos en España. Sin humo: contenido práctico con datos reales.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://comparaia.es/blog/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#00e5a0">
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://comparaia.es/blog/">
   <meta property="og:title" content="Blog de IA para autónomos y freelancers en España">
@@ -14,6 +19,8 @@
   <meta property="og:site_name" content="CompararIA">
   <meta property="og:description" content="Análisis, guías y herramientas de inteligencia artificial para freelancers y autónomos en España. Sin humo: contenido práctico con datos reales.">
   <meta property="og:image" content="https://comparaia.es/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog de IA para autónomos y freelancers en España">
   <meta name="twitter:description" content="Análisis, guías y herramientas de IA para freelancers y autónomos en España. Contenido práctico con datos reales.">
@@ -82,8 +89,21 @@
     @media(max-width:768px){.posts-grid,.more-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
     @media(max-width:480px){.posts-grid,.more-grid{grid-template-columns:1fr}}
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://comparaia.es/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://comparaia.es/blog/"}
+  ]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18T27X6Y2D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-18T27X6Y2D',{anonymize_ip:true});</script>
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#00e5a0;color:#000;padding:8px;z-index:100;font-weight:bold;text-decoration:none;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Saltar al contenido principal</a>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <nav aria-label="Navegación principal">
@@ -98,7 +118,7 @@
     </ul>
   </div>
 </nav>
-<main>
+<main id="main-content">
   <div class="container">
     <header class="page-header">
       <span class="badge">Blog · 24 artículos</span>
