@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Afiliación | CompararIA</title>
+  <meta name="description" content="Política de afiliación de CompararIA. Transparencia sobre los enlaces de afiliado y programas de comisión que utilizamos en comparaia.es.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://comparaia.es/afiliados/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comparaia.es/afiliados/">
+  <meta property="og:title" content="Política de Afiliación | CompararIA">
+  <meta property="og:description" content="Transparencia total sobre cómo funcionan los enlaces de afiliado en CompararIA.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <style>
+    :root {
+      --bg: #0c0e0f;
+      --bg2: #131618;
+      --border: #1e2124;
+      --text: #e8eaed;
+      --muted: #8a9099;
+      --accent: #7aff6e;
+      --accent2: #4fc3f7;
+      --nav-h: 56px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(12,14,15,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      height: var(--nav-h);
+    }
+    .nav-inner {
+      max-width: 860px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px; height: 100%;
+    }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--text); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* PAGE */
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
+    .page-header { margin-bottom: 48px; }
+    .page-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem; font-weight: 800;
+      letter-spacing: -0.04em; margin-bottom: 12px;
+    }
+    .page-header p { color: var(--muted); font-size: 0.95rem; }
+    .updated-badge {
+      display: inline-block;
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 4px 12px;
+      font-size: 0.8rem; color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* SECTIONS */
+    .section { margin-bottom: 48px; }
+    .section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem; font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section p { margin-bottom: 14px; }
+    .section ul { padding-left: 20px; margin-bottom: 14px; }
+    .section ul li { margin-bottom: 6px; }
+
+    /* INFO BOX */
+    .info-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .info-box p { margin-bottom: 0; }
+
+    /* PROGRAMS TABLE */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 580px) { .programs-grid { grid-template-columns: 1fr; } }
+    .program-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .program-name { font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .program-category { font-size: 0.8rem; color: var(--muted); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+    }
+    .footer-inner {
+      max-width: 860px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer .logo { font-size: 1rem; }
+    .footer-links { display: flex; gap: 20px; list-style: none; }
+    .footer-links a { color: var(--muted); font-size: 0.85rem; }
+    .footer-links a:hover { color: var(--text); text-decoration: none; }
+    .footer-copy { color: var(--muted); font-size: 0.8rem; width: 100%; }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="logo">Comparar<span>IA</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/guias/">Guías</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="page-wrap">
+
+      <nav aria-label="Ruta de navegación">
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:32px;">
+          <a href="/">Inicio</a> <span aria-hidden="true">›</span> Política de afiliación
+        </p>
+      </nav>
+
+      <header class="page-header">
+        <h1>Política de afiliación</h1>
+        <span class="updated-badge">Actualizada: junio de 2026</span>
+        <p>En CompararIA somos transparentes sobre cómo funciona nuestro modelo de negocio. Esta página explica qué son los enlaces de afiliado, qué programas utilizamos y cómo afectan (o no) a nuestras opiniones.</p>
+      </header>
+
+      <div class="info-box" role="note">
+        <p><strong>Resumen en una frase:</strong> Algunos enlaces de este sitio son de afiliado. Si compras a través de ellos, recibimos una comisión sin coste adicional para ti. Nuestras comparativas y recomendaciones son siempre independientes.</p>
+      </div>
+
+      <!-- SECCIÓN 1 -->
+      <section class="section">
+        <h2>1. ¿Qué son los enlaces de afiliado?</h2>
+        <p>Un enlace de afiliado es una URL que incluye un identificador único que permite al proveedor registrar que el usuario ha llegado desde CompararIA. Si el usuario realiza una compra o se registra en el servicio, el proveedor nos abona una comisión económica.</p>
+        <p>Esta comisión la paga el proveedor, <strong>nunca el usuario</strong>. El precio que paga el comprador es exactamente el mismo que si hubiera accedido directamente al sitio del proveedor.</p>
+        <p>Esta práctica está regulada en España por la <strong>Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE)</strong> y, a nivel europeo, por las directrices de la <strong>Autoridad Europea de Protección de Datos (EDPB)</strong> y el <strong>Reglamento (UE) 2016/679 (RGPD)</strong>.</p>
+      </section>
+
+      <!-- SECCIÓN 2 -->
+      <section class="section">
+        <h2>2. Principios que rigen nuestras recomendaciones</h2>
+        <ul>
+          <li><strong>Independencia editorial:</strong> las recomendaciones se basan exclusivamente en el análisis técnico y en la experiencia de uso real. La existencia o ausencia de un programa de afiliado no influye en nuestra valoración.</li>
+          <li><strong>Sin contenido patrocinado oculto:</strong> cualquier contenido pagado o patrocinado se identifica explícitamente con la etiqueta "Publicidad" o "Patrocinado".</li>
+          <li><strong>Transparencia activa:</strong> las páginas que contienen enlaces de afiliado incluyen un aviso visible al inicio o al final del contenido.</li>
+          <li><strong>Sin sesgo por comisión:</strong> no ordenamos los resultados ni modificamos las puntuaciones en función de la tasa de comisión.</li>
+          <li><strong>Actualizaciones periódicas:</strong> revisamos regularmente las herramientas para reflejar cambios en precios, funcionalidades y calidad.</li>
+        </ul>
+      </section>
+
+      <!-- SECCIÓN 3 -->
+      <section class="section">
+        <h2>3. Programas de afiliado activos</h2>
+        <p>CompararIA participa actualmente en los siguientes programas de afiliado, gestionados a través de la plataforma <strong>PartnerStack</strong>:</p>
+
+        <div class="programs-grid" role="list">
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Surfer SEO</div>
+            <div class="program-category">SEO y optimización de contenido</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">GetResponse</div>
+            <div class="program-category">Email marketing y automatización</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Brevo (ex Sendinblue)</div>
+            <div class="program-category">Email marketing y CRM</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">monday.com</div>
+            <div class="program-category">Gestión de proyectos</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">ActiveCampaign</div>
+            <div class="program-category">Email marketing y automatización</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Unbounce</div>
+            <div class="program-category">Landing pages con IA</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">1Password</div>
+            <div class="program-category">Gestión de contraseñas</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Webflow</div>
+            <div class="program-category">Diseño web sin código</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Thinkific</div>
+            <div class="program-category">Creación de cursos online</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Leadpages</div>
+            <div class="program-category">Landing pages y captación de leads</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Apollo.io</div>
+            <div class="program-category">Prospección de ventas y datos B2B</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Bright Data</div>
+            <div class="program-category">Datos web e infraestructura de proxies</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">SocialBee</div>
+            <div class="program-category">Gestión de redes sociales</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Gamma</div>
+            <div class="program-category">Presentaciones con IA</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">Kit (ex ConvertKit)</div>
+            <div class="program-category">Email marketing para creadores</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">ElevenLabs</div>
+            <div class="program-category">Síntesis de voz con IA</div>
+          </div>
+
+          <div class="program-card" role="listitem">
+            <div class="program-name">AdCreative.ai</div>
+            <div class="program-category">Creatividades publicitarias con IA</div>
+          </div>
+
+        </div>
+
+        <p style="font-size:0.9rem;color:var(--muted);">Esta lista se actualiza cuando se incorporan o eliminan programas. Última actualización: junio de 2026.</p>
+      </section>
+
+      <!-- SECCIÓN 4 -->
+      <section class="section">
+        <h2>4. Cómo identificar un enlace de afiliado</h2>
+        <p>Los enlaces de afiliado en CompararIA suelen ir acompañados de:</p>
+        <ul>
+          <li>El aviso <em>"Este es un enlace de afiliado"</em> o <em>"Enlace de afiliado"</em> junto al botón o CTA.</li>
+          <li>El disclaimer general al inicio o final de cada artículo o página que contenga enlaces de afiliado.</li>
+          <li>La referencia a esta página de política de afiliación.</li>
+        </ul>
+        <p>Si en alguna página detectas un enlace de afiliado sin identificar, puedes comunicárnoslo a través de la <a href="/contacto/">página de contacto</a>.</p>
+      </section>
+
+      <!-- SECCIÓN 5 -->
+      <section class="section">
+        <h2>5. Base legal y normativa aplicable</h2>
+        <p>Esta política se dicta en cumplimiento de:</p>
+        <ul>
+          <li><strong>Ley 34/2002 (LSSI-CE):</strong> obligación de informar sobre comunicaciones comerciales y servicios de la sociedad de la información.</li>
+          <li><strong>Real Decreto Legislativo 1/2007 (TRLGDCU):</strong> protección de los consumidores frente a prácticas comerciales desleales, incluida la publicidad encubierta.</li>
+          <li><strong>Reglamento (UE) 2016/679 (RGPD):</strong> tratamiento de datos personales en el contexto de cookies de seguimiento de afiliados.</li>
+          <li><strong>Ley Orgánica 3/2018 (LOPDGDD):</strong> adaptación española del RGPD.</li>
+          <li><strong>Directrices de la Comisión Federal de Comercio de EE. UU. (FTC, 16 CFR Part 255):</strong> aplicable en la medida en que los programas de afiliado estén sujetos a la jurisdicción estadounidense.</li>
+        </ul>
+      </section>
+
+      <!-- SECCIÓN 6 -->
+      <section class="section">
+        <h2>6. Cookies de seguimiento de afiliados</h2>
+        <p>Al hacer clic en un enlace de afiliado, el proveedor puede instalar una cookie en el navegador del usuario para registrar la referencia durante un periodo determinado (habitualmente 30-90 días). Esta cookie permite al proveedor atribuir la comisión a CompararIA si el usuario realiza una compra dentro de ese periodo.</p>
+        <p>Estas cookies son gestionadas íntegramente por el proveedor (no por CompararIA). Para más información sobre cómo gestionamos las cookies propias, consulta nuestra <a href="/privacidad/">Política de privacidad</a>.</p>
+      </section>
+
+      <!-- SECCIÓN 7 -->
+      <section class="section">
+        <h2>7. Contacto</h2>
+        <p>Si tienes alguna pregunta sobre nuestra política de afiliación, puedes contactarnos a través de:</p>
+        <ul>
+          <li>Página de contacto: <a href="/contacto/">comparaia.es/contacto/</a></li>
+          <li>Responsable: David Mateos Pascual</li>
+        </ul>
+      </section>
+
+    </div><!-- /page-wrap -->
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 CompararIA · David Mateos Pascual</p>
+    </div>
+  </footer>
+
+</body>
+</html>
