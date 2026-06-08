@@ -1,0 +1,91 @@
+# Comparaia.es — LLM Sitemap
+# Lista completa de URLs con descripción para indexación por crawlers de LLMs
+# Formato: URL | Descripción
+# Última actualización: 2026-06-08
+
+## PÁGINAS PRINCIPALES
+
+https://comparaia.es/ | Página principal de Comparaia.es — comparativas de herramientas IA y SaaS para freelancers hispanohablantes
+https://comparaia.es/comparativas/ | Índice de todas las comparativas X vs Y de herramientas IA para autónomos
+https://comparaia.es/blog/ | Blog con guías prácticas sobre cómo usar IA en el trabajo freelance
+https://comparaia.es/herramientas/ | Fichas individuales de las principales herramientas IA con precio, funciones y enlace oficial
+https://comparaia.es/guias/ | Guías completas sobre IA para autónomos: cómo empezar, herramientas gratuitas, prompts efectivos
+https://comparaia.es/calculadora-roi-ia/ | Calculadora interactiva para calcular el ROI de adoptar herramientas IA como autónomo
+https://comparaia.es/stack-ia-por-perfil/ | Stack de herramientas IA recomendado por perfil de freelancer (diseñador, redactor, consultor, etc.)
+https://comparaia.es/prompts-por-profesion/ | Biblioteca de prompts de IA organizados por profesión freelance
+https://comparaia.es/test-que-ia-necesitas/ | Test interactivo para saber qué herramienta IA es la más adecuada según el perfil y presupuesto
+
+## COMPARATIVAS (X vs Y)
+
+https://comparaia.es/comparativas/chatgpt-vs-claude/ | ChatGPT vs Claude: comparativa completa para freelancers — cuál es mejor según el tipo de trabajo
+https://comparaia.es/comparativas/chatgpt-vs-gemini/ | ChatGPT vs Gemini: análisis de precios, funciones y casos de uso para autónomos hispanohablantes
+https://comparaia.es/comparativas/chatgpt-vs-deepseek/ | ChatGPT vs DeepSeek: comparativa de las dos IA de texto más usadas en 2026
+https://comparaia.es/comparativas/claude-vs-gemini/ | Claude vs Gemini: qué modelo de IA es mejor para redacción, código y análisis
+https://comparaia.es/comparativas/claude-vs-deepseek/ | Claude vs DeepSeek: comparativa directa de capacidades y precios
+https://comparaia.es/comparativas/surfer-seo-vs-semrush/ | Surfer SEO vs Semrush: cuál elegir para SEO si eres freelancer — tabla comparativa, precios y veredicto por perfil
+https://comparaia.es/comparativas/getresponse-vs-activecampaign-vs-brevo/ | GetResponse vs ActiveCampaign vs Brevo: la comparativa definitiva de email marketing para autónomos en 2026
+https://comparaia.es/comparativas/mejores-ia-escribir/ | Las mejores herramientas IA para escritura y redacción de contenido en español
+https://comparaia.es/comparativas/mejores-ia-diseno/ | Las mejores herramientas IA para diseño gráfico: Midjourney, Canva IA, Adobe Firefly y alternativas
+https://comparaia.es/comparativas/mejores-ia-codigo/ | Las mejores herramientas IA para programación: GitHub Copilot, Cursor, TabNine y más
+https://comparaia.es/comparativas/ia-gratis-vs-pago/ | IA gratis vs pago: cuándo merece la pena pagar por herramientas IA y cuándo no
+https://comparaia.es/comparativas/canva-ia-vs-adobe-firefly/ | Canva IA vs Adobe Firefly: cuál es mejor para diseño si eres freelancer
+https://comparaia.es/comparativas/cursor-vs-github-copilot/ | Cursor vs GitHub Copilot: qué editor IA con IA es mejor para desarrolladores freelance
+https://comparaia.es/comparativas/gemini-vs-microsoft-copilot/ | Gemini vs Microsoft Copilot: comparativa para freelancers que usan ecosistema Google o Microsoft
+https://comparaia.es/comparativas/midjourney-vs-leonardo-ai/ | Midjourney vs Leonardo AI: cuál es mejor para generar imágenes IA en 2026
+https://comparaia.es/comparativas/notion-ia-vs-obsidian/ | Notion IA vs Obsidian: gestión del conocimiento con IA para freelancers
+https://comparaia.es/comparativas/ia-para-traductores-freelance/ | Las mejores herramientas IA para traductores freelance: DeepL, ChatGPT, Claude y más
+
+## BLOG Y GUÍAS PRÁCTICAS
+
+https://comparaia.es/blog/elevenlabs-vs-alternativas/ | ElevenLabs en español: análisis completo, precios 2026 y mejores alternativas de síntesis de voz IA
+https://comparaia.es/blog/mejores-herramientas-email-marketing-freelancers/ | Las mejores herramientas de email marketing para freelancers en 2026: GetResponse, Brevo, ActiveCampaign y Kit
+https://comparaia.es/blog/mejores-ia-redes-sociales-contenido-freelancers/ | Las mejores IA para redes sociales y creación de contenido para freelancers: SocialBee, AdCreative.ai y Gamma
+https://comparaia.es/blog/herramientas-ia-autonomos-espana/ | Las mejores herramientas de IA para autónomos en España en 2026: guía completa con precios
+https://comparaia.es/blog/ia-email-marketing-freelancer/ | Cómo usar IA para email marketing si eres freelancer: estrategias y herramientas
+https://comparaia.es/blog/ia-facturacion-verifactu-autonomo/ | IA para facturación y cumplimiento Verifactu para autónomos españoles
+https://comparaia.es/blog/chatgpt-declaracion-renta-autonomo/ | Cómo usar ChatGPT para preparar la declaración de la renta si eres autónomo
+https://comparaia.es/blog/n8n-vs-zapier-vs-make-autonomos/ | n8n vs Zapier vs Make: comparativa de herramientas de automatización para autónomos
+https://comparaia.es/blog/5-automatizaciones-n8n-freelancers/ | Las 5 automatizaciones con n8n más útiles para freelancers en 2026
+https://comparaia.es/blog/webflow-para-freelancers/ | Webflow para freelancers: guía completa, precios y casos de uso en 2026
+https://comparaia.es/blog/mejores-landing-pages-freelancers/ | Las mejores herramientas de landing pages para freelancers: Leadpages, Unbounce y alternativas
+https://comparaia.es/blog/ia-linkedin-prompts-autonomo-2026/ | Los mejores prompts de IA para LinkedIn si eres autónomo o freelancer en 2026
+https://comparaia.es/blog/ia-propuestas-comerciales-freelancer/ | Cómo usar IA para crear propuestas comerciales que convierten si eres freelancer
+https://comparaia.es/blog/chatgpt-atencion-cliente-autonomo/ | Cómo usar ChatGPT para atención al cliente si eres autónomo
+https://comparaia.es/blog/chatgpt-gestion-proyectos-autonomo/ | ChatGPT para gestión de proyectos como autónomo: flujos de trabajo y prompts
+https://comparaia.es/blog/chatgpt-presupuestos-propuestas-autonomo/ | ChatGPT para redactar presupuestos y propuestas profesionales como autónomo
+https://comparaia.es/blog/claude-vs-chatgpt-autonomos/ | Claude vs ChatGPT para autónomos: cuál es mejor para el trabajo freelance diario
+https://comparaia.es/blog/futuro-autonomo-ia/ | El futuro del autónomo con IA: qué cambia en los próximos años y cómo prepararse
+https://comparaia.es/blog/ia-contabilidad-autonomos/ | IA para contabilidad de autónomos: herramientas que automatizan la gestión financiera
+https://comparaia.es/blog/ia-diseno-marca-personal/ | IA para diseñar tu marca personal como freelancer: logos, paletas y materiales
+https://comparaia.es/blog/ia-investigacion-mercado-freelancer/ | IA para investigación de mercado si eres freelancer: cómo analizar competencia y tendencias
+https://comparaia.es/blog/ia-redes-sociales-contenido-2026/ | IA para redes sociales en 2026: guía completa de herramientas y estrategias
+https://comparaia.es/blog/ia-traduccion-autonomos-espana/ | IA para traducción si eres autónomo en España: DeepL, ChatGPT y herramientas especializadas
+https://comparaia.es/blog/make-automatizacion-autonomo/ | Make (Integromat) para autónomos: cómo automatizar flujos de trabajo sin código
+https://comparaia.es/blog/n8n-gratis-vs-pago-autonomo/ | n8n gratis vs pago para autónomos: cuándo merece la pena el plan cloud
+https://comparaia.es/blog/n8n-para-freelancers/ | n8n para freelancers: guía de inicio y casos de uso más útiles
+https://comparaia.es/blog/notion-ia-autonomo/ | Notion IA para autónomos: cómo usar la IA integrada para gestionar proyectos y clientes
+https://comparaia.es/blog/productividad-ia-automatizacion/ | Productividad con IA y automatización: la guía del freelancer para trabajar menos y ganar más
+https://comparaia.es/blog/prompt-engineering-autonomos/ | Prompt engineering para autónomos: cómo escribir prompts que generan resultados profesionales
+
+## HERRAMIENTAS (FICHAS)
+
+https://comparaia.es/herramientas/chatgpt/ | ChatGPT: ficha completa — qué es, precio, planes, para qué sirve y enlace oficial
+https://comparaia.es/herramientas/claude/ | Claude de Anthropic: ficha completa — modelos disponibles, precio y casos de uso para freelancers
+https://comparaia.es/herramientas/gemini/ | Gemini de Google: ficha completa — integración con Google Workspace y usos para autónomos
+https://comparaia.es/herramientas/midjourney/ | Midjourney: ficha completa — generación de imágenes IA, precio y cómo empezar
+https://comparaia.es/herramientas/notion-ia/ | Notion IA: ficha completa — gestión de proyectos con inteligencia artificial integrada
+https://comparaia.es/herramientas/canva-ia/ | Canva IA: ficha completa — herramientas de diseño con IA integradas en Canva
+
+## GUÍAS
+
+https://comparaia.es/guias/ia-para-autonomos-espana/ | Guía completa de IA para autónomos en España: por dónde empezar, qué herramientas usar y cuánto cuesta
+https://comparaia.es/guias/ia-para-freelancers/ | Guía de IA para freelancers: las herramientas más útiles organizadas por área de trabajo
+https://comparaia.es/guias/herramientas-ia-gratis/ | Guía de herramientas IA gratuitas para autónomos: qué puedes hacer sin pagar nada
+https://comparaia.es/guias/como-escribir-prompts/ | Guía para escribir prompts efectivos en español: estructura, técnicas y ejemplos por profesión
+
+## PÁGINAS LEGALES Y DE CONTACTO
+
+https://comparaia.es/aviso-legal/ | Aviso legal de Comparaia.es
+https://comparaia.es/privacidad/ | Política de privacidad de Comparaia.es
+https://comparaia.es/afiliados/ | Política de afiliación de Comparaia.es — cómo funcionan los enlaces de afiliado
+https://comparaia.es/contacto/ | Formulario de contacto de Comparaia.es
