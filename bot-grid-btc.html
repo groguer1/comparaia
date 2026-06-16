@@ -494,104 +494,76 @@ iframe.brevo-iframe{width:100%;border:none;min-height:340px;border-radius:8px;ba
   <div class="container">
     <div style="text-align:center;margin-bottom:48px">
       <div class="section-tag">Precio</div>
-      <h2>Sin suscripciones. Sin sorpresas.<br>El código es tuyo para siempre.</h2>
+      <h2 style="margin-bottom:16px">Acceso completo por <span class="highlight">35€</span></h2>
+      <p style="color:#94a3b8;font-size:1.1rem">Pago único. Sin suscripción. Sin sorpresas.</p>
     </div>
-    <div class="price-wrap">
-      <div class="price-card">
-        <div class="price-amount">
-          <span class="price-num">35€</span>
-          <span class="price-currency">EUR</span>
-        </div>
-        <div class="price-recur">Pago único · sin renovaciones</div>
-        <ul class="price-features">
-          <li>Código fuente completo en Python</li>
-          <li>Acceso al repositorio privado en GitHub</li>
-          <li>Actualizaciones futuras incluidas</li>
-          <li>Modo testnet para practicar sin riesgo</li>
-          <li>README con instrucciones de instalación</li>
-          <li>Sin comisiones de plataforma</li>
-        </ul>
-        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="document.getElementById('modalCompra').classList.add('active')">Obtener por 35€ →</button>
-      </div>
-      <div>
-        <div class="price-payment">
-          <div class="price-payment-title">₿ Paga en Bitcoin (BTC)</div>
-          <div class="btc-addr-box">
-            <div class="btc-icon">₿</div>
-            <div class="btc-addr" id="btcAddr1" onclick="copyAddr('btcAddr1')">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</div>
-            <button class="btn-copy" onclick="copyAddr('btcAddr1')">Copiar</button>
-          </div>
-          <div class="price-detail">
-            <strong>Cómo funciona:</strong> Envía exactamente 35€ en BTC a la dirección de arriba. Después rellena el formulario con tu usuario de GitHub para que podamos enviarte la invitación al repositorio. Recibirás acceso en menos de 24h.
-          </div>
-        </div>
-        <div style="margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
-          <div class="section-tag" style="margin-bottom:8px">¿Dudas antes de comprar?</div>
-          <p style="font-size:0.88rem;color:var(--muted);margin-bottom:16px">Si tienes preguntas sobre el bot, cómo instalarlo o si es compatible con tu VPS, abre el formulario y déjanos tu pregunta en el campo de comentarios.</p>
-          <button class="btn btn-ghost" style="font-size:0.85rem;padding:10px 20px" onclick="document.getElementById('modalCompra').classList.add('active')">Ir al formulario →</button>
-        </div>
-      </div>
+    <div class="price-card" style="max-width:560px;margin:0 auto;text-align:center;padding:48px 40px;background:#111827;border:1px solid #f7931a33;border-radius:20px;">
+      <div style="font-size:4rem;font-weight:900;color:#f7931a;line-height:1;margin-bottom:8px">35€</div>
+      <div style="color:#94a3b8;margin-bottom:32px;font-size:1rem">pago único en BTC</div>
+      <ul style="list-style:none;padding:0;margin:0 0 36px;text-align:left;display:inline-block">
+        <li style="padding:8px 0;color:#e2e8f0;display:flex;align-items:center;gap:12px"><span style="color:#f7931a;font-size:1.2rem">✓</span> Código fuente completo del bot</li>
+        <li style="padding:8px 0;color:#e2e8f0;display:flex;align-items:center;gap:12px"><span style="color:#f7931a;font-size:1.2rem">✓</span> Acceso al repositorio privado en GitHub</li>
+        <li style="padding:8px 0;color:#e2e8f0;display:flex;align-items:center;gap:12px"><span style="color:#f7931a;font-size:1.2rem">✓</span> Guía de instalación y configuración</li>
+        <li style="padding:8px 0;color:#e2e8f0;display:flex;align-items:center;gap:12px"><span style="color:#f7931a;font-size:1.2rem">✓</span> Soporte por Telegram incluido</li>
+        <li style="padding:8px 0;color:#e2e8f0;display:flex;align-items:center;gap:12px"><span style="color:#f7931a;font-size:1.2rem">✓</span> Actualizaciones gratuitas 6 meses</li>
+      </ul>
+      <button class="cta-btn" style="width:100%;font-size:1.15rem;padding:18px 0;" onclick="document.getElementById('modalCompra').classList.add('active')">Obtener por 35€ →</button>
+      <p style="color:#64748b;font-size:0.82rem;margin-top:16px">🔒 Pago seguro con Bitcoin · Acceso en menos de 24h</p>
+    </div>
+  </div>
+</section>
+
+<!-- DONACIONES -->
+<section class="section" style="padding:60px 0;background:#0d1117;">
+  <div class="container" style="text-align:center">
+    <div class="section-tag">Donaciones</div>
+    <h2 style="margin-bottom:16px">¿Te ha sido útil?</h2>
+    <p style="color:#94a3b8;margin-bottom:28px">Si usas el bot y te genera ganancias, considera apoyar el desarrollo.</p>
+    <div style="background:#111827;border:1px solid #ffffff1a;border-radius:12px;padding:20px 28px;display:inline-flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center">
+      <span style="font-family:'JetBrains Mono',monospace;color:#f7931a;font-size:0.92rem" id="btcDonAddr">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</span>
+      <button onclick="copyAddr('btcDonAddr')" style="background:#f7931a;color:#000;border:none;border-radius:8px;padding:8px 18px;font-weight:700;cursor:pointer;font-size:0.9rem">Copiar</button>
     </div>
   </div>
 </section>
 
 <!-- MODAL DE COMPRA -->
 <div class="modal-overlay" id="modalCompra" onclick="if(event.target===this)this.classList.remove('active')">
-  <div class="modal-box">
-    <button class="modal-close" onclick="document.getElementById('modalCompra').classList.remove('active')">✕</button>
-    <div class="modal-title">Obtener acceso al Bot BTC ₿</div>
-    <p class="modal-sub">Rellena el formulario con tu usuario de GitHub y email. Después envía 35€ en BTC a la dirección de abajo. Recibirás acceso al repositorio en menos de 24h.</p>
+  <div class="modal-box" style="background:#111827;border:1px solid #f7931a44;border-radius:20px;max-width:600px;width:92%;padding:40px 36px;position:relative;max-height:90vh;overflow-y:auto;">
+    <button onclick="document.getElementById('modalCompra').classList.remove('active')" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#94a3b8;font-size:1.5rem;cursor:pointer;line-height:1;" aria-label="Cerrar">&times;</button>
 
-    <!-- Brevo Form iframe -->
-    <iframe
-      class="brevo-iframe"
-      src="https://9a7395d6.sibforms.com/serve/MUIFALWE-Rvg_4Z4AsYVoTGKlkNl1Mx37qsRnNLA92a_vlmHyl6rdZWLcn5TDb0GalDvR1GmiLp2ePoNRRncrBVlanAaEVf0gO2iHELvzjSWsM-i3E5jC2XF71nFFFTs1RG024K-Uranwf7oWXv9tElPCtMBIllHdArjfmSkd5bbc-QrY_RI4kSV45DH3oBgLDG0zC34TO53hGnGDQ==?isAjaxIframe=1"
-      allowfullscreen
-      scrolling="auto"
-      title="Formulario de acceso Bot BTC">
-    </iframe>
+    <!-- STEP 1: form + payment -->
+    <div id="modalStep1">
+      <h2 style="color:#fff;margin:0 0 8px;font-size:1.5rem">Completa tu pedido</h2>
+      <p style="color:#94a3b8;margin:0 0 28px;font-size:0.95rem">Rellena tus datos y realiza el pago. Recibirás acceso en menos de 24h.</p>
 
-    <hr class="modal-divider">
+      <!-- Brevo form -->
+      <div style="margin-bottom:28px;border-radius:12px;overflow:hidden;">
+        <iframe width="100%" height="305" src="https://9a7395d6.sibforms.com/v2/serve/MUIFALWE-Rvg_4Z4AsYVoTGKlkNl1Mx37qsRnNLA92a_vlmHyl6rdZWLcn5TDb0GalDvR1GmiLp2ePoNRRncrBVlanAaEVf0gO2iHELvzjSWsM-i3E5jC2XF71nFFFTs1RG024K-Uranwf7oWXv9tElPCtMBIllHdArjfmSkd5bbc-QrY_RI4kSV45DH3oBgLDG0zC34TO53hGnGDQ==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;max-width:100%;border:none;"></iframe>
+      </div>
 
-    <div style="margin-bottom:12px;font-size:0.8rem;font-weight:600;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase">₿ Dirección de pago BTC</div>
-    <div class="btc-addr-box">
-      <div class="btc-icon">₿</div>
-      <div class="btc-addr" id="btcAddrModal" onclick="copyAddr('btcAddrModal')">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</div>
-      <button class="btn-copy" onclick="copyAddr('btcAddrModal')">Copiar</button>
+      <!-- Payment block -->
+      <div style="border-top:1px solid #ffffff1a;padding-top:24px;">
+        <h3 style="color:#f7931a;margin:0 0 10px;font-size:1.1rem">Realiza el pago</h3>
+        <p style="color:#94a3b8;margin:0 0 14px;font-size:0.93rem">Envía exactamente 35€ en BTC a esta dirección:</p>
+        <div style="background:#0a0a0f;border:1px solid #ffffff1a;border-radius:10px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
+          <span id="btcModalAddr" style="font-family:'JetBrains Mono',monospace;color:#f7931a;font-size:0.88rem;word-break:break-all;">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</span>
+          <button id="copyModalBtn" onclick="copyModalAddr()" style="background:#f7931a;color:#000;border:none;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer;font-size:0.88rem;white-space:nowrap;">Copiar</button>
+        </div>
+        <p style="color:#64748b;font-size:0.8rem;margin:0 0 24px;">Puedes pagar desde Coinbase, Binance o cualquier wallet.</p>
+        <button onclick="showConfirmation()" style="width:100%;background:#f7931a;color:#000;border:none;border-radius:10px;padding:16px;font-size:1rem;font-weight:700;cursor:pointer;">He realizado el pago ✓</button>
+      </div>
     </div>
-    <div class="modal-notice">
-      Tras rellenar el formulario envía 35€ en BTC a esta dirección. Recibirás acceso al repositorio en menos de 24h.
+
+    <!-- STEP 2: confirmation -->
+    <div id="modalStep2" style="display:none;text-align:center;padding:20px 0;">
+      <div style="width:72px;height:72px;background:#00e5a022;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2.2rem;">✓</div>
+      <h2 style="color:#00e5a0;margin:0 0 12px;font-size:1.6rem">¡Perfecto!</h2>
+      <p style="color:#94a3b8;margin:0 0 28px;font-size:0.95rem;line-height:1.6;">Hemos recibido tu solicitud. Revisaremos tu pago y te enviaremos acceso al repositorio en menos de 24 horas al email indicado.</p>
+      <button onclick="document.getElementById('modalCompra').classList.remove('active');document.getElementById('modalStep1').style.display='block';document.getElementById('modalStep2').style.display='none';" style="background:#334155;color:#fff;border:none;border-radius:10px;padding:14px 32px;font-size:1rem;font-weight:600;cursor:pointer;">Cerrar</button>
     </div>
   </div>
 </div>
 
-<hr class="divider">
-
-<!-- DONATIONS -->
-<section class="donations">
-  <div class="container" style="text-align:center">
-    <div class="section-tag">¿Te ha sido útil?</div>
-    <h2>Apoya el proyecto</h2>
-    <p class="section-desc" style="margin:0 auto 0">Si el bot te ha generado beneficios y quieres contribuir, puedes hacer una donación voluntaria. Cualquier cantidad ayuda a mantener el proyecto activo.</p>
-    <div class="donate-box">
-      <h3>₿ Bitcoin (BTC)</h3>
-      <p>Cualquier cantidad es bienvenida</p>
-      <div class="btc-addr-box">
-        <div class="btc-icon">₿</div>
-        <div class="btc-addr" id="btcAddr2" onclick="copyAddr('btcAddr2')">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</div>
-        <button class="btn-copy" onclick="copyAddr('btcAddr2')">Copiar</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <p>© 2025 <a href="/">comparaia.es</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/afiliados/">Afiliados</a></p>
-    <p class="footer-disclaimer">⚠️ Este bot es una herramienta educativa y de automatización. El trading de criptomonedas conlleva riesgo significativo de pérdida de capital. No constituye asesoramiento financiero. Opera siempre con dinero que puedas permitirte perder.</p>
-  </div>
-</footer>
 
 <script>
 function copyAddr(id) {
@@ -600,42 +572,35 @@ function copyAddr(id) {
   const addr = el.textContent.trim();
   navigator.clipboard.writeText(addr).then(() => {
     const orig = el.textContent;
-    el.textContent = '¡Copiado!';
+    el.textContent = '\u2713 Copiado';
     el.style.color = '#00e5a0';
-    setTimeout(() => { el.textContent = orig; el.style.color = ''; }, 2000);
-  }).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = addr;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
+    setTimeout(() => { el.textContent = orig; el.style.color = '#f7931a'; }, 2000);
   });
 }
 
-// Smooth scroll for anchor links
+function copyModalAddr() {
+  const addr = document.getElementById('btcModalAddr').textContent.trim();
+  navigator.clipboard.writeText(addr).then(() => {
+    const btn = document.getElementById('copyModalBtn');
+    btn.textContent = '\u2713 Copiado';
+    btn.style.background = '#00e5a0';
+    setTimeout(() => { btn.textContent = 'Copiar'; btn.style.background = '#f7931a'; }, 2000);
+  });
+}
+
+function showConfirmation() {
+  document.getElementById('modalStep1').style.display = 'none';
+  document.getElementById('modalStep2').style.display = 'block';
+}
+
+// Nav scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    if (target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
   });
-});
-
-// Animate stats on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, {threshold: 0.1});
-document.querySelectorAll('.feat-card, .step, .stat').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
 });
 </script>
+
 </body>
 </html>
