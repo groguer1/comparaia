@@ -521,79 +521,134 @@ iframe.brevo-iframe{width:100%;border:none;min-height:340px;border-radius:8px;ba
     <p style="color:#94a3b8;margin-bottom:28px">Si usas el bot y te genera ganancias, considera apoyar el desarrollo.</p>
     <div style="background:#111827;border:1px solid #ffffff1a;border-radius:12px;padding:20px 28px;display:inline-flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center">
       <span style="font-family:'JetBrains Mono',monospace;color:#f7931a;font-size:0.92rem" id="btcDonAddr">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</span>
-      <button onclick="copyAddr('btcDonAddr')" style="background:#f7931a;color:#000;border:none;border-radius:8px;padding:8px 18px;font-weight:700;cursor:pointer;font-size:0.9rem">Copiar</button>
+      <button onclick="copyBTCAddr('btcDonAddr',this)" style="background:#334155;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-weight:700;cursor:pointer;font-size:0.9rem">Copiar</button>
     </div>
   </div>
 </section>
 
 <!-- MODAL DE COMPRA -->
-<div class="modal-overlay" id="modalCompra" onclick="if(event.target===this)this.classList.remove('active')">
-  <div class="modal-box" style="background:#111827;border:1px solid #f7931a44;border-radius:20px;max-width:600px;width:92%;padding:40px 36px;position:relative;max-height:90vh;overflow-y:auto;">
-    <button onclick="document.getElementById('modalCompra').classList.remove('active')" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#94a3b8;font-size:1.5rem;cursor:pointer;line-height:1;" aria-label="Cerrar">&times;</button>
+<div class="modal-overlay" id="modalCompra" onclick="if(event.target===this)this.classList.remove('active')" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#111827;border:1px solid #f7931a;border-radius:16px;padding:2rem;max-width:480px;width:92%;position:relative;max-height:90vh;overflow-y:auto;">
+    <button onclick="closeModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;color:#94a3b8;font-size:1.6rem;cursor:pointer;line-height:1;" aria-label="Cerrar">&times;</button>
 
-    <!-- STEP 1: form + payment -->
+    <!-- Step 1: form + payment -->
     <div id="modalStep1">
-      <h2 style="color:#fff;margin:0 0 8px;font-size:1.5rem">Completa tu pedido</h2>
-      <p style="color:#94a3b8;margin:0 0 28px;font-size:0.95rem">Rellena tus datos y realiza el pago. Recibirás acceso en menos de 24h.</p>
+      <h2 style="color:#fff;margin:0 0 8px;font-size:1.4rem;font-weight:700;">Completa tu pedido</h2>
+      <p style="color:#7a8299;margin:0 0 24px;font-size:0.93rem;">Rellena tus datos y realiza el pago. Recibirás acceso en menos de 24h.</p>
 
-      <!-- Brevo form -->
-      <div style="margin-bottom:28px;border-radius:12px;overflow:hidden;">
-        <iframe width="100%" height="305" src="https://9a7395d6.sibforms.com/v2/serve/MUIFALWE-Rvg_4Z4AsYVoTGKlkNl1Mx37qsRnNLA92a_vlmHyl6rdZWLcn5TDb0GalDvR1GmiLp2ePoNRRncrBVlanAaEVf0gO2iHELvzjSWsM-i3E5jC2XF71nFFFTs1RG024K-Uranwf7oWXv9tElPCtMBIllHdArjfmSkd5bbc-QrY_RI4kSV45DH3oBgLDG0zC34TO53hGnGDQ==" frameborder="0" scrolling="auto" allowfullscreen style="display:block;max-width:100%;border:none;"></iframe>
-      </div>
+      <form id="formspreeForm" action="https://formspree.io/f/xnjyrdov" method="POST" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" name="_subject" value="Nuevo pedido Bot BTC - 35€">
 
-      <!-- Payment block -->
-      <div style="border-top:1px solid #ffffff1a;padding-top:24px;">
-        <h3 style="color:#f7931a;margin:0 0 10px;font-size:1.1rem">Realiza el pago</h3>
-        <p style="color:#94a3b8;margin:0 0 14px;font-size:0.93rem">Envía exactamente 35€ en BTC a esta dirección:</p>
-        <div style="background:#0a0a0f;border:1px solid #ffffff1a;border-radius:10px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
-          <span id="btcModalAddr" style="font-family:'JetBrains Mono',monospace;color:#f7931a;font-size:0.88rem;word-break:break-all;">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</span>
-          <button id="copyModalBtn" onclick="copyModalAddr()" style="background:#f7931a;color:#000;border:none;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer;font-size:0.88rem;white-space:nowrap;">Copiar</button>
+        <div style="margin-bottom:14px;">
+          <label style="display:block;color:#94a3b8;font-size:0.83rem;margin-bottom:6px;font-weight:600;">Nombre completo</label>
+          <input type="text" name="nombre" placeholder="Tu nombre" required
+            style="width:100%;box-sizing:border-box;background:#0a0f1e;border:1px solid #1e2a45;border-radius:8px;padding:0.7rem 1rem;color:#fff;font-size:0.9rem;outline:none;">
         </div>
-        <p style="color:#64748b;font-size:0.8rem;margin:0 0 24px;">Puedes pagar desde Coinbase, Binance o cualquier wallet.</p>
-        <button onclick="showConfirmation()" style="width:100%;background:#f7931a;color:#000;border:none;border-radius:10px;padding:16px;font-size:1rem;font-weight:700;cursor:pointer;">He realizado el pago ✓</button>
-      </div>
+
+        <div style="margin-bottom:14px;">
+          <label style="display:block;color:#94a3b8;font-size:0.83rem;margin-bottom:6px;font-weight:600;">Email</label>
+          <input type="email" name="email" placeholder="tu@email.com" required
+            style="width:100%;box-sizing:border-box;background:#0a0f1e;border:1px solid #1e2a45;border-radius:8px;padding:0.7rem 1rem;color:#fff;font-size:0.9rem;outline:none;">
+        </div>
+
+        <div style="margin-bottom:24px;">
+          <label style="display:block;color:#94a3b8;font-size:0.83rem;margin-bottom:6px;font-weight:600;">Usuario de GitHub</label>
+          <input type="text" name="github" placeholder="@tuusuario" required
+            style="width:100%;box-sizing:border-box;background:#0a0f1e;border:1px solid #1e2a45;border-radius:8px;padding:0.7rem 1rem;color:#fff;font-size:0.9rem;outline:none;">
+        </div>
+
+        <!-- Payment block -->
+        <div style="border-top:1px solid #1e2a45;padding-top:20px;margin-bottom:20px;">
+          <h3 style="color:#f7931a;margin:0 0 10px;font-size:1rem;font-weight:700;">Realiza el pago</h3>
+          <p style="color:#7a8299;margin:0 0 12px;font-size:0.9rem;">Envía exactamente 35€ en BTC a esta dirección:</p>
+          <div style="background:#0a0f1e;border:1px solid #1e2a45;border-radius:8px;padding:0.8rem;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+            <span id="btcModalAddr" style="font-family:monospace;color:#00d4aa;font-size:0.85rem;word-break:break-all;">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</span>
+            <button type="button" id="copyModalBtn" onclick="copyBTCAddr('btcModalAddr',this)"
+              style="background:#334155;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-weight:700;cursor:pointer;font-size:0.82rem;white-space:nowrap;">Copiar</button>
+          </div>
+          <p style="color:#64748b;font-size:0.8rem;margin:0;">Puedes pagar desde Coinbase, Binance o cualquier wallet.</p>
+        </div>
+
+        <button type="submit"
+          style="width:100%;background:#f7931a;color:#000;border:none;border-radius:12px;padding:1rem;font-size:1rem;font-weight:800;cursor:pointer;">
+          He realizado el pago ✓
+        </button>
+      </form>
     </div>
 
-    <!-- STEP 2: confirmation -->
+    <!-- Step 2: confirmation -->
     <div id="modalStep2" style="display:none;text-align:center;padding:20px 0;">
-      <div style="width:72px;height:72px;background:#00e5a022;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2.2rem;">✓</div>
-      <h2 style="color:#00e5a0;margin:0 0 12px;font-size:1.6rem">¡Perfecto!</h2>
+      <div style="width:72px;height:72px;background:#00e5a022;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:2.2rem;color:#00e5a0;">✓</div>
+      <h2 style="color:#fff;margin:0 0 12px;font-size:1.6rem;">¡Perfecto!</h2>
       <p style="color:#94a3b8;margin:0 0 28px;font-size:0.95rem;line-height:1.6;">Hemos recibido tu solicitud. Revisaremos tu pago y te enviaremos acceso al repositorio en menos de 24 horas al email indicado.</p>
-      <button onclick="document.getElementById('modalCompra').classList.remove('active');document.getElementById('modalStep1').style.display='block';document.getElementById('modalStep2').style.display='none';" style="background:#334155;color:#fff;border:none;border-radius:10px;padding:14px 32px;font-size:1rem;font-weight:600;cursor:pointer;">Cerrar</button>
+      <button onclick="closeModal()" style="background:#334155;color:#fff;border:none;border-radius:10px;padding:14px 32px;font-size:1rem;font-weight:600;cursor:pointer;">Cerrar</button>
     </div>
   </div>
 </div>
 
 
 <script>
-function copyAddr(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const addr = el.textContent.trim();
-  navigator.clipboard.writeText(addr).then(() => {
-    const orig = el.textContent;
-    el.textContent = '\u2713 Copiado';
-    el.style.color = '#00e5a0';
-    setTimeout(() => { el.textContent = orig; el.style.color = '#f7931a'; }, 2000);
-  });
+// Open / close modal
+function openModal() {
+  const m = document.getElementById('modalCompra');
+  m.style.display = 'flex';
+  document.getElementById('modalStep1').style.display = 'block';
+  document.getElementById('modalStep2').style.display = 'none';
+  document.getElementById('formspreeForm').reset();
+}
+function closeModal() {
+  document.getElementById('modalCompra').style.display = 'none';
 }
 
-function copyModalAddr() {
-  const addr = document.getElementById('btcModalAddr').textContent.trim();
+// Copy BTC address
+function copyBTCAddr(id, btn) {
+  const addr = document.getElementById(id).textContent.trim();
   navigator.clipboard.writeText(addr).then(() => {
-    const btn = document.getElementById('copyModalBtn');
-    btn.textContent = '\u2713 Copiado';
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copiado';
     btn.style.background = '#00e5a0';
-    setTimeout(() => { btn.textContent = 'Copiar'; btn.style.background = '#f7931a'; }, 2000);
+    btn.style.color = '#000';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '#334155';
+      btn.style.color = '#fff';
+    }, 2000);
   });
 }
 
-function showConfirmation() {
-  document.getElementById('modalStep1').style.display = 'none';
-  document.getElementById('modalStep2').style.display = 'block';
+// Formspree AJAX submit
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('modalStep1').style.display = 'none';
+      document.getElementById('modalStep2').style.display = 'block';
+    } else {
+      btn.textContent = 'Error al enviar. Inténtalo de nuevo.';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Error de red. Inténtalo de nuevo.';
+    btn.disabled = false;
+  }
 }
 
-// Nav scroll
+// Wire all "Obtener por 35€" buttons to openModal
+document.querySelectorAll('[onclick*="modalCompra"]').forEach(el => {
+  el.setAttribute('onclick', 'openModal()');
+});
+
+// Smooth scroll nav
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
