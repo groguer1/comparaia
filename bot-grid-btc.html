@@ -164,6 +164,19 @@ footer a:hover{color:var(--text)}
   .steps::before{display:none}
   nav .nav-links{display:none}
 }
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9000;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.active{display:flex}
+.modal-box{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative;padding:36px}
+.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:none;color:var(--text);font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:rgba(255,255,255,0.2)}
+.modal-title{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:6px}
+.modal-sub{font-size:0.85rem;color:var(--muted);margin-bottom:24px;line-height:1.5}
+.modal-divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+.modal-notice{background:rgba(0,229,160,0.07);border:1px solid rgba(0,229,160,0.2);border-radius:8px;padding:14px 16px;font-size:0.83rem;color:var(--muted);line-height:1.6;margin-top:16px}
+.modal-notice strong{color:var(--green)}
+iframe.brevo-iframe{width:100%;border:none;min-height:340px;border-radius:8px;background:transparent}
 </style>
 </head><body>
 <div class="orb orb-1"></div>
@@ -179,7 +192,7 @@ footer a:hover{color:var(--text)}
       <li><a href="/guias/">Guías</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/bot-grid-btc.html" class="active">Bot BTC</a></li>
-      <li><a href="#precio" class="nav-cta">Obtener por 35€ →</a></li>
+      <li><button class="nav-cta" style="background:var(--accent);border:none;cursor:pointer;padding:8px 16px;border-radius:6px;font-weight:700;font-size:0.82rem" onclick="document.getElementById('modalCompra').classList.add('active')">Obtener por 35€ →</button></li>
     </ul>
   </div>
 </nav>
@@ -191,7 +204,7 @@ footer a:hover{color:var(--text)}
     <h1>Grid bot para BTC/USDT<br>que trabaja <em>mientras duermes</em></h1>
     <p class="hero-sub">Coloca y gestiona órdenes automáticamente. Captura ganancias en cada oscilación del precio. Control total desde Telegram. Sin suscripciones — código tuyo para siempre.</p>
     <div class="hero-actions">
-      <a href="#precio" class="btn btn-primary">Obtener por 35€ →</a>
+      <button class="btn btn-primary" onclick="document.getElementById('modalCompra').classList.add('active')">Obtener por 35€ →</button>
       <a href="#simulacion" class="btn btn-ghost">Ver simulación</a>
     </div>
   </div>
@@ -498,7 +511,7 @@ footer a:hover{color:var(--text)}
           <li>README con instrucciones de instalación</li>
           <li>Sin comisiones de plataforma</li>
         </ul>
-        <a href="mailto:david@davidmateos.com?subject=Acceso%20bot-grid-btc&body=Hola%20David%2C%20adjunto%20comprobante%20de%20pago%20por%2035%E2%82%AC%20del%20bot%20de%20grid%20trading." class="btn btn-primary" style="width:100%;justify-content:center">Enviar comprobante de pago →</a>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="document.getElementById('modalCompra').classList.add('active')">Obtener por 35€ →</button>
       </div>
       <div>
         <div class="price-payment">
@@ -509,18 +522,48 @@ footer a:hover{color:var(--text)}
             <button class="btn-copy" onclick="copyAddr('btcAddr1')">Copiar</button>
           </div>
           <div class="price-detail">
-            <strong>Cómo funciona:</strong> Envía exactamente 35€ en BTC a la dirección de arriba. Después envía el comprobante de pago (captura de pantalla o txid) a <strong>david@davidmateos.com</strong> indicando tu usuario de GitHub. Recibirás la invitación al repositorio en menos de 24h.
+            <strong>Cómo funciona:</strong> Envía exactamente 35€ en BTC a la dirección de arriba. Después rellena el formulario con tu usuario de GitHub para que podamos enviarte la invitación al repositorio. Recibirás acceso en menos de 24h.
           </div>
         </div>
         <div style="margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
           <div class="section-tag" style="margin-bottom:8px">¿Dudas antes de comprar?</div>
-          <p style="font-size:0.88rem;color:var(--muted);margin-bottom:16px">Si tienes preguntas sobre el bot, cómo instalarlo o si es compatible con tu VPS, escríbeme antes de comprar.</p>
-          <a href="mailto:david@davidmateos.com?subject=Consulta%20bot-grid-btc" class="btn btn-ghost" style="font-size:0.85rem;padding:10px 20px">Preguntar por email →</a>
+          <p style="font-size:0.88rem;color:var(--muted);margin-bottom:16px">Si tienes preguntas sobre el bot, cómo instalarlo o si es compatible con tu VPS, abre el formulario y déjanos tu pregunta en el campo de comentarios.</p>
+          <button class="btn btn-ghost" style="font-size:0.85rem;padding:10px 20px" onclick="document.getElementById('modalCompra').classList.add('active')">Ir al formulario →</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- MODAL DE COMPRA -->
+<div class="modal-overlay" id="modalCompra" onclick="if(event.target===this)this.classList.remove('active')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('modalCompra').classList.remove('active')">✕</button>
+    <div class="modal-title">Obtener acceso al Bot BTC ₿</div>
+    <p class="modal-sub">Rellena el formulario con tu nombre, email y usuario de GitHub. Recibirás la invitación al repositorio privado en menos de 24h tras confirmar el pago.</p>
+
+    <!-- Brevo Form iframe -->
+    <iframe
+      class="brevo-iframe"
+      src="https://9a7395d6.sibforms.com/serve/MUIFALWE-Rvg_4Z4AsYVoTGKlkNl1Mx37qsRnNLA92a_vlmHyl6rdZWLcn5TDb0GalDvR1GmiLp2ePoNRRncrBVlanAaEVf0gO2iHELvzjSWsM-i3E5jC2XF71nFFFTs1RG024K-Uranwf7oWXv9tElPCtMBIllHdArjfmSkd5bbc-QrY_RI4kSV45DH3oBgLDG0zC34TO53hGnGDQ==?isAjaxIframe=1"
+      allowfullscreen
+      scrolling="auto"
+      title="Formulario de acceso Bot BTC">
+    </iframe>
+
+    <hr class="modal-divider">
+
+    <div style="margin-bottom:12px;font-size:0.8rem;font-weight:600;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase">₿ Dirección de pago BTC</div>
+    <div class="btc-addr-box">
+      <div class="btc-icon">₿</div>
+      <div class="btc-addr" id="btcAddrModal" onclick="copyAddr('btcAddrModal')">3ExGnoRWiQCgYr3c7cuuNVcpFjvj4aUpED</div>
+      <button class="btn-copy" onclick="copyAddr('btcAddrModal')">Copiar</button>
+    </div>
+    <div class="modal-notice">
+      <strong>✓ Una vez realizado el pago</strong>, recibirás acceso al repositorio privado de GitHub en menos de 24h. Asegúrate de indicar correctamente tu usuario de GitHub en el formulario.
+    </div>
+  </div>
+</div>
 
 <hr class="divider">
 
