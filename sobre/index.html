@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sobre CompararIA: qué es y cómo comparamos</title>
+  <meta name="description" content="CompararIA es un proyecto independiente que acerca la inteligencia artificial a todos los públicos con comparativas honestas, precios reales y veredictos por perfil.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://comparaia.es/sobre/">
+  <meta name="theme-color" content="#00e5a0">
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comparaia.es/sobre/">
+  <meta property="og:title" content="Sobre CompararIA: qué es y cómo comparamos">
+  <meta property="og:description" content="Un proyecto independiente que acerca la inteligencia artificial a todos los públicos con comparativas honestas, precios reales y veredictos por perfil.">
+  <meta property="og:site_name" content="CompararIA">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f; --bg2: #111118; --surface: #1e1e2e;
+      --border: rgba(255,255,255,0.07); --accent: #00e5a0;
+      --text: #e8e8f0; --muted: #7a7a9a;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.75; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.9); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; height: 60px; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; letter-spacing: -0.03em; }
+    .logo span { color: var(--accent); }
+
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); padding-top: 28px; margin-bottom: 32px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 8px; }
+
+    .page-header { padding: 8px 0 40px; margin-bottom: 8px; }
+    .page-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.2); padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+    h1 { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 12px; }
+    .page-intro { font-size: 1.05rem; color: var(--muted); max-width: 560px; }
+
+    .section { margin-bottom: 40px; }
+    .section h2 { font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .section p { color: #c4c4d4; margin-bottom: 14px; }
+    .section strong { color: var(--text); }
+
+    .method-list { list-style: none; margin: 8px 0 0; }
+    .method-list li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: #c4c4d4; }
+    .method-list li:last-child { border-bottom: none; }
+    .method-list li::before { content: '→'; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+
+    .note { background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.15); border-radius: 10px; padding: 20px 24px; margin-top: 8px; }
+    .note p { font-size: 0.9rem; color: var(--muted); margin: 0; }
+    .note strong { color: var(--text); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 64px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://comparaia.es/sobre/",
+  "name": "Sobre CompararIA",
+  "description": "CompararIA es un proyecto independiente que acerca la inteligencia artificial a todos los públicos con comparativas honestas, precios reales y veredictos por perfil.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CompararIA",
+    "url": "https://comparaia.es/",
+    "description": "Comparador independiente de herramientas de inteligencia artificial para freelancers, autónomos y cualquier persona que quiera elegir bien.",
+    "knowsAbout": ["inteligencia artificial", "herramientas de IA", "productividad", "software para freelancers"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://comparaia.es/"},
+    {"@type":"ListItem","position":2,"name":"Sobre","item":"https://comparaia.es/sobre/"}
+  ]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18T27X6Y2D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-18T27X6Y2D',{anonymize_ip:true});</script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2322984058410308" crossorigin="anonymous"></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#00e5a0;color:#000;padding:8px;z-index:100;font-weight:bold;text-decoration:none;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Saltar al contenido principal</a>
+
+  <nav aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="logo">Comparar<span>IA</span></a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+
+      <nav aria-label="Ruta de navegación">
+        <p class="breadcrumb">
+          <a href="/">Inicio</a><span>›</span>Sobre
+        </p>
+      </nav>
+
+      <header class="page-header">
+        <span class="page-tag">Sobre el proyecto</span>
+        <h1>Qué es CompararIA</h1>
+        <p class="page-intro">Un proyecto independiente con una idea sencilla: acercar la inteligencia artificial a todos los públicos, sin humo y sin tecnicismos.</p>
+      </header>
+
+      <div class="section">
+        <h2>Por qué existe</h2>
+        <p>La inteligencia artificial avanza a una velocidad que abruma. Cada semana aparecen herramientas nuevas, los precios cambian, y para quien no vive pegado a la tecnología es casi imposible saber cuál merece la pena. La mayoría de la información está en inglés, escrita para expertos o pagada por las propias empresas.</p>
+        <p><strong>CompararIA nace para arreglar eso.</strong> Queremos que cualquiera —un freelance, un autónomo, un pequeño negocio o alguien con curiosidad— pueda entender qué hace cada herramienta de IA, cuánto cuesta de verdad y si encaja con lo que necesita. En español claro y sin depender de haberla probado antes.</p>
+      </div>
+
+      <div class="section">
+        <h2>Cómo comparamos</h2>
+        <p>No somos una tienda ni un catálogo de anuncios. Cada comparativa se construye con el mismo método:</p>
+        <ul class="method-list">
+          <li><strong>Precios reales y actualizados</strong>, no los de la portada de marketing: qué incluye el plan gratuito y qué se paga de verdad.</li>
+          <li><strong>Veredicto por perfil</strong>: no existe "la mejor IA", existe la mejor IA para redactar, para diseñar, para programar o para tu presupuesto.</li>
+          <li><strong>Pros y contras honestos</strong>, incluidos los límites y las cosas que una herramienta hace mal.</li>
+          <li><strong>Lenguaje claro</strong>: explicamos los términos técnicos en vez de darlos por sabidos.</li>
+          <li><strong>Actualización continua</strong>: cuando una herramienta cambia de precio o de funciones, revisamos la comparativa.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Nuestra independencia</h2>
+        <p>CompararIA se financia con publicidad y con enlaces de afiliación: si te registras en una herramienta a través de nuestros enlaces, podemos llevarnos una pequeña comisión, <strong>sin ningún coste adicional para ti</strong>.</p>
+        <p>Eso nunca cambia lo que recomendamos. <strong>No aceptamos dinero para mejorar una valoración</strong> ni para colocar una herramienta por encima de otra. Si una opción es peor, lo decimos, cobremos comisión por ella o no. Esa es la única forma de que estas comparativas te sirvan de algo.</p>
+      </div>
+
+      <div class="note">
+        <p><strong>¿Ves algo mejorable?</strong> Si detectas un dato desactualizado o quieres proponer una herramienta que debería estar aquí, escríbenos desde la <a href="/contacto/" style="color:var(--accent);text-decoration:none;">página de contacto</a>. El proyecto mejora con la comunidad que lo usa.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;">Comparar<span style="color:var(--accent)">IA</span></a>
+      <ul class="footer-links">
+        <li><a href="/comparativas/">Comparativas</a></li>
+        <li><a href="/herramientas/">Herramientas</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/aviso-legal/">Aviso Legal</a></li>
+        <li><a href="/privacidad/">Privacidad</a></li>
+      </ul>
+      <p class="footer-copy">© 2025 CompararIA · David Mateos Pascual</p>
+    </div>
+  </footer>
+
+</body>
+</html>
