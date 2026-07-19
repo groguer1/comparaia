@@ -12,6 +12,8 @@
   <meta property="og:title" content="Guías de IA para autónomos y freelancers en España">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="CompararIA">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Guías de IA para autónomos y freelancers","url":"https://comparaia.es/guias/","description":"Guías prácticas de inteligencia artificial para autónomos y freelancers en España y Latinoamérica: cómo empezar, herramientas gratuitas y cómo escribir prompts.","inLanguage":"es-ES","publisher":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Necesito conocimientos técnicos para seguir estas guías?","acceptedAnswer":{"@type":"Answer","text":"No. Están escritas para personas sin formación técnica: si sabes usar el correo y un navegador, puedes seguirlas. Cada paso se explica en lenguaje llano y con ejemplos concretos."}},{"@type":"Question","name":"¿Sirven para autónomos fuera de España?","acceptedAnswer":{"@type":"Answer","text":"En su mayoría sí. Las herramientas y técnicas son las mismas en todo el mundo hispanohablante; lo específico de España, como los apuntes sobre fiscalidad, está señalado para que sepas qué aplica en tu país y qué no."}},{"@type":"Question","name":"¿Cada cuánto se actualizan las guías?","acceptedAnswer":{"@type":"Answer","text":"Revisamos las guías cuando cambian los precios o las funciones de las herramientas que mencionan, porque el sector de la IA se mueve muy rápido. Cada guía indica su última actualización."}},{"@type":"Question","name":"¿Estas guías recomiendan herramientas de pago por comisión?","acceptedAnswer":{"@type":"Answer","text":"Recomendamos la herramienta que mejor resuelve cada tarea, de pago o gratuita. Cuando incluimos un enlace de afiliado lo indicamos, y no cambia qué recomendamos."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -59,6 +61,18 @@
     .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
     .footer-links a:hover{color:var(--text)}
     .footer-copy{font-size:0.82rem;color:var(--muted)}
+    .prose{max-width:760px;margin:0 0 40px}
+    .prose p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+    .prose p strong{color:var(--text);font-weight:500}
+    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:8px 0 20px;display:flex;align-items:center;gap:14px}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+    .faq{max-width:760px;margin-bottom:56px}
+    .faq details{border-bottom:1px solid var(--border);padding:16px 0}
+    .faq summary{cursor:pointer;font-family:'Syne',sans-serif;font-weight:600;font-size:0.98rem;color:var(--text);list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::before{content:'+';color:var(--accent);margin-right:12px;font-weight:700}
+    .faq details[open] summary::before{content:'–'}
+    .faq details p{color:var(--muted);font-size:0.92rem;margin-top:12px;line-height:1.65}
     @media(max-width:768px){.guide-card{flex-wrap:wrap}.guide-num{display:none}.nav-links{display:none}.cta-banner{flex-direction:column}}
   </style>
 
@@ -87,6 +101,11 @@
       <h1>Guías de IA<br>para autónomos</h1>
       <p class="subtitle">Guías prácticas pensadas para el contexto español. Sin teoría innecesaria — solo lo que puedes aplicar esta semana.</p>
     </header>
+
+    <div class="prose">
+      <p>La mayoría de los tutoriales de IA que hay en internet están pensados para grandes empresas o para el mercado estadounidense. Aquí no. Estas guías están escritas para <strong>quien trabaja por su cuenta en España y Latinoamérica</strong>: autónomos, freelancers y pequeños estudios que quieren usar la inteligencia artificial para ganar tiempo, no para complicarse la vida.</p>
+      <p>Cada guía parte de un problema real —"tengo que escribir diez propuestas esta semana", "no sé qué herramienta gratuita elegir", "mis prompts no dan buenos resultados"— y va directa a la solución, con ejemplos que puedes copiar y precios actualizados. Si no sabes por dónde empezar, la primera guía de la lista es el mejor punto de partida.</p>
+    </div>
 
     <div class="guides-list">
       <a href="/guias/ia-para-autonomos-espana/" class="guide-card">
@@ -140,6 +159,19 @@
         <div class="guide-arrow">→</div>
       </a>
 </div>
+
+    <div class="section-label">¿Por dónde empezar?</div>
+    <div class="prose">
+      <p><strong>Si nunca has usado IA en tu trabajo</strong>, empieza por <a href="/guias/ia-para-autonomos-espana/" style="color:var(--accent)">cómo usar IA si eres autónomo en España</a>: te da el mapa completo y evita que pagues suscripciones que no necesitas. <strong>Si ya la usas pero quieres exprimirla</strong>, salta a <a href="/guias/como-escribir-prompts/" style="color:var(--accent)">cómo escribir buenos prompts</a>, que es lo que más diferencia un resultado mediocre de uno útil. <strong>Y si tu prioridad es no gastar</strong>, la guía de <a href="/guias/herramientas-ia-gratis/" style="color:var(--accent)">herramientas gratuitas</a> te dice cuáles tienen un plan gratis de verdad, no un trial de siete días.</p>
+    </div>
+
+    <div class="section-label">Preguntas frecuentes</div>
+    <div class="faq">
+      <details><summary>¿Necesito conocimientos técnicos para seguir estas guías?</summary><p>No. Están escritas para personas sin formación técnica: si sabes usar el correo y un navegador, puedes seguirlas. Cada paso se explica en lenguaje llano y con ejemplos concretos.</p></details>
+      <details><summary>¿Sirven para autónomos fuera de España?</summary><p>En su mayoría sí. Las herramientas y técnicas son las mismas en todo el mundo hispanohablante; lo específico de España (como los apuntes sobre fiscalidad) está señalado para que sepas qué aplica en tu país y qué no.</p></details>
+      <details><summary>¿Cada cuánto se actualizan?</summary><p>Revisamos las guías cuando cambian los precios o las funciones de las herramientas que mencionan, porque el sector de la IA se mueve muy rápido. Cada guía indica su última actualización.</p></details>
+      <details><summary>¿Estas guías recomiendan herramientas de pago por comisión?</summary><p>Recomendamos la herramienta que mejor resuelve cada tarea, de pago o gratuita. Cuando incluimos un enlace de afiliado lo indicamos, y no cambia qué recomendamos. La metodología está en la página <a href="/sobre/" style="color:var(--accent)">Sobre</a>.</p></details>
+    </div>
 
     <div class="cta-banner">
       <div>
