@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Puede la IA hacer trading por ti? La realidad de los bots (2026) | CompararIA Blog</title>
+  <meta name="description" content="Qué hay de cierto en el trading automático con IA, por qué la mayoría de bots no son IA, cómo funciona un grid bot y los riesgos reales antes de poner un euro.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://comparaia.es/blog/ia-trading-automatico-bots/">
+  <meta name="theme-color" content="#00e5a0">
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://comparaia.es/blog/ia-trading-automatico-bots/">
+  <meta property="og:title" content="¿Puede la IA hacer trading por ti? La realidad de los bots">
+  <meta property="og:description" content="Qué hay de cierto en el trading automático con IA, por qué casi ningún bot es IA, cómo funciona un grid bot y los riesgos reales.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="CompararIA">
+  <meta property="og:image" content="https://comparaia.es/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:title" content="¿Puede la IA hacer trading por ti? La realidad de los bots">
+  <meta name="twitter:description" content="Qué hay de cierto en el trading automático con IA, por qué casi ningún bot es IA y los riesgos reales.">
+  <meta name="twitter:image" content="https://comparaia.es/assets/og-image.png">
+  <meta property="article:published_time" content="2026-07-21T00:00:00+01:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"¿Puede la IA hacer trading por ti? La realidad de los bots automáticos","datePublished":"2026-07-21T00:00:00+01:00","dateModified":"2026-07-21T00:00:00+01:00","author":{"@type":"Organization","name":"CompararIA","url":"https://comparaia.es/"},"publisher":{"@type":"Organization","name":"CompararIA"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://comparaia.es/blog/ia-trading-automatico-bots/"},"inLanguage":"es-ES"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--bg2:#111118;--surface:#1e1e2e;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);--accent:#00e5a0;--accent2:#7c6fff;--text:#e8e8f0;--muted:#7a7a9a;--warn:#f59e0b}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+    .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;width:500px;height:500px;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-100px;left:-100px}
+    .container-article{max-width:780px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    nav{padding:20px 0;border-bottom:1px solid var(--border);background:rgba(10,10,15,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--text)}
+    .breadcrumb{padding:24px 0 0;font-size:0.82rem;color:var(--muted)}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .breadcrumb span{margin:0 8px;opacity:0.4}
+    .article-hero{padding:40px 0 48px;animation:fadeUp 0.5s ease both}
+    .badge{display:inline-block;background:rgba(124,111,255,0.1);color:var(--accent2);padding:6px 14px;border-radius:100px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:18px}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:18px}
+    .article-meta{font-size:0.82rem;color:var(--muted);margin-bottom:20px;display:flex;gap:16px;flex-wrap:wrap}
+    .article-intro{font-size:1.05rem;color:var(--muted);line-height:1.75;border-left:3px solid var(--accent);padding-left:20px}
+    .article-body h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;margin:52px 0 16px;padding-top:52px;border-top:1px solid var(--border)}
+    .article-body h2:first-child{margin-top:0;padding-top:0;border-top:none}
+    .article-body h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:28px 0 10px}
+    .article-body p{margin-bottom:18px;color:var(--muted);font-size:0.97rem}
+    .article-body strong{color:var(--text);font-weight:600}
+    .article-body ul{margin:0 0 18px 20px;color:var(--muted);font-size:0.97rem}
+    .article-body li{margin-bottom:8px}
+    .warning-box{background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-left:3px solid var(--warn);border-radius:12px;padding:22px 26px;margin:24px 0}
+    .warning-box .w-title{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--warn);margin-bottom:12px}
+    .warning-box p{margin:0 0 12px;color:var(--text);font-size:0.92rem}
+    .warning-box p:last-child{margin-bottom:0}
+    .tools-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.88rem;border-radius:12px;overflow:hidden}
+    .tools-table thead{background:var(--surface)}
+    .tools-table th{padding:12px 16px;text-align:left;font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--muted);border-bottom:1px solid var(--border2)}
+    .tools-table td{padding:11px 16px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+    .tools-table tr:hover td{background:rgba(255,255,255,0.02)}
+    .tools-table td:first-child{font-weight:600;color:var(--text)}
+    .td-yes{color:var(--accent);font-weight:600}
+    .td-partial{color:var(--warn)}
+    .callout{background:rgba(0,229,160,0.06);border:1px solid rgba(0,229,160,0.2);border-radius:12px;padding:20px 24px;margin:24px 0}
+    .callout p{margin:0;color:var(--text);font-size:0.95rem}
+    .product-cta{background:var(--surface);border:1px solid var(--border2);border-radius:16px;padding:28px;margin:36px 0}
+    .product-cta .pc-tag{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+    .product-cta h3{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:10px;color:var(--text)}
+    .product-cta p{color:var(--muted);font-size:0.95rem;margin-bottom:18px}
+    .pc-btn{display:inline-block;background:var(--accent);color:#0a0a0f;font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;padding:13px 26px;border-radius:10px;text-decoration:none;transition:transform .2s}
+    .pc-btn:hover{transform:translateY(-2px)}
+    .faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+    .faq-item h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+    .faq-item p{color:var(--muted);font-size:0.94rem;margin:0}
+    .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px;margin-bottom:48px}
+    .related-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;text-decoration:none;color:inherit;transition:all 0.3s ease}
+    .related-card:hover{border-color:rgba(0,229,160,0.3);transform:translateY(-3px)}
+    .related-tag{font-size:0.7rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
+    .related-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:4px}
+    .related-desc{font-size:0.82rem;color:var(--muted)}
+    footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.85rem}
+    .footer-links{display:flex;gap:20px;justify-content:center;list-style:none;margin-bottom:12px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);text-decoration:none;font-size:0.82rem}
+    .footer-links a:hover{color:var(--accent)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:640px){.related-grid{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://comparaia.es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://comparaia.es/blog/"},{"@type":"ListItem","position":3,"name":"¿Puede la IA hacer trading por ti?","item":"https://comparaia.es/blog/ia-trading-automatico-bots/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Existe una IA que invierta en bolsa por mí y gane dinero seguro?","acceptedAnswer":{"@type":"Answer","text":"No. Ninguna IA ni bot garantiza ganancias: si existiera, nadie la vendería. Hay sistemas que automatizan una estrategia (como los grid bots), pero automatizar no es predecir. El mercado puede ir en tu contra y puedes perder dinero. Desconfía de cualquier producto que prometa rentabilidad segura."}},{"@type":"Question","name":"¿Un bot de trading es inteligencia artificial de verdad?","acceptedAnswer":{"@type":"Answer","text":"Casi nunca. La mayoría de bots que se venden como 'IA' son en realidad automatización basada en reglas fijas: si el precio baja X, compra; si sube Y, vende. Un grid bot es un ejemplo claro: no aprende ni predice, ejecuta una rejilla de órdenes. La IA real aplicada a trading (modelos de machine learning) existe, pero es cara, institucional y tampoco garantiza resultados."}},{"@type":"Question","name":"¿Qué es un grid bot y cuándo gana dinero?","acceptedAnswer":{"@type":"Answer","text":"Un grid bot coloca una rejilla de órdenes de compra y venta por debajo y por encima del precio actual, y captura pequeñas ganancias con cada oscilación. Funciona mejor en mercados laterales (que suben y bajan dentro de un rango). Su punto débil son las tendencias fuertes: si el precio se dispara o se hunde y sale del rango, el bot deja de comprar barato y vender caro y puede quedarse atrapado."}},{"@type":"Question","name":"¿Hay que declarar a Hacienda las ganancias de un bot de cripto?","acceptedAnswer":{"@type":"Answer","text":"Sí. En España las ganancias por venta de criptomonedas tributan como ganancia patrimonial en la base del ahorro del IRPF, con tramos que van del 19% al 28%. Cada operación cuenta, y usar un bot no cambia la obligación fiscal. Lleva un registro de tus operaciones y consulta con tu gestor."}}]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18T27X6Y2D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-18T27X6Y2D',{anonymize_ip:true});</script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2322984058410308" crossorigin="anonymous"></script>
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#00e5a0;color:#000;padding:8px;z-index:100;font-weight:bold;text-decoration:none;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Saltar al contenido principal</a>
+<div class="orb"></div>
+<nav aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="/" class="logo">Comparar<span>IA</span></a>
+    <ul class="nav-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="main-content">
+<div class="container-article">
+  <nav aria-label="Ruta de navegación">
+    <p class="breadcrumb"><a href="/">Inicio</a><span>›</span><a href="/blog/">Blog</a><span>›</span>¿Puede la IA hacer trading por ti?</p>
+  </nav>
+  <header class="article-hero">
+    <span class="badge">Automatización · julio 2026</span>
+    <h1>¿Puede la IA hacer trading por ti? La realidad de los bots automáticos</h1>
+    <div class="article-meta"><span>21 julio 2026</span><span>·</span><span>9 min de lectura</span></div>
+    <p class="article-intro">"Deja que la IA invierta por ti mientras duermes." Es uno de los reclamos más repetidos y también uno de los que más confusión genera. Antes de poner un solo euro conviene separar lo que es marketing de lo que es real: qué son de verdad estos bots, por qué la mayoría no son IA, cómo funciona el tipo más común —el grid bot— y qué riesgos asumes. Sin humo.</p>
+  </header>
+
+  <article class="article-body">
+
+    <h2>"IA que invierte por ti": qué hay de verdad</h2>
+    <p>La idea de un sistema que opera solo y te genera ingresos pasivos es muy atractiva, sobre todo para un autónomo o freelance que ya tiene poco tiempo. Pero hay que empezar por una distinción incómoda: <strong>automatizar no es predecir</strong>. Que un programa ejecute órdenes solo no significa que sepa hacia dónde va el mercado. Y ningún sistema, por sofisticado que sea, puede garantizarte ganancias: si alguien tuviera esa fórmula, no te la vendería por 35 €, la usaría en silencio.</p>
+    <p>Eso no significa que estos bots sean una estafa. Significa que son <strong>herramientas</strong>, con un funcionamiento concreto y unos límites concretos. Entenderlos es la diferencia entre usarlos con criterio y perder dinero por creer en una promesa que nadie puede cumplir.</p>
+
+    <h2>Por qué casi ningún "bot de IA" es realmente IA</h2>
+    <p>La mayoría de bots de trading que se venden con la etiqueta "IA" son en realidad <strong>automatización basada en reglas fijas</strong>: si el precio baja a X, compra; si sube a Y, vende. No aprenden, no razonan y no predicen. Ejecutan instrucciones deterministas, igual que una alarma que salta a una hora. Es útil, pero no es inteligencia artificial.</p>
+    <p>¿Existe IA de verdad aplicada al trading? Sí: los fondos institucionales usan modelos de <em>machine learning</em> sobre cantidades enormes de datos. Pero es cara, requiere equipos especializados, infraestructura seria y <strong>tampoco garantiza acertar</strong> — los mercados son parcialmente impredecibles por naturaleza. El "bot de IA" de 30 € que promete rentabilidad constante no es eso.</p>
+
+    <div class="warning-box">
+      <div class="w-title">⚠ Señales de alarma en cualquier bot o curso de trading</div>
+      <p><strong>"Rentabilidad garantizada" o "sin riesgo".</strong> No existe. Cualquiera que lo prometa miente o vende un esquema.</p>
+      <p><strong>Capturas de ganancias espectaculares.</strong> Se falsifican en dos minutos y casi nunca muestran las operaciones perdedoras.</p>
+      <p><strong>Presión para invertir mucho y ya.</strong> El trading serio no tiene prisa; los estafadores sí.</p>
+    </div>
+
+    <h2>Qué es un grid bot (el tipo más común)</h2>
+    <p>El bot automático más extendido para cripto es el <strong>grid bot</strong> o bot de rejilla. Su lógica es sencilla y honesta: coloca una serie de órdenes de compra por debajo del precio actual y de venta por encima, formando una "rejilla". Cada vez que el precio oscila, el bot compra un poco más abajo y vende un poco más arriba, capturando pequeñas ganancias en cada movimiento.</p>
+    <p>La clave es entender <strong>cuándo funciona y cuándo no</strong>:</p>
+    <ul>
+      <li><strong>A favor:</strong> brilla en mercados <em>laterales</em>, que suben y bajan dentro de un rango. Ahí las oscilaciones son su combustible.</li>
+      <li><strong>En contra:</strong> sufre en tendencias fuertes. Si el precio se dispara y se sale del rango por arriba, el bot ya ha vendido barato; si se hunde por debajo, se queda comprado y "atrapado" esperando una recuperación que puede tardar.</li>
+    </ul>
+    <p>Es decir: un grid bot no es una máquina de imprimir dinero, es una <strong>estrategia concreta para un tipo de mercado concreto</strong>. Bien entendido, automatiza un trabajo que harías a mano; mal entendido, te da una falsa sensación de seguridad.</p>
+
+    <h2>Bots vs. asistentes de IA: dos cosas distintas</h2>
+    <p>Para un autónomo, conviene no mezclar dos usos muy diferentes de la tecnología:</p>
+    <table class="tools-table" aria-label="Diferencias entre bots de trading y asistentes de IA">
+      <thead><tr><th>&nbsp;</th><th>Bot de trading (grid, DCA…)</th><th>Asistente de IA (ChatGPT, Claude)</th></tr></thead>
+      <tbody>
+        <tr><td>Qué hace</td><td>Ejecuta órdenes según reglas fijas</td><td>Genera texto, analiza, resume, sugiere</td></tr>
+        <tr><td>¿Es IA?</td><td class="td-partial">Normalmente no (reglas)</td><td class="td-yes">Sí (modelos de lenguaje)</td></tr>
+        <tr><td>Riesgo económico</td><td class="td-partial">Alto: tu dinero está en el mercado</td><td class="td-yes">Ninguno directo</td></tr>
+        <tr><td>Para el día a día del freelance</td><td>Nicho (solo si operas en cripto)</td><td class="td-yes">Muy útil (facturas, textos, tareas)</td></tr>
+      </tbody>
+    </table>
+    <p>Si lo que buscas es productividad en tu negocio, tu herramienta no es un bot de trading, sino un asistente de IA. Para eso tienes toda nuestra sección de <a href="/herramientas/">herramientas</a> y <a href="/guias/ia-para-autonomos-espana/">guía de IA para autónomos</a>.</p>
+
+    <h2>Los riesgos que nadie te cuenta en el anuncio</h2>
+    <div class="warning-box">
+      <div class="w-title">⚠ Antes de operar con cualquier bot</div>
+      <p><strong>Puedes perder dinero, incluido el capital.</strong> La volatilidad de las criptomonedas es alta. Nunca operes con dinero que necesites para vivir.</p>
+      <p><strong>No es pasivo del todo.</strong> Hay que configurar el rango, vigilar que el mercado no se salga de él y ajustar. Un bot desatendido en el momento equivocado puede acumular pérdidas.</p>
+      <p><strong>Tiene implicaciones fiscales.</strong> En España las ganancias por vender cripto tributan en el IRPF como ganancia patrimonial (del 19 % al 28 %). Cada operación cuenta; lleva un registro.</p>
+    </div>
+
+    <h2>Entonces, ¿merece la pena?</h2>
+    <p>Depende de qué esperes. Si buscas "hacerte rico sin esfuerzo", ningún bot te lo va a dar y cualquiera que lo prometa te está engañando. Si en cambio ya operas o quieres experimentar en cripto con <strong>dinero que puedes permitirte perder</strong>, entiendes que un grid bot es una estrategia para mercados laterales y quieres <strong>automatizar esa operativa sin pagar suscripciones ni ceder el control de tu cuenta</strong>, entonces tiene sentido como herramienta.</p>
+
+    <div class="product-cta">
+      <div class="pc-tag">Herramienta relacionada</div>
+      <h3>Grid bot para BTC/USDT con el código en tu poder</h3>
+      <p>Si tras entender los riesgos quieres probarlo, tenemos un grid bot sencillo para Binance: pago único de 35 € (sin suscripciones), el código es tuyo para siempre y lo controlas desde Telegram. Nada de promesas de rentabilidad: es la herramienta, tú decides el uso.</p>
+      <a href="/bot-grid-btc" class="pc-btn" rel="nofollow">Ver el grid bot →</a>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Existe una IA que invierta en bolsa por mí y gane dinero seguro?</h3>
+      <p>No. Ninguna IA ni bot garantiza ganancias: si existiera, nadie la vendería. Hay sistemas que automatizan una estrategia, pero automatizar no es predecir. El mercado puede ir en tu contra y puedes perder dinero. Desconfía de cualquier producto que prometa rentabilidad segura.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Un bot de trading es inteligencia artificial de verdad?</h3>
+      <p>Casi nunca. La mayoría de bots que se venden como "IA" son automatización basada en reglas fijas. Un grid bot no aprende ni predice: ejecuta una rejilla de órdenes. La IA real aplicada a trading existe, pero es cara, institucional y tampoco garantiza resultados.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Qué es un grid bot y cuándo gana dinero?</h3>
+      <p>Coloca una rejilla de órdenes de compra y venta alrededor del precio actual y captura pequeñas ganancias con cada oscilación. Funciona mejor en mercados laterales. Su punto débil son las tendencias fuertes: si el precio sale del rango, puede quedarse atrapado.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Hay que declarar a Hacienda las ganancias de un bot de cripto?</h3>
+      <p>Sí. En España tributan como ganancia patrimonial en la base del ahorro del IRPF (del 19 % al 28 %). Usar un bot no cambia la obligación fiscal. Lleva un registro de tus operaciones y consulta con tu gestor.</p>
+    </div>
+
+  </article>
+
+  <nav aria-label="Artículos relacionados">
+    <div class="related-grid">
+      <a href="/guias/ia-para-autonomos-espana/" class="related-card">
+        <div class="related-tag">Guía completa</div>
+        <div class="related-title">IA para autónomos en España</div>
+        <p class="related-desc">Las herramientas de IA que sí mueven la aguja en tu negocio.</p>
+      </a>
+      <a href="/blog/productividad-ia-automatizacion/" class="related-card">
+        <div class="related-tag">Productividad</div>
+        <div class="related-title">Automatizar tareas con IA</div>
+        <p class="related-desc">Dónde la automatización aporta valor real (y dónde no).</p>
+      </a>
+    </div>
+  </nav>
+</div>
+</main>
+<footer>
+  <div style="max-width:1140px;margin:0 auto;padding:0 24px">
+    <ul class="footer-links">
+      <li><a href="/comparativas/">Comparativas</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li><a href="/guias/">Guías</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+    </ul>
+    <p>© 2026 CompararIA · Hecho en España para freelancers.</p>
+  </div>
+</footer>
+</body>
+</html>
