@@ -4,7 +4,7 @@ MAPA = {}
 if os.path.exists('afiliados.json'):
     MAPA = json.load(open('afiliados.json', encoding='utf-8')).get('enlaces', {})
 
-AVISO_AFF = 'Enlaces de afiliado: si te registras a traves de ellos podemos ganar una comision, sin coste adicional para ti. No influye en nuestro veredicto'
+AVISO_AFF = 'Enlaces de afiliado: si te registras a trav\u00e9s de ellos podemos ganar una comisi\u00f3n, sin coste adicional para ti. No influye en nuestro veredicto'
 AVISO_NEUTRO = 'Enlaces a las webs oficiales de cada herramienta. Ninguna marca paga por aparecer ni influye en nuestro veredicto'
 
 cambios = 0
@@ -30,7 +30,7 @@ for root, dirs, files in os.walk('.'):
             t = t.replace(AVISO_NEUTRO, AVISO_AFF)
         else:
             t = t.replace(AVISO_AFF, AVISO_NEUTRO)
-            t = t.replace('Enlaces de afiliado: si te registras a traves de ellos podemos ganar una comision, sin coste adicional para ti. No influye en nuestro veredicto', AVISO_NEUTRO)
+
         if t != orig:
             open(p, 'w', encoding='utf-8').write(t)
             cambios += 1
