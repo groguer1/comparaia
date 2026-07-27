@@ -22,7 +22,7 @@
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://comparaia.es/bot-grid-btc</loc>
+  <loc>https://comparaia.es/bot-grid-btc.html</loc>
   <lastmod>2026-07-21</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
@@ -439,4 +439,58 @@
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
+  <url>
+    <loc>https://comparaia.es/comparativas/getresponse-vs-activecampaign-vs-brevo/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/chatgpt-declaracion-renta-autonomo/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/ia-linkedin-prompts-autonomo-2026/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/ia-redes-sociales-contenido-2026/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/mejores-herramientas-email-marketing-freelancers/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/mejores-ia-redes-sociales-contenido-freelancers/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/mejores-landing-pages-freelancers/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/blog/webflow-para-freelancers/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://comparaia.es/afiliados/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
