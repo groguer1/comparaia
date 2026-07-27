@@ -1,6 +1,7 @@
 {
   "_comentario": "Mapa de enlaces de afiliado. Clave = valor de data-aff en los botones. Valor = URL de afiliado. Con el mapa vacio el workflow deja el aviso neutro.",
   "enlaces": {
+    "domestika": "https://domestika.sjv.io/zzqq4x",
     "udemy": "https://trk.udemy.com/oN5VYb"
   }
 }
