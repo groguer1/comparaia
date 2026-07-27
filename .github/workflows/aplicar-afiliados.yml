@@ -1,0 +1,23 @@
+name: Aplicar enlaces de afiliado
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aplicar mapa de afiliados y ajustar aviso
+        run: python3 .github/scripts/aplicar_afiliados.py
+
+      - name: Commit y push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "Sin cambios" || (git commit -m "Afiliados: aplicar mapa y ajustar aviso" && git push)
