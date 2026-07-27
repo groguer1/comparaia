@@ -1,4 +1,6 @@
 {
   "_comentario": "Mapa de enlaces de afiliado. Clave = valor de data-aff en los botones. Valor = URL de afiliado. Con el mapa vacio el workflow deja el aviso neutro.",
-  "enlaces": {}
+  "enlaces": {
+    "udemy": "https://trk.udemy.com/oN5VYb"
+  }
 }
